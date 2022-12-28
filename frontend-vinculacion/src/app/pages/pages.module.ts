@@ -6,9 +6,10 @@ import { PortafolioComponent } from './docente-tutor/portafolio/portafolio.compo
 import { AsignarFundacionComponent } from './docente-vinculacion/asignar-fundacion/asignar-fundacion.component';
 import { ConfiguracionComponent } from './docente-vinculacion/configuracion/configuracion.component';
 import { ProyectoComponent } from './docente-vinculacion/proyecto/proyecto.component';
-import { SolicitudComponent } from './docente-vinculacion/solicitud/solicitud.component';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
+import { SolicitudVinculacionComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
 
 
 @NgModule({
@@ -20,14 +21,15 @@ import { RouterModule } from '@angular/router';
     ConfiguracionComponent,
     // PortafolioComponent,
     ProyectoComponent,
-    SolicitudComponent,
+    PortafolioVinculacionComponent,
+    SolicitudVinculacionComponent,
   ],
   exports:[
     AsignarFundacionComponent,
     ConfiguracionComponent,
     PortafolioComponent,
     ProyectoComponent,
-    SolicitudComponent,
+    SolicitudVinculacionComponent
   ],
   imports: [
     CommonModule,
