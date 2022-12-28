@@ -4,8 +4,8 @@ import { PagesComponent } from './pages/pages.component';
 import { AsignarFundacionComponent } from './pages/docente-vinculacion/asignar-fundacion/asignar-fundacion.component';
 import { ConfiguracionComponent } from './pages/docente-vinculacion/configuracion/configuracion.component';
 import { PortafolioComponent } from './pages/docente-tutor/portafolio/portafolio.component';
-import { ProyectoComponent } from './pages/docente-vinculacion/proyecto/proyecto.component';
 import { SolicitudVinculacionComponent } from './pages/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
+import { ProyectoVinculacionComponent } from './pages/docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'asignar-fundacion', component: AsignarFundacionComponent },
   { path: 'configuraciones', component: ConfiguracionComponent},
   { path: 'portafolio', component: PortafolioComponent},
-  { path: 'producto', component: ProyectoComponent},
+  { path: 'proyecto', component: ProyectoVinculacionComponent},
   // // {path:'', redirectTo:'/dashboard', pathMatch:'full'},
   // { path: '**', component: NopagesfoundComponent },
 ]

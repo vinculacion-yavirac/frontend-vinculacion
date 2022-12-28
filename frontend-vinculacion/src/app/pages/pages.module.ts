@@ -5,11 +5,11 @@ import { ListaEstudiantesComponent } from './docente-tutor/lista-estudiantes/lis
 import { PortafolioComponent } from './docente-tutor/portafolio/portafolio.component';
 import { AsignarFundacionComponent } from './docente-vinculacion/asignar-fundacion/asignar-fundacion.component';
 import { ConfiguracionComponent } from './docente-vinculacion/configuracion/configuracion.component';
-import { ProyectoComponent } from './docente-vinculacion/proyecto/proyecto.component';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudVinculacionComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
+import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 
 
 @NgModule({
@@ -20,15 +20,14 @@ import { SolicitudVinculacionComponent } from './docente-vinculacion/solicitud-v
     AsignarFundacionComponent,
     ConfiguracionComponent,
     // PortafolioComponent,
-    ProyectoComponent,
     PortafolioVinculacionComponent,
     SolicitudVinculacionComponent,
+    ProyectoVinculacionComponent,
   ],
   exports:[
     AsignarFundacionComponent,
     ConfiguracionComponent,
     PortafolioComponent,
-    ProyectoComponent,
     SolicitudVinculacionComponent
   ],
   imports: [
