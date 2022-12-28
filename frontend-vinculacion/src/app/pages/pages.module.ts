@@ -29,7 +29,10 @@ import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tu
     PortafolioVinculacionComponent,
     PortafolioTutorComponent,
     ProyectoVinculacionComponent,
-    SolicitudVinculacionComponent
+    SolicitudVinculacionComponent,
+    ListaFundacionTutorComponent,
+    ListaEstudiantesTutorComponent,
+    PortafolioTutorComponent,
   ],
   imports: [
     CommonModule,
