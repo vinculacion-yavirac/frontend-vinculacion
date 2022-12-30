@@ -44,7 +44,7 @@ import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redi
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
     RedireccionarComponent,
-    RellenarDatosComponent
+    RellenarDatosComponent,
 
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
