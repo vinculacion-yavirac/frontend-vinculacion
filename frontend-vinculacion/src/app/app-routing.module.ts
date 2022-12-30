@@ -6,6 +6,10 @@ import { ProyectoVinculacionComponent } from './pages/docente-vinculacion/proyec
 import { ConfiguracionVinculacionComponent } from './pages/docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { AsignarFundacionVinculacionComponent } from './pages/docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
 import { PortafolioVinculacionComponent } from './pages/docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
+import { RellenarDatosComponent } from './pages/coordinador-carrera/rellenar-datos/rellenar-datos.component';
+import { ListaEstudiantesComponent } from './pages/coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
+import { ListaPortafoliosComponent } from './pages/coordinador-carrera/lista-portafolios/lista-portafolios.component';
+import { AgregarRolComponent } from './pages/coordinador-carrera/agregar-rol/agregar-rol.component';
 
 const routes: Routes = [
   {
@@ -21,6 +25,15 @@ const routes: Routes = [
   { path: 'configuraciones', component: ConfiguracionVinculacionComponent},
   { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent},
   { path: 'proyecto', component: ProyectoVinculacionComponent},
+
+  { path: 'agregar-rol', component: AgregarRolComponent},
+  { path: 'lista-estudiantes', component: ListaEstudiantesComponent},
+  { path: 'lista-portafolios', component: ListaPortafoliosComponent},
+  { path: 'rellenar-datos', component: RellenarDatosComponent},
+
+
+
+
   // // {path:'', redirectTo:'/dashboard', pathMatch:'full'},
   // { path: '**', component: NopagesfoundComponent },
 ]
