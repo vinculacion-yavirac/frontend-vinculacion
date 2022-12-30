@@ -13,6 +13,7 @@ import { AgregarRolComponent } from './pages/coordinador-carrera/agregar-rol/agr
 import { ListaEstudiantesTutorComponent } from './pages/docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './pages/docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
 import { PortafolioTutorComponent } from './pages/docente-tutor/portafolio-tutor/portafolio-tutor.component';
+import { RedireccionarComponent } from './pages/coordinador-carrera/redireccionar/redireccionar.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,9 @@ const routes: Routes = [
   { path: 'agregar-rol', component: AgregarRolComponent},
   { path: 'lista-estudiantes', component: ListaEstudiantesComponent},
   { path: 'lista-portafolios', component: ListaPortafoliosComponent},
+  { path: 'redireccionar', component: RedireccionarComponent},
   { path: 'rellenar-datos', component: RellenarDatosComponent},
+
 
   { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent},
   { path: 'lista-estudiantes-tutor', component: ListaEstudiantesTutorComponent},
