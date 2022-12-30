@@ -37,14 +37,18 @@ import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redi
     AsignarFundacionVinculacionComponent,
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
-    PortafolioTutorComponent,
     ProyectoVinculacionComponent,
     SolicitudVinculacionComponent,
+
     AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
     RedireccionarComponent,
     RellenarDatosComponent
+
+    ListaFundacionTutorComponent,
+    ListaEstudiantesTutorComponent,
+    PortafolioTutorComponent,
   ],
   imports: [
     CommonModule,
