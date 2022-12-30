@@ -10,6 +10,11 @@ import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asig
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
 import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
+import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
+import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
+import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
+import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
+import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 
 
 @NgModule({
@@ -22,14 +27,25 @@ import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tu
     PortafolioTutorComponent,
     ListaEstudiantesTutorComponent,
     ListaFundacionTutorComponent,
+    AgregarRolComponent,
+    ListaEstudiantesComponent,
+    ListaPortafoliosComponent,
+    RedireccionarComponent,
+    RellenarDatosComponent
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
-    PortafolioTutorComponent,
     ProyectoVinculacionComponent,
     SolicitudVinculacionComponent,
+
+    AgregarRolComponent,
+    ListaEstudiantesComponent,
+    ListaPortafoliosComponent,
+    RedireccionarComponent,
+    RellenarDatosComponent
+
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
     PortafolioTutorComponent,
