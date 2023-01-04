@@ -15,7 +15,9 @@ import { ListaFundacionTutorComponent } from './pages/docente-tutor/lista-fundac
 import { PortafolioTutorComponent } from './pages/docente-tutor/portafolio-tutor/portafolio-tutor.component';
 import { RedireccionarComponent } from './pages/coordinador-carrera/redireccionar/redireccionar.component';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
-
+import { EstudianteComponent } from './pages/estudiante/estudiante/estudiante.component';
+import { EstudiantePortafolioComponent } from './pages/estudiante/estudiante-portafolio/estudiante-portafolio.component';
+import { DesboardComponent } from './pages/desboard/desboard.component';
 
 
 const routes: Routes = [
@@ -23,8 +25,8 @@ const routes: Routes = [
     path: '', component: PagesComponent,
 
     children: [
-      { path: '', redirectTo: '/solicitudes', pathMatch: 'full' },
-      { path: 'solicitud', component:SolicitudVinculacionComponent },
+      { path: '', redirectTo: '/desboard', pathMatch: 'full' },
+      { path: 'desboard', component:DesboardComponent },
     ]
   },
   { path: 'solicitud', component: SolicitudVinculacionComponent },
@@ -45,10 +47,12 @@ const routes: Routes = [
   { path: 'lista-estudiantes-tutor', component: ListaEstudiantesTutorComponent},
   { path: 'portafolio-tutor', component: PortafolioTutorComponent},
 
-  // // {path:'', redirectTo:'/dashboard', pathMatch:'full'},
-  // { path: '**', component: NopagesfoundComponent },
+  { path: 'estudiante', component: EstudianteComponent},
+  { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent},
 
   { path: '**', component: NopagesfoundComponent },
+  { path: '', redirectTo: '/desboard', pathMatch: 'full' },
+
 ]
 
 @NgModule({

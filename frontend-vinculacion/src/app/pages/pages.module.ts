@@ -17,6 +17,7 @@ import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafoli
 import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
+import { DesboardComponent } from './desboard/desboard.component';
 
 
 
@@ -37,6 +38,8 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
     RellenarDatosComponent,
     EstudianteComponent,
     EstudiantePortafolioComponent,
+    DesboardComponent,
+
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
@@ -54,6 +57,11 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
     PortafolioTutorComponent,
+
+    EstudianteComponent,
+    EstudiantePortafolioComponent,
+    DesboardComponent,
+
   ],
   imports: [
     CommonModule,
