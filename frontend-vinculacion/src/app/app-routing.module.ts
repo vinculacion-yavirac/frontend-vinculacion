@@ -16,14 +16,15 @@ import { PortafolioTutorComponent } from './pages/docente-tutor/portafolio-tutor
 import { RedireccionarComponent } from './pages/coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './pages/estudiante/estudiante-portafolio/estudiante-portafolio.component';
+import { DesboardComponent } from './pages/desboard/desboard.component';
 
 const routes: Routes = [
   {
     path: '', component: PagesComponent,
 
     children: [
-      { path: '', redirectTo: '/solicitudes', pathMatch: 'full' },
-      { path: 'solicitud', component:SolicitudVinculacionComponent },
+      { path: '', redirectTo: '/desboard', pathMatch: 'full' },
+      { path: 'desboard', component:DesboardComponent },
     ]
   },
   { path: 'solicitud', component: SolicitudVinculacionComponent },
@@ -46,6 +47,8 @@ const routes: Routes = [
 
   { path: 'estudiante', component: EstudianteComponent},
   { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent},
+
+  { path: '', redirectTo: '/desboard', pathMatch: 'full' },
 
 ]
 

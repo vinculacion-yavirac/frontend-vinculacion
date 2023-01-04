@@ -17,6 +17,7 @@ import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafoli
 import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
+import { DesboardComponent } from './desboard/desboard.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
     RellenarDatosComponent,
     EstudianteComponent,
     EstudiantePortafolioComponent,
+    DesboardComponent,
 
   ],
   exports:[
@@ -57,6 +59,8 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
+
+    DesboardComponent,
 
   ],
   imports: [
