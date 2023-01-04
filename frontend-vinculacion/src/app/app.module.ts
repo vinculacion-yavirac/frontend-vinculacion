@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 
 
 
@@ -11,6 +12,7 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent,
+    NopagesfoundComponent,
 
   ],
   imports: [

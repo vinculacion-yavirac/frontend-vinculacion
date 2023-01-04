@@ -14,7 +14,8 @@ import { ListaEstudiantesTutorComponent } from './pages/docente-tutor/lista-estu
 import { ListaFundacionTutorComponent } from './pages/docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
 import { PortafolioTutorComponent } from './pages/docente-tutor/portafolio-tutor/portafolio-tutor.component';
 import { RedireccionarComponent } from './pages/coordinador-carrera/redireccionar/redireccionar.component';
-import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
+
 
 
 const routes: Routes = [
