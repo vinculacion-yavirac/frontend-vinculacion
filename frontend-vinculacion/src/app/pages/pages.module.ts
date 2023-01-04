@@ -20,6 +20,7 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
 import { DesboardComponent } from './desboard/desboard.component';
 
 
+
 @NgModule({
   declarations: [
     AsignarFundacionVinculacionComponent,
@@ -59,7 +60,6 @@ import { DesboardComponent } from './desboard/desboard.component';
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
-
     DesboardComponent,
 
   ],
