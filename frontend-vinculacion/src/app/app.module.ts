@@ -17,8 +17,6 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    // SharedModule,
-    // AuthModule,
     HttpClientModule,
   ],
   providers: [],
