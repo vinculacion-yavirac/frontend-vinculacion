@@ -16,7 +16,7 @@ import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiant
 import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
 import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
-import { PortafolioEstudianteComponent } from './estudiante/portafolio-estudiante/portafolio-estudiante/portafolio-estudiante.component';
+import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { PortafolioEstudianteComponent } from './estudiante/portafolio-estudiant
     RedireccionarComponent,
     RellenarDatosComponent,
     EstudianteComponent,
-    PortafolioEstudianteComponent
+    EstudiantePortafolioComponent,
+
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
