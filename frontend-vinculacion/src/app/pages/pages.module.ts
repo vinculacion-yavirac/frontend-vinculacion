@@ -54,6 +54,10 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
     PortafolioTutorComponent,
+
+    EstudianteComponent,
+    EstudiantePortafolioComponent,
+
   ],
   imports: [
     CommonModule,
