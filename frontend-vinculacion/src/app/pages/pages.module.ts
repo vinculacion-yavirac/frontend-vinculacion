@@ -18,6 +18,8 @@ import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redi
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { DesboardComponent } from './desboard/desboard.component';
+import { SharedModule } from '../shared/shared.module';
+import { PagesComponent } from './pages.component';
 
 
 
@@ -39,7 +41,7 @@ import { DesboardComponent } from './desboard/desboard.component';
     EstudianteComponent,
     EstudiantePortafolioComponent,
     DesboardComponent,
-
+    PagesComponent,
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
@@ -67,6 +69,7 @@ import { DesboardComponent } from './desboard/desboard.component';
     CommonModule,
     HttpClientModule,
     RouterModule,
+    SharedModule,
   ]
 })
 export class PagesModule { }
