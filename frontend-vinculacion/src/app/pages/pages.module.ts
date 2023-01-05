@@ -22,6 +22,7 @@ import { PortafolioComponent } from './coordinador-general/portafolio/portafolio
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
+import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-estudiante-general/lista-estudiante-general.component';
 
 
 
@@ -47,6 +48,7 @@ import { PagesComponent } from './pages.component';
     PortafolioComponent,
     SolicitudCertificadoComponent,
     PagesComponent,
+    ListaEstudianteGeneralComponent,
 
   ],
   exports:[
