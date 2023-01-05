@@ -64,6 +64,10 @@ import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-est
     RedireccionarComponent,
     RellenarDatosComponent,
 
+    ListaEstudiantesGeneralComponent,
+    PortafolioComponent,
+    SolicitudCertificadoComponent,
+
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
     PortafolioTutorComponent,
