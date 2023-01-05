@@ -20,6 +20,7 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
 import { DesboardComponent } from './desboard/desboard.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
+import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 
 
 
@@ -43,6 +44,7 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
     DesboardComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
+    ListaEstudiantesGeneralComponent,
 
   ],
   exports:[
