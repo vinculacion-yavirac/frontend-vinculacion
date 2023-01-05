@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -20,6 +21,7 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
     AppRoutingModule,
     PagesModule,
     HttpClientModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

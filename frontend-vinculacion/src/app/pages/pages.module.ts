@@ -20,6 +20,9 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
 import { DesboardComponent } from './desboard/desboard.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
+import { SharedModule } from '../shared/shared.module';
+import { PagesComponent } from './pages.component';
+
 
 
 
@@ -43,6 +46,7 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
     DesboardComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
+    PagesComponent,
 
   ],
   exports:[
@@ -71,6 +75,7 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
     CommonModule,
     HttpClientModule,
     RouterModule,
+    SharedModule,
   ]
 })
 export class PagesModule { }
