@@ -18,6 +18,8 @@ import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redi
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { DesboardComponent } from './desboard/desboard.component';
+import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
+import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 
 
 
@@ -39,6 +41,8 @@ import { DesboardComponent } from './desboard/desboard.component';
     EstudianteComponent,
     EstudiantePortafolioComponent,
     DesboardComponent,
+    PortafolioComponent,
+    SolicitudCertificadoComponent,
 
   ],
   exports:[
