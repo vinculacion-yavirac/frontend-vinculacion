@@ -20,11 +20,10 @@ import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafoli
 import { DesboardComponent } from './desboard/desboard.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
+import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
 import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-estudiante-general/lista-estudiante-general.component';
-
-
 
 
 @NgModule({
@@ -49,6 +48,7 @@ import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-est
     SolicitudCertificadoComponent,
     PagesComponent,
     ListaEstudianteGeneralComponent,
+
 
   ],
   exports:[
