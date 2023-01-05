@@ -18,6 +18,9 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './pages/estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { DesboardComponent } from './pages/desboard/desboard.component';
+import { PortafolioComponent } from './pages/coordinador-general/portafolio/portafolio.component';
+import { SolicitudCertificadoComponent } from './pages/coordinador-general/solicitud-certificado/solicitud-certificado.component';
+import { ListaEstudiantesGeneralComponent } from './pages/coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 
 
 const routes: Routes = [
@@ -42,6 +45,9 @@ const routes: Routes = [
   { path: 'redireccionar', component: RedireccionarComponent},
   { path: 'rellenar-datos', component: RellenarDatosComponent},
 
+  { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent},
+  { path: 'portafolio', component: PortafolioComponent},
+  { path: 'solicitud-certificado', component: SolicitudCertificadoComponent},
 
   { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent},
   { path: 'lista-estudiantes-tutor', component: ListaEstudiantesTutorComponent},
