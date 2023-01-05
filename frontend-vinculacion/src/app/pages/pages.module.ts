@@ -23,7 +23,6 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
-import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-estudiante-general/lista-estudiante-general.component';
 
 
 @NgModule({
@@ -47,7 +46,7 @@ import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-est
     PortafolioComponent,
     SolicitudCertificadoComponent,
     PagesComponent,
-    ListaEstudianteGeneralComponent,
+    ListaEstudiantesGeneralComponent,
 
 
   ],
@@ -67,6 +66,7 @@ import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-est
 
     PortafolioComponent,
     SolicitudCertificadoComponent,
+    ListaEstudiantesGeneralComponent,
 
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
