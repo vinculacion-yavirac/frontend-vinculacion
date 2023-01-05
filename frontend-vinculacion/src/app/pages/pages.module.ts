@@ -21,7 +21,9 @@ import { DesboardComponent } from './desboard/desboard.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
-
+import { SharedModule } from '../shared/shared.module';
+import { PagesComponent } from './pages.component';
+import { ListaEstudianteGeneralComponent } from './coordinador-general/lista-estudiante-general/lista-estudiante-general.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-es
     DesboardComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
+    PagesComponent,
+    ListaEstudianteGeneralComponent,
+
 
   ],
   exports:[
@@ -73,6 +77,7 @@ import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-es
     CommonModule,
     HttpClientModule,
     RouterModule,
+    SharedModule,
   ]
 })
 export class PagesModule { }
