@@ -21,6 +21,7 @@ import { DesboardComponent } from './pages/desboard/desboard.component';
 import { PortafolioComponent } from './pages/coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './pages/coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './pages/coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
+import { ActividadesComponent } from './pages/pestanias/actividades/actividades.component';
 
 
 const routes: Routes = [
@@ -55,6 +56,8 @@ const routes: Routes = [
 
   { path: 'estudiante', component: EstudianteComponent},
   { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent},
+
+  { path: 'actividades', component: ActividadesComponent},
 
   { path: '**', component: NopagesfoundComponent },
   { path: '', redirectTo: '/desboard', pathMatch: 'full' },
