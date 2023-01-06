@@ -23,6 +23,17 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
+import { ActividadesComponent } from './pestanias/actividades/actividades.component';
+import { AnexosComponent } from './pestanias/anexos/anexos.component';
+import { BibliografiaComponent } from './pestanias/bibliografia/bibliografia.component';
+import { CertificadosComponent } from './pestanias/certificados/certificados.component';
+import { DatosGeneralesComponent } from './pestanias/datos-generales/datos-generales.component';
+import { DocumentosComponent } from './pestanias/documentos/documentos.component';
+import { EmpresaComponent } from './pestanias/empresa/empresa.component';
+import { FirmasComponent } from './pestanias/firmas/firmas.component';
+import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
+import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
+import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 
 
 @NgModule({
@@ -47,6 +58,17 @@ import { PagesComponent } from './pages.component';
     SolicitudCertificadoComponent,
     PagesComponent,
     ListaEstudiantesGeneralComponent,
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
 
 
   ],
