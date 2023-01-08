@@ -3,3 +3,37 @@
   height: 500px;
 
 }
+
+.iconbuscar{
+  width: 30px;
+  height: 30px;
+  margin-left: -50px;
+}
+
+.buscar{
+  border-radius: 10px;
+  margin-top: 5px;
+  border-color: #6D99EB;
+}
+
+.periodo{
+  text-align: center;
+  background-color: #6D99EB;
+  margin-left: -380px;
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
+  }
+
+.table{
+  background-color: #6D99EB;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.observar{
+  width: 40px;
+  height: 40px;
+}
+
+
