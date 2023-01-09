@@ -23,6 +23,9 @@ import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-c
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
+import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
+import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
+import { InformeControlComponent } from './informe-control/infrome-control/informe-control.component';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { PagesComponent } from './pages.component';
     SolicitudCertificadoComponent,
     PagesComponent,
     ListaEstudiantesGeneralComponent,
+    AvanceCumplimientoComponent,
+    ObservacionAvanceComponent,
+    InformeControlComponent,
 
 
   ],
