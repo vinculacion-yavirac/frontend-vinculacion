@@ -25,7 +25,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
-import { InformeControlComponent } from './informe-control/infrome-control/informe-control.component';
+
 
 
 @NgModule({
@@ -52,7 +52,7 @@ import { InformeControlComponent } from './informe-control/infrome-control/infor
     ListaEstudiantesGeneralComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
-    InformeControlComponent,
+
 
 
   ],
