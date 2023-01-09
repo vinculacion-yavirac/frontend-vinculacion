@@ -1,0 +1,40 @@
+.navbar{
+  margin-top: -17px;
+  height: 100px;
+  border-radius: 5px;
+}
+.user{
+  width: 30px;
+  height: 30px;
+}
+
+.nombre{
+  color: white;
+  margin-top: 15px;
+  margin-left: 21cm;
+  line-height: 5px;
+}
+
+.carrera{
+  color: white;
+  margin-top: 15px;
+  margin-left: 20cm;
+}
+
+.cargo{
+  color: white;
+  margin-top: 15px;
+}
+
+.option{
+  width: 20px;
+  height: 20px;
+}
+
+.inicio{
+  text-align: center;
+}
+.imgnav{
+  width: 30px;
+  height: 30px;
+}

@@ -1,5 +1,49 @@
+.bread{
+  width: 150rem;
+  margin-block-start: 8px;
+}
+
+.cuadro{
+  width: 150rem;
+  margin-block-start: 5px;
+}
+
 .container{
   background-color: #19418B;
   height: 500px;
-
 }
+
+.iconbuscar{
+  width: 30px;
+  height: 30px;
+}
+
+.buscar{
+  border-radius: 10px;
+  border-color: #6D99EB;
+}
+
+.periodo{
+  text-align: center;
+  background-color: #6D99EB;
+  margin-left: 49rem;
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
+  }
+
+.table{
+  background-color: #6D99EB;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.observar{
+  width: 40px;
+  height: 40px;
+}
+
+.pagination{
+  margin-left: 30rem;
+}
+
