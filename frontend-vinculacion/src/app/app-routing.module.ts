@@ -21,6 +21,9 @@ import { DesboardComponent } from './pages/desboard/desboard.component';
 import { PortafolioComponent } from './pages/coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './pages/coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './pages/coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
+import { AvanceCumplimientoComponent } from './pages/informe-control/avance-cumplimiento/avance-cumplimiento.component';
+import { InformeControlComponent } from './pages/informe-control/informe-control/informe-control.component';
+import { ObservacionAvanceComponent } from './pages/informe-control/observacion-avance/observacion-avance.component';
 
 
 const routes: Routes = [
@@ -55,6 +58,13 @@ const routes: Routes = [
 
   { path: 'estudiante', component: EstudianteComponent},
   { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent},
+
+  { path: 'avance-cumplimiento', component: AvanceCumplimientoComponent},
+  { path: 'informe-control', component: InformeControlComponent},
+  { path: 'observacion-avance', component: ObservacionAvanceComponent},
+
+
+
 
   { path: '**', component: NopagesfoundComponent },
   { path: '', redirectTo: '/desboard', pathMatch: 'full' },

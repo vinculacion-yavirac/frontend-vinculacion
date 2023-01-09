@@ -25,6 +25,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
+import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 
 
 
@@ -52,6 +53,8 @@ import { ObservacionAvanceComponent } from './informe-control/observacion-avance
     ListaEstudiantesGeneralComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
+    AvanceCumplimientoComponent,
+    InformeControlComponent
 
 
 
