@@ -31,6 +31,7 @@ import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formu
 import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
+import { EncuestaComponent } from './encuesta/encuesta.component';
 
 
 
@@ -64,7 +65,9 @@ import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estu
     PrimerFormularioInicialComponent,
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
-    InformeFinalEstudianteComponent
+    InformeFinalEstudianteComponent,
+    EncuestaComponent,
+    
 
 
 
