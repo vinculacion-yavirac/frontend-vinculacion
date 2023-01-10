@@ -26,6 +26,11 @@ import { PagesComponent } from './pages.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
+import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
+import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
+import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
+import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
+import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 
 
 
@@ -54,7 +59,12 @@ import { InformeControlComponent } from './informe-control/informe-control/infor
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
     AvanceCumplimientoComponent,
-    InformeControlComponent
+    InformeControlComponent,
+    InformeInicialComponent,
+    PrimerFormularioInicialComponent,
+    SegundoFormularioInicialComponent,
+    FormularioFinalTutorComponent,
+    InformeFinalEstudianteComponent
 
 
 
