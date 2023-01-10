@@ -10,7 +10,7 @@
 
 .container{
   background-color: #19418B;
-  height: 500px;
+  height: 420px;
   grid-auto-flow: auto;
 }
 
@@ -45,7 +45,12 @@
 }
 
 .pagination{
-  margin-left: 30rem;
+  margin: auto;
+  width: 50%;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 17%;
 }
 
 .switch{
