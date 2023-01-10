@@ -66,7 +66,8 @@ import { EncuestaComponent } from './encuesta/encuesta.component';
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    
 
 
 
