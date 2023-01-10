@@ -8,6 +8,10 @@
   margin-block-start: 5px;
 }
 
+.leters{
+  color: white;
+}
+
 .container{
   background-color: #19418B;
   height: 500px;
