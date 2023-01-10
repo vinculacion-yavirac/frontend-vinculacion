@@ -24,6 +24,11 @@ import { ListaEstudiantesGeneralComponent } from './pages/coordinador-general/li
 import { AvanceCumplimientoComponent } from './pages/informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { InformeControlComponent } from './pages/informe-control/informe-control/informe-control.component';
 import { ObservacionAvanceComponent } from './pages/informe-control/observacion-avance/observacion-avance.component';
+import { InformeInicialComponent } from './pages/informe-inicial/informe-inicial/informe-inicial.component';
+import { PrimerFormularioInicialComponent } from './pages/informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
+import { SegundoFormularioInicialComponent } from './pages/informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
+import { FormularioFinalTutorComponent } from './pages/docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
+import { InformeFinalEstudianteComponent } from './pages/estudiante/informe-final-estudiante/informe-final-estudiante.component';
 
 
 const routes: Routes = [
@@ -63,8 +68,11 @@ const routes: Routes = [
   { path: 'informe-control', component: InformeControlComponent},
   { path: 'observacion-avance', component: ObservacionAvanceComponent},
 
-
-
+  { path: 'informe-inicial', component: InformeInicialComponent},
+  { path: 'primer-formulario-inicial', component: PrimerFormularioInicialComponent},
+  { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent},
+  { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent},
+  { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent},
 
   { path: '**', component: NopagesfoundComponent },
   { path: '', redirectTo: '/desboard', pathMatch: 'full' },

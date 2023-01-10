@@ -95,6 +95,12 @@ import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estu
     EstudiantePortafolioComponent,
     DesboardComponent,
 
+    InformeInicialComponent,
+    PrimerFormularioInicialComponent,
+    SegundoFormularioInicialComponent,
+    FormularioFinalTutorComponent,
+    InformeFinalEstudianteComponent
+
   ],
   imports: [
     CommonModule,
