@@ -4,7 +4,7 @@
 }
 
 .cuadro{
-  width: 150rem;
+  width: 66rem;
   margin-block-start: 5px;
 }
 
@@ -12,6 +12,7 @@
   background-color: #19418B;
   height: 500px;
   grid-auto-flow: auto;
+  margin: 10px;
 }
 
 .iconbuscar{
@@ -27,7 +28,7 @@
 .periodo{
   text-align: center;
   background-color: #6D99EB;
-  margin-left: 49rem;
+  margin-left: 35rem;
   height: 30px;
   width: 150px;
   border-radius: 10px;
