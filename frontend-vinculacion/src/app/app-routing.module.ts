@@ -59,7 +59,7 @@ const routes: Routes = [
   { path: 'solicitud-certificado', component: SolicitudCertificadoComponent},
 
   { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent},
-  { path: 'lista-estudiantes-tutor', component: ListaEstudiantesTutorComponent},
+  { path: 'lista-estudiante-tutor', component: ListaEstudiantesTutorComponent},
   { path: 'portafolio-tutor', component: PortafolioTutorComponent},
 
   { path: 'estudiante', component: EstudianteComponent},
