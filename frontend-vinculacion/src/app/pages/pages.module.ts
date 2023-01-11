@@ -32,6 +32,17 @@ import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-for
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
+import { ActividadesComponent } from './pestanias/actividades/actividades.component';
+import { AnexosComponent } from './pestanias/anexos/anexos.component';
+import { BibliografiaComponent } from './pestanias/bibliografia/bibliografia.component';
+import { CertificadosComponent } from './pestanias/certificados/certificados.component';
+import { DatosGeneralesComponent } from './pestanias/datos-generales/datos-generales.component';
+import { DocumentosComponent } from './pestanias/documentos/documentos.component';
+import { EmpresaComponent } from './pestanias/empresa/empresa.component';
+import { FirmasComponent } from './pestanias/firmas/firmas.component';
+import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
+import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
+import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 
 
 
@@ -67,6 +78,17 @@ import { EncuestaComponent } from './encuesta/encuesta.component';
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
     EncuestaComponent,
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
     
 
 
