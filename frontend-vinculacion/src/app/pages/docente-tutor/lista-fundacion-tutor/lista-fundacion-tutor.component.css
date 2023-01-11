@@ -12,11 +12,21 @@
   color: white;
 }
 
-.container{
-  background-color: #19418B;
+.container2{
+  background-color: #3965B8;
   height: 500px;
   grid-auto-flow: auto;
-  margin: 10px;
+  border-radius: 10px;
+}
+
+.container{
+  background-color: #19418B;
+  height: 430px;
+  grid-auto-flow: auto;
+  border-radius: 10px;
+  border-color: white;
+
+
 }
 
 .iconbuscar{
@@ -44,6 +54,8 @@
   background-color: #6D99EB;
   border-radius: 10px;
   text-align: center;
+  margin-left: -12px;
+  width: 25.57cm;
 }
 
 .observar{
@@ -59,4 +71,3 @@
   width: 70px;
   height: 24px;
 }
-
