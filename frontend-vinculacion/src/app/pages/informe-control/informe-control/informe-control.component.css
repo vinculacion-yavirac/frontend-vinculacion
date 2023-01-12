@@ -1,0 +1,73 @@
+.bread{
+  width: 150rem;
+  margin-block-start: 8px;
+}
+
+.cuadro{
+  width: 64rem;
+  margin-block-start: 5px;
+}
+
+.leters{
+  color: white;
+}
+
+.container2{
+  background-color: #3965B8;
+  height: 500px;
+  grid-auto-flow: auto;
+  border-radius: 10px;
+}
+
+.container{
+  background-color: #19418B;
+  height: 430px;
+  grid-auto-flow: auto;
+  border-radius: 10px;
+  border-color: white;
+
+
+}
+
+.iconbuscar{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.buscar{
+  border-radius: 10px;
+  border-color: #6D99EB;
+}
+
+.periodo{
+  text-align: center;
+  background-color: #6D99EB;
+  margin-left: 34.3rem;
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
+  }
+
+.table{
+  background-color: #6D99EB;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: -12px;
+  width: 25.57cm;
+}
+
+.observar{
+  width: 40px;
+  height: 40px;
+}
+
+.pagination{
+  margin-left: 24rem;
+}
+
+.switch{
+  width: 70px;
+  height: 24px;
+}
