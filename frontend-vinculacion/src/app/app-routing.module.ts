@@ -30,7 +30,17 @@ import { SegundoFormularioInicialComponent } from './pages/informe-inicial/segun
 import { FormularioFinalTutorComponent } from './pages/docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './pages/estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './pages/encuesta/encuesta.component';
-
+import { ActividadesComponent } from './pages/pestanias/actividades/actividades.component';
+import { AnexosComponent } from './pages/pestanias/anexos/anexos.component';
+import { BibliografiaComponent } from './pages/pestanias/bibliografia/bibliografia.component';
+import { CertificadosComponent } from './pages/pestanias/certificados/certificados.component';
+import { DatosGeneralesComponent } from './pages/pestanias/datos-generales/datos-generales.component';
+import { DocumentosComponent } from './pages/pestanias/documentos/documentos.component';
+import { EmpresaComponent } from './pages/pestanias/empresa/empresa.component';
+import { FirmasComponent } from './pages/pestanias/firmas/firmas.component';
+import { IntegrantesComponent } from './pages/pestanias/integrantes/integrantes.component';
+import { ObservacionesComponent } from './pages/pestanias/observaciones/observaciones.component';
+import { PlanDeTrabajoComponent } from './pages/pestanias/plan-de-trabajo/plan-de-trabajo.component';
 
 const routes: Routes = [
   {
@@ -76,6 +86,18 @@ const routes: Routes = [
   { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent},
 
   { path: 'encuesta', component: EncuestaComponent},
+
+  { path: 'actividades', component: ActividadesComponent},
+  { path: 'anexos', component: AnexosComponent},
+  { path: 'bibliografia', component: BibliografiaComponent},
+  { path: 'certificados', component: CertificadosComponent},
+  { path: 'datos-generales', component: DatosGeneralesComponent},
+  { path: 'documentos', component: DocumentosComponent},
+  { path: 'empresa', component: EmpresaComponent},
+  { path: 'firmas', component: FirmasComponent},
+  { path: 'integrantes', component: IntegrantesComponent},
+  { path: 'observaciones', component: ObservacionesComponent},
+  { path: 'plan-de-trabajo', component: PlanDeTrabajoComponent},
 
   { path: '**', component: NopagesfoundComponent },
   { path: '', redirectTo: '/desboard', pathMatch: 'full' },

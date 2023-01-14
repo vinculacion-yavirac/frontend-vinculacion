@@ -89,9 +89,6 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
-    
-
-
 
   ],
   exports:[
@@ -124,7 +121,19 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     PrimerFormularioInicialComponent,
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
-    InformeFinalEstudianteComponent
+    InformeFinalEstudianteComponent,
+
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
 
   ],
   imports: [
