@@ -1,10 +1,16 @@
-<div id="main-wrapper">
+<div class=".container-fluid">
     <app-header></app-header>
-    <app-sidebar></app-sidebar>
-    <br>
-    <div class="page-wrapper">
-        <div class="container-fluid">
-            <div class="row">
+</div>
+<div class=".container-fluid navbar-expand-md ">
+    <div class="flex-colum flex-md-row">
+        <app-sidebar></app-sidebar>
+    </div>
+</div>
+<br>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="bread col-12">
                 <div class="col-9" style="margin-left: 18rem; margin-block-start: -17rem;">
                     <div class="card">
                         <div class="card-body">
@@ -13,34 +19,29 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-9" style="margin-left: 18rem; margin-block-start: -12rem;">
-                    <div class="card">
-                        <div class="card-body">
+        </div>
+        <div class="row">
+            <div class="cuadro col-9" style="margin-left: 18rem; margin-block-start: -12rem;">
+                <div class="card container">
 
-                            <H2>Solicitud</H2>
+                    <div class="card-body">
+                        <H2>Solicitud</H2>
+                        <select class="periodo" name="" id="">
+                            <option value="">Periodo Lectivo</option>
+                            <option value="">2023-1</option>
+                            <option value="">2022-1</option>
+                            <option value="">2022-2</option>
+                        </select>
 
-                            <br>
-                            <div class="color">
-                                <div class="input_search"
-                                    style="margin-left: 675px;background-color: #6D99EB;height: 40px;width: 189px;border-radius: 10px;">
-                                    <input type="search" placeholder="Buscar"
-                                        style="border-radius: 10px;margin-top: 5px;border-color: #6D99EB;">
-                                    <select name="" id=""
-                                        style="background-color:#6D99EB;margin-left: -260px;height: 40px;width: 70px;border-radius: 10px;">
-                                        <p>HOLA</p>
-                                        <option value="">Tipo</option>
-                                        <option value="">Tipo</option>
-                                        <option value="">Tipo</option>
-                                    </select>
-                                </div>
-                            </div>
+                        <img class="iconbuscar" src="../../../../assets/image/buscar.png" alt="">
 
+                        <input class="buscar" type="search" placeholder="      Buscar Estudiante">
 
-                            <div class="container">
-                              <br>
-
-                                <table class="table table-hover" style="background-color: #6D99EB;border-radius: 10px;">
+                        <div class="containerSkyBlue container-fuild gap-2 col-12 flex-md-row">
+                            <div class="containerBlue ">
+                                <br>
+                                <table
+                                    class="table table-hover container-fuild gap-1 col-sm  flex-md-row containerSky">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -52,43 +53,48 @@
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="leters">
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
+                                            <td>Certificado</td>
+                                            <td>Steveen Ordoñez</td>
+                                            <td>1755516802</td>
+                                            <td>17-1-2023</td>
+                                            <td>Pendiente</td>
+                                            <td>
+                                                <div class="d-grid gap-2 col-11 mx-auto">
+                                                    <button class="" type="button">Portafolio</button>
+                                                    <button class="" type="button">Proyecto</button>
+                                                </div>
                                     </tbody>
                                 </table>
+
                             </div>
-
-
+                            <nav aria-label="page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <app-footer></app-footer> -->
 </div>
+<!-- <app-footer></app-footer> -->
