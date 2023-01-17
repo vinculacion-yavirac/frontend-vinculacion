@@ -10,23 +10,29 @@
 
 .leters{
   color: white;
+  text-align: center;
+  grid-auto-flow: column;
 }
 
-.container2{
+.containerSkyBlue{
   background-color: #3965B8;
-  height: 500px;
+  height: 29.2em;
+  margin-left: auto;
+  margin-right: auto;
   grid-auto-flow: auto;
   border-radius: 10px;
+  margin-top: 1em;
 }
 
-.container{
+.containerBlue{
   background-color: #19418B;
-  height: 430px;
+  height: 26.8em;
+  margin-top: 1em;
+  left: auto;
   grid-auto-flow: auto;
+  display: block;
   border-radius: 10px;
   border-color: white;
-
-
 }
 
 .iconbuscar{
@@ -54,9 +60,9 @@
   background-color: #6D99EB;
   border-radius: 10px;
   text-align: center;
-  margin-left: -12px;
-  width: 24cm;
-  grid-area: auto;
+  margin-left: 8px;
+  width: 24.5cm;
+  grid-auto-flow: auto;
 }
 
 .observar{
