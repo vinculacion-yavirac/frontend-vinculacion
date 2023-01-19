@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { MainComponent } from './main/main.component';
+import { CommonModule } from '@angular/common';
+import { PagesRoutingModule } from '../pages/pages-routing.module';
+import { SharedRoutingModule } from './shared-routing.module';
 
 
 
@@ -10,14 +14,17 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     HeaderComponent,
     SidebarComponent,
     BreadcrumbsComponent,
+    MainComponent,
   ],
   exports:[
     HeaderComponent,
     SidebarComponent,
     BreadcrumbsComponent,
+    MainComponent,
   ],
   imports:[
-
+    CommonModule,
+    SharedRoutingModule,
   ]
 
 })

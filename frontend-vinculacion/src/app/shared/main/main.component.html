@@ -1,0 +1,30 @@
+<div id="main-wrapper">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <div class="page-wrapper">
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+              <div class="col-auto col-12 col-sm-12 px-sm-5 col-md-10 px-md-6 col-sm-12 offset-md-2 px-12 pt-1">
+                  <div class="card">
+                      <div class="card-body">
+                          <app-breadcrumbs></app-breadcrumbs>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center pt-1" >
+              <div class="col-auto col-12 col-sm-12 px-sm-5 col-md-10 px-md-6 col-xl-10 px-xl-6 col-lg-10 px-lg-10 offset-md-2 px-12">
+                  <div class="card">
+                      <div class="card-body">
+                        <router-outlet></router-outlet>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- style="margin-left: 18rem; margin-block-start: -17rem;" -->
