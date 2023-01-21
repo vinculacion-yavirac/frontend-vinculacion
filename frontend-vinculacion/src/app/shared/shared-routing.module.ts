@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PagesComponent } from '../pages/pages.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NopagesfoundComponent } from '../nopagesfound/nopagesfound.component';
 import { AgregarRolComponent } from '../pages/coordinador-carrera/agregar-rol/agregar-rol.component';
 import { ListaEstudiantesComponent } from '../pages/coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
 import { ListaPortafoliosComponent } from '../pages/coordinador-carrera/lista-portafolios/lista-portafolios.component';
