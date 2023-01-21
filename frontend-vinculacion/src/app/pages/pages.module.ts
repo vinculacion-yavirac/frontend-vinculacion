@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { SolicitudVinculacionComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
 import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
@@ -51,7 +50,6 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
 @NgModule({
   declarations: [
     AsignarFundacionVinculacionComponent,
-    SolicitudVinculacionComponent,
     PortafolioVinculacionComponent,
     ProyectoVinculacionComponent,
     ConfiguracionVinculacionComponent,
@@ -97,8 +95,6 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
     ProyectoVinculacionComponent,
-    SolicitudVinculacionComponent,
-
     AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
