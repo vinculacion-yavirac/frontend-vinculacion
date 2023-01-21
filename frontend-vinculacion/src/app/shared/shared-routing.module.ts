@@ -19,7 +19,6 @@ import { AsignarFundacionVinculacionComponent } from '../pages/docente-vinculaci
 import { ConfiguracionVinculacionComponent } from '../pages/docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { PortafolioVinculacionComponent } from '../pages/docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { ProyectoVinculacionComponent } from '../pages/docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
-import { SolicitudVinculacionComponent } from '../pages/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
 import { EncuestaComponent } from '../pages/encuesta/encuesta.component';
 import { EstudiantePortafolioComponent } from '../pages/estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { EstudianteComponent } from '../pages/estudiante/estudiante/estudiante.component';

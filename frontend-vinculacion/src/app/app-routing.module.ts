@@ -9,8 +9,6 @@ const routes: Routes= [
   {path: 'pages', loadChildren:() => import('./pages/pages.module').then(m => m.PagesModule)},
   {path: 'shared', loadChildren:() => import('./shared/shared.module').then(m => m.SharedModule)},
   { path: '**', component: NopagesfoundComponent },
-  // { path: '', redirectTo: '/desboard', pathMatch: 'full' },
-  // {path: '/dasboard', component:DesboardComponent},
 ]
 
 

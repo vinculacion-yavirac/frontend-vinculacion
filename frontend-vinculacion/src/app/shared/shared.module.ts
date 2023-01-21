@@ -4,10 +4,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { MainComponent } from './main/main.component';
 import { CommonModule } from '@angular/common';
-import { PagesRoutingModule } from '../pages/pages-routing.module';
 import { SharedRoutingModule } from './shared-routing.module';
-
-
 
 @NgModule({
   declarations: [
