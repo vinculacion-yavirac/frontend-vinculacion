@@ -20,16 +20,11 @@
 }
 
 .nombre{
-  color: white;
-  margin-top: 15px;
-  margin-left: 21cm;
-  line-height: 5px;
+  margin-top: -2.5em;
 }
 
 .carrera{
-  color: white;
-  margin-top: 15px;
-  margin-left: 20cm;
+  margin-top: -4em;
 }
 
 .cargo{

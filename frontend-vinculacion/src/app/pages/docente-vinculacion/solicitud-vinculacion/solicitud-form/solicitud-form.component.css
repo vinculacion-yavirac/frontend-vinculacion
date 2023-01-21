@@ -1,3 +1,24 @@
+/* .containerBlue{
+  background-color: #3965B8;
+  height: 29.2em;
+  margin-left: auto;
+  margin-right: auto;
+  grid-auto-flow: auto;
+  border-radius: 0px;
+  margin-top: 1em;
+}
+
+.containerBlue{
+  background-color: #19418B;
+  height: 26.8em;
+  margin-top: 1em;
+  left: auto;
+  grid-auto-flow: auto;
+  display: block;
+  border-radius: 10px;
+  border-color: white;
+} */
+
 .bread{
   width: 150rem;
   margin-block-start: 8px;
@@ -59,9 +80,9 @@
 .table{
   background-color: #6D99EB;
   border-radius: 10px;
-  text-align: center;
-  margin-left: 8px;
-  width: 24.5cm;
+  /* text-align: center; */
+  /* margin-left: 8px;
+  width: 24.5cm; */
   grid-auto-flow: auto;
 }
 

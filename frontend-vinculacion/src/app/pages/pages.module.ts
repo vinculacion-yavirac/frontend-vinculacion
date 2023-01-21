@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { SolicitudVinculacionComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion.component';
 import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
@@ -17,12 +16,10 @@ import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafoli
 import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
-import { DesboardComponent } from './desboard/desboard.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
-import { PagesComponent } from './pages.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
@@ -43,13 +40,16 @@ import { FirmasComponent } from './pestanias/firmas/firmas.component';
 import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
+import { PagesRoutingModule } from './pages-routing.module';
+import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 
 
 
 @NgModule({
   declarations: [
     AsignarFundacionVinculacionComponent,
-    SolicitudVinculacionComponent,
     PortafolioVinculacionComponent,
     ProyectoVinculacionComponent,
     ConfiguracionVinculacionComponent,
@@ -63,10 +63,8 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     RellenarDatosComponent,
     EstudianteComponent,
     EstudiantePortafolioComponent,
-    DesboardComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
-    PagesComponent,
     ListaEstudiantesGeneralComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
@@ -89,18 +87,14 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
-    
-
-
-
+    DashboardComponent,
+    SolicitudFormComponent,
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
     ProyectoVinculacionComponent,
-    SolicitudVinculacionComponent,
-
     AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
@@ -118,7 +112,6 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
-    DesboardComponent,
 
     InformeInicialComponent,
     PrimerFormularioInicialComponent,
@@ -129,6 +122,8 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
   ],
   imports: [
     CommonModule,
+    PagesRoutingModule,
+    FormsModule,
     HttpClientModule,
     RouterModule,
     SharedModule,
