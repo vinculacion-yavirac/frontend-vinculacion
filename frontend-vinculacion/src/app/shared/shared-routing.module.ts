@@ -32,47 +32,47 @@ import { SolicitudFormComponent } from '../pages/docente-vinculacion/solicitud-v
 
 
 const routes: Routes = [
-  {path: '', component:MainComponent ,
-  children: [
+  {
+    path: '', component: MainComponent,
+    children: [
+      { path: 'dashborad', component: DashboardComponent },
+      { path: 'solicitud', component: SolicitudFormComponent },
+      { path: 'asignar-fundacion', component: AsignarFundacionVinculacionComponent },
+      { path: 'configuraciones', component: ConfiguracionVinculacionComponent },
+      { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
+      { path: 'proyecto', component: ProyectoVinculacionComponent },
 
-  {path: '', component:DashboardComponent},
-  { path: 'solicitud', component: SolicitudFormComponent },
-  { path: 'asignar-fundacion', component: AsignarFundacionVinculacionComponent },
-  { path: 'configuraciones', component: ConfiguracionVinculacionComponent},
-  { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent},
-  { path: 'proyecto', component: ProyectoVinculacionComponent},
 
+      { path: 'agregar-rol', component: AgregarRolComponent },
+      { path: 'lista-estudiantes', component: ListaEstudiantesComponent },
+      { path: 'lista-portafolios', component: ListaPortafoliosComponent },
+      { path: 'redireccionar', component: RedireccionarComponent },
+      { path: 'rellenar-datos', component: RellenarDatosComponent },
 
-  { path: 'agregar-rol', component: AgregarRolComponent},
-  { path: 'lista-estudiantes', component: ListaEstudiantesComponent},
-  { path: 'lista-portafolios', component: ListaPortafoliosComponent},
-  { path: 'redireccionar', component: RedireccionarComponent},
-  { path: 'rellenar-datos', component: RellenarDatosComponent},
+      { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },
+      { path: 'portafolio', component: PortafolioComponent },
+      { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
 
-  { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent},
-  { path: 'portafolio', component: PortafolioComponent},
-  { path: 'solicitud-certificado', component: SolicitudCertificadoComponent},
+      { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent },
+      { path: 'lista-estudiante-tutor', component: ListaEstudiantesTutorComponent },
+      { path: 'portafolio-tutor', component: PortafolioTutorComponent },
 
-  { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent},
-  { path: 'lista-estudiante-tutor', component: ListaEstudiantesTutorComponent},
-  { path: 'portafolio-tutor', component: PortafolioTutorComponent},
+      { path: 'estudiante', component: EstudianteComponent },
+      { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent },
 
-  { path: 'estudiante', component: EstudianteComponent},
-  { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent},
+      { path: 'avance-cumplimiento', component: AvanceCumplimientoComponent },
+      { path: 'informe-control', component: InformeControlComponent },
+      { path: 'observacion-avance', component: ObservacionAvanceComponent },
 
-  { path: 'avance-cumplimiento', component: AvanceCumplimientoComponent},
-  { path: 'informe-control', component: InformeControlComponent},
-  { path: 'observacion-avance', component: ObservacionAvanceComponent},
+      { path: 'informe-inicial', component: InformeInicialComponent },
+      { path: 'primer-formulario-inicial', component: PrimerFormularioInicialComponent },
+      { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent },
+      { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent },
+      { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent },
 
-  { path: 'informe-inicial', component: InformeInicialComponent},
-  { path: 'primer-formulario-inicial', component: PrimerFormularioInicialComponent},
-  { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent},
-  { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent},
-  { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent},
-
-  { path: 'encuesta', component: EncuestaComponent},
-  ]
-}
+      { path: 'encuesta', component: EncuestaComponent },
+    ]
+  }
 ];
 
 
