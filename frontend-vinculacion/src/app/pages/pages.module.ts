@@ -117,7 +117,19 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
     PrimerFormularioInicialComponent,
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
-    InformeFinalEstudianteComponent
+    InformeFinalEstudianteComponent,
+
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
 
   ],
   imports: [
