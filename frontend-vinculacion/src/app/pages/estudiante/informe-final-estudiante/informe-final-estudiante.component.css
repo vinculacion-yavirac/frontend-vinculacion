@@ -2,62 +2,104 @@
     background-color: #19418B;
     height: 500px;
   } */
-  .container1{
-	position: fixed;
- }
- .container2{
-	width:500px;
-	padding: 10px;
-	border-radius: 50p;
-	
- }
-
- /*formulario informe final*/
-
- .myForm > * {
-  font: 1.4em; 
- }
- .myForm {
-   display: grid;
-   grid-template-columns: [labels] auto [controls] 1fr;
-   grid-auto-flow: row;
-   grid-gap: .8em .5em;
-   background: #19418B;
-   padding: 1.2em;
-   width: 40em;
-   color: #fff;
- }
- .myForm > label,
- .myForm > fieldset  {
-   grid-column: labels;
-   grid-row: auto;
-   font-size: medium;
- }
- .myForm > input, 
- .myForm > select,
- .myForm > textarea,
- .myForm > button {
-   grid-column: controls;
-   grid-row: auto;
-   padding: .2em;
-   border: 50;
- }
- .myForm > fieldset {
-   grid-column: span 2;
- }  
- .myForm > button {
-   background: #023f0c;
-   color: white;
-   left: 50px;
+  .container2{
+    width:750px;
+    height: 300px;
+    background: #19418B;
+    border-radius: 30px 0px 38px;
+    box-shadow: -4px 0px 6px rgb(47, 47, 47);
+    padding: 20px;
+    border-radius: 0.5p;
+    overflow-y: auto;
+    margin: 5px;
    }
- .myForm > textarea {
-   min-height: 3em;
+  
+   /*formulario informe final*/
+  
+   .myForm {
+     display: grid;
+     grid-template-columns: [labels] auto [controls] 1fr;
+     grid-auto-flow: row;
+     grid-gap: .8em .5em;
+     background: #19418B;
+     padding: 1.2em;
+     width: 40em;
+     color: #fff;
+     border-radius: 2%;
+     scroll-behavior: auto;
    }
- .h5{
-  padding:1px;
-  /* position: fixed; */
-  left: 500px;
-  background-color: dimgrey;
-  margin: auto;
-  width: 32em;
- }
+   .myForm > input {
+     grid-column: controls;
+     grid-row: auto;
+     padding: .2em;
+     border: 50px;
+   }
+   .button {
+     text-align: center;
+     margin: 10px;
+     }
+   .myForm > textarea {
+     min-height: 3em;
+     }
+   .h5{
+    padding:1px;
+    background-color: transparent;
+    margin: auto;
+    width: 32em;
+    justify-content: center;
+    border-radius: 5%;
+    text-align: center;
+   }
+   
+   /*tabla de objetivos y actividades*/
+   
+   .container-tabla-oa{
+    width:740px;
+    height: 300px;
+    background: #19418B;
+    border-radius: 30px 0px 38px;
+    box-shadow: -4px 0px 6px rgb(47, 47, 47);
+    padding: 20px;
+    border-radius: 50p;
+    overflow-y: auto;
+    margin: 5px;
+   }
+   table{
+    color:#fff;
+    font: zice 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+   }
+   thead{
+    background: dimgray;
+   }
+   th{
+    padding: 10px;
+    font-weight: 780;
+    text-transform: uppercase;
+    text-align:center;
+   }
+   td{
+    padding: 0.2px;
+    border-bottom: solid 1px rgb(232, 57, 13);
+    text-align:center;
+   }
+  tbody tr:hover{
+    background: #19418B;
+  }
+  
+  /*formulario y tabla*/
+  .formulario-tabla{
+    display: flex;
+  }
+  
+  .tabla2{
+    width:1355px;
+    height: 120px;
+    background: #19418B;
+    box-shadow: -4px 0px 6px rgb(4, 57, 170);
+    padding: 2px;
+    display: flex;
+    border: 10cm;
+    margin: 5px;
+  }
