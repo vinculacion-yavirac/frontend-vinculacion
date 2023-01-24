@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
 import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
@@ -45,18 +44,19 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
 import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
+import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
 
 
 @NgModule({
   declarations: [
     //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
-    ConfiguracionVinculacionComponent,
     SolicitudFormComponent,
     SolicitudSearchComponent,
     ProyectoFormComponent,
     AsignarFundacionFormComponent,
-
+    ConfiguracionVinculacionFormComponent,
+    
     //Docente Tutor-Portafolio
     PortafolioTutorComponent,
     ListaEstudiantesTutorComponent,
@@ -96,7 +96,6 @@ import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fun
   ],
   exports:[
     //Docente Vinculacion-Portafolio
-    ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
 
     AgregarRolComponent,
