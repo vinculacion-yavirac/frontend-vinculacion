@@ -14,7 +14,6 @@ import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-
 import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
-import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
@@ -29,6 +28,7 @@ import { InformeInicialComponent } from './informe-inicial/informe-inicial/infor
 import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
 import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
+import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 
 const routes: Routes = [
   {
@@ -36,7 +36,7 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'solicitud', component: SolicitudFormComponent },
-      { path: 'asignar-fundacion', component: AsignarFundacionVinculacionComponent },
+      { path: 'asignar-fundacion', component: AsignarFundacionFormComponent },
       { path: 'configuraciones', component: ConfiguracionVinculacionComponent },
       { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
       { path: 'proyecto', component: ProyectoFormComponent},
