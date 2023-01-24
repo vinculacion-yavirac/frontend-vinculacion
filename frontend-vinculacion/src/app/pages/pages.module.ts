@@ -46,6 +46,7 @@ import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacio
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
 import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
+import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculac
     ProyectoFormComponent,
     ProyectoSearchComponent,
     AsignarFundacionFormComponent,
+    AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
     
     //Docente Tutor-Portafolio
