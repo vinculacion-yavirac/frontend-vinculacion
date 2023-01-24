@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
@@ -45,15 +44,21 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
+import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 
 
 
 @NgModule({
   declarations: [
+    //Docente Vinculacion-Portafolio
     AsignarFundacionVinculacionComponent,
     PortafolioVinculacionComponent,
-    ProyectoVinculacionComponent,
     ConfiguracionVinculacionComponent,
+    SolicitudFormComponent,
+    SolicitudSearchComponent,
+    ProyectoFormComponent,
+    
+    //Docente Tutor-Portafolio
     PortafolioTutorComponent,
     ListaEstudiantesTutorComponent,
     ListaFundacionTutorComponent,
@@ -89,14 +94,13 @@ import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vincul
     ObservacionesComponent,
     PlanDeTrabajoComponent,
     DashboardComponent,
-    SolicitudFormComponent,
-    SolicitudSearchComponent,
   ],
   exports:[
+    //Docente Vinculacion-Portafolio
     AsignarFundacionVinculacionComponent,
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
-    ProyectoVinculacionComponent,
+
     AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
