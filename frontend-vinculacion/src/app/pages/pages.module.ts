@@ -44,6 +44,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
+import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
 
 
 
@@ -89,6 +90,7 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
     PlanDeTrabajoComponent,
     DashboardComponent,
     SolicitudFormComponent,
+    SolicitudSearchComponent,
   ],
   exports:[
     AsignarFundacionVinculacionComponent,
