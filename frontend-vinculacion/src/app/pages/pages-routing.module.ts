@@ -17,7 +17,6 @@ import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/porta
 import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
@@ -29,6 +28,7 @@ import { ObservacionAvanceComponent } from './informe-control/observacion-avance
 import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
 import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
 import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
+import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 
 const routes: Routes = [
   {
@@ -39,7 +39,7 @@ const routes: Routes = [
       { path: 'asignar-fundacion', component: AsignarFundacionVinculacionComponent },
       { path: 'configuraciones', component: ConfiguracionVinculacionComponent },
       { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
-      { path: 'proyecto', component: ProyectoVinculacionComponent },
+      { path: 'proyecto', component: ProyectoFormComponent},
 
 
       { path: 'agregar-rol', component: AgregarRolComponent },
