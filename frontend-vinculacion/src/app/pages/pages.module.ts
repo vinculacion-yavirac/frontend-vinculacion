@@ -4,7 +4,6 @@ import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
-import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
 import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
@@ -45,19 +44,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
-
+import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 
 
 @NgModule({
   declarations: [
     //Docente Vinculacion-Portafolio
-    AsignarFundacionVinculacionComponent,
     PortafolioVinculacionComponent,
     ConfiguracionVinculacionComponent,
     SolicitudFormComponent,
     SolicitudSearchComponent,
     ProyectoFormComponent,
-    
+    AsignarFundacionFormComponent,
+
     //Docente Tutor-Portafolio
     PortafolioTutorComponent,
     ListaEstudiantesTutorComponent,
@@ -97,7 +96,6 @@ import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacio
   ],
   exports:[
     //Docente Vinculacion-Portafolio
-    AsignarFundacionVinculacionComponent,
     ConfiguracionVinculacionComponent,
     PortafolioVinculacionComponent,
 
