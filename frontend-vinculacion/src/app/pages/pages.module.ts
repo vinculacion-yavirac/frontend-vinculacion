@@ -45,6 +45,7 @@ import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vincul
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
+import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/con
     SolicitudFormComponent,
     SolicitudSearchComponent,
     ProyectoFormComponent,
+    ProyectoSearchComponent,
     AsignarFundacionFormComponent,
     ConfiguracionVinculacionFormComponent,
     
