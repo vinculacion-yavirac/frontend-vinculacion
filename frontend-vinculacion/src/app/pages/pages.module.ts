@@ -4,8 +4,6 @@ import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
-import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
-
 import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
 import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
 import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
@@ -48,8 +46,13 @@ import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/con
 import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
 import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
 import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
+
 import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
 import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-buscar/lista-fundacion-tutor-buscar.component';
+
+import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
+import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
+
 
 
 @NgModule({
@@ -67,8 +70,6 @@ import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundac
 
     //Docente Tutor-Portafolio
     PortafolioTutorComponent,
-    ListaEstudiantesTutorComponent,
-
     AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
@@ -101,8 +102,13 @@ import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundac
     ObservacionesComponent,
     PlanDeTrabajoComponent,
     DashboardComponent,
+
     ListaFundacionTutorFromComponent,
     ListaFundacionTutorBuscarComponent,
+
+    ListaEstudianteTutorFormComponent,
+    ListaEstudianteTutorBuscarComponent,
+
   ],
   exports:[
     //Docente Vinculacion-Portafolio
@@ -119,9 +125,14 @@ import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundac
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
 
+
     //Docente Tutor-Portafolio
     ListaFundacionTutorFromComponent,
-    ListaEstudiantesTutorComponent,
+
+
+
+    ListaEstudianteTutorFormComponent,
+
     PortafolioTutorComponent,
 
     EstudianteComponent,
