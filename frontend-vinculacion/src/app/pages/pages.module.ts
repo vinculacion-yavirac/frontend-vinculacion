@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
+
 import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
 import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
 import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
@@ -48,6 +48,9 @@ import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/con
 import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
 import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
 import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
+import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
+import { PortafolioTutorEstudianteComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-estudiante/portafolio-tutor-estudiante.component';
+import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-tutor/portafolio-tutor-tutor.component';
 
 
 @NgModule({
@@ -62,9 +65,9 @@ import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/c
     AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
     ConfiguracionVinculacionSearchComponent,
-    
+
     //Docente Tutor-Portafolio
-    PortafolioTutorComponent,
+
     ListaEstudiantesTutorComponent,
     ListaFundacionTutorComponent,
     AgregarRolComponent,
@@ -99,6 +102,9 @@ import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/c
     ObservacionesComponent,
     PlanDeTrabajoComponent,
     DashboardComponent,
+    PortafolioTutorFormularioComponent,
+    PortafolioTutorEstudianteComponent,
+    PortafolioTutorTutorComponent,
   ],
   exports:[
     //Docente Vinculacion-Portafolio
@@ -117,7 +123,7 @@ import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/c
 
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
-    PortafolioTutorComponent,
+
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
