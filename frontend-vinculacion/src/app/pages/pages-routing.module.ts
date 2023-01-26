@@ -11,9 +11,6 @@ import { PortafolioComponent } from './coordinador-general/portafolio/portafolio
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
-
-import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
-
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -29,9 +26,8 @@ import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-for
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
-
 import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
-
+import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 
 
@@ -56,14 +52,11 @@ const routes: Routes = [
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },
       { path: 'portafolio', component: PortafolioComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
-
-      { path: 'lista-fundacion-tutor', component: ListaFundacionTutorComponent },
-
       
       { path: 'portafolio-tutor', component: PortafolioTutorFormularioComponent },
-
+      { path: 'lista-fundacion-tutor', component: ListaFundacionTutorFromComponent },
       { path: 'lista-estudiante-tutor', component: ListaEstudianteTutorFormComponent },
-      
+
 
 
       { path: 'estudiante', component: EstudianteComponent },
