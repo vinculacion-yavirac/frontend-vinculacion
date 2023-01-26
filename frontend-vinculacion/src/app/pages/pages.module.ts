@@ -123,7 +123,7 @@ import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/
 
     ListaFundacionTutorComponent,
     ListaEstudiantesTutorComponent,
-
+    PortafolioTutorFormularioComponent,
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
