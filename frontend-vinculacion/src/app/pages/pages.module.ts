@@ -154,7 +154,19 @@ import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estud
     PrimerFormularioInicialComponent,
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
-    InformeFinalEstudianteComponent
+    InformeFinalEstudianteComponent,
+
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
 
   ],
   imports: [
