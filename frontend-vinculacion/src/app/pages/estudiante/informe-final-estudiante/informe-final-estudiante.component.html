@@ -8,132 +8,127 @@
     <link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
   </head>
   <body>
-    <div class="container1">
-      <!-- <app-header></app-header> -->
+<form class="form2">
+    <div class="h5">
+      <h5>FORMULARIO DE INFORME FINAL</h5>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container2">
-      <div class="h5">
-        <h5>FORLULARIO DE INFORME FINAL</h5>
+    <div class="tabla2">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Proyecto</th>
+            <th>Nombre de la entidad beneficiaria</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Tutor de la entidad de vinculacion</th>
+            <th>Tutor del proyecto</th>
+            <th>Fecha de Inicio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vinculacion con la Sociedad</td>
+            <td>Instituto Tecnologico Yavirac</td>
+            <td>yavirac.edu.ec</td>
+            <td>0999319213</td>
+            <td>Garcia Moreno</td>
+            <td>Yogledis Herrera</td>
+            <td>Yogledis Herrera</td>
+            <td>12-12-2022</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="formulario-tabla">
+      <div class="container-tabla-oa">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>OBJETIVOS</th>
+              <th>ACTIVIDADES</th>
+              <th>AVANCE</th>
+              <th>RESULTADOS ALCANZADOS</th>
+              <th>ALCANCE</th>
+              <th>OBSERVACIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Crear un sistema funcional y proactivo</td>
+              <td>trabajar 8 horas diarias y enviar informe diario</td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Crear un sistema funcional y proactivo</td>
+              <td>trabajar 8 horas diarias y enviar informe diario</td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Crear un sistema funcional y proactivo</td>
+              <td>trabajar 8 horas diarias y enviar informe diario</td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Crear un sistema funcional y proactivo</td>
+              <td>trabajar 8 horas diarias y enviar informe diario</td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Crear un sistema funcional y proactivo</td>
+              <td>trabajar 8 horas diarias y enviar informe diario</td>
+              <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+              <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <form class="myForm">
-        <h2>DATOS DE LA ENTIDAD BENEFICIARIA</h2>
-        <label for="customer_name">Nombre del Proyecto </label>
-        <input type="text" name="customer_name" id="customer_name" required>
-      
-        <label for="phone_number">Nombre de la entidad beneficiaria </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Direccion </label>
-        <input type="email" name="email_address" id="email_address">
+      <div class="container2">
+        <form class="myForm">
+          <label for="pickup_time">Fecha de Finalizacion del Proyecto</label>
+          <input type="datetime-local" name="pickup_time" id="pickup_time" required>
 
-        <label for="phone_number">Tutor de la entidad de vinculacion </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Tutor del proyecto </label>
-        <input type="email" name="email_address" id="email_address">
+          <label for="comments">Comentarios del tutor del proyecto</label>
+          <textarea name="comments" id="comments" maxlength="500" disabled ></textarea>
+  
+          <label for="email_address">Adjuntar Archivos </label>
+          <input type="file" name="email_address" id="email_address" required>
 
-        <label for="pickup_time">Fecha de Inicio</label>
-        <input type="datetime-local" name="pickup_time" id="pickup_time" required>
+          <label for="email_address">Adjuntar Archivos </label>
+          <input type="file" name="email_address" id="email_address" required>
 
-        <label for="pickup_time">Fecha de Finalizacion</label>
-        <input type="datetime-local" name="pickup_time" id="pickup_time" required>
-
-        <label for="phone_number">Telefono</label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Correo Electronico </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Phone </label>
-        <input type="tel" name="phone_number" id="phone_number">
-        
-        <h2>AVANCE</h2>
-      
-        <label for="email_address">Avance 1 </label>
-        <input type="email" name="email_address" id="email_address">
-      
-        <label for="email_address">Avance 2 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Avance 3 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Avance 4 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Avance 5 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-
-        <h2>RESULTADOS ALCANZADOS</h2>
-      
-        <label for="email_address">Resultados Alcanzados 1 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Resultados Alcanzados 2 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Resultados Alcanzados 3 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Resultados Alcanzados 4 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Resultados Alcanzados 5 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <h2>ALCANCE</h2>
-      
-        <label for="email_address">Alcance 1 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Alcance 2 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Alcance 3 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Alcance 4 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Alcance 5 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <h2>OBSERVACIONES</h2>
-      
-        <label for="email_address">Observacones 1 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="phone_number">Observacones 2 </label>
-        <input type="tel" name="phone_number" id="phone_number">
-      
-        <label for="email_address">Observacones 3 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="email_address">Observacones 4 </label>
-
-        <input type="email" name="email_address" id="email_address">
-
-        <label for="email_address">Observacones 5 </label>
-        <input type="email" name="email_address" id="email_address">
-
-        <h2>COMENTARIOS, A. ADJUNTOS, OBSERVACIONES Y FIRMAS</h2>
-      
-        <label for="comments">Comentarios del tutor del proyecto</label>
-        <textarea name="comments" id="comments" maxlength="500"></textarea>
-
-        <label for="email_address">Adjuntar Archivos </label>
-        <input type="file" name="email_address" id="email_address">
-
-        <label for="comments">Observaciones</label>
-        <textarea name="comments" id="comments" maxlength="500"></textarea>
-      
-        <button>Generar PDF</button>
-      
-      </form>
+          <label for="email_address">Adjuntar Archivos </label>
+          <input type="file" name="email_address" id="email_address" required>
+  
+          <label for="comments">Observaciones</label>
+          <textarea name="comments" id="comments" maxlength="500" disabled></textarea>
+        </form>
+      </div>
     </div>
+    <div class="button">
+      <button class="btn btn-primary">Enviar Formulario</button>
+    </div>
+</form>
   </body>
 </html>
