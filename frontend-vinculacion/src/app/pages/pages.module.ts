@@ -51,13 +51,11 @@ import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundac
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
-import { RedireccionarBotonUnoComponent } from './coordinador-carrera/redireccionar/redireccionar-boton-uno/redireccionar-boton-uno.component';
-import { RedireccionarBotonDosComponent } from './coordinador-carrera/redireccionar/redireccionar-boton-dos/redireccionar-boton-dos.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
-import { AgregarRolBotonComponent } from './coordinador-carrera/agregar-rol/agregar-rol-boton/agregar-rol-boton.component';
+import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agregar-rol-search/agregar-rol-search.component';
 
 
 
@@ -117,10 +115,8 @@ import { AgregarRolBotonComponent } from './coordinador-carrera/agregar-rol/agre
     ListaEstudianteTutorFormComponent,
     ListaEstudianteTutorBuscarComponent,
     RedireccionarPrincipalComponent,
-    RedireccionarBotonUnoComponent,
-    RedireccionarBotonDosComponent,
     AgregarRolAddComponent,
-    AgregarRolBotonComponent,
+    AgregarRolSearchComponent,
 
   ],
   exports:[
