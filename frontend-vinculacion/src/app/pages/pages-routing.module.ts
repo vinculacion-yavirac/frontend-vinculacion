@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
-import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
 import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
-import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
@@ -29,6 +27,8 @@ import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacio
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
+import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
+import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 
 
 const routes: Routes = [
@@ -44,10 +44,10 @@ const routes: Routes = [
 
 
       { path: 'agregar-rol', component: AgregarRolAddComponent },
-      { path: 'lista-estudiantes', component: ListaEstudiantesComponent },
+      { path: 'lista-estudiantes', component: ListaEstudiantesFormComponent},
       { path: 'lista-portafolios', component: ListaPortafoliosComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
-      { path: 'rellenar-datos', component: RellenarDatosComponent },
+      { path: 'rellenar-datos', component: RellenarDatosFormComponent },
 
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },
       { path: 'portafolio', component: PortafolioComponent },

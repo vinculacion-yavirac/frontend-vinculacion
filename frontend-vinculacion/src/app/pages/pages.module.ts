@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
-import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
 import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
@@ -56,6 +54,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agregar-rol-search/agregar-rol-search.component';
+import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
+import { ListaEstudiantesSearchComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-search/lista-estudiantes-search.component';
+import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 
 
 
@@ -73,9 +74,7 @@ import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agr
     ConfiguracionVinculacionSearchComponent,
 
     //Docente Tutor-Portafolio
-    ListaEstudiantesComponent,
     ListaPortafoliosComponent,
-    RellenarDatosComponent,
     EstudianteComponent,
     EstudiantePortafolioComponent,
     PortafolioComponent,
@@ -117,15 +116,16 @@ import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agr
     RedireccionarPrincipalComponent,
     AgregarRolAddComponent,
     AgregarRolSearchComponent,
+    RellenarDatosFormComponent,
+    ListaEstudiantesSearchComponent,
+    ListaEstudiantesFormComponent,
 
   ],
   exports:[
     //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
 
-    ListaEstudiantesComponent,
     ListaPortafoliosComponent,
-    RellenarDatosComponent,
 
 
     PortafolioComponent,
