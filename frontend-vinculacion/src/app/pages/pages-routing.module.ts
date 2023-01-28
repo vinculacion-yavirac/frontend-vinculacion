@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
-import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
 import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
 import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
-import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
@@ -40,7 +38,8 @@ import { FirmasComponent } from './pestanias/firmas/firmas.component';
 import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
-
+import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
+import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 
 const routes: Routes = [
   {
@@ -54,10 +53,10 @@ const routes: Routes = [
       { path: 'proyecto', component: ProyectoFormComponent},
 
 
-      { path: 'agregar-rol', component: AgregarRolComponent },
+      { path: 'agregar-rol', component: AgregarRolAddComponent },
       { path: 'lista-estudiantes', component: ListaEstudiantesComponent },
       { path: 'lista-portafolios', component: ListaPortafoliosComponent },
-      { path: 'redireccionar', component: RedireccionarComponent },
+      { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosComponent },
 
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },

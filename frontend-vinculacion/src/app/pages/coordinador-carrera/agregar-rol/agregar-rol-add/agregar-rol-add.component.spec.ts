@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RedireccionarComponent } from './redireccionar.component';
+import { AgregarRolAddComponent } from './agregar-rol-add.component';
 
-describe('RedireccionarComponent', () => {
-  let component: RedireccionarComponent;
-  let fixture: ComponentFixture<RedireccionarComponent>;
+describe('AgregarRolAddComponent', () => {
+  let component: AgregarRolAddComponent;
+  let fixture: ComponentFixture<AgregarRolAddComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RedireccionarComponent ]
+      declarations: [ AgregarRolAddComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RedireccionarComponent);
+    fixture = TestBed.createComponent(AgregarRolAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

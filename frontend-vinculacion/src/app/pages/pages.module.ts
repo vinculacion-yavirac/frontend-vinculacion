@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
 import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
 import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
 import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
-import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
@@ -35,7 +31,6 @@ import { IntegrantesComponent } from './pestanias/integrantes/integrantes.compon
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
@@ -55,6 +50,14 @@ import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundac
 
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
+import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
+import { RedireccionarBotonUnoComponent } from './coordinador-carrera/redireccionar/redireccionar-boton-uno/redireccionar-boton-uno.component';
+import { RedireccionarBotonDosComponent } from './coordinador-carrera/redireccionar/redireccionar-boton-dos/redireccionar-boton-dos.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
+import { AgregarRolBotonComponent } from './coordinador-carrera/agregar-rol/agregar-rol-boton/agregar-rol-boton.component';
 
 
 
@@ -72,10 +75,8 @@ import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estud
     ConfiguracionVinculacionSearchComponent,
 
     //Docente Tutor-Portafolio
-    AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
-    RedireccionarComponent,
     RellenarDatosComponent,
     EstudianteComponent,
     EstudiantePortafolioComponent,
@@ -115,16 +116,19 @@ import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estud
 
     ListaEstudianteTutorFormComponent,
     ListaEstudianteTutorBuscarComponent,
+    RedireccionarPrincipalComponent,
+    RedireccionarBotonUnoComponent,
+    RedireccionarBotonDosComponent,
+    AgregarRolAddComponent,
+    AgregarRolBotonComponent,
 
   ],
   exports:[
     //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
 
-    AgregarRolComponent,
     ListaEstudiantesComponent,
     ListaPortafoliosComponent,
-    RedireccionarComponent,
     RellenarDatosComponent,
 
 
@@ -133,10 +137,10 @@ import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estud
     ListaEstudiantesGeneralComponent,
 
 
-    
+
     PortafolioTutorFormularioComponent,
 
-    
+
 
 
 
