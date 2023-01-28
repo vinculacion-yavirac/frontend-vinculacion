@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
-import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
@@ -29,6 +28,8 @@ import { RedireccionarPrincipalComponent } from './coordinador-carrera/redirecci
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
+import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
+import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 
 
 const routes: Routes = [
@@ -45,7 +46,7 @@ const routes: Routes = [
 
       { path: 'agregar-rol', component: AgregarRolAddComponent },
       { path: 'lista-estudiantes', component: ListaEstudiantesFormComponent},
-      { path: 'lista-portafolios', component: ListaPortafoliosComponent },
+      { path: 'lista-portafolios', component: ListaPortafoliosFormComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
 

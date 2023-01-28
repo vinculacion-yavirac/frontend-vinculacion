@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
@@ -57,6 +56,9 @@ import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agr
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesSearchComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-search/lista-estudiantes-search.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
+import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
+import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
+import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
 
 
 
@@ -74,7 +76,7 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
     ConfiguracionVinculacionSearchComponent,
 
     //Docente Tutor-Portafolio
-    ListaPortafoliosComponent,
+
     EstudianteComponent,
     EstudiantePortafolioComponent,
     PortafolioComponent,
@@ -119,14 +121,14 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
     RellenarDatosFormComponent,
     ListaEstudiantesSearchComponent,
     ListaEstudiantesFormComponent,
+    ListaPortafoliosFormComponent,
+    ListaPortafoliosEstudiantesComponent,
+    ListaPortafoliosTutorComponent,
 
   ],
   exports:[
     //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
-
-    ListaPortafoliosComponent,
-
 
     PortafolioComponent,
     SolicitudCertificadoComponent,
