@@ -11,8 +11,6 @@ import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimien
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
-import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
-import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -59,6 +57,7 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 
 
 
@@ -87,8 +86,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     AvanceCumplimientoComponent,
     InformeControlComponent,
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+    FormularioInformeInicialComponent,
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
     EncuestaComponent,
@@ -124,6 +122,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+    FormularioInformeInicialComponent,
 
   ],
   exports:[
@@ -153,8 +152,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     EstudiantePortafolioComponent,
 
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+  
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
 
