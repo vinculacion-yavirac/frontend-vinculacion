@@ -25,13 +25,13 @@
 
             <!--Table body-->
             <tbody>
-                <tr class="text-center">
-                    <th class="text-white" scope="row">1</th>
-                    <td class="text-white">Certificado</td>
+                <tr class="text-center" *ngFor="let solicitud of solicitudList">
+                    <th class="text-white" scope="row">{{solicitud.id}}</th>
+                    <td class="text-white">{{solicitud.tipo_solicitud}}</td>
                     <td class="text-white">Steveen Ordoñez</td>
                     <td class="text-white">1755516802</td>
-                    <td class="text-white">17/1/2023</td>
-                    <td class="text-white">Pendiente</td>
+                    <td class="text-white">17{{solicitud.fecha_emision}}</td>
+                    <td class="text-white">{{solicitud.estado}}</td>
                     <td>
                         <div class="d-grid gap-1  col-auto">
                             <button class="btn btn-primary" type="button">Portafolio</button>
