@@ -9,8 +9,6 @@ import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimien
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
-import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
-import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -57,10 +55,12 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
+
 
 
 
@@ -87,8 +87,7 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
     AvanceCumplimientoComponent,
     InformeControlComponent,
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+    FormularioInformeInicialComponent,
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
     EncuestaComponent,
@@ -124,6 +123,9 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+
+    FormularioInformeInicialComponent,
+
     EstudianteBuscarComponent,
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
@@ -158,8 +160,7 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
     
 
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+  
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
 

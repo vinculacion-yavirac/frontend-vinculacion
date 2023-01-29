@@ -14,8 +14,6 @@ import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimien
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
-import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
-import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
@@ -39,9 +37,11 @@ import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
+import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+
 
 const routes: Routes = [
   {
@@ -79,8 +79,7 @@ const routes: Routes = [
       { path: 'observacion-avance', component: ObservacionAvanceComponent },
 
       { path: 'informe-inicial', component: InformeInicialComponent },
-      { path: 'primer-formulario-inicial', component: PrimerFormularioInicialComponent },
-      { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent },
+      { path: 'formulario-informe-inicial', component: FormularioInformeInicialComponent },
       { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent },
       { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent },
 
