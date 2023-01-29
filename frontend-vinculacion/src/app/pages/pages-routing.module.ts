@@ -24,13 +24,23 @@ import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/con
 import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
 import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
+import { ActividadesComponent } from './pestanias/actividades/actividades.component';
+import { AnexosComponent } from './pestanias/anexos/anexos.component';
+import { BibliografiaComponent } from './pestanias/bibliografia/bibliografia.component';
+import { CertificadosComponent } from './pestanias/certificados/certificados.component';
+import { DatosGeneralesComponent } from './pestanias/datos-generales/datos-generales.component';
+import { DocumentosComponent } from './pestanias/documentos/documentos.component';
+import { EmpresaComponent } from './pestanias/empresa/empresa.component';
+import { FirmasComponent } from './pestanias/firmas/firmas.component';
+import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
+import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
+import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
-
 
 const routes: Routes = [
   {
@@ -72,6 +82,18 @@ const routes: Routes = [
       { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent },
       { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent },
       { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent },
+
+      { path: 'actividades', component: ActividadesComponent},
+      { path: 'anexos', component: AnexosComponent},
+      { path: 'bibliografia', component: BibliografiaComponent},
+      { path: 'certificados', component: CertificadosComponent},
+      { path: 'datos-generales', component: DatosGeneralesComponent},
+      { path: 'documentos', component: DocumentosComponent},
+      { path: 'empresa', component: EmpresaComponent},
+      { path: 'firmas', component: FirmasComponent},
+      { path: 'integrantes', component: IntegrantesComponent},
+      { path: 'observaciones', component: ObservacionesComponent},
+      { path: 'plan-de-trabajo', component: PlanDeTrabajoComponent},
 
       { path: 'encuesta', component: EncuestaComponent },
     ]
