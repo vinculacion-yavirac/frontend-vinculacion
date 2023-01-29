@@ -59,6 +59,8 @@ import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-porta
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
 import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
+import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-estudiante-form/portafolio-vinculacion-estudiante-form.component';
+import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-tutor-form/portafolio-vinculacion-tutor-form.component';
 
 
 
@@ -70,6 +72,8 @@ import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portaf
     SolicitudSearchComponent,
     ProyectoFormComponent,
     ProyectoSearchComponent,
+    PortafolioVinculacionEstudianteFormComponent,
+    PortafolioVinculacionTutorFormComponent,
     AsignarFundacionFormComponent,
     AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
