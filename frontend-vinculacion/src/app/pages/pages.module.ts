@@ -59,6 +59,8 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { AuthModule } from '../auth/auth.module';
+
 
 
 
@@ -178,6 +180,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     HttpClientModule,
     RouterModule,
     SharedModule,
+    
   ]
 })
 export class PagesModule { }
