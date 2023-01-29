@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
-import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
@@ -59,6 +57,10 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
+import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
+import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 
 
 
@@ -77,8 +79,6 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
 
     //Docente Tutor-Portafolio
 
-    EstudianteComponent,
-    EstudiantePortafolioComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
@@ -124,6 +124,12 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+    EstudianteBuscarComponent,
+    EstudianteFormularioComponent,
+    EstudiantePortafolioPortafolioComponent,
+    EstudiantePortafolioFormularioComponent,
+    
+    
 
   ],
   exports:[
@@ -149,8 +155,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
 
 
 
-    EstudianteComponent,
-    EstudiantePortafolioComponent,
+    
 
     InformeInicialComponent,
     PrimerFormularioInicialComponent,
@@ -169,6 +174,10 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
+    EstudianteBuscarComponent,
+    EstudianteFormularioComponent,
+    EstudiantePortafolioPortafolioComponent,
+    
 
   ],
   imports: [
