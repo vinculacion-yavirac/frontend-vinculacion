@@ -1,1 +1,146 @@
-<p>integrantes works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+  <br><div><h6><b>&nbsp;&nbsp;Coordinador del Proyecto</b></h6></div>
+  <div class="row">
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre y Titulo Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horario de trabajo para el Proyecto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo o Función en la Institución Beneficiaria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones Asignadas</b>
+          </label></section>
+
+          <section class="input-field col s12 m2 sizze">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze2">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze4">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze5">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+        </div>
+        <!--<div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>-->
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+        <br><div><h6><b>&nbsp;&nbsp;Grupo de Estudiantes</b></h6></div>
+        <div class="row">
+            <section class="input-field row s12 m6">
+                <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellidos y Nombres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Cedula&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Especialidad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones Asignadas y Horas de Trabajo</b>
+                </label></section>
+
+                <section class="input-field col s12 m2 sizze">
+                <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+                </section>
+                <section class="input-field col s12 m2 sizze5">
+                <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+                </section>
+                <section class="input-field col s12 m2 sizze2">
+                <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+                </section>
+                <section class="input-field col s12 m2 sizze4">
+                <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+                </section>
+                <section class="input-field col s12 m2 sizze3">
+                <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+                </section>
+              </div>
+              <br><div><h6><b>&nbsp;&nbsp;Grupo de Docente Academico</b></h6></div>
+  <div class="row">
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre y Titulo Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horario de trabajo para el Proyecto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones Asignadas y Horas de Trabajo</b>
+          </label></section>
+
+          <section class="input-field col s12 m2 sizze">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze2">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze5">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze5">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+        </div>
+        <br><div><h6><b>&nbsp;&nbsp;Coordinador(es) de Institución Beneficiaria</b></h6></div>
+        <div class="row">
+          <section class="input-field row s12 m6">
+              <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellidos y Nombres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo o Función de la institución Beneficiaria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones Asignadas</b>
+              </label></section>
+
+              <section class="input-field col s12 m2 sizze">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze5">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze5">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze5">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+            </div>
+        <br><div><h6><b>&nbsp;&nbsp;Grupo de Docente Empresarial</b></h6></div>
+        <div class="row">
+          <section class="input-field row s12 m6">
+              <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre y Titulo Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Télefono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo</b>
+              </label></section>
+
+              <section class="input-field col s12 m2 sizze">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze5">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze2">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze2">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+            </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit">Confirmar
+      <i class="mdi-content-send right"></i>
+  </button>
+</form>
+</div>

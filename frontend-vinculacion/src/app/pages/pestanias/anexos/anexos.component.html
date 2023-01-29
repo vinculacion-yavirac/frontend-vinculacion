@@ -1,1 +1,202 @@
-<p>anexos works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+  <br><h6><b>&nbsp;&nbsp;Anexos Empresariales</b></h6>
+  <button ng-disabled="registro.$invalid"  type="submit"  class="center">Adjuntar
+    <i class="mdi-content-send right"></i>
+  </button>
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td >
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td>
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td>
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <br><h6><b>&nbsp;&nbsp;Anexos Institucionales</b></h6>
+  <button ng-disabled="registro.$invalid"  type="submit"  class="center">Adjuntar
+    <i class="mdi-content-send right"></i>
+  </button>
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Anexos.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Copia simple de la acción de personal del Rector vigente y debidamente legalizado
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Copia simple de la cédula de identidad del Rector
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </form>
+            </div>

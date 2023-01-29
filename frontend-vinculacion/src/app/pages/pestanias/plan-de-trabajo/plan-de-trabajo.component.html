@@ -1,1 +1,167 @@
-<p>plan-de-trabajo works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+  <div class="row">
+      <section class="input-field col s12 m6">
+          <label for="nombre">Descripción General del Proyecto:</label><br><br><br>
+          <input type="text" class="celeste" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+  </div>
+  <div class="row">
+    <section class="input-field col s12 m9">
+        <label for="correo">Objetivo del Proyecto: </label><br><br><br>
+        <input type="email" class="celeste" ng-model="data.correo" name="correo" required>
+      <div ng-messages="registro.correo.$error" ng-messages-include="errores.html" ng-hide="registro.correo.$pristine">
+      </div>
+    </section>
+</div>
+  <div class="row">
+      <section class="input-field col s12">
+          <label for="direccion">Analisis Situacional:</label><br><br><br>
+          <input type="text" class="materialize-textarea celeste" ng-model="data.direccion" name="direccion" required pattern="[ñáéíóú,.\w ]+">
+        <div ng-messages="registro.direccion.$error" ng-messages-include="errores.html" ng-hide="registro.direccion.$pristine"></div>
+      </section>
+  </div>
+
+  <div class="row">
+  <section class="input-field col s12 m3">
+    <label for="edad">Justificación:</label><br><br><br>
+    <input type="number" class="celeste" ng-model="data.edad" name="edad" required min="0">
+  <div ng-messages="registro.edad.$error" ng-messages-include="errores.html" ng-hide="registro.edad.$pristine">
+  </div>
+  </section>
+  </div>
+
+  <!--<div class="row">
+      <section class="input-field col s12 m6">
+          <input class="with-gap" type="radio" ng-model="data.sexo" name="sexo" id="sexo_M" value="M" required>
+          <label for="sexo_M">Masculino</label><br>
+          <input class="with-gap" type="radio" ng-model="data.sexo" name="sexo" id="sexo_F" value="F" required>
+          <label for="sexo_F">Femenino</label>
+        <div ng-messages="registro.sexo.$error" ng-messages-include="errores.html" ng-hide="registro.sexo.$pristine"></div>
+      </section>
+      <section class="input-field col s12 m6">
+          <input type="checkbox" ng-model="data.acepto" name="acepto" id="acepto" required>
+          <label for="acepto">Acepto y quiero continuar</label><br><br>
+        <div ng-messages="registro.acepto.$error" ng-messages-include="errores.html" ng-hide="registro.acepto.$pristine"></div>
+      </section>
+  </div>-->
+
+  <br><div><h6><b>&nbsp;&nbsp;Matriz de Marco Lógico</b></h6></div>
+
+  <div class="row border">
+    <br><div class="border">&nbsp;&nbsp;Objetivos Generales</div>
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="celeste fblack">Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Objetivo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicador Verificable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metodos de Verifcación
+          </label></section>
+
+          <section class="input-field col s12 m2 sizze">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+        </div>
+
+  <div class="row border">
+    <br><div class="border">&nbsp;&nbsp;Criterios Economicos</div>
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="celeste fblack">Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Criterio
+          </label></section>
+
+          <section class="input-field col s12 m2 sizze">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze3">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze6">
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+        </div>
+<br><br>
+        <div class="row">
+          <section class="input-field row s12 m6">
+              <label for="nombre" class="orange2 fblack"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Objetivos Especificos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicadores Verificables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medios de Verificación
+              </b></label></section>
+
+              <section class="input-field col s12 m2 sizze4">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze6">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze6">
+              <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+            </div>
+
+
+            <div class="row">
+              <section class="input-field col s12 m3">
+                <label for="edad">Conclusiones:</label><br><br><br>
+                <input type="number" class="celeste" ng-model="data.edad" name="edad" required min="0">
+              <div ng-messages="registro.edad.$error" ng-messages-include="errores.html" ng-hide="registro.edad.$pristine">
+              </div>
+              </section>
+              </div>
+
+              <div class="row">
+                <section class="input-field col s12 m3">
+                  <label for="edad">Recomendaciones:</label><br><br><br>
+                  <input type="number" class="celeste" ng-model="data.edad" name="edad" required min="0">
+                <div ng-messages="registro.edad.$error" ng-messages-include="errores.html" ng-hide="registro.edad.$pristine">
+                </div>
+                </section>
+                </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit">Confirmar
+      <i class="mdi-content-send right"></i>
+  </button>
+</form>
+</div>

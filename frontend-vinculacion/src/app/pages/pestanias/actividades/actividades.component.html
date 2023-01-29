@@ -1,1 +1,137 @@
-<p>actividades works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+  <div class="row">
+      <section class="input-field col s12 m6">
+          <label for="nombre"><b>Frecuencia de las Actividades:</b></label><br><br>
+          <input type="checkbox" ng-model="data.diaria" name="diaria" id="diaria" required>
+          <label for="diaria">Diaria</label><br><br>
+          <input type="checkbox" ng-model="data.semanal" name="semanal" id="semanal" required>
+          <label for="semanal">Semanal</label><br><br>
+          <input type="checkbox" ng-model="data.quincenal" name="quincenal" id="quincenal" required>
+          <label for="quincenal">Quincenal</label><br><br>
+          <input type="checkbox" ng-model="data.mensual" name="mensual" id="mensual" required>
+          <label for="mensual">Mensual</label><br><br>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+      <section class="input-field col s12 m6">
+        <label for="nombre"><b>Actividades de Vinculación:</b></label><br><br>
+        <input type="checkbox" ng-model="data.correos" name="correos" id="correos" required>
+        <label for="correos">Convenio Institucionales</label><br><br>
+        <input type="checkbox" ng-model="data.pvpij" name="pvpij" id="pvpij" required>
+        <label for="pvpij">Proyecto de Vinculación Prototipo IST JME</label><br><br>
+        <input type="checkbox" ng-model="data.pcc" name="pcc" id="pcc" required>
+        <label for="pcc">Programa de Capacitación a la Comunidad</label><br><br>
+        <input type="checkbox" ng-model="data.pvc" name="pvc" id="pvc" required>
+        <label for="pvc">Prácticas Vinculación con la Comunidad</label><br><br>
+        <input type="checkbox" ng-model="data.investigacion" name="investigacion" id="investigacion" required>
+        <label for="investigacion">Investigación</label><br><br>
+        <input type="checkbox" ng-model="data.acuerdo" name="acuerdo" id="acuerdo" required>
+        <label for="acuerdo">Acuerdo</label><br><br>
+        <input type="checkbox" ng-model="data.otros" name="otros" id="otros" required>
+        <label for="otros">Otros</label><br><br>
+      <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+    </section>
+  </div>
+  <div class="row">
+    <section class="input-field col s12 m6">
+      <label for="nombre"><b>Sectores de Intervención:</b></label><br><br>
+      <input type="checkbox" ng-model="data.educacion" name="educacion" id="educacion" required>
+      <label for="educacion">Educación</label><br><br>
+      <input type="checkbox" ng-model="data.salud" name="salud" id="salud" required>
+      <label for="salud">Salud</label><br><br>
+      <input type="checkbox" ng-model="data.sa" name="sa" id="sa" required>
+      <label for="sa">Sanamiento Ambiental</label><br><br>
+      <input type="checkbox" ng-model="data.ap" name="ap" id="ap" required>
+      <label for="ap">Apoyo Productivo</label><br><br>
+      <input type="checkbox" ng-model="data.agyp" name="agyp" id="agyp" required>
+      <label for="agyp">Agricultura, Ganadería y Pesca</label><br><br>
+      <input type="checkbox" ng-model="data.vivienda" name="vivienda" id="vivienda" required>
+      <label for="vivienda">Vivienda</label><br><br>
+      <input type="checkbox" ng-model="data.pma" name="pma" id="pma" required>
+      <label for="pma">Protección del medio ambiente y desastres naturales</label><br><br>
+      <input type="checkbox" ng-model="data.rne" name="rne" id="rne" required>
+      <label for="rne">Recursos Naturales y Energía</label><br><br>
+      <input type="checkbox" ng-model="data.tcv" name="tcv" id="tcv" required>
+      <label for="tcv">Transporte, Comunicación y Viabilidad</label><br><br>
+      <input type="checkbox" ng-model="data.desarrolloU" name="desarrolloU" id="desarrolloU" required>
+      <label for="desarrolloU">Desarrollo Urbano</label><br><br>
+      <input type="checkbox" ng-model="data.turismo" name="turismo" id="turismo" required>
+      <label for="turismo">Turismo</label><br><br>
+      <input type="checkbox" ng-model="data.cultura" name="cultura" id="cultura" required>
+      <label for="cultura">Cultura</label><br><br>
+      <input type="checkbox" ng-model="data.dic" name="dic" id="dic" required>
+      <label for="dic">Desarrollo de Investigación Científica</label><br><br>
+      <input type="checkbox" ng-model="data.deportes" name="deportes" id="deportes" required>
+      <label for="deportes">Deportes</label><br><br>
+      <input type="checkbox" ng-model="data.jys" name="jys" id="jys" required>
+      <label for="jys">Justicia y Seguridad</label><br><br>
+  </section>
+  <section class="input-field col s12 m6">
+    <label for="nombre"><b>Ejes Estratégicos de Vinculación con la Colectividad</b></label><br><br>
+    <input type="checkbox" ng-model="data.ambiente" name="ambiente" id="ambiente" required>
+    <label for="ambiente">Ambiente</label><br><br>
+    <input type="checkbox" ng-model="data.dsyc" name="dsyc" id="dsyc" required>
+    <label for="dsyc">Desarrollo Social y Comunitario</label><br><br>
+    <input type="checkbox" ng-model="data.ia" name="ia" id="ia" required>
+    <label for="ia">Investigativo Académico</label><br><br>
+    <input type="checkbox" ng-model="data.ig" name="ig" id="ig" required>
+    <label for="ig">Interculturalidad/Género</label><br><br>
+    <input type="checkbox" ng-model="data.desarrolloL" name="desarrolloL" id="desarrolloL" required>
+    <label for="desarrolloL">Desarrollo Local</label><br><br>
+    <input type="checkbox" ng-model="data.epys" name="epys" id="epys" required>
+    <label for="epys">Economía Popular y Solidaria</label><br><br>
+    <input type="checkbox" ng-model="data.dtyt" name="dtyt" id="dtyt" required>
+    <label for="dtyt">Desarrollo Técnico y Técnológico</label><br><br>
+    <input type="checkbox" ng-model="data.inovacion" name="inovacion" id="inovacion" required>
+    <label for="inovacion">Inovación</label><br><br>
+    <input type="checkbox" ng-model="data.rsu" name="rsu" id="rsu" required>
+    <label for="rsu">Responsabilidad Social Universitaria</label><br><br>
+    <input type="checkbox" ng-model="data.matrizP" name="matrizP" id="matrizP" required>
+    <label for="matrizP">Matriz Productiva</label><br><br>
+    <input type="checkbox" ng-model="data.otros2" name="otros2" id="otros2" required>
+    <label for="otros2">Otros</label><br><br>
+</section>
+  </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit">Confirmar
+      <i class="mdi-content-send right"></i>
+  </button>
+</form>
+</div>
+

@@ -1,1 +1,177 @@
-<p>empresa works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+
+  <div class="col s12 m4">
+      <section class="input-field s12 m6">
+          <label for="nombre">Nombre de la Entidad:</label><br>
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+      <section class="input-field s12 m6">
+        <label for="edad">Naturaleza de Gestión de la Entidad Receptora:</label><br><br>
+        <input class="with-gap" type="radio" ng-model="data.sexo" name="sexo" id="sexo_M" value="M" required>
+        <label for="sexo_M">Pública</label> &nbsp;&nbsp;
+        <input class="with-gap" type="radio" ng-model="data.sexo" name="sexo" id="sexo_F" value="F" required>
+        <label for="sexo_F">Privada</label><br>
+        <input class="with-gap" type="radio" ng-model="data.sexo" name="sexo" id="sexo_F" value="F" required>
+        <label for="sexo_F">Mixta</label>
+      <!--<div ng-messages="registro.sexo.$error" ng-messages-include="errores.html" ng-hide="registro.sexo.$pristine"></div>-->
+      </section><br>
+      <section class="input-field s12 m6">
+          <label for="nombre">Nombre de la persona autorizada legalmente para la suscripción del convenio:</label><br><br>
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+      <section class="input-field s12 m6">
+          <label for="apellido">Numero de RUC:</label><br>
+          <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+      </section>
+      <section class="input-field s12 m6">
+          <label for="nombre">Actividad Económica que consta en el RUC:</label><br><br>
+          <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+      <section class="input-field s12 m6">
+          <label for="apellido">Correo Electrónico de la Empresa:</label><br><br>
+          <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+      </section>
+      <section class="input-field s12 m6">
+          <label for="apellido">Télefono de Contacto:</label><br>
+          <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+      </section>
+    </div>
+
+    <div class="col s12 m4">
+      <section class="input-field s12 m6">
+        <label class="Titulo"><b>Dirección Matriz de Entidad Receptora</b></label><br><br>
+      </section>
+      <section class="input-field s12 m6">
+          <label for="nombre">Parroquia:</label><br>
+          <input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+        <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+        <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Provincia:</label><br>
+        <input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+      <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+      <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+    </section>
+    <section class="input-field s12 m6">
+      <label for="nombre">Cantón:</label><br>
+      <input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+    <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+    <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+  </section>
+  <section class="input-field s12 m6">
+    <label for="nombre">Dirección:</label><br>
+    <input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+  <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+  <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+</section>
+
+<section class="input-field s12 m6">
+  <label class="Titulo"><b>Dirección Sucursal de Entidad Receptora</b></label><br><br>
+</section>
+<section class="input-field s12 m6">
+    <label for="nombre">Parroquia:</label><br>
+    <input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+  <div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+  <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+</section>
+<section class="input-field s12 m6">
+  <label for="nombre">Provincia:</label><br>
+  <input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+<div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+<!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+</section>
+<section class="input-field s12 m6">
+<label for="nombre">Cantón:</label><br>
+<input type="number" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+<div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+<!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+</section>
+<section class="input-field s12 m6">
+<label for="nombre">Dirección:</label><br>
+<input type="text" ng-model="data.nombre" name="nombre" required pattern="[ñáéíóúA-Za-z ]+">
+<div ng-messages="registro.nombre.$error" ng-messages-include="errores.html" ng-hide="registro.nombre.$pristine"></div>
+<!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+</section>
+    </div>
+
+    <div class="col s12 m4">
+      <section class="input-field s12 m6">
+        <label for="apellido">Numero de Estudiantes que recibirá inicialmente la Entidad:</label><br><br>
+        <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+      <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+    </section>
+    <section class="input-field s12 m6">
+      <label for="apellido">Total de Estudiantes que recibirá la Entidad:</label><br><br>
+      <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+    <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+  </section>
+  <section class="input-field s12 m6">
+    <label for="apellido">Lugar de Ubicación:</label><br><br>
+    <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+  <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+  </section>
+  <section class="input-field s12 m6">
+    <label for="apellido">Beneficiarios Directos:</label><br><br>
+    <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+  <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+  </section>
+  <section class="input-field s12 m6">
+    <label for="apellido">Beneficiarios Indirectos:</label><br><br>
+    <input type="text" ng-model="data.apellido" name="apellido" required pattern="[ñáéíóúA-Za-z ]+">
+  <div ng-messages="registro.apellido.$error" ng-messages-include="errores.html" ng-hide="registro.apellido.$pristine"></div>
+</section>
+    </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit">Confirmar
+      <i class="mdi-content-send right"></i>
+  </button>
+
+</form>
+</div>
+

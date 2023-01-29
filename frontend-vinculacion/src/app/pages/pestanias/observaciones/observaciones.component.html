@@ -1,1 +1,77 @@
-<p>observaciones works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+                <div class="card-body">
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar PDF
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar Convenio
+                    <i class="mdi-content-send right"></i>
+                  </button>
+
+                  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light left" type="submit">Generar ITV
+                    <i class="mdi-content-send right"></i>
+                  </button><br><br>
+                  <div class="pestanas">
+                    <a href="../datos-generales" class="Datos Generales">Datos Generales</a>
+                    <a href="../empresa" class="Empresa">Empresa</a>
+                    <a href="../integrantes" class="Integrantes">Integrantes</a>
+                    <a href="../actividades" class="Actividades">Actividades</a>
+                    <a href="../plan-de-trabajo" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a href="../firmas" class="Firma">Firmas</a>
+                    <a href="../bibliografia" class="Bibliografía">Bibliografía</a>
+
+                    <a href="../anexos" class="Anexos">Anexos</a>
+                    <a href="../observaciones" class="Observaciones">Observaciones</a>
+                    <a href="../documentos" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a href="../certificados" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                    </div>
+
+<form name="registro" novalidate>
+
+  <div class="row">
+      <section class="input-field col">
+        <label for="nombre"><h5><b>&nbsp;Estado</b></h5></label><br><br><br>
+        <input type="checkbox" ng-model="data.aprobado" name="aprobado" id="aprobado" required>
+        <label for="aprobado" class="bgcolor">Aprobado</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.enrevision" name="enrevision" id="enrevision" required>
+        <label for="enrevision">En Revisión</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.corregido" name="corregido" id="corregido" required>
+        <label for="corregido" class="bgcolor">Corregido</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.rechazado" name="rechazado" id="rechazado" required>
+        <label for="rechazado">Rechazado</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.enviado" name="enviado" id="enviado" required>
+        <label for="enviado" class="bgcolor">Enviado a Senecyt</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.porenviar" name="porenviar" id="porenviar" required>
+        <label for="porenviar">Por enviar a Senecyt</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.desarrollo" name="desarrollo" id="desarrollo" required>
+        <label for="desarrollo">En Desarrollo</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.terminado" name="terminado" id="terminado" required>
+        <label for="terminado" class="bgcolor">Terminado</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="data.suspendido" name="suspendido" id="suspendido" required>
+        <label for="suspendido">Suspendido</label>&nbsp;&nbsp;&nbsp;
+      <!--<div ng-message="email">Debe ingresar un correo válido</div>-->
+    </section>
+  </div>
+  <div class="row">
+    <section class="input-field col">
+      <label for="nombre"><h5><b>&nbsp;Observaciones</b></h5></label><br><br><br>
+        <input type="text" class="materialize-textarea biginput" ng-model="data.direccion" name="direccion" required pattern="[ñáéíóú,.\w ]+">
+      <div ng-messages="registro.direccion.$error" ng-messages-include="errores.html" ng-hide="registro.direccion.$pristine"></div>
+    </section>
+  </div>
+
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit">Confirmar
+      <i class="mdi-content-send right"></i>
+  </button>
+</form>
+</div>
+
