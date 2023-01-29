@@ -6,7 +6,7 @@ import { PortafolioComponent } from './coordinador-general/portafolio/portafolio
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
-import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
+// import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
@@ -49,7 +49,7 @@ const routes: Routes = [
       { path: 'solicitud', component: SolicitudFormComponent},
       { path: 'asignar-fundacion', component: AsignarFundacionFormComponent },
       { path: 'configuraciones', component: ConfiguracionVinculacionFormComponent },
-      { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
+      // { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
       { path: 'proyecto', component: ProyectoFormComponent},
 
 

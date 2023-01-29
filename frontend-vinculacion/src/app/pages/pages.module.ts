@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
-import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
+// import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
@@ -65,7 +65,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
 @NgModule({
   declarations: [
     //Docente Vinculacion-Portafolio
-    PortafolioVinculacionComponent,
+    // PortafolioVinculacionComponent,
     SolicitudFormComponent,
     SolicitudSearchComponent,
     ProyectoFormComponent,
@@ -128,7 +128,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
   ],
   exports:[
     //Docente Vinculacion-Portafolio
-    PortafolioVinculacionComponent,
+    // PortafolioVinculacionComponent,
 
     PortafolioComponent,
     SolicitudCertificadoComponent,
