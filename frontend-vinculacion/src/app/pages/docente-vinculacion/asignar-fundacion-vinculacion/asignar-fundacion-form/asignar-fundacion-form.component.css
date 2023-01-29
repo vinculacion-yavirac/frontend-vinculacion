@@ -1,0 +1,10 @@
+.containerBlue {
+    background-color: #19418B;
+}
+
+
+.table {
+    background-color: #6D99EB;
+    border-radius: 10px;
+    grid-auto-flow: auto;
+}

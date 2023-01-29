@@ -1,0 +1,21 @@
+.containerBlue {
+  background-color: #19418B;
+}
+
+
+.table {
+  background-color: #6D99EB;
+  border-radius: 10px;
+  grid-auto-flow: auto;
+  text-align: center;
+}
+
+.iconobser{
+  width: 40px;
+  height: 40px;
+}
+
+.switch{
+  width: 70px;
+  height: 24px;
+}

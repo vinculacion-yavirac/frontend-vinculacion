@@ -1,19 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
-import { ProyectoVinculacionComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion.component';
-import { ConfiguracionVinculacionComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion.component';
-import { AsignarFundacionVinculacionComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion.component';
-import { PortafolioTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor.component';
-import { ListaEstudiantesTutorComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiantes-tutor.component';
-import { ListaFundacionTutorComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor.component';
-import { AgregarRolComponent } from './coordinador-carrera/agregar-rol/agregar-rol.component';
-import { RellenarDatosComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos.component';
-import { ListaEstudiantesComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes.component';
-import { ListaPortafoliosComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios.component';
-import { RedireccionarComponent } from './coordinador-carrera/redireccionar/redireccionar.component';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
@@ -41,26 +28,55 @@ import { IntegrantesComponent } from './pestanias/integrantes/integrantes.compon
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
+import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
+import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
+import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
+import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
+import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
+import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
+import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
+
+import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
+import { PortafolioTutorEstudianteComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-estudiante/portafolio-tutor-estudiante.component';
+import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-tutor/portafolio-tutor-tutor.component';
+
+import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
+import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-buscar/lista-fundacion-tutor-buscar.component';
+
+import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
+import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
+import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
+import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agregar-rol-search/agregar-rol-search.component';
+import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
+import { ListaEstudiantesSearchComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-search/lista-estudiantes-search.component';
+import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
+import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
+import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
+import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
 
 
 
 @NgModule({
   declarations: [
-    AsignarFundacionVinculacionComponent,
+    //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
-    ProyectoVinculacionComponent,
-    ConfiguracionVinculacionComponent,
-    PortafolioTutorComponent,
-    ListaEstudiantesTutorComponent,
-    ListaFundacionTutorComponent,
-    AgregarRolComponent,
-    ListaEstudiantesComponent,
-    ListaPortafoliosComponent,
-    RedireccionarComponent,
-    RellenarDatosComponent,
+    SolicitudFormComponent,
+    SolicitudSearchComponent,
+    ProyectoFormComponent,
+    ProyectoSearchComponent,
+    AsignarFundacionFormComponent,
+    AsignarFundacionSearchComponent,
+    ConfiguracionVinculacionFormComponent,
+    ConfiguracionVinculacionSearchComponent,
+
+    //Docente Tutor-Portafolio
+
     EstudianteComponent,
     EstudiantePortafolioComponent,
     PortafolioComponent,
@@ -88,27 +104,50 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
     ObservacionesComponent,
     PlanDeTrabajoComponent,
     DashboardComponent,
-    SolicitudFormComponent,
+
+
+    PortafolioTutorFormularioComponent,
+    PortafolioTutorEstudianteComponent,
+    PortafolioTutorTutorComponent,
+
+    ListaFundacionTutorFromComponent,
+    ListaFundacionTutorBuscarComponent,
+
+    ListaEstudianteTutorFormComponent,
+    ListaEstudianteTutorBuscarComponent,
+    RedireccionarPrincipalComponent,
+    AgregarRolAddComponent,
+    AgregarRolSearchComponent,
+    RellenarDatosFormComponent,
+    ListaEstudiantesSearchComponent,
+    ListaEstudiantesFormComponent,
+    ListaPortafoliosFormComponent,
+    ListaPortafoliosEstudiantesComponent,
+    ListaPortafoliosTutorComponent,
+
   ],
   exports:[
-    AsignarFundacionVinculacionComponent,
-    ConfiguracionVinculacionComponent,
+    //Docente Vinculacion-Portafolio
     PortafolioVinculacionComponent,
-    ProyectoVinculacionComponent,
-    AgregarRolComponent,
-    ListaEstudiantesComponent,
-    ListaPortafoliosComponent,
-    RedireccionarComponent,
-    RellenarDatosComponent,
-
 
     PortafolioComponent,
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
 
-    ListaFundacionTutorComponent,
-    ListaEstudiantesTutorComponent,
-    PortafolioTutorComponent,
+
+
+    PortafolioTutorFormularioComponent,
+
+
+
+
+
+    //Docente Tutor-Portafolio
+    ListaFundacionTutorFromComponent,
+    ListaEstudianteTutorFormComponent,
+
+
+
 
     EstudianteComponent,
     EstudiantePortafolioComponent,
@@ -117,7 +156,19 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
     PrimerFormularioInicialComponent,
     SegundoFormularioInicialComponent,
     FormularioFinalTutorComponent,
-    InformeFinalEstudianteComponent
+    InformeFinalEstudianteComponent,
+
+    ActividadesComponent,
+    AnexosComponent,
+    BibliografiaComponent,
+    CertificadosComponent,
+    DatosGeneralesComponent,
+    DocumentosComponent,
+    EmpresaComponent,
+    FirmasComponent,
+    IntegrantesComponent,
+    ObservacionesComponent,
+    PlanDeTrabajoComponent,
 
   ],
   imports: [
