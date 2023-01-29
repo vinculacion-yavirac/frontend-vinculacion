@@ -9,8 +9,6 @@ import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
-import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
-import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
@@ -40,6 +38,10 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
+import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
+import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
+import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+
 
 const routes: Routes = [
   {
@@ -68,9 +70,9 @@ const routes: Routes = [
       { path: 'lista-estudiante-tutor', component: ListaEstudianteTutorFormComponent },
 
 
+      { path: 'estudiante', component: EstudianteFormularioComponent },
+      { path: 'estudiante-portafolio', component: EstudiantePortafolioFormularioComponent },
 
-      { path: 'estudiante', component: EstudianteComponent },
-      { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent },
 
       { path: 'avance-cumplimiento', component: AvanceCumplimientoComponent },
       { path: 'informe-control', component: InformeControlComponent },
