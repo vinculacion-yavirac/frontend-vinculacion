@@ -16,7 +16,7 @@ export class UserHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://127.0.0.1:8000/api/user/";
+  private url: string = "http://127.0.0.1:8000/api/users/";
 
   public save(user: User): Observable<User>{
     return this.http.post<User>(this.url+"/save",user, this.httpOption);
