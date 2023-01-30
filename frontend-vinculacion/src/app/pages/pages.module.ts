@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
-import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
@@ -66,6 +65,9 @@ import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiant
 import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
+import { PortafolioTutorComponent } from './coordinador-general/portafolio/portafolio-tutor/portafolio-tutor.component';
+import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
 
 
 
@@ -87,7 +89,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
     //Docente Tutor-Portafolio
 
-    PortafolioComponent,
+    PortafolioEstudianteComponent,
+    PortafolioFormComponent,
+    PortafolioTutorComponent,
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
     AvanceCumplimientoComponent,
@@ -146,7 +150,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     //Docente Vinculacion-Portafolio
     // PortafolioVinculacionComponent,
 
-    PortafolioComponent,
+    PortafolioEstudianteComponent,
+    PortafolioFormComponent,
+    PortafolioTutorComponent,
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
 
