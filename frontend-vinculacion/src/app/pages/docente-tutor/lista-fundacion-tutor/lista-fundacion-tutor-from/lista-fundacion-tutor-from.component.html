@@ -24,17 +24,17 @@
           <!--Table body-->
           <tbody class="leters">
             <tr *ngFor="let lista of listaFundacion">
-              <th scope="row">{{lista.id}}</th>
-              <td>{{lista.nombre}}</td>
+              <th class="text-white" scope="row">{{lista.id}}</th>
+              <td class="text-white">{{lista.nombre}}</td>
               <td>
                 <div class="margin-leftform-check form-switch">
                   <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
                   [(ngModel)]="lista.estado" disabled>
                 </div>
               </td>
-              <td> 14 </td>
+              <td class="text-white"> 14 </td>
               <td>
-                <a href="">
+                <a href="" routerLink="/dashboard/lista-estudiante-tutor">
                   <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
                 </a>
               </td>
