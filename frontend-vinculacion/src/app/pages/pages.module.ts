@@ -65,6 +65,7 @@ import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-bu
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -195,8 +196,7 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
     HttpClientModule,
     RouterModule,
     SharedModule,
-    
-    
+    NgxPaginationModule
   ]
 })
 export class PagesModule { }

@@ -14,6 +14,7 @@ export class AsignarFundacionFormComponent {
     private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService
   ) { }
 
+  pages: number = 1;
   asignarList: AsignarFundacionVinculacion[]=[];
 
   ngOnInit(): void {
