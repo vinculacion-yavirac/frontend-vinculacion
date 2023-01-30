@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
+import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
@@ -10,8 +11,6 @@ import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimien
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
-import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
-import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -58,9 +57,18 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+
 import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
 import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-estudiante-form/portafolio-vinculacion-estudiante-form.component';
 import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-tutor-form/portafolio-vinculacion-tutor-form.component';
+
+import { AuthModule } from '../auth/auth.module';
+import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
+import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
+import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
+import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
+
 
 
 
@@ -81,8 +89,6 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
 
     //Docente Tutor-Portafolio
 
-    EstudianteComponent,
-    EstudiantePortafolioComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
     ListaEstudiantesGeneralComponent,
@@ -91,8 +97,7 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
     AvanceCumplimientoComponent,
     InformeControlComponent,
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+    FormularioInformeInicialComponent,
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
     EncuestaComponent,
@@ -129,6 +134,15 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
 
+    FormularioInformeInicialComponent,
+
+    EstudianteBuscarComponent,
+    EstudianteFormularioComponent,
+    EstudiantePortafolioPortafolioComponent,
+    EstudiantePortafolioFormularioComponent,
+    
+    
+
   ],
   exports:[
     //Docente Vinculacion-Portafolio
@@ -153,12 +167,10 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
 
 
 
-    EstudianteComponent,
-    EstudiantePortafolioComponent,
+    
 
     InformeInicialComponent,
-    PrimerFormularioInicialComponent,
-    SegundoFormularioInicialComponent,
+  
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
 
@@ -173,6 +185,10 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
+    EstudianteBuscarComponent,
+    EstudianteFormularioComponent,
+    EstudiantePortafolioPortafolioComponent,
+    
 
   ],
   imports: [
@@ -182,6 +198,7 @@ import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/p
     HttpClientModule,
     RouterModule,
     SharedModule,
+    
   ]
 })
 export class PagesModule { }
