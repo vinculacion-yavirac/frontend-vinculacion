@@ -13,6 +13,7 @@ export class SolicitudFormComponent {
     private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
   ) { }
 
+  pages: number = 1;
   solicitudList: SolicitdVinculacion[]=[];
 
   ngOnInit(): void {
