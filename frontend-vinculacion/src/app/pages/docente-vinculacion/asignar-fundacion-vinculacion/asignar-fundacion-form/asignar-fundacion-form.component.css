@@ -8,3 +8,13 @@
     border-radius: 10px;
     grid-auto-flow: auto;
 }
+
+.iconobser{
+    width: 40px;
+    height: 40px;
+  }
+
+  .switch{
+    width: 70px;
+    height: 24px;
+  }

@@ -27,9 +27,14 @@
                 <tr class="text-center" *ngFor="let asignar of asignarList">
                     <th class="text-white" scope="row">{{asignar.id}}</th>
                     <td class="text-white">{{asignar.nombre}}</td>
-                    <td class="text-white">circulo</td>
+                    <td class="text-white"><div class="margin-leftform-check form-switch">
+                        <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                        [(ngModel)]="asignar.estado" disabled>
+                      </div></td>
                     <td class="text-white">10</td>
-                    <td class="text-white">ojo</td>
+                    <td class="text-white"><a href=""  routerLink="/dashboard/portafolio-vinculacion">
+                        <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
+                      </a></td>
                     <td>
 
 

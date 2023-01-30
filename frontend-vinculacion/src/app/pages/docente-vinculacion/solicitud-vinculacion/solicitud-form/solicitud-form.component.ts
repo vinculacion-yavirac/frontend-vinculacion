@@ -21,8 +21,7 @@ export class SolicitudFormComponent {
 
   public findAll(): void{
     this.solicitudVinculacionHttpService.findAll().subscribe(
-      (response) => this.solicitudList = response
-    );
+      (response) => this.solicitudList = response    );
   }
 
   public findByDescription(term:string): void{

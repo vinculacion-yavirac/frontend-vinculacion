@@ -196,6 +196,7 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
     RouterModule,
     SharedModule,
     
+    
   ]
 })
 export class PagesModule { }
