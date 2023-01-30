@@ -4,7 +4,29 @@
   background-color: #D9D9D9;
 }
 
-.card-body{
+.card-body {
   background-color: #D9D9D9;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+/*
+.row{
+  background-color: blueviolet;
+} */
+
+.card3{
+
+  width: auto;
+  border: 3px;
 }
 
+.addq{
+  color: green;
+}
+
+
+.add{
+  color: green;
+}

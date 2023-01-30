@@ -63,73 +63,260 @@
                 </div>
                 <br>
 
-                  <div class="card-body">
-                    <p>Preguntas</p>
-                    <p>1. Usted como beneficiario considera que el proyecto cumplio con los requerimientos solicitados
-                      de manera?</p>
+                <div class="addq">
+                  <a [routerLink]="['../agregar']">
+                    <button type="button" class="btn btn-outline-success">Agregar Pregunta
+                      <svg width="20pt" height="20pt" color="green" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                         <path d="m210 260h-0.28125c-11.043 0-20.004 8.9414-20.004 20.004 0 11.059 8.9414 20.004 20.004 20.004h0.29688 279.96 0.28125c11.043 0 20.004-8.9414 20.004-20.004 0-11.059-8.9414-20.004-20.004-20.004h-0.29688z"/>
+                         <path d="m370 140v-0.28125c0-11.043-8.9414-20.004-20.004-20.004-11.059 0-20.004 8.9414-20.004 20.004v0.29688-0.015625 279.98 0.28125c0 11.043 8.9414 20.004 20.004 20.004 11.059 0 20.004-8.9414 20.004-20.004v-0.29688 0.015625z"/>
+                         <path d="m350 0c-154.4 0-279.98 125.6-279.98 279.98s125.6 279.98 279.98 279.98c154.4 0 279.98-125.6 279.98-279.98s-125.6-279.98-279.98-279.98zm0 40.004c132.79 0 240 107.22 240 240s-107.2 240-240 240c-132.79 0-240-107.2-240-240 0-132.79 107.2-240 240-240z"/>
+                        </g>
+                       </svg>
+                    </button>
+                  </a>
+                </div>
+                <br>
 
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
-                      <label class="form-check-label" for="inlineRadio1">Alto</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
-                      <label class="form-check-label" for="inlineRadio2">Medio</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                        value="option3">
-                      <label class="form-check-label" for="inlineRadio3">Bajo</label>
+                <div class="card-body">
 
+                 <div class="card-header">
+                  <p data-bs-toggle="collapse" href="#collapseExamplep"
+                  role="button" aria-expanded="false" aria-controls="collapseExample">
+
+                  1. Usted como beneficiario considera que el proyecto cumplio con los requerimientos solicitados
+                    de manera?</p>
+
+                    <div class="collapse" id="collapseExamplep">
+                      <div class="card card-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <a [routerLink]="['../editar']">
+                              <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <path
+                                  d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
+                                <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
+                                <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
+                                <path
+                                  d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
+                                <path
+                                  d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
+                              </g>
+                            </svg>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                           <a [routerLink]="['../eliminar']">
+                            <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                              <path
+                                d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
+                              <path
+                                d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
+                              <path
+                                d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                              <path
+                                d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                              <path
+                                d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
+                            </g>
+                          </svg>
+                           </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1" data-bs-toggle="collapse" href="#collapseExample"
+                      role="button" aria-expanded="false" aria-controls="collapseExample">Alto</label>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <a [routerLink]="['../editar']">
+                              <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <path
+                                  d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
+                                <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
+                                <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
+                                <path
+                                  d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
+                                <path
+                                  d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
+                              </g>
+                            </svg>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                           <a [routerLink]="['../eliminar']">
+                            <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                              <path
+                                d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
+                              <path
+                                d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
+                              <path
+                                d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                              <path
+                                d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                              <path
+                                d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
+                            </g>
+                          </svg>
+                           </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <br>
-
-
-                    <div class="card-body">
-                      <p>Preguntas</p>
-                      <p>2. ¿Ud. como beneficiario del proyecto en que fases ha participado?</p>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                          value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Alto</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                          value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Medio</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                          value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Bajo</label>
-
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2" data-bs-toggle="collapse"
+                      href="#collapseExample2" role="button" aria-expanded="false"
+                      aria-controls="collapseExample">Medio</label>
+                    <div class="collapse" id="collapseExample2">
+                      <div class="card card-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <path
+                                  d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
+                                <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
+                                <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
+                                <path
+                                  d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
+                                <path
+                                  d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
+                              </g>
+                            </svg>
+                          </div>
+                          <div class="col-6">
+                            <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g>
+                                <path
+                                  d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
+                                <path
+                                  d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
+                                <path
+                                  d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                                <path
+                                  d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                                <path
+                                  d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <br><div class="card-body">
-                      <p>Preguntas</p>
-                      <p>2. ¿Ud. como beneficiario del proyecto en que fases ha participado?</p>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                          value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Alto</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                          value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Medio</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                          value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Bajo</label>
-
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option3">
+                    <label class="form-check-label" for="inlineRadio3" data-bs-toggle="collapse"
+                      href="#collapseExample3" role="button" aria-expanded="false"
+                      aria-controls="collapseExample">Bajo</label>
+                    <div class="collapse" id="collapseExample3">
+                      <div class="card card-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <path
+                                  d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
+                                <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
+                                <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
+                                <path
+                                  d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
+                                <path
+                                  d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
+                              </g>
+                            </svg>
+                          </div>
+                          <div class="col-6">
+                            <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g>
+                                <path
+                                  d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
+                                <path
+                                  d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
+                                <path
+                                  d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                                <path
+                                  d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                                <path
+                                  d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+
+                <br>
+
+
+                <div class="card-body">
+
+                  <p>2. ¿Ud. como beneficiario del proyecto en que fases ha participado?</p>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Alto</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Medio</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option3">
+                    <label class="form-check-label" for="inlineRadio3">Bajo</label>
+
+                  </div>
+                </div>
+                <br>
+                <div class="card-body">
+
+                  <p>2. ¿Ud. como beneficiario del proyecto en que fases ha participado?</p>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Alto</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Medio</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option3">
+                    <label class="form-check-label" for="inlineRadio3">Bajo</label>
+
+                  </div>
+                </div>
 
 
 
