@@ -22,3 +22,22 @@
     color: white;
   
   }
+
+  .window-notice .content {
+    background: #1f6dfd;
+
+    box-shadow: 0 1px 3px #1f6dfd;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 10;
+    min-width: 10px !important;
+    right: -150px;
+    top: -47px;
+
+    position: relative;
+    width: 13%;
+
+ 
+}
