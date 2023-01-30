@@ -1,32 +1,15 @@
-<div class="grid" id="main-wrapper">
-  <!-- <app-header></app-header> -->
-  <!-- <app-sidebar></app-sidebar> -->
-  <br>
-  <div class="page-wrapper">
-    <div class="container-fluid">
+
+
       <div class="row">
-        <div class="bread col-12">
-          <div class="col-9" style="margin-left: 18rem; margin-block-start: -17rem;">
-            <div class="card">
-              <div class="card-body">
-                <!-- <app-breadcrumbs></app-breadcrumbs> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cuadro col-9" style="margin-left: 18rem; margin-block-start: -12rem;">
+
           <div class="card">
             <div class="card-body">
               <H2>Avance cumplimiento de objetivos</H2>
 
 
-              <img class="iconbuscar" src="../../../../assets/image/buscar.png" alt="">
 
-              <input class="buscar" type="search" placeholder="        Buscar">
-              <br>
-              <br>
+
+
               <div class="container2 container-fuild">
                 <br>
 
@@ -44,16 +27,16 @@
                       </tr>
                     </thead>
                     <tbody class="leters">
-                      <tr>
+                      <tr class="text-center" *ngFor="let avance of avanceC">
                         <th scope="row">1</th>
                         <td>
-                          Vinculacion 1
+                          {{avance.resumenN}}
                         </td>
                         <td>
-                          Fundacion
+                          {{avance.indicadoresF}}
                         </td>
                         <td>
-                          Fundacion
+                          {{avance. mediosF}}
                         </td>
                         <td>
                           <div class="form-floating">
@@ -65,25 +48,7 @@
 
                       </tr>
 
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>
-                          Fundacion 1
-                        </td>
-                        <td>
-                           Vinculacion
-                        </td>
-                        <td>
-                          Vinculacion
-                        </td>
-                        <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Comments</label>
-                          </div>
-                        </td>
 
-                      </tr>
                     </tbody>
                   </table>
 
@@ -98,8 +63,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+
   <!-- <app-footer></app-footer> -->
-</div>
+
