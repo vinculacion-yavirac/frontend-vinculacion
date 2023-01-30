@@ -7,7 +7,7 @@
 <div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
     <div class="">
         <!--Table-->
-        <table class="table col-12 px-1">
+        <table class="table col-12 px-1" >
 
             <!--Table head-->
             <thead>
@@ -23,13 +23,19 @@
             <!--Table head-->
 
             <!--Table body-->
-            <tbody>
-                <tr class="text-center" *ngFor="let asignar of asignarList">
+            
+            <tbody >
+                <tr class="text-center"  *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 5, currentPage: pages }">
                     <th class="text-white" scope="row">{{asignar.id}}</th>
                     <td class="text-white">{{asignar.nombre}}</td>
-                    <td class="text-white">circulo</td>
+                    <td class="text-white"><div class="margin-leftform-check form-switch">
+                        <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                        [(ngModel)]="asignar.estado" disabled>
+                      </div></td>
                     <td class="text-white">10</td>
-                    <td class="text-white">ojo</td>
+                    <td class="text-white"><a href=""  routerLink="/dashboard/portafolio-vinculacion">
+                        <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
+                      </a></td>
                     <td>
 
 
@@ -75,10 +81,6 @@
                             </div>
                             <button class="btn btn-success btn-outline-light btn-sm"
                                 data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Asignar</button>
-
-
-
-
                         </div>
                     </td>
                 </tr>
@@ -87,4 +89,8 @@
         </table>
         <!--Table-->
     </div>
+    <div class="pagi">
+        <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+    </div>
 </div>
+

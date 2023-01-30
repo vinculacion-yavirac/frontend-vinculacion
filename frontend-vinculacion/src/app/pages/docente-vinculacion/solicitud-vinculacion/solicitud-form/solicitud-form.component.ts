@@ -13,6 +13,7 @@ export class SolicitudFormComponent {
     private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
   ) { }
 
+  pages: number = 1;
   solicitudList: SolicitdVinculacion[]=[];
 
   ngOnInit(): void {
@@ -21,8 +22,7 @@ export class SolicitudFormComponent {
 
   public findAll(): void{
     this.solicitudVinculacionHttpService.findAll().subscribe(
-      (response) => this.solicitudList = response
-    );
+      (response) => this.solicitudList = response    );
   }
 
   public findByDescription(term:string): void{

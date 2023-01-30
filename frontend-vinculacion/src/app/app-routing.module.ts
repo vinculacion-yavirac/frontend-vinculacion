@@ -4,10 +4,10 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 
 const routes: Routes= [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {path: 'dashboard', loadChildren:() => import('./pages/pages.module').then(m => m.PagesModule)},
   {path: 'shared', loadChildren:() => import('./shared/shared.module').then(m => m.SharedModule)},
-  {path: 'auth', loadChildren:() => import('./auth/auth.module').then(m => m.AuthModule)},
+  {path: 'login', loadChildren:() => import('./auth/auth.module').then(m => m.AuthModule)},
   { path: '**', component: NopagesfoundComponent },
 ]
 
