@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
+import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
+import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
@@ -55,6 +57,11 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+
+import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
+import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-estudiante-form/portafolio-vinculacion-estudiante-form.component';
+import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-tutor-form/portafolio-vinculacion-tutor-form.component';
+
 import { AuthModule } from '../auth/auth.module';
 import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
@@ -68,11 +75,13 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
 @NgModule({
   declarations: [
     //Docente Vinculacion-Portafolio
-    PortafolioVinculacionComponent,
+    PortafolioVinculacionFormComponent,
     SolicitudFormComponent,
     SolicitudSearchComponent,
     ProyectoFormComponent,
     ProyectoSearchComponent,
+    PortafolioVinculacionEstudianteFormComponent,
+    PortafolioVinculacionTutorFormComponent,
     AsignarFundacionFormComponent,
     AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
@@ -137,7 +146,7 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
   ],
   exports:[
     //Docente Vinculacion-Portafolio
-    PortafolioVinculacionComponent,
+    // PortafolioVinculacionComponent,
 
     PortafolioComponent,
     SolicitudCertificadoComponent,

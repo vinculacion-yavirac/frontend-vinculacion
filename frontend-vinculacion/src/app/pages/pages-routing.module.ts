@@ -6,7 +6,6 @@ import { PortafolioComponent } from './coordinador-general/portafolio/portafolio
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
-import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
@@ -36,22 +35,21 @@ import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agrega
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
+import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
 import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
-
-
 
 const routes: Routes = [
   {
     path: '', component: MainComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'solicitud', component: SolicitudFormComponent },
+      { path: 'solicitud', component: SolicitudFormComponent},
       { path: 'asignar-fundacion', component: AsignarFundacionFormComponent },
       { path: 'configuraciones', component: ConfiguracionVinculacionFormComponent },
-      { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
+      { path: 'portafolio-vinculacion', component: PortafolioVinculacionFormComponent },
       { path: 'proyecto', component: ProyectoFormComponent},
 
 
