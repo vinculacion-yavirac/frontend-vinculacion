@@ -5,7 +5,6 @@ import { EstudianteComponent } from './estudiante/estudiante/estudiante.componen
 import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
-import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
@@ -59,6 +58,8 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { ListaEstudiantesGeneralFormComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-form/lista-estudiantes-general-form.component';
+import { ListaEstudiantesGeneralSearchComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-search/lista-estudiantes-general-search.component';
 
 
 
@@ -81,7 +82,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     EstudiantePortafolioComponent,
     PortafolioComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
+    ListaEstudiantesGeneralFormComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
     AvanceCumplimientoComponent,
@@ -124,6 +125,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+    ListaEstudiantesGeneralSearchComponent,
 
   ],
   exports:[
@@ -132,8 +134,7 @@ import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-port
 
     PortafolioComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
-
+    ListaEstudiantesGeneralFormComponent,
 
 
     PortafolioTutorFormularioComponent,
