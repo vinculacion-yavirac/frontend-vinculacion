@@ -36,4 +36,8 @@ export class ListaFundacionHttpService {
   public findByDescription(term: string):Observable<ListaFundacionTutor[]>{
     return this.http.get<ListaFundacionTutor[]>(this.url+"/findByDescription/"+term,this.httpOption);
   }
+
+  public findByName(term: string):Observable<ListaFundacionTutor[]>{
+    return this.http.get<ListaFundacionTutor[]>(this.url+"/findByName/"+term,this.httpOption);
+  }
 }

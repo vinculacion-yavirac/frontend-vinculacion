@@ -1,8 +1,11 @@
-<div class="d-flex flex-row-reverse">
-  <div class="p-1 col-sm-7 col-md-10">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class=" btn btn-outline-primary" type="submit">Search</button>
-    </form>
-  </div>
+<div class="dropdown dropdown-hover">
+  <input #inputListaFundacionTutorBuscar class="input input-primary input-sm" type="text" name="" id=""
+  placeholder="Agregar"
+  (input)="onInput(inputListaFundacionTutorBuscar.value)"
+  >
+  <ul class="menu menu-compact dropdown-content bg-white" >
+      <li *ngFor="let item of listaFundacion">
+          <a (click)="onSelect(item)">{{item.nombre}}</a>
+      </li>
+  </ul>
 </div>
