@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
-import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
@@ -40,6 +39,7 @@ import { FormularioInformeInicialComponent } from './informe-inicial/formulario-
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 
 const routes: Routes = [
   {
@@ -60,7 +60,7 @@ const routes: Routes = [
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
 
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },
-      { path: 'portafolio', component: PortafolioComponent },
+      { path: 'portafolio-form', component: PortafolioFormComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
 
       { path: 'portafolio-tutor', component: PortafolioTutorFormularioComponent },
