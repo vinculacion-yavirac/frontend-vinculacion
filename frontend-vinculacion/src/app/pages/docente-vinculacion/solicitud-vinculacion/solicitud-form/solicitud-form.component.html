@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 24em;">
+<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 23em;">
     <div class="">
         <!--Table-->
         <table class="table col-12 px-1">
@@ -34,12 +34,12 @@
             <tbody>
                 <tr class="text-center"
                     *ngFor="let solicitud of solicitudList | paginate: { itemsPerPage: 3, currentPage: pages }">
-                    <th class="text-white" scope="row">{{solicitud.id}}</th>
-                    <td class="text-white">{{solicitud.tipoSolicitud}}</td>
-                    <td class="text-white">Steveen Ordoñez</td>
-                    <td class="text-white">1755516802</td>
-                    <td class="text-white">{{solicitud.fechaEmision}}</td>
-                    <td class="text-white">{{solicitud.estado}}</td>
+                    <th class="text-dark" scope="row">{{solicitud.id}}</th>
+                    <td class="text-dark">{{solicitud.tipoSolicitud}}</td>
+                    <td class="text-dark">Steveen Ordoñez</td>
+                    <td class="text-dark">1755516802</td>
+                    <td class="text-dark">{{solicitud.fechaEmision}}</td>
+                    <td class="text-dark">{{solicitud.estado}}</td>
                     <td>
                         <div class="d-grid gap-1  col-auto">
                             <a href="" routerLink="/dashboard/asignar-fundacion"><button

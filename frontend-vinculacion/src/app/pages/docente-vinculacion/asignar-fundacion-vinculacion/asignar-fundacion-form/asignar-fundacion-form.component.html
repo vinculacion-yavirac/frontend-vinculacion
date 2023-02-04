@@ -13,7 +13,7 @@
         </div>
     </div>
 </div>
-<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
+<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 22em;">
     <div class="">
         <!--Table-->
         <table class="table col-12 px-1">
@@ -35,17 +35,17 @@
 
             <tbody>
                 <tr class="text-center"
-                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 5, currentPage: pages }">
-                    <th class="text-white" scope="row">{{asignar.id}}</th>
-                    <td class="text-white">{{asignar.nombre}}</td>
-                    <td class="text-white">
+                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 4, currentPage: pages }">
+                    <th class="text-dark" scope="row">{{asignar.id}}</th>
+                    <td class="text-dark">{{asignar.nombre}}</td>
+                    <td class="text-dark">
                         <div class="margin-leftform-check form-switch">
                             <input class="switch form-check-input" type="checkbox" role="switch"
                                 id="flexSwitchCheckChecked" [(ngModel)]="asignar.estado" disabled>
                         </div>
                     </td>
-                    <td class="text-white">10</td>
-                    <td class="text-white"><a href="" routerLink="/dashboard/portafolio-vinculacion">
+                    <td class="text-dark">10</td>
+                    <td class="text-dark"><a href="" routerLink="/dashboard/portafolio-vinculacion">
                             <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
                         </a></td>
                     <td>
