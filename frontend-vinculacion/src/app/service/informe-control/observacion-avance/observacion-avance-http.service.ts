@@ -20,7 +20,7 @@ export class ObservacionAvanceHttpService {
   private url: string = "http://localhost:8080/api/observacionesavance/";
 
   public save(observacionAvance: ObservacionAvance): Observable<ObservacionAvance>{
-    return this.http.post<ObservacionAvance>(this.url+"/",observacionAvance, this.httpOption);
+    return this.http.post<ObservacionAvance>(this.url+"save",observacionAvance, this.httpOption);
   }
 
   public findById(id: number): Observable<ObservacionAvance>{

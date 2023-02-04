@@ -28,16 +28,16 @@
                           {{observacion.actividades}}
                         </td>
                         <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
+
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="observacion.avancesCumplimiento" ></textarea>
+
+
                         </td>
                         <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
+
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="observacion.observaciones"></textarea>
+
+
                         </td>
                         <td>
 
@@ -59,6 +59,7 @@
                 <a href="dashboard/avance-cumplimiento">
                   <button  class="btn btn-primary" type="button">Atras</button>
                 </a>
+                <button  class="btn btn-primary" type="button" (click)="save()">Guardar</button>
                 <button class="btn btn-primary" type="button">Generar Pdf</button>
               </div>
 
