@@ -5,8 +5,8 @@
     <div class="d-flex flex-row-reverse">
         <div class="p-1 col-sm-7 col-md-10">
             <form class="d-flex" role="search">
-                <input #inputSearchholidayActividad class="form-control me-2" type="search" placeholder="Search"
-                    aria-label="Search" (input)="onInput(inputSearchholidayActividad.value)">
+                <input #inputSearchTipoSolicitud class="form-control me-2" type="search" placeholder="Search"
+                    aria-label="Search" (input)="onInput(inputSearchTipoSolicitud .value)">
                 <button class=" btn btn-outline-primary" type="submit">Search</button>
             </form>
         </div>
@@ -42,7 +42,7 @@
                     <td class="text-white">{{solicitud.estado}}</td>
                     <td>
                         <div class="d-grid gap-1  col-auto">
-                            <a href="" routerLink="/dashboard/portafolio-vinculacion"><button
+                            <a href="" routerLink="/dashboard/asignar-fundacion"><button
                                     class="btn btn-primary btn-sm" type="button">Portafolio</button></a>
                             <a href="" routerLink="/dashboard/proyecto"><button class="btn btn-primary btn-sm"
                                     type="button">Proyectos</button></a>
