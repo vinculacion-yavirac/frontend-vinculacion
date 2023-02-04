@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SolicitdVinculacion } from 'src/app/models/docente-vinculacion/solicitud-vinculacion';
 import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion-http.service';
 
@@ -9,30 +9,45 @@ import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vincula
 })
 export class SolicitudFormComponent {
 
-  constructor(
-    private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
-  ) { }
+ // @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
 
-  pages: number = 1;
-  solicitudList: SolicitdVinculacion[]=[];
+ @Input() entityDescription: string = "";
+ @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
+ constructor(
+   private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
+ ) { }
 
-  ngOnInit(): void {
-    this.findAll();
-  }
+ pages: number = 1;
+ solicitudList: SolicitdVinculacion[]=[];
 
-  public findAll(): void{
-    this.solicitudVinculacionHttpService.findAll().subscribe(
-      (response) => this.solicitudList = response    );
-  }
+ ngOnInit(): void {
+   this.findAll();
+ }
 
-  public findByDescription(term:string): void{
-    if(term.length >= 2){
-      this.solicitudVinculacionHttpService.findByDescription(term).subscribe(
-        (response) => this.solicitudList = response
-      )
-    }
-    if(term.length == 0){
-      this.findAll();
-    }
-  }
+ public findAll(): void{
+   this.solicitudVinculacionHttpService.findAll().subscribe(
+     (response) => this.solicitudList = response    );
+ }
+
+ // public onInput(term: string){
+
+ //   this.termEmitter.emit(term);
+ // }
+
+ public onInput(term: string) {
+   if (term.length >= 1) {
+     this.solicitudVinculacionHttpService.findByDescription(term).subscribe(
+       (response) => this.solicitudList = response
+     )
+   }
+   if (term.length === 0) {
+     this.findAll()
+   }
+ }
+
+ 
+ public onSelect(solicitdVinculacion: SolicitdVinculacion): void {
+   this.termEmitter.emit(solicitdVinculacion);
+
+ }
 }
