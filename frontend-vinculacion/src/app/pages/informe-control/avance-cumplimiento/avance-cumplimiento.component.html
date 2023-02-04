@@ -1,3 +1,8 @@
+<div class="alert alert-danger"  *ngIf="esvacio">
+
+  <strong>Danger!</strong> Llenar al menos un campo
+
+</div>
 
 
       <div class="row">
@@ -28,7 +33,7 @@
                     </thead>
                     <tbody class="leters">
                       <tr class="text-center" *ngFor="let avance of avanceC">
-                        <th scope="row">1</th>
+                        <th scope="row"> {{avance.id}}</th>
                         <td>
                           {{avance.resumenN}}
                         </td>
@@ -38,12 +43,13 @@
                         <td>
                           {{avance. mediosF}}
                         </td>
-                        <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Comments</label>
-                          </div>
-                        </td>
+
+
+                         <td>
+                          <textarea required    class="form-control" placeholder="Leave a comment here" id=""   [(ngModel)]="avance.avanceC"  ></textarea>
+                         </td>
+
+
 
 
                       </tr>
@@ -64,7 +70,7 @@
                 </a>
                 <a href="dashboard/observacion-avance">
 
-                  <button  class="btn btn-primary" type="button">Siguiente</button>
+                  <button  class="btn btn-primary" type="button"  (click)="save()">Siguiente</button>
                 </a>
 
 

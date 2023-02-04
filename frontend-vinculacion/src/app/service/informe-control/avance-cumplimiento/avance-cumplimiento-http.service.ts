@@ -19,7 +19,7 @@ export class AvanceCumplimientoHttpService {
   private url: string = "http://localhost:8080/api/avancecumplimiento/";
 
   public save(avancesCumplimiento: AvanceCumplimiento): Observable<AvanceCumplimiento>{
-    return this.http.post<AvanceCumplimiento>(this.url+"/",avancesCumplimiento, this.httpOption);
+    return this.http.post<AvanceCumplimiento>(this.url+"save",avancesCumplimiento, this.httpOption);
   }
 
   public findById(id: number): Observable<AvanceCumplimiento>{

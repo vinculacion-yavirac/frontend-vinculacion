@@ -14,9 +14,38 @@ export class ObservacionAvanceComponent {
   ) { }
 
   observacionA: ObservacionAvance[]=[];
+
+  esvacio1:Boolean=false ;
+
+
+
+
+
+
   ngOnInit(): void {
     this.findAll();
+    this.esvacio1=false;
   }
+
+
+
+
+  save():void{
+
+
+    for(let avance2 of this.observacionA){
+       if (avance2.observaciones==''){
+
+        this.esvacio1=true;
+
+       }else{
+        this.observacionAvanceHttpService.save(avance2).subscribe()
+       }
+
+    }
+
+
+    }
 
   public findAll(): void{
     this.observacionAvanceHttpService.findAll().subscribe(
