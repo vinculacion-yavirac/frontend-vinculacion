@@ -13,4 +13,6 @@
 .pagi{
   text-align: center;
   padding: 10px;
+  position:static;
+  grid-row-end: auto;
 }

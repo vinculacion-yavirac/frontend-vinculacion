@@ -24,7 +24,6 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
 import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
-import { SolicitudSearchComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-search/solicitud-search.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
@@ -77,7 +76,6 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     //Docente Vinculacion-Portafolio
     PortafolioVinculacionFormComponent,
     SolicitudFormComponent,
-    SolicitudSearchComponent,
     ProyectoFormComponent,
     ProyectoSearchComponent,
     PortafolioVinculacionEstudianteFormComponent,

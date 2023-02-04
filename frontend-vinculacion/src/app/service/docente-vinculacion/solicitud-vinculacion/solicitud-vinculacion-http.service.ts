@@ -16,7 +16,7 @@ export class SolicitudVinculacionHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://127.0.0.1:8000/api/solicitud/";
+  private url: string = "http://localhost:8080/api/solicitud";
 
   public save(solicitdVinculacion: SolicitdVinculacion): Observable<SolicitdVinculacion>{
     return this.http.post<SolicitdVinculacion>(this.url+"/save",solicitdVinculacion, this.httpOption);
@@ -31,11 +31,11 @@ export class SolicitudVinculacionHttpService {
   }
 
   public findAll():Observable<SolicitdVinculacion[]>{
-    return this.http.get<SolicitdVinculacion[]>(this.url,this.httpOption);
+    return this.http.get<SolicitdVinculacion[]>(this.url+"/findAll",this.httpOption);
   }
 
   public findByDescription(term: string):Observable<SolicitdVinculacion[]>{
-    return this.http.get<SolicitdVinculacion[]>(this.url+"/findByDescription/"+term,this.httpOption);
+    return this.http.get<SolicitdVinculacion[]>(this.url+"/findByTipoSolicitud/"+term,this.httpOption);
   }
 
 }

@@ -1,7 +1,7 @@
 export interface SolicitdVinculacion {
     id: number,
     estado:boolean,
-    tipo_solicitud:string,
-    fecha_emision:Date,
+    tipoSolicitud:string,
+    fechaEmision:Date,
     tipoPersona_id:number,
 }
