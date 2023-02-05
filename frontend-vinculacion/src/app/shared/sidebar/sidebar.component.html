@@ -1,51 +1,54 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light .container-fluid" style="width: 280px;">
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-    <svg class="bi pe-none me-2" width="40" height="32">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="fs-4"></span>
-  </a>
-
-  <ul class="nav nav-pills flex-column .container-fluid navbar-expand-md ">
-    <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#home" />
-        </svg>
-        Solicitudes
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link link-dark">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#speedometer2" />
-        </svg>
-        Configuracion
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link link-dark">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#table" />
-        </svg>
-        Visualizar Proyecto
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link link-dark">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#grid" />
-        </svg>
-        Visualizar Portafolio
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link link-dark">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
-        </svg>
-        Asignar Fundacion
-      </a>
-    </li>
-  </ul>
+<div class="container-fluid ">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-sm-3 px-sm-1 col-md-2 px-md-2 col-xl-2 px-sm-1 px-0 bg-light">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-0 pt-1 text-white min-vh-90">
+        <a href="/" class="d-flex align-items-center pb-0 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-6 d-none d-sm-inline">Portafolio</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a routerLink="solicitud" class="nav-link align-middle px-4">
+              <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline" >Solicitud</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="proyecto" class="nav-link align-middle px-4">
+              <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="portafolio-vinculacion" class="nav-link align-middle px-4">
+              <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Portafolio</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="asignar-fundacion" class="nav-link align-middle px-4">
+              <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Asignar Fundacion</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-auto col-10 col-sm-9 px-sm-4 col-md-10 px-md-3 col-xl-10 px-xl-3 col-lg-10 px-lg-3">
+      <div class="row">
+        <div
+          class="pt-1 col-auto col-12 col-sm-12 px-sm-3 col-md-12 px-md-3 col-md-10 col-xl-12 px-xl-3 col-lg-12 px-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <app-breadcrumbs></app-breadcrumbs>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pt-1 col-auto col-12 col-sm-12 px-sm-3 col-md-12 px-md-3 col-xl-12 px-xl-3 col-lg-12 px-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

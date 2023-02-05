@@ -1,0 +1,106 @@
+<div class="justify-text">
+    <h2>Asignar Fundación</h2>
+</div>
+<div class="col-auto  d-flex flex-row-reverse">
+    <div class="d-flex flex-row-reverse">
+        <div class="p-1 col-sm-7 col-md-10">
+            <form class="d-flex" role="search">
+                <input #inputSearch class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    (input)="onInput(inputSearch.value)">
+                <button class=" btn btn-outline-primary" type="submit"
+                    (click)="onInput(inputSearch.value)">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 21em;">
+    <div class="">
+        <!--Table-->
+        <table class="table col-12 px-1">
+
+            <!--Table head-->
+            <thead>
+                <tr class="text-center">
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre de fundación</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Estudiantes Asignados</th>
+                    <th scope="col">Observar</th>
+                    <th scope="col">Asignar</th>
+                </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body-->
+
+            <tbody>
+                <tr class="text-center"
+                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 3, currentPage: pages }">
+                    <th class="text-dark" scope="row">{{asignar.id}}</th>
+                    <td class="text-dark">{{asignar.nombre}}</td>
+                    <td class="text-dark">
+                        <div class="margin-leftform-check form-switch">
+                            <input class="switch form-check-input" type="checkbox" role="switch"
+                                id="flexSwitchCheckChecked" [(ngModel)]="asignar.estado" disabled>
+                        </div>
+                    </td>
+                    <td class="text-dark">10</td>
+                    <td class="text-dark"><a href="" routerLink="/dashboard/portafolio-vinculacion">
+                            <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
+                        </a></td>
+                    <td>
+
+
+
+                        <div class=" d-grid gap-1  col-auto">
+
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Asignar Turor</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <fieldset>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Asignar Tutor</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                            placeholder="Disabled input">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Asignar estudiante</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                            placeholder="Disabled input">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary " data-bs-dismiss="modal"
+                                                aria-label="Close">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            </div>
+                            <button class="btn btn-success btn-outline-light btn-sm"
+                                data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Asignar</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <!--Table body-->
+        </table>
+        <!--Table-->
+    </div>
+    <div class="pagi">
+        <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+    </div>
+</div>
