@@ -6,7 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
-import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
+import { InformeInicialComponent } from './docente-tutor/informe-inicial/informe-inicial/informe-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -57,7 +57,7 @@ import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculac
 import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-tutor-form/portafolio-vinculacion-tutor-form.component';
 
 import { AuthModule } from '../auth/auth.module';
-import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
+import { FormularioInformeInicialComponent } from './docente-tutor/informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
@@ -145,6 +145,7 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
   exports:[
     //Docente Vinculacion-Portafolio
     // PortafolioVinculacionComponent,
+
 
     PortafolioEstudianteComponent,
     PortafolioFormComponent,
