@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ListaFundacionTutor } from 'src/app/models/docente-tutor/lista-fundacion-tutor';
 import { ListaFundacionHttpService } from 'src/app/service/docente-tutor/lista-fundacion-tutor/lista-fundacion-http.service';
 
@@ -8,11 +8,13 @@ import { ListaFundacionHttpService } from 'src/app/service/docente-tutor/lista-f
   styleUrls: ['./lista-fundacion-tutor-from.component.css']
 })
 export class ListaFundacionTutorFromComponent {
-
+  @Input() entityDescription: string = "";
+  @Output() termEmitter = new EventEmitter<ListaFundacionTutor>();
   constructor(
     private listaFundacionHttpService:ListaFundacionHttpService
   ) { }
 
+  pages: number = 1;
   listaFundacion: ListaFundacionTutor[]=[];
 
   ngOnInit(): void {
@@ -21,18 +23,28 @@ export class ListaFundacionTutorFromComponent {
 
   public findAll(): void{
     this.listaFundacionHttpService.findAll().subscribe(
-      (response) => this.listaFundacion = response
-    );
+      (response) => this.listaFundacion = response    );
   }
 
-  public findByDescription(term:string): void{
-    if(term.length >= 2){
+  // public onInput(term: string){
+
+  //   this.termEmitter.emit(term);
+  // }
+
+  public onInput(term: string) {
+    if (term.length >= 1) {
       this.listaFundacionHttpService.findByDescription(term).subscribe(
         (response) => this.listaFundacion = response
       )
     }
-    if(term.length == 0){
-      this.findAll();
+    if (term.length === 0) {
+      this.findAll()
     }
+  }
+
+
+  public onSelect(listaFundacion: ListaFundacionTutor): void {
+    this.termEmitter.emit(listaFundacion);
+
   }
 }

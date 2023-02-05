@@ -15,7 +15,7 @@ export class ListaFundacionHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://127.0.0.1:8000/api/fundacion/";
+  private url: string = "http://localhost:8080/api/fundacion";
 
   public save(listaFundacionTutor: ListaFundacionTutor): Observable<ListaFundacionTutor>{
     return this.http.post<ListaFundacionTutor>(this.url+"/save",listaFundacionTutor, this.httpOption);
@@ -30,7 +30,7 @@ export class ListaFundacionHttpService {
   }
 
   public findAll():Observable<ListaFundacionTutor[]>{
-    return this.http.get<ListaFundacionTutor[]>(this.url,this.httpOption);
+    return this.http.get<ListaFundacionTutor[]>(this.url+"/findAll",this.httpOption);
   }
 
   public findByDescription(term: string):Observable<ListaFundacionTutor[]>{
