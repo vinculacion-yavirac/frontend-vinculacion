@@ -8,15 +8,24 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Cedula de Identidad</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="cedula" id="" placeholder="1584687421" [(ngModel)]="currentEntity.cedula" >
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="mb-3 row">
-            <label for="" class="col-sm-3 col-form-label">Nombres</label>
+            <label for="" class="col-sm-3 col-form-label">Nombre</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="nombre" id="" placeholder="Juan" [(ngModel)]="currentEntity.nombre">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="mb-3 row">
+            <label for="" class="col-sm-3 col-form-label">Telefono</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="telefono" id="" placeholder="12456" [(ngModel)]="currentEntity.telefono">
             </div>
           </div>
         </div>
@@ -25,34 +34,27 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Rol</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="estudiante" id="" placeholder="Estudiante" >
             </div>
           </div>
         </div>
+<br>
         <div class="col-md-6">
           <div class="mb-3 row">
-            <label for="" class="col-sm-3 col-form-label">Apellidos</label>
+            <label for="" class="col-sm-3 col-form-label">Direccion</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="direccion" id="" placeholder="Lucha de Los Pobres" [(ngModel)]="currentEntity.direccion">
             </div>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="mb-3 row">
-            <label for="" class="col-sm-3 col-form-label">Semestre</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
-            </div>
-          </div>
-        </div>
       </form>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="d-grid gap-2 col-md-6">
+      <div class="d-grid gap-1 col-md-2">
         <br>
-        <button class="btn btn-primary" type="button">
-          <img src="../../../../assets/image/ojo-boton.png" style=" height: 20px; " alt=" ">
+        <button class="btn btn-primary" type="button" (click)="save()">
+          <img src="../../../../assets/image/ojo-boton.png" style=" height: 20px; " alt=" " >
           <p>GUARDAR</p>
         </button>
       </div>

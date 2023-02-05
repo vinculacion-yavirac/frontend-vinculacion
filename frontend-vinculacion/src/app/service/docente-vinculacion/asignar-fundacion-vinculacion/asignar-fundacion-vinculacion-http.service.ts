@@ -16,7 +16,7 @@ export class AsignarFundacionVinculacionHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://127.0.0.1:8000/api/fundacion/";
+  private url: string = "http://localhost:8000/api/fundacion/";
 
   public save(asignarFundacionVinculacion: AsignarFundacionVinculacion): Observable<AsignarFundacionVinculacion>{
     return this.http.post<AsignarFundacionVinculacion>(this.url+"/save",asignarFundacionVinculacion, this.httpOption);

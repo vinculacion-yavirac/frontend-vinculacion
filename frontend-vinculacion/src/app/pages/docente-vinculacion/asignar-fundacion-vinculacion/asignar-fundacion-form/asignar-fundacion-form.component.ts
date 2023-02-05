@@ -9,7 +9,7 @@ import { AsignarFundacionVinculacionHttpService } from 'src/app/service/docente-
 })
 export class AsignarFundacionFormComponent {
 
-  
+
   constructor(
     private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService
   ) { }
