@@ -6,8 +6,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   overflow-x: hidden;
-  color: #67757c;
-  font-weight: 300; }
+  font-weight: 100; }
 
 
 .img-responsive {
@@ -68,8 +67,7 @@ ol li {
 .text-danger {
   color: #ef5350 !important; }
 
-.text-muted {
-  color: #99abb4 !important; }
+
 
 .text-warning {
   color: #ffb22b !important; }
@@ -132,7 +130,7 @@ File: scss
 
 .boxed #main-wrapper {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.1); }
@@ -146,16 +144,10 @@ File: scss
 
 
 .container-fluid {
-  padding: 2px 10px; }
+  padding: 1px 2px; }
 
-.card {
-  margin-bottom: 10px; }
-  .card .card-subtitle {
-    font-weight: 300;
-    margin-bottom: 10px;
-    color: #99abb4; }
-  .card .card-title {
-    position: relative; }
+
+
 
 /*******************
  Topbar
@@ -780,6 +772,7 @@ Buttons
   display: none; }
 
 /*
+Aquiiiiiiii
 Template Name: Admin pro Admin
 Author: Wrappixel
 Email: niravjoshi87@gmail.com
@@ -799,22 +792,14 @@ File: scss
 /*******************
 Custom-select
 ******************/
-.custom-select {
-  background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat; }
 
 /*******************
 textarea
 ******************/
-textarea {
-  resize: none; }
 
 /*******************
 Form-control
 ******************/
-.form-control {
-  color: #67757c;
-  min-height: 38px;
-  display: initial; }
 
 .form-control-sm {
   min-height: 20px; }
@@ -940,8 +925,7 @@ Form addons page
   height: 38px; }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 38px; }
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 33px; }
+ 
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   float: right;
@@ -1280,10 +1264,7 @@ form p:last-child {
   transform-origin: left 0px; }
 
 /*panels*/
-.card {
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 4px; }
+
 
 .well, pre {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
@@ -2358,12 +2339,7 @@ File: scss
 /*******************
 /*User mail widgets*/
 /*******************/
-.topbar .top-navbar .mailbox {
-  width: 300px; }
-  .topbar .top-navbar .mailbox ul {
-    padding: 0px; }
-    .topbar .top-navbar .mailbox ul li {
-      list-style: none; }
+
 
 .mailbox ul li .drop-title {
   font-weight: 500;
@@ -2461,13 +2437,7 @@ File: scss
 .comment-widgets {
   position: relative;
   margin-bottom: 10px; }
-  .comment-widgets .comment-row {
-    border-bottom: 1px solid rgba(120, 130, 140, 0.13);
-    padding: 15px; }
-    .comment-widgets .comment-row:last-child {
-      border-bottom: 0px; }
-    .comment-widgets .comment-row:hover, .comment-widgets .comment-row.active {
-      background: rgba(0, 0, 0, 0.02); }
+
 
 .comment-text {
   padding: 15px 15px 15px 20px;
@@ -2701,9 +2671,7 @@ File: scss
     background: #e9edf2;
     opacity: 0.8; }
 
-.fc-text-arrow {
-  font-family: inherit;
-  font-size: 16px; }
+
 
 .fc-state-hover {
   background: #F5F5F5; }
@@ -2983,14 +2951,7 @@ File: scss
 /*******************
 /*States row*/
 /*******************/
-.stats-row {
-  margin-bottom: 20px; }
-  .stats-row .stat-item {
-    display: inline-block;
-    padding-right: 15px; }
-    .stats-row .stat-item + .stat-item {
-      padding-left: 15px;
-      border-left: 1px solid rgba(120, 130, 140, 0.13); }
+
 
 /*******************/
 /*Guage chart*/
@@ -3351,8 +3312,6 @@ File: scss
 .hidden-xl-down {
   display: none !important; }
 
-.card-inverse .card-blockquote, .card-inverse .card-footer, .card-inverse .card-header, .card-inverse .card-title {
-  color: #ffffff; }
 
 /*
 Template Name: Admin Pro Admin
@@ -3411,12 +3370,7 @@ File: scss
     column-count: 1; }
   .inbox-center a {
     width: 200px; }
-  .hdr-nav-bar .navbar .navbar-nav > li a {
-    padding: 12px 15px;
-    border-bottom: 0px solid transparent;
-    border-left: 2px solid transparent; }
-  .hdr-nav-bar .navbar .navbar-nav > li:hover a {
-    padding: 12px 20px; }
+
   .hdr-nav-bar .call-to-act .custom-select {
     margin-bottom: 10px; }
   .d-flex {
@@ -3430,20 +3384,9 @@ File: scss
 /*-- ============================================================== 
  Ipad & above all(768px) 
  ============================================================== */
-@media (min-width: 768px) {
-  .navbar-header {
-    width: 240px;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0; }
-    .navbar-header .navbar-brand {
-      padding-top: 0px; }
+
   /*This is for the breeadcrumd*/
-  .page-titles .breadcrumb {
-    float: right; }
-  .card-group .card:first-child,
-  .card-group .card:not(:first-child):not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.03); }
+
   .material-icon-list-demo .icons div {
     width: 33%;
     padding: 15px;
@@ -3454,7 +3397,7 @@ File: scss
   .flex-wrap {
     -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
-    -webkit-flex-wrap: nowrap !important; } }
+    -webkit-flex-wrap: nowrap !important; } 
 
 /*-- ============================================================== 
  Phone and below ipad(767px) 
@@ -3466,38 +3409,11 @@ File: scss
   .topbar {
     position: fixed;
     width: 100%; }
-    .topbar .top-navbar {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -webkit-align-items: center; }
-      .topbar .top-navbar .navbar-collapse {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        width: 100%; }
-      .topbar .top-navbar .navbar-nav {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row; }
-        .topbar .top-navbar .navbar-nav > .nav-item.show {
-          position: static; }
-          .topbar .top-navbar .navbar-nav > .nav-item.show .dropdown-menu {
-            width: 100%;
-            margin-top: 0px; }
-        .topbar .top-navbar .navbar-nav > .nav-item > .nav-link {
-          padding-left: .50rem;
-          padding-right: .50rem; }
-        .topbar .top-navbar .navbar-nav .dropdown-menu {
-          position: absolute; }
+
+
+
+
+
   .mega-dropdown .dropdown-menu {
     height: 480px;
     overflow: auto; }

@@ -13,7 +13,7 @@
         </div>
     </div>
 </div>
-<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 22em;">
+<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 21em;">
     <div class="">
         <!--Table-->
         <table class="table col-12 px-1">
@@ -35,7 +35,7 @@
 
             <tbody>
                 <tr class="text-center"
-                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 4, currentPage: pages }">
+                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 3, currentPage: pages }">
                     <th class="text-dark" scope="row">{{asignar.id}}</th>
                     <td class="text-dark">{{asignar.nombre}}</td>
                     <td class="text-dark">

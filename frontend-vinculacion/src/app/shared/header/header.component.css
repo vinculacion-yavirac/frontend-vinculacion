@@ -1,16 +1,16 @@
 .navbar{
-  margin-top: -17px;
+  margin-top: -15px;
   height: 87px;
   border-radius: 3px;
+  width: 100em;
+
 }
 
-.avbar-toggler{
-  border: hidden;
-}
+
 
 .redimension {
   margin: 5px;
-  width: 80px;
+  width: 100px;
   height: 55px;
 }
 
