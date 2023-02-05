@@ -16,7 +16,7 @@ export class AsignarFundacionVinculacionHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://127.0.0.1:8000/api/fundacion/";
+  private url: string = "http://localhost:8080/api/fundacion";
 
   public save(asignarFundacionVinculacion: AsignarFundacionVinculacion): Observable<AsignarFundacionVinculacion>{
     return this.http.post<AsignarFundacionVinculacion>(this.url+"/save",asignarFundacionVinculacion, this.httpOption);
@@ -31,10 +31,10 @@ export class AsignarFundacionVinculacionHttpService {
   }
 
   public findAll():Observable<AsignarFundacionVinculacion[]>{
-    return this.http.get<AsignarFundacionVinculacion[]>(this.url,this.httpOption);
+    return this.http.get<AsignarFundacionVinculacion[]>(this.url+"/findAll",this.httpOption);
   }
 
-  public findByDescription(term: string):Observable<AsignarFundacionVinculacion[]>{
-    return this.http.get<AsignarFundacionVinculacion[]>(this.url+"/findByDescription/"+term,this.httpOption);
+  public findByName(term: string):Observable<AsignarFundacionVinculacion[]>{
+    return this.http.get<AsignarFundacionVinculacion[]>(this.url+"/findByNombre/"+term,this.httpOption);
   }
 }

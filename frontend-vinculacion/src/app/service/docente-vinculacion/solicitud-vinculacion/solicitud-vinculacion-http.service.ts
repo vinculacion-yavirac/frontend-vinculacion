@@ -34,7 +34,7 @@ export class SolicitudVinculacionHttpService {
     return this.http.get<SolicitdVinculacion[]>(this.url+"/findAll",this.httpOption);
   }
 
-  public findByDescription(term: string):Observable<SolicitdVinculacion[]>{
+  public findByTipoSolicitud(term: string):Observable<SolicitdVinculacion[]>{
     return this.http.get<SolicitdVinculacion[]>(this.url+"/findByTipoSolicitud/"+term,this.httpOption);
   }
 

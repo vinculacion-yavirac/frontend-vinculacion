@@ -28,7 +28,6 @@ import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacio
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
 import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
-import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
 import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
 
 import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
@@ -81,7 +80,6 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     PortafolioVinculacionEstudianteFormComponent,
     PortafolioVinculacionTutorFormComponent,
     AsignarFundacionFormComponent,
-    AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
     ConfiguracionVinculacionSearchComponent,
 

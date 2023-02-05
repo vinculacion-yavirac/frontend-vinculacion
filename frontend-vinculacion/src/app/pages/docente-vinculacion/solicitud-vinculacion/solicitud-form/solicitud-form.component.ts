@@ -9,9 +9,6 @@ import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vincula
 })
 export class SolicitudFormComponent {
 
- // @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
-
- @Input() entityDescription: string = "";
  @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
  constructor(
    private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
@@ -29,14 +26,9 @@ export class SolicitudFormComponent {
      (response) => this.solicitudList = response    );
  }
 
- // public onInput(term: string){
-
- //   this.termEmitter.emit(term);
- // }
-
  public onInput(term: string) {
    if (term.length >= 1) {
-     this.solicitudVinculacionHttpService.findByDescription(term).subscribe(
+     this.solicitudVinculacionHttpService.findByTipoSolicitud(term).subscribe(
        (response) => this.solicitudList = response
      )
    }
@@ -45,9 +37,4 @@ export class SolicitudFormComponent {
    }
  }
 
- 
- public onSelect(solicitdVinculacion: SolicitdVinculacion): void {
-   this.termEmitter.emit(solicitdVinculacion);
-
- }
 }
