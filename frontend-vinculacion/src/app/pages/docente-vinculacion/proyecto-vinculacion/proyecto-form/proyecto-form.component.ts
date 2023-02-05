@@ -15,7 +15,7 @@ export class ProyectoFormComponent {
   ) { }
  
   pages: number = 1;
-  solicitudList: ProyectoVinculacion[]=[];
+  proyectoList: ProyectoVinculacion[]=[];
  
   ngOnInit(): void {
     this.findAll();
@@ -23,13 +23,13 @@ export class ProyectoFormComponent {
  
   public findAll(): void{
     this.portafolioVinculacionHttpService.findAll().subscribe(
-      (response) => this.solicitudList = response);
+      (response) => this.proyectoList = response);
   }
  
   public onInput(term: string) {
     if (term.length >= 1) {
       this.portafolioVinculacionHttpService.findByNombre(term).subscribe(
-        (response) => this.solicitudList = response
+        (response) => this.proyectoList = response
       )
     }
     if (term.length === 0) {
