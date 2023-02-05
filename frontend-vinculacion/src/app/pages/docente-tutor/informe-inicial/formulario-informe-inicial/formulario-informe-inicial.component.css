@@ -66,13 +66,13 @@ th{
   padding: 1px;
   text-transform: uppercase;
   text-align:center;
-  border: solid 5px rgb(36, 152, 241);
+  border: solid 5px #3965B8;
   margin: auto;
   color:black;
  }
  td{
   padding: 0.2px;
-  border: solid 5px rgb(36, 152, 241);
+  border: solid 5px #3965B8;
   text-align:center;
   margin: auto;
  }
@@ -90,36 +90,24 @@ th{
   max-width: 1050px;
   margin-top:10px;
 }
-.tabla3{
-  height: 80px;
-  background: #19418B;
-  box-shadow: -4px 0px 6px rgb(47, 47, 47);
-  padding: 5px;
-  overflow-y: auto;
-  margin: auto;
-  width:99%;
-  max-width: 1050px;
-  margin-top:10px;
-}
 .form{
   width:99%;
   max-width: 510px;
-  background-color: rgb(36, 152, 241);
+  background-color: #3965B8;
   border-radius:20px;
   margin: auto;
 }
 .parrafo{
   height: 300px;
   background: #19418B;
-  box-shadow: -4px 0px 6px rgb(47, 47, 47);
-  padding: 20px;
+  padding: 10px;
   overflow-y: auto;
-  margin: auto;
   width:99%;
-  max-width: 1050px;
+  max-width: 1040px;
   margin-top:20px;
   color:#fff;
   text-align:justify;
+  margin: auto;
 }
 .p{
   text-align:justify;
