@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="formulario-informe-inicial.component.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
+
+  </head>
+  <body>
+<form class="form">
+    <div class="h5">
+      <h5>FORMULARIO DE INFORME INICIAL</h5>
+    </div>
+      <div class="myForm">
+          <label for="pickup_time">Dirigido a:</label>
+          <input type="text" name="pickup_time" id="pickup_time" required>
+          <label for="pickup_time">Asunto</label>
+          <input type="text" name="pickup_time" id="pickup_time" required>
+          <label for="pickup_time">Fecha Inicio de Actividades</label>
+          <input type="datetime-local" name="pickup_time" id="pickup_time" disabled>
+      </div>
+      <div class="parrafo">
+        <P>
+          Yo <input type="text" name="pickup_time" id="pickup_time" disabled> con CI <input type="text" name="pickup_time" id="pickup_time" disabled> docente de la carrera de <input type="text" name="pickup_time" id="pickup_time" disabled> tengo bien a informar que, 
+          siguiendo con el cronograma de actividades estableciendo en el proyecto 
+          de vinculacion <input type="text" name="pickup_time" id="pickup_time" disabled>, le informo que el dia de hoy <input type="text" name="pickup_time" id="pickup_time" disabled> del año en curso, se 
+          procedio a dar inicio con el desarrollo del mismo.
+        </P>
+        <textarea name="comments" id="comments" maxlength="500" placeholder="Explicacion de inicio de actividades" required></textarea><br>
+
+        <label for="email_address">Adjuntar Archivos </label>
+        <input type="file" name="email_address" id="email_address" required>
+      </div>
+    <div class="button">
+      <button class="btn btn-primary">Generar PDF</button>
+    </div>
+  </form>
+  </body>
+</html>

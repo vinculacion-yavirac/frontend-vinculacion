@@ -1,0 +1,114 @@
+.container2{
+  height: 190px;
+  background: #19418B;
+  box-shadow: -4px 0px 6px rgb(47, 47, 47);
+  padding: 5px;
+  /* overflow-y: auto; */
+  
+ }
+
+ /*formulario informe final */
+
+ .myForm {
+   display: grid;
+   grid-template-columns: [labels] auto [controls] 1fr;
+   grid-gap: .8em .5em;
+   background: #19418B;
+   padding: 1.2em;
+   width: 40em;
+   color: #fff;
+   border-radius: 2%;
+   scroll-behavior: auto;
+   margin: auto;
+   width:99%;
+   max-width: 1050px;
+   margin-top:10px;
+ }
+ .myForm > input > lavel {
+   border: 50px;
+   margin-top:10px;
+ }
+ .button {
+   text-align: center;
+   margin: 10px;
+   color: #19418B;
+   }
+ .parrafo > textarea {
+  width:50%;
+  height: 50px;
+   }
+ .h5{
+  padding:0px;
+  background-color: transparent;
+  margin: auto;
+  width: 32em;
+  border-radius: 5%;
+  text-align: center;
+  width:99%;
+  max-width: 1050px;
+  color:#fff;
+ }
+ table{
+  color:#fff;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: auto;
+  margin-top:10px;
+ }
+ thead{
+  background: #fff;
+  max-width: 1050px;
+  width:99%;
+  margin: auto;
+ }
+th{
+  padding: 1px;
+  text-transform: uppercase;
+  text-align:center;
+  border: solid 5px #3965B8;
+  margin: auto;
+  color:black;
+ }
+ td{
+  padding: 0.2px;
+  border: solid 5px #3965B8;
+  text-align:center;
+  margin: auto;
+ }
+
+/* formulario y tabla */
+
+.tabla2{
+  height: 80px;
+  background: #19418B;
+  box-shadow: -4px 0px 6px rgb(47, 47, 47);
+  padding: 5px;
+  overflow-y: auto;
+  margin: auto;
+  width:99%;
+  max-width: 1050px;
+  margin-top:10px;
+}
+.form{
+  width:99%;
+  max-width: 510px;
+  background-color: #3965B8;
+  border-radius:20px;
+  margin: auto;
+}
+.parrafo{
+  height: 300px;
+  background: #19418B;
+  padding: 10px;
+  overflow-y: auto;
+  width:99%;
+  max-width: 1040px;
+  margin-top:20px;
+  color:#fff;
+  text-align:justify;
+  margin: auto;
+}
+.p{
+  text-align:justify;
+}

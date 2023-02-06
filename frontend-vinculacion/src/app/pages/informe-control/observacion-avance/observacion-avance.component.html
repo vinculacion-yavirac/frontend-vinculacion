@@ -1,22 +1,6 @@
-<div class="grid" id="main-wrapper">
-  <!-- <app-header></app-header> -->
-  <!-- <app-sidebar></app-sidebar> -->
-  <br>
-  <div class="page-wrapper">
-    <div class="container-fluid">
+
       <div class="row">
-        <div class="bread col-12">
-          <div class="col-9" style="margin-left: 18rem; margin-block-start: -17rem;">
-            <div class="card">
-              <div class="card-body">
-                <!-- <app-breadcrumbs></app-breadcrumbs> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cuadro col-9" style="margin-left: 18rem; margin-block-start: -12rem;">
+
           <div class="card">
             <div class="card-body">
               <H2>Observaciones,Avances y cumplimientos de actividades</H2>
@@ -38,64 +22,50 @@
                       </tr>
                     </thead>
                     <tbody class="leters">
-                      <tr>
+                      <tr class="text-center" *ngFor="let observacion of  observacionA">
                         <th scope="row">1</th>
                         <td>
-                          Fundacion 1
+                          {{observacion.actividades}}
                         </td>
                         <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
+
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="observacion.avancesCumplimiento" ></textarea>
+
+
                         </td>
                         <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
+
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="observacion.observaciones"></textarea>
+
+
                         </td>
                         <td>
 
                         </td>
                       </tr>
 
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>
-                          Fundacion 1
-                        </td>
-                        <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
-                          </div>
-                        </td>
-                        <td>
 
-                        </td>
-                      </tr>
+
                     </tbody>
                   </table>
 
                 </div>
 
               </div>
+
+
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                <a href="dashboard/avance-cumplimiento">
+                  <button  class="btn btn-primary" type="button">Atras</button>
+                </a>
+                <button  class="btn btn-primary" type="button" (click)="save()">Guardar</button>
                 <button class="btn btn-primary" type="button">Generar Pdf</button>
               </div>
 
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+
   <!-- <app-footer></app-footer> -->
-</div>
+

@@ -8,3 +8,11 @@
   border-radius: 10px;
   grid-auto-flow: auto;
 }
+
+
+.pagi{
+  text-align: center;
+  padding: 15px;
+  position:static;
+  grid-row-end: auto;
+}

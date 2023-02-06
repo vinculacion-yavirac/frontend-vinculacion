@@ -7,4 +7,17 @@
       background-color: #6D99EB;
       border-radius: 10px;
       grid-auto-flow: auto;
+      text-align:justify;
+  }
+
+  .pagi{
+    text-align: center;
+    padding: 15px;
+    position:static;
+    grid-row-end: auto;
+  }
+
+  .switch{
+    width: 50px;
+    height: 20px;
   }

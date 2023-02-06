@@ -2,21 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
 import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
+import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
-import { PortafolioVinculacionComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
-import { EstudiantePortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio.component';
-import { EstudianteComponent } from './estudiante/estudiante/estudiante.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
-import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
-import { PrimerFormularioInicialComponent } from './informe-inicial/primer-formulario-inicial/primer-formulario-inicial.component';
-import { SegundoFormularioInicialComponent } from './informe-inicial/segundo-formulario-inicial/segundo-formulario-inicial.component';
+import { InformeInicialComponent } from './docente-tutor/informe-inicial/informe-inicial/informe-inicial.component';
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
@@ -38,20 +34,26 @@ import { RedireccionarPrincipalComponent } from './coordinador-carrera/redirecci
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
-import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaEstudiantesGeneralFormComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-form/lista-estudiantes-general-form.component';
+import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
+import { FormularioInformeInicialComponent } from './docente-tutor/informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
+import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
+import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
+import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
+import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 
 const routes: Routes = [
   {
     path: '', component: MainComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'solicitud', component: SolicitudFormComponent },
+      { path: 'solicitud', component: SolicitudFormComponent},
       { path: 'asignar-fundacion', component: AsignarFundacionFormComponent },
       { path: 'configuraciones', component: ConfiguracionVinculacionFormComponent },
-      { path: 'portafolio-vinculacion', component: PortafolioVinculacionComponent },
+      { path: 'portafolio-vinculacion', component: PortafolioVinculacionFormComponent },
       { path: 'proyecto', component: ProyectoFormComponent},
+      { path: 'proyecto/:id', component: ProyectoFormComponent},
 
 
       { path: 'agregar-rol', component: AgregarRolAddComponent },
@@ -59,7 +61,7 @@ const routes: Routes = [
       { path: 'lista-portafolios', component: ListaPortafoliosFormComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
-
+      
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralFormComponent },
       { path: 'portafolio', component: PortafolioComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
@@ -69,17 +71,16 @@ const routes: Routes = [
       { path: 'lista-estudiante-tutor', component: ListaEstudianteTutorFormComponent },
 
 
+      { path: 'estudiante', component: EstudianteFormularioComponent },
+      { path: 'estudiante-portafolio', component: EstudiantePortafolioFormularioComponent },
 
-      { path: 'estudiante', component: EstudianteComponent },
-      { path: 'estudiante-portafolio', component: EstudiantePortafolioComponent },
 
       { path: 'avance-cumplimiento', component: AvanceCumplimientoComponent },
       { path: 'informe-control', component: InformeControlComponent },
       { path: 'observacion-avance', component: ObservacionAvanceComponent },
 
       { path: 'informe-inicial', component: InformeInicialComponent },
-      { path: 'primer-formulario-inicial', component: PrimerFormularioInicialComponent },
-      { path: 'segundo-formulario-inicial', component: SegundoFormularioInicialComponent },
+      { path: 'formulario-informe-inicial', component: FormularioInformeInicialComponent },
       { path: 'formulario-final-tutor', component: FormularioFinalTutorComponent },
       { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent },
 

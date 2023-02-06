@@ -1,0 +1,93 @@
+.containerBlue {
+    background-color: #19418B;
+}
+
+
+.table {
+    background-color: #6D99EB;
+    border-radius: 10px;
+    grid-auto-flow: auto;
+
+}
+
+.button {
+    color: #19418B;
+}
+
+/* menu */
+
+#menu ul {
+    list-style:none;
+    margin: 0;
+    padding:0;
+
+   }
+   
+   /* items del menu */
+   
+   #menu ul li {
+    background-color:#6D99EB;
+   }
+   
+   /* enlaces del menu */
+   
+   #menu ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:100;
+    font-size:10px;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0px;
+   }
+   
+   /* items del menu */
+   
+   #menu ul li {
+    position:relative;
+    float:right;
+    margin: -4px;;
+    padding:0;
+    margin-right: 55px;
+
+   }
+   
+   /* efecto al pasar el ratón por los items del menu */
+   
+   #menu ul li:hover {
+    background:#78a1ee;
+   }
+
+   /* menu desplegable */
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left: -10px;
+    right: -10px;
+    background:#6D99EB;
+    padding: -10px;
+   }
+   
+   /* items del menu desplegable */
+   
+   #menu ul ul li {
+    float:none;
+    width: 100px;
+   }
+   
+   /* enlaces de los items del menu desplegable */
+   
+   #menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+   #menu ul li:hover > ul {
+    display:block;
+   }

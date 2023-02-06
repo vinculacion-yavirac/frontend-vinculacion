@@ -1,0 +1,4 @@
+<select #selectRol (change)="onSelect(selectRol.value)" class="form-select" aria-label="Default select example">
+    <option  value=0 selected disabled>Seleccionar Tutor</option>
+    <option value="1" *ngFor="let rol of roles" [value]="rol.id" [selected]="rol.id === id"><h4>{{rol.nombre}}</h4></option>
+  </select>

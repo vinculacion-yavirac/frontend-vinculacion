@@ -1,0 +1,25 @@
+.container-general{
+    background-color: #19418B;
+    height: auto;
+    grid-auto-flow: auto;
+    border-radius: 10px;
+  }
+  
+  .container-form{
+    background-color: #3965B8;
+    height: auto;
+    grid-auto-flow: auto;
+    border-radius: 10px;
+    grid-auto-rows: auto;
+    color: white;
+  }
+  
+  .container-portafolio{
+    background-color: #3965B8;
+    height: auto;
+    grid-auto-flow: auto;
+    border-radius: 10px;
+    color: white;
+  
+  }
+
