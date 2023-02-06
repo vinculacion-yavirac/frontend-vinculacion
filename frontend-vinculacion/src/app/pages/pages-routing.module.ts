@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
-import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
-import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
@@ -40,9 +38,7 @@ import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portaf
 import { FormularioInformeInicialComponent } from './docente-tutor/informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
-import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
-
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -63,7 +59,7 @@ const routes: Routes = [
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
       
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralFormComponent },
-      { path: 'portafolio', component: PortafolioComponent },
+      { path: 'portafolio', component: PortafolioFormComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
 
       { path: 'portafolio-tutor', component: PortafolioTutorFormularioComponent },
