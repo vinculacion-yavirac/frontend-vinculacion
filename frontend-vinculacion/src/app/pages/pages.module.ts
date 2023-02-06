@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
-import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
@@ -50,6 +49,8 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { ListaEstudiantesGeneralFormComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-form/lista-estudiantes-general-form.component';
+import { ListaEstudiantesGeneralSearchComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-search/lista-estudiantes-general-search.component';
 
 import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
 import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-estudiante-form/portafolio-vinculacion-estudiante-form.component';
@@ -91,7 +92,7 @@ import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol
     PortafolioFormComponent,
     PortafolioTutorComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
+    ListaEstudiantesGeneralFormComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
     AvanceCumplimientoComponent,
@@ -133,6 +134,7 @@ import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+    ListaEstudiantesGeneralSearchComponent,
 
     FormularioInformeInicialComponent,
 
@@ -153,8 +155,7 @@ import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol
     PortafolioFormComponent,
     PortafolioTutorComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
-
+    ListaEstudiantesGeneralFormComponent,
 
 
     PortafolioTutorFormularioComponent,

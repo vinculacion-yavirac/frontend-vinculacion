@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../shared/main/main.component';
+import { PortafolioComponent } from './coordinador-general/portafolio/portafolio.component';
 import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -34,6 +35,7 @@ import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agrega
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
 import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estudiantes/lista-estudiantes-form/lista-estudiantes-form.component';
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
+import { ListaEstudiantesGeneralFormComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-form/lista-estudiantes-general-form.component';
 import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
 import { FormularioInformeInicialComponent } from './docente-tutor/informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
@@ -59,9 +61,9 @@ const routes: Routes = [
       { path: 'lista-portafolios', component: ListaPortafoliosFormComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
-
-      { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralComponent },
-      { path: 'portafolio-form', component: PortafolioFormComponent },
+      
+      { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralFormComponent },
+      { path: 'portafolio', component: PortafolioComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
 
       { path: 'portafolio-tutor', component: PortafolioTutorFormularioComponent },
