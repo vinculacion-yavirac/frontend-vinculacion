@@ -19,7 +19,11 @@ export class PortafolioVinculacionHttpService {
   private url: string = "http://localhost:8080/api/proyecto";
 
   public save(proyectoVinculacion: ProyectoVinculacion): Observable<ProyectoVinculacion>{
-    return this.http.post<ProyectoVinculacion>(this.url+"/save",proyectoVinculacion, this.httpOption);
+    return this.http.post<ProyectoVinculacion>(this.url+"/save",proyectoVinculacion.id, this.httpOption);
+  }
+
+  public update(proyectoVinculacion: ProyectoVinculacion): Observable<ProyectoVinculacion>{
+    return this.http.put<ProyectoVinculacion>(this.url+"/update",proyectoVinculacion.id, this.httpOption);
   }
 
   public findById(id: number): Observable<ProyectoVinculacion>{

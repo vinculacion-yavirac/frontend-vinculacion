@@ -32,8 +32,7 @@
 
             <!--Table body-->
             <tbody>
-                <tr class=""
-                    *ngFor="let proyecto of proyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
+                <tr class="" *ngFor="let proyecto of proyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
                     <th class="text-dark" scope="row">{{proyecto.id}}</th>
                     <td class="text-dark">{{proyecto.nombre}}</td>
                     <td class="text-dark">Fundación 1</td>
@@ -45,8 +44,7 @@
                     </td>
                     <td class="text-dark">1755516802</td>
                     <td>
-                            <button class="btn btn-success btn-outline-light btn-sm"
-                            >Asignar</button>
+                        <button class="btn btn-success btn-outline-light btn-sm" [routerLink]="[proyecto.id]" (click)="save()">Guardar</button>
                     </td>
                 </tr>
             </tbody>
