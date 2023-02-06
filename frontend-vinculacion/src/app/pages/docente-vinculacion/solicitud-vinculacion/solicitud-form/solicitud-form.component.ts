@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Catalogo } from 'src/app/models/catalogo/Catalogo';
 import { SolicitdVinculacion } from 'src/app/models/docente-vinculacion/solicitud-vinculacion';
 import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion-http.service';
 
@@ -9,6 +10,7 @@ import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vincula
 })
 export class SolicitudFormComponent {
 
+// @Input () prueba: Catalogo;
  @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
  constructor(
    private solicitudVinculacionHttpService:SolicitudVinculacionHttpService

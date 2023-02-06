@@ -65,6 +65,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 import { PortafolioTutorComponent } from './coordinador-general/portafolio/portafolio-tutor/portafolio-tutor.component';
 import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
+import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
 
 
 
@@ -80,7 +81,8 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     AsignarFundacionFormComponent,
     ConfiguracionVinculacionFormComponent,
     ConfiguracionVinculacionSearchComponent,
-
+    // RolComboboxComponent,
+    RolComboboxComponent,
     //Docente Tutor-Portafolio
 
     PortafolioEstudianteComponent,

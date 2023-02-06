@@ -6,6 +6,6 @@ export interface Catalogo{
     rolEstudiante:number,
     rolCoordinadorGeneral:number,
     rolCoordinadorCarrera:number,
-    vinculacion:number,
-    estudiante:number,
+    vinculacion:string,
+    estudiante:string,
 }

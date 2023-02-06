@@ -23,6 +23,18 @@ export class AsignarFundacionFormComponent {
     this.findAll();
   }
 
+  
+  currentEntity: AsignarFundacionVinculacion = {
+    id: 0,
+    nombre: '',
+    direccion: '',
+    encargado: '',
+    telefono: '',
+    estado: false,
+    tipoPersonaId: 0,
+    catalogoId:0
+  };
+
   public findAll(): void{
     this.asignarFundacionVinculacionHttpService.findAll().subscribe(
       (response) => this.asignarList = response
