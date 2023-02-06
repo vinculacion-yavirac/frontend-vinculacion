@@ -55,6 +55,8 @@ const routes: Routes = [
 
       { path: 'agregar-rol', component: AgregarRolAddComponent },
       { path: 'lista-estudiantes', component: ListaEstudiantesFormComponent},
+      { path: 'rellenar-datos/:id', component:RellenarDatosFormComponent},
+      { path: 'agregar-rol/:id', component:RellenarDatosFormComponent},
       { path: 'lista-portafolios', component: ListaPortafoliosFormComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },

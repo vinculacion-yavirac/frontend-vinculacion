@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
 import { RellenarDatosHttpService } from 'src/app/service/coordinador-carrera/rellenar-datos/rellenar-datos-http.service';
 
@@ -10,7 +11,9 @@ import { RellenarDatosHttpService } from 'src/app/service/coordinador-carrera/re
 export class RellenarDatosFormComponent implements OnInit {
 
   constructor(
-    private rellenarDatosHttpService: RellenarDatosHttpService
+    private rellenarDatosHttpService: RellenarDatosHttpService,
+    private activatedRoute: ActivatedRoute,
+    private router:Router
     ){}
 
     currentEntity: Persona =
@@ -25,10 +28,15 @@ export class RellenarDatosFormComponent implements OnInit {
 
 
 
-
   ngOnInit(): void {
-
-  }
+      this.activatedRoute.paramMap.subscribe(
+        (params) => {
+          if (params.get("id")){
+            this.findById(parseInt(params.get("id")!));
+          }
+        }
+      )
+    }
 
   save(): void {
     console.table(this.rellenarDatosHttpService)
@@ -44,8 +52,32 @@ export class RellenarDatosFormComponent implements OnInit {
           telefono: '',
           direccion: '',
         };
+        this.router.navigate(['/dashboard/agregar-rol']);
       }
-
      )
     }
-}
+
+    findById(id: number):void{
+      
+
+      this.rellenarDatosHttpService.findById(id).subscribe(
+        (response) =>{
+
+        this.currentEntity = response;
+      }
+)
+    }
+
+
+    deleteById():void{
+      this.rellenarDatosHttpService.deleteById(this.currentEntity.id).subscribe(
+        () => {
+          console.log("Borrado");
+          //redireccionar ....
+
+        }
+        )
+
+      }
+
+    }
