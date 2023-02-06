@@ -78,10 +78,6 @@ currentEntity: Persona = {
     this.currentEntity = response;
   }
 )
-
-  
-
-
 }
 
 

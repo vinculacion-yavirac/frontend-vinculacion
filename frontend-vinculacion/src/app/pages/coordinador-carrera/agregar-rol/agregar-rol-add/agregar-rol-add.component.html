@@ -30,10 +30,10 @@
       <tbody class="leters">
         <tr class="text-center"
         *ngFor="let persona of agregarList | paginate: { itemsPerPage: 3, currentPage: pages }">
-          <th class="text-white" scope="row">{{persona.id}}</th>
-          <td class="text-white"> {{persona.cedula}}</td>
-          <td class="text-white"> {{persona.nombre}}</td>
-          <td class="text-white"> Rol</td>
+          <th class="text-dark" scope="row">{{persona.id}}</th>
+          <td class="text-dark"> {{persona.cedula}}</td>
+          <td class="text-dark"> {{persona.nombre}}</td>
+          <td class="text-dark"> Rol</td>
           <td>
             <div class="margin-leftform-check form-switch">
               <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>

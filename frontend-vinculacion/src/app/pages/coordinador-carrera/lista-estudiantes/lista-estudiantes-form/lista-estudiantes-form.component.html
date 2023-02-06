@@ -12,7 +12,7 @@
       <!--Table head-->
       <thead>
         <tr>
-          <th scope="col">#</th>
+           <th scope="col">#</th>
           <th scope="col">Cedula de Identidad</th>
           <th scope="col">Nombre del Estudiante</th>
           <th scope="col">Fundacion</th>
@@ -25,10 +25,10 @@
       <!--Table body-->
       <tbody class="leters">
         <tr>
-          <th class="text-white" scope="row">1</th>
-          <td class="text-white"> 1207154145 </td>
-          <td class="text-white"> Geovanny Vera </td>
-          <td class="text-white"> Fundacion </td>
+          <th class="text-dark" scope="row">1</th>
+          <td class="text-dark"> 1207154145 </td>
+          <td class="text-dark"> Geovanny Vera </td>
+          <td class="text-dark"> Fundacion </td>
 
           <td>
             <a href="">
@@ -44,5 +44,8 @@
         <!--Table body-->
     </table>
     <!--Table-->
+  </div>
+  <div class="pagi static">
+    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
   </div>
 </div>
