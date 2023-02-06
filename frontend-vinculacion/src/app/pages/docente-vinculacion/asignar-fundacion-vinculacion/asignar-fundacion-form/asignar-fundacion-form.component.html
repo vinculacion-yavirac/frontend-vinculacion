@@ -2,46 +2,54 @@
     <h2>Asignar Fundación</h2>
 </div>
 <div class="col-auto  d-flex flex-row-reverse">
-    <app-asignar-fundacion-search></app-asignar-fundacion-search>
+    <div class="d-flex flex-row-reverse">
+        <div class="p-1 col-sm-7 col-md-10">
+            <form class="d-flex" role="search">
+                <input #inputSearch class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    (input)="onInput(inputSearch.value)">
+                <button class=" btn btn-outline-primary" type="submit"
+                    (click)="onInput(inputSearch.value)">Search</button>
+            </form>
+        </div>
+    </div>
 </div>
-<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
+<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 21em;">
     <div class="">
         <!--Table-->
-        <table class="table col-12 px-1" >
+        <table class="table col-12 px-1">
 
             <!--Table head-->
-            <thead>
+            <thead class="text-center">
                 <tr class="text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre de fundación</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Estudiantes Asignados</th>
-                    <th scope="col">Observar</th>
-                    <th scope="col">Asignar</th>
+                    <th class="text-dark" scope="col">#</th>
+                    <th class="text-center text-dark" scope="col">Nombre de la fundación</th>
+                    <th class="text-center text-dark" scope="col">Estado</th>
+                    <th class="text-center text-dark" scope="col">Asignados</th>
+                    <th class="text-center text-dark" scope="col">Observar</th>
+                    <th class="text-center text-dark" scope="col">Asignar</th>
                 </tr>
             </thead>
             <!--Table head-->
 
             <!--Table body-->
-            
-            <tbody >
-                <tr class="text-center"  *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 5, currentPage: pages }">
-                    <th class="text-white" scope="row">{{asignar.id}}</th>
-                    <td class="text-white">{{asignar.nombre}}</td>
-                    <td class="text-white"><div class="margin-leftform-check form-switch">
-                        <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                        [(ngModel)]="asignar.estado" disabled>
-                      </div></td>
-                    <td class="text-white">10</td>
-                    <td class="text-white"><a href=""  routerLink="/dashboard/portafolio-vinculacion">
-                        <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
-                      </a></td>
+
+            <tbody>
+                <tr class="text-center"
+                    *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 3, currentPage: pages }">
+                    <th class="text-dark" scope="row">{{asignar.id}}</th>
+                    <td class="text-dark">{{asignar.nombre}}</td>
+                    <td class="text-dark">
+                        <div class="margin-leftform-check form-switch">
+                            <input class="switch form-check-input" type="checkbox" role="switch"
+                                id="flexSwitchCheckChecked" [(ngModel)]="asignar.estado" disabled>
+                        </div>
+                    </td>
+                    <td class="text-dark">10</td>
+                    <td class="text-dark"><a href="" routerLink="/dashboard/portafolio-vinculacion">
+                            <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
+                        </a></td>
                     <td>
-
-
-
-                        <div class=" d-grid gap-1  col-auto">
-                            <!-- <button class="btn btn-success btn-outline-light" type="button">Añadir</button> -->
+                        <div class=" d-grid gap-1 ">
 
                             <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
                                 aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -55,17 +63,19 @@
                                         <div class="modal-body">
                                             <form>
                                                 <fieldset>
+                                                    <label class="form-label">Asignar Tutor/Estudiante</label>
+                                                    <app-rol-combobox
+                                                        (rolIdEmiter)="currentEntity.catalogoId=$event"
+                                                        [id]="currentEntity.catalogoId"></app-rol-combobox>
                                                     <div class="mb-3">
-                                                        <label class="form-label">Asignar Tutor</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                            placeholder="Disabled input">
+                                                       <div class="mb-3">
+                                                        <label class="form-label">Asignar </label>
+                                                        <app-rol-combobox-tutor
+                                                            (rolIdEmiter)="currentEntity.tipoPersonaId=$event"
+                                                            [id]="currentEntity.tipoPersonaId"></app-rol-combobox-tutor>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Asignar estudiante</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                            placeholder="Disabled input">
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-primary"(click)="save()" >Submit</button>
                                                 </fieldset>
                                             </form>
                                         </div>
@@ -93,4 +103,3 @@
         <pagination-controls (pageChange)="pages = $event"></pagination-controls>
     </div>
 </div>
-

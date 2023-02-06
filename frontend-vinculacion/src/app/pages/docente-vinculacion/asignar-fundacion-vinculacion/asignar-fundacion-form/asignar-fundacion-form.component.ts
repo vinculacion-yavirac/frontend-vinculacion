@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MessageBundle } from '@angular/compiler';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AsignarFundacionVinculacion } from 'src/app/models/docente-vinculacion/asignar-fundacion-vinculacion';
 import { AsignarFundacionVinculacionHttpService } from 'src/app/service/docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion-http.service';
 
@@ -9,9 +10,11 @@ import { AsignarFundacionVinculacionHttpService } from 'src/app/service/docente-
 })
 export class AsignarFundacionFormComponent {
 
+  @Output() termEmitter = new EventEmitter<AsignarFundacionVinculacion>();
 
   constructor(
-    private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService
+    private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService,
+    // private asignarT: AsignarFundacionVinculacion,
   ) { }
 
   pages: number = 1;
@@ -21,20 +24,51 @@ export class AsignarFundacionFormComponent {
     this.findAll();
   }
 
+  
+  currentEntity: AsignarFundacionVinculacion = {
+    id: 0,
+    nombre: '',
+    direccion: '',
+    encargado: '',
+    telefono: '',
+    estado: false,
+    tipoPersonaId: 0,
+    catalogoId:0
+  };
+
   public findAll(): void{
     this.asignarFundacionVinculacionHttpService.findAll().subscribe(
       (response) => this.asignarList = response
     );
   }
 
-  public findByDescription(term:string): void{
-    if(term.length >= 2){
-      this.asignarFundacionVinculacionHttpService.findByDescription(term).subscribe(
+  save(): void {
+    console.table(this.currentEntity);
+    this.asignarFundacionVinculacionHttpService.save(this.currentEntity).subscribe(
+      () => {
+        this.currentEntity = {
+          id: 0,
+          nombre: '',
+          direccion: '',
+          encargado: '',
+          telefono: '',
+          estado: false,
+          tipoPersonaId: 0,
+          catalogoId:0,
+        };
+        // this.router.navigate(['/layout/holiday-list'])
+      }
+    )
+  }
+
+  public onInput(term: string) {
+    if (term.length >= 1) {
+      this.asignarFundacionVinculacionHttpService.findByName(term).subscribe(
         (response) => this.asignarList = response
       )
     }
-    if(term.length == 0){
-      this.findAll();
+    if (term.length === 0) {
+      this.findAll()
     }
   }
 }

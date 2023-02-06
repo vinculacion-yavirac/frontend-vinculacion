@@ -3,5 +3,5 @@ export interface SolicitdVinculacion {
     estado:boolean,
     tipoSolicitud:string,
     fechaEmision:Date,
-    tipoPersona_id:number,
+    tipoPersonaId:number,
 }

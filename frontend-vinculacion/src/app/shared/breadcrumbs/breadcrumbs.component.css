@@ -1,8 +1,6 @@
-.breadcrumb-item-active{
-  display: grid;
-  }
 
 .breadcrumb{
 height: 5px;
+background-color: rgb(255, 255, 255);
 }
 

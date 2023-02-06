@@ -1,8 +1,5 @@
 .container-general{
     background-color: #19418B;
-    height: auto;
-    grid-auto-flow: auto;
-    border-radius: 10px;
   }
   
   .container-form{

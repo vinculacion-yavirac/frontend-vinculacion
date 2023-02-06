@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Catalogo } from 'src/app/models/catalogo/Catalogo';
 import { SolicitdVinculacion } from 'src/app/models/docente-vinculacion/solicitud-vinculacion';
 import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion-http.service';
 
@@ -9,9 +10,7 @@ import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vincula
 })
 export class SolicitudFormComponent {
 
- // @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
-
- @Input() entityDescription: string = "";
+// @Input () prueba: Catalogo;
  @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
  constructor(
    private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
@@ -29,14 +28,9 @@ export class SolicitudFormComponent {
      (response) => this.solicitudList = response    );
  }
 
- // public onInput(term: string){
-
- //   this.termEmitter.emit(term);
- // }
-
  public onInput(term: string) {
    if (term.length >= 1) {
-     this.solicitudVinculacionHttpService.findByDescription(term).subscribe(
+     this.solicitudVinculacionHttpService.findByTipoSolicitud(term).subscribe(
        (response) => this.solicitudList = response
      )
    }
@@ -45,9 +39,4 @@ export class SolicitudFormComponent {
    }
  }
 
- 
- public onSelect(solicitdVinculacion: SolicitdVinculacion): void {
-   this.termEmitter.emit(solicitdVinculacion);
-
- }
 }

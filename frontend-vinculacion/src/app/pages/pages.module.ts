@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { SolicitudCertificadoComponent } from './coordinador-general/solicitud-certificado/solicitud-certificado.component';
-import { ListaEstudiantesGeneralComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general.component';
 import { SharedModule } from '../shared/shared.module';
 import { AvanceCumplimientoComponent } from './informe-control/avance-cumplimiento/avance-cumplimiento.component';
 import { ObservacionAvanceComponent } from './informe-control/observacion-avance/observacion-avance.component';
 import { InformeControlComponent } from './informe-control/informe-control/informe-control.component';
-import { InformeInicialComponent } from './informe-inicial/informe-inicial/informe-inicial.component';
+import { InformeInicialComponent } from './docente-tutor/informe-inicial/informe-inicial/informe-inicial.component';
 import { FormularioFinalTutorComponent } from './docente-tutor/formulario-final-tutor/formulario-final-tutor.component';
 import { InformeFinalEstudianteComponent } from './estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
@@ -27,8 +26,6 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
-import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
-import { AsignarFundacionSearchComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-search/asignar-fundacion-search.component';
 import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
 
 import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
@@ -52,13 +49,15 @@ import { ListaEstudiantesFormComponent } from './coordinador-carrera/lista-estud
 import { ListaPortafoliosFormComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-form/lista-portafolios-form.component';
 import { ListaPortafoliosEstudiantesComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-estudiantes/lista-portafolios-estudiantes.component';
 import { ListaPortafoliosTutorComponent } from './coordinador-carrera/lista-portafolios/lista-portafolios-tutor/lista-portafolios-tutor.component';
+import { ListaEstudiantesGeneralFormComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-form/lista-estudiantes-general-form.component';
+import { ListaEstudiantesGeneralSearchComponent } from './coordinador-general/lista-estudiantes-general/lista-estudiantes-general-search/lista-estudiantes-general-search.component';
 
 import { PortafolioVinculacionFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
 import { PortafolioVinculacionEstudianteFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-estudiante-form/portafolio-vinculacion-estudiante-form.component';
 import { PortafolioVinculacionTutorFormComponent } from './docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-tutor-form/portafolio-vinculacion-tutor-form.component';
 
 import { AuthModule } from '../auth/auth.module';
-import { FormularioInformeInicialComponent } from './informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
+import { FormularioInformeInicialComponent } from './docente-tutor/informe-inicial/formulario-informe-inicial/formulario-informe-inicial.component';
 import { EstudianteBuscarComponent } from './estudiante/estudiante/estudiante-buscar/estudiante-buscar.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { EstudiantePortafolioPortafolioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-portafolio/estudiante-portafolio-portafolio.component';
@@ -67,6 +66,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 import { PortafolioTutorComponent } from './coordinador-general/portafolio/portafolio-tutor/portafolio-tutor.component';
 import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
+import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
+import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol-combobox-tutor/rol-combobox-tutor.component';
 
 
 
@@ -77,21 +78,21 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     PortafolioVinculacionFormComponent,
     SolicitudFormComponent,
     ProyectoFormComponent,
-    ProyectoSearchComponent,
     PortafolioVinculacionEstudianteFormComponent,
     PortafolioVinculacionTutorFormComponent,
     AsignarFundacionFormComponent,
-    AsignarFundacionSearchComponent,
     ConfiguracionVinculacionFormComponent,
     ConfiguracionVinculacionSearchComponent,
-
+    // RolComboboxComponent,
+    RolComboboxComponent,
+    RolComboboxTutorComponent,
     //Docente Tutor-Portafolio
 
     PortafolioEstudianteComponent,
     PortafolioFormComponent,
     PortafolioTutorComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
+    ListaEstudiantesGeneralFormComponent,
     AvanceCumplimientoComponent,
     ObservacionAvanceComponent,
     AvanceCumplimientoComponent,
@@ -133,6 +134,7 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     ListaPortafoliosFormComponent,
     ListaPortafoliosEstudiantesComponent,
     ListaPortafoliosTutorComponent,
+    ListaEstudiantesGeneralSearchComponent,
 
     FormularioInformeInicialComponent,
 
@@ -148,12 +150,12 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     //Docente Vinculacion-Portafolio
     // PortafolioVinculacionComponent,
 
+
     PortafolioEstudianteComponent,
     PortafolioFormComponent,
     PortafolioTutorComponent,
     SolicitudCertificadoComponent,
-    ListaEstudiantesGeneralComponent,
-
+    ListaEstudiantesGeneralFormComponent,
 
 
     PortafolioTutorFormularioComponent,
