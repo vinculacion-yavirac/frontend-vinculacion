@@ -7,4 +7,3 @@ export interface Persona{
   direccion:string,
 
 }
-

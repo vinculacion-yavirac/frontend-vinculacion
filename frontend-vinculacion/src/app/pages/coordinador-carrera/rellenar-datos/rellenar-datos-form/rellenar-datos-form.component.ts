@@ -58,7 +58,7 @@ export class RellenarDatosFormComponent implements OnInit {
     }
 
     findById(id: number):void{
-      
+
 
       this.rellenarDatosHttpService.findById(id).subscribe(
         (response) =>{
@@ -67,17 +67,5 @@ export class RellenarDatosFormComponent implements OnInit {
       }
 )
     }
-
-
-    deleteById():void{
-      this.rellenarDatosHttpService.deleteById(this.currentEntity.id).subscribe(
-        () => {
-          console.log("Borrado");
-          //redireccionar ....
-
-        }
-        )
-
-      }
 
     }

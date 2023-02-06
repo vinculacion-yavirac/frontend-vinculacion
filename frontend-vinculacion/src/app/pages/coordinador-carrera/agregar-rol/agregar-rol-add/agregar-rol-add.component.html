@@ -20,7 +20,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Rol</th>
           <th scope="col">Estado Usuario</th>
-          <th scope="col">Asignar D.V</th>
+
           <th scope="col">Opciones</th>
         </tr>
       </thead>
@@ -39,12 +39,10 @@
               <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
             </div>
           </td>
-          <td>
-            <input type="text" id="dv" name="dv">
-          </td>
+
           <td>
           <button type="button" class="btn btn-primary" routerLink="{{persona.id}}">Editar</button>
-          <button type="button" class="btn btn-danger" (click)="deleteById()">Eliminar</button>
+          <button type="button" class="btn btn-danger" >Eliminar</button>
         </td>
         </tr>
         <!--Table body-->
@@ -54,9 +52,6 @@
 
   </div>
 
-  <div class="pagi static">
-    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
-</div>
 
 <div class="botones">
   <div class="d-flex justify-content-center">
@@ -66,16 +61,11 @@
         <p>AGREGAR</p>
       </button></a>
     </div>
-    <div style="margin-left:2% ;" class="d-grid gap-2 col-1">
-
-      <button class="btn btn-primary" type="button">
-        <img src="../../../../assets/image/ojo-boton.png" style=" height: 20px; " alt="">
-        <p>GUARDAR</p>
-      </button>
-
-    </div>
   </div>
 </div>
-
+<br>
+<div class="pagi static">
+  <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+</div>
 
 </div>

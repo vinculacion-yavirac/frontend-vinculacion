@@ -15,7 +15,6 @@ export class AgregarRolAddComponent {
  constructor(
    private agregarRolHttpService:AgregarRolHttpService,
    private activatedRoute: ActivatedRoute,
-   private router:Router
 
  ){}
 
@@ -82,16 +81,15 @@ currentEntity: Persona = {
 }
 
 
-deleteById():void{
-  this.agregarRolHttpService.deleteById(this.currentEntity.id).subscribe(
-    () => {
-
-      console.log("Borrado");
-      //this.router.navigate(['/dashboard/agregar-rol']);
-
-    }
-    )
-
-  }
-
+/*/deleteById(id: string) {
+  const res = confirm('Estas seguro de querer eliminar');
+  if (res) {
+    this.agregarRolHttpService.deleteById(id).subscribe(
+      (res) => {
+        this.currentEntity();
+      },
+      (error) => console.log(error)
+    );
+  }*/
 }
+
