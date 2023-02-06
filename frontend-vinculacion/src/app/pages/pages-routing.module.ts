@@ -51,6 +51,7 @@ const routes: Routes = [
       { path: 'configuraciones', component: ConfiguracionVinculacionFormComponent },
       { path: 'portafolio-vinculacion', component: PortafolioVinculacionFormComponent },
       { path: 'proyecto', component: ProyectoFormComponent},
+      { path: 'proyecto/:id', component: ProyectoFormComponent},
 
 
       { path: 'agregar-rol', component: AgregarRolAddComponent },

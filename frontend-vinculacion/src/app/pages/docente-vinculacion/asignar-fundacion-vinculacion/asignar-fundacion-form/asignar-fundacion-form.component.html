@@ -19,14 +19,14 @@
         <table class="table col-12 px-1">
 
             <!--Table head-->
-            <thead>
+            <thead class="text-center">
                 <tr class="text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre de fundación</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Estudiantes Asignados</th>
-                    <th scope="col">Observar</th>
-                    <th scope="col">Asignar</th>
+                    <th class="text-dark" scope="col">#</th>
+                    <th class="text-center text-dark" scope="col">Nombre de la fundación</th>
+                    <th class="text-center text-dark" scope="col">Estado</th>
+                    <th class="text-center text-dark" scope="col">Asignados</th>
+                    <th class="text-center text-dark" scope="col">Observar</th>
+                    <th class="text-center text-dark" scope="col">Asignar</th>
                 </tr>
             </thead>
             <!--Table head-->
@@ -49,10 +49,7 @@
                             <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
                         </a></td>
                     <td>
-
-
-
-                        <div class=" d-grid gap-1  col-auto">
+                        <div class=" d-grid gap-1 ">
 
                             <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
                                 aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -66,17 +63,19 @@
                                         <div class="modal-body">
                                             <form>
                                                 <fieldset>
+                                                    <label class="form-label">Asignar Tutor/Estudiante</label>
+                                                    <app-rol-combobox
+                                                        (rolIdEmiter)="currentEntity.catalogoId=$event"
+                                                        [id]="currentEntity.catalogoId"></app-rol-combobox>
                                                     <div class="mb-3">
-                                                        <label class="form-label">Asignar Tutor</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                            placeholder="Disabled input">
+                                                       <div class="mb-3">
+                                                        <label class="form-label">Asignar </label>
+                                                        <app-rol-combobox-tutor
+                                                            (rolIdEmiter)="currentEntity.tipoPersonaId=$event"
+                                                            [id]="currentEntity.tipoPersonaId"></app-rol-combobox-tutor>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Asignar estudiante</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                            placeholder="Disabled input">
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-primary"(click)="save()" >Submit</button>
                                                 </fieldset>
                                             </form>
                                         </div>

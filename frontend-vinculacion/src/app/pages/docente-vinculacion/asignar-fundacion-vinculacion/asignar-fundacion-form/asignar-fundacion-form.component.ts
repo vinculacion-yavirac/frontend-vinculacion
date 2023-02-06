@@ -23,10 +23,41 @@ export class AsignarFundacionFormComponent {
     this.findAll();
   }
 
+  
+  currentEntity: AsignarFundacionVinculacion = {
+    id: 0,
+    nombre: '',
+    direccion: '',
+    encargado: '',
+    telefono: '',
+    estado: false,
+    tipoPersonaId: 0,
+    catalogoId:0
+  };
+
   public findAll(): void{
     this.asignarFundacionVinculacionHttpService.findAll().subscribe(
       (response) => this.asignarList = response
     );
+  }
+
+  save(): void {
+    console.table(this.currentEntity);
+    this.asignarFundacionVinculacionHttpService.save(this.currentEntity).subscribe(
+      () => {
+        this.currentEntity = {
+          id: 0,
+          nombre: '',
+          direccion: '',
+          encargado: '',
+          telefono: '',
+          estado: false,
+          tipoPersonaId: 0,
+          catalogoId:0,
+        };
+        // this.router.navigate(['/layout/holiday-list'])
+      }
+    )
   }
 
   public onInput(term: string) {

@@ -27,7 +27,6 @@ import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculac
 import { ProyectoFormComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 import { AsignarFundacionFormComponent } from './docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
 import { ConfiguracionVinculacionFormComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
-import { ProyectoSearchComponent } from './docente-vinculacion/proyecto-vinculacion/proyecto-search/proyecto-search.component';
 import { ConfiguracionVinculacionSearchComponent } from './docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-search/configuracion-vinculacion-search.component';
 
 import { PortafolioTutorFormularioComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-formulario/portafolio-tutor-formulario.component';
@@ -66,6 +65,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 import { PortafolioTutorComponent } from './coordinador-general/portafolio/portafolio-tutor/portafolio-tutor.component';
 import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
+import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
+import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol-combobox-tutor/rol-combobox-tutor.component';
 
 
 
@@ -76,13 +77,14 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
     PortafolioVinculacionFormComponent,
     SolicitudFormComponent,
     ProyectoFormComponent,
-    ProyectoSearchComponent,
     PortafolioVinculacionEstudianteFormComponent,
     PortafolioVinculacionTutorFormComponent,
     AsignarFundacionFormComponent,
     ConfiguracionVinculacionFormComponent,
     ConfiguracionVinculacionSearchComponent,
-
+    // RolComboboxComponent,
+    RolComboboxComponent,
+    RolComboboxTutorComponent,
     //Docente Tutor-Portafolio
 
     PortafolioEstudianteComponent,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProyectoSearchComponent } from './proyecto-search.component';
+import { RolComboboxComponent } from './rol-combobox.component';
 
-describe('ProyectoSearchComponent', () => {
-  let component: ProyectoSearchComponent;
-  let fixture: ComponentFixture<ProyectoSearchComponent>;
+describe('RolComboboxComponent', () => {
+  let component: RolComboboxComponent;
+  let fixture: ComponentFixture<RolComboboxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProyectoSearchComponent ]
+      declarations: [ RolComboboxComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProyectoSearchComponent);
+    fixture = TestBed.createComponent(RolComboboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

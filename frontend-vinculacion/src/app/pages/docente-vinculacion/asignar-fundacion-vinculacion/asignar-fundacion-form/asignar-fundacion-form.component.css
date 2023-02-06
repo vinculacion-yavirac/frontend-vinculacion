@@ -7,6 +7,7 @@
     background-color: #6D99EB;
     border-radius: 10px;
     grid-auto-flow: auto;
+    text-align:justify;
 }
 
 .iconobser{
@@ -15,11 +16,11 @@
   }
 
   .switch{
-    width: 70px;
-    height: 24px;
+    width: 50px;
+    height: 20px;
   }
 
   .pagi{
     text-align: center;
-    padding: 16px;
+    padding: 10px;
   }
