@@ -20,49 +20,52 @@
           <th scope="col">Nombre</th>
           <th scope="col">Rol</th>
           <th scope="col">Estado Usuario</th>
-          <th scope="col">Asignar D.V</th>
+
+          <th scope="col">Opciones</th>
         </tr>
       </thead>
       <!--Table head-->
 
       <!--Table body-->
       <tbody class="leters">
-        <tr>
-          <th class="text-white" scope="row">1</th>
-          <td class="text-white"> 1207154145 </td>
-          <td class="text-white"> Geovanny Vera </td>
-          <td class="text-white"> Estudiante </td>
+        <tr class="text-center"
+        *ngFor="let persona of agregarList | paginate: { itemsPerPage: 3, currentPage: pages }">
+          <th class="text-white" scope="row">{{persona.id}}</th>
+          <td class="text-white"> {{persona.cedula}}</td>
+          <td class="text-white"> {{persona.nombre}}</td>
+          <td class="text-white"> Rol</td>
           <td>
             <div class="margin-leftform-check form-switch">
               <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
             </div>
           </td>
+
           <td>
-            <input type="text" id="dv" name="dv">
-          </td>
+          <button type="button" class="btn btn-primary" routerLink="{{persona.id}}">Editar</button>
+          <button type="button" class="btn btn-danger" >Eliminar</button>
+        </td>
         </tr>
         <!--Table body-->
 
     </table>
     <!--Table-->
+
   </div>
+
+
+<div class="botones">
   <div class="d-flex justify-content-center">
     <div class="d-grid gap-2 col-md-1">
-      <br><br><br><br><br><br><br>
-      <button class="btn btn-primary" type="button">
+      <a href="../dashboard/rellenar-datos"><button class="btn btn-primary" type="button" routerLink="">
         <img src="../../../../assets/image/agregardoce.png" style=" height: 20px; " alt="">
         <p>AGREGAR</p>
-      </button>
+      </button></a>
     </div>
-    <div style="margin-left:2% ;" class="d-grid gap-2 col-1">
-      <br><br><br><br><br><br><br>
-      <button class="btn btn-primary" type="button">
-        <img src="../../../../assets/image/ojo-boton.png" style=" height: 20px; " alt="">
-        <p>GUARDAR</p>
-      </button>
-    </div>
-
-
   </div>
+</div>
+<br>
+<div class="pagi static">
+  <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+</div>
 
 </div>
