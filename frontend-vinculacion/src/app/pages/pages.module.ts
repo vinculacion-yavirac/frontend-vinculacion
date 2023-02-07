@@ -33,7 +33,6 @@ import { PortafolioTutorEstudianteComponent } from './docente-tutor/portafolio-t
 import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-tutor/portafolio-tutor-tutor.component';
 
 import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
-import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-buscar/lista-fundacion-tutor-buscar.component';
 
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
@@ -122,7 +121,6 @@ import { EditarComponent } from './encuesta/editar/editar.component';
     PortafolioTutorTutorComponent,
 
     ListaFundacionTutorFromComponent,
-    ListaFundacionTutorBuscarComponent,
 
     ListaEstudianteTutorFormComponent,
     ListaEstudianteTutorBuscarComponent,
@@ -144,8 +142,8 @@ import { EditarComponent } from './encuesta/editar/editar.component';
     EstudiantePortafolioPortafolioComponent,
     EstudiantePortafolioFormularioComponent,
     EditarComponent,
-    
-    
+
+
 
   ],
   exports:[
@@ -173,10 +171,10 @@ import { EditarComponent } from './encuesta/editar/editar.component';
 
 
 
-    
+
 
     InformeInicialComponent,
-  
+
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
 
@@ -194,7 +192,7 @@ import { EditarComponent } from './encuesta/editar/editar.component';
     EstudianteBuscarComponent,
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
-    
+
 
   ],
   imports: [
