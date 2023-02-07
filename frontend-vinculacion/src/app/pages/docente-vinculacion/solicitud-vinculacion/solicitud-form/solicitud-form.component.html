@@ -33,11 +33,11 @@
             <!--Table body-->
             <tbody>
                 <tr class="text-center"
-                    *ngFor="let solicitud of solicitudList | paginate: { itemsPerPage: 2, currentPage: pages }">
-                    <th class="text-dark" scope="row">{{solicitud.id}}</th>
+                    *ngFor="let solicitud of vistaList | paginate: { itemsPerPage: 2, currentPage: pages }">
+                    <th class="text-dark" scope="row">1</th>
                     <td class="text-dark">{{solicitud.tipoSolicitud}}</td>
-                    <td class="text-dark">{{solicitud.tipoPersonaId}}</td>
-                    <td class="text-dark">1755516802</td>
+                    <td class="text-dark">{{solicitud.nombre}}</td>
+                    <td class="text-dark">{{solicitud.cedula}}</td>
                     <td class="text-dark">{{solicitud.fechaEmision}}</td>
                     <td class="text-dark">{{solicitud.estado}}</td>
                     <td>

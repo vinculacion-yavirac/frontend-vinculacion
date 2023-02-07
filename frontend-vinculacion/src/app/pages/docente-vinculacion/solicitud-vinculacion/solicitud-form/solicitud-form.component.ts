@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Catalogo } from 'src/app/models/catalogo/Catalogo';
 import { SolicitdVinculacion } from 'src/app/models/docente-vinculacion/solicitud-vinculacion';
+import { Vista } from 'src/app/models/vista/vista';
 import { SolicitudVinculacionHttpService } from 'src/app/service/docente-vinculacion/solicitud-vinculacion/solicitud-vinculacion-http.service';
+import { VistHttpService } from 'src/app/service/vista/vist-http.service';
 
 @Component({
   selector: 'app-solicitud-form',
@@ -13,20 +15,28 @@ export class SolicitudFormComponent {
 // @Input () prueba: Catalogo;
  @Output() termEmitter = new EventEmitter<SolicitdVinculacion>();
  constructor(
-   private solicitudVinculacionHttpService:SolicitudVinculacionHttpService
+   private solicitudVinculacionHttpService:SolicitudVinculacionHttpService,
+   private vistHttpService:VistHttpService,
  ) { }
 
  pages: number = 1;
  solicitudList: SolicitdVinculacion[]=[];
 
+ vistaList: Vista[]=[];
+
  ngOnInit(): void {
    this.findAll();
  }
 
- public findAll(): void{
-   this.solicitudVinculacionHttpService.findAll().subscribe(
-     (response) => this.solicitudList = response    );
- }
+//  public findAll(): void{
+//    this.solicitudVinculacionHttpService.findAll().subscribe(
+//      (response) => this.solicitudList = response    );
+//  }
+
+public findAll(): void{
+  this.vistHttpService.findAll().subscribe(
+    (response) => this.vistaList = response );
+}
 
  public onInput(term: string) {
    if (term.length >= 1) {
