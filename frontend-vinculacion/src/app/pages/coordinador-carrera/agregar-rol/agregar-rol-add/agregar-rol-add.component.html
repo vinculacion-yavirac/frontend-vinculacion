@@ -7,47 +7,56 @@
   <app-agregar-rol-search></app-agregar-rol-search>
 </div>
 
-<div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
-  <div class="">
-    <!--Table-->
-    <table class="table col-12 px-1">
+      <div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 21em;">
+        <div class="">
+            <!--Table-->
+            <table class="table col-12 px-1">
 
-      <!--Table head-->
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Cedula de Identidad</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Rol</th>
-          <th scope="col">Estado Usuario</th>
+                <!--Table head-->
+                <thead class="text-center">
+                    <tr class="text-center">
+                        <th class="text-dark" scope="col">#</th>
+                        <th class="text-center text-dark" scope="col">Numero de Cedula</th>
+                        <th class="text-center text-dark" scope="col">Nombre</th>
+                        <th class="text-center text-dark" scope="col">Rol</th>
+                        <th class="text-center text-dark" scope="col">Estado Usuario</th>
+                        <th class="text-center text-dark" scope="col">Opciones</th>
 
-          <th scope="col">Opciones</th>
-        </tr>
-      </thead>
-      <!--Table head-->
+                    </tr>
+                </thead>
+                <!--Table head-->
 
-      <!--Table body-->
-      <tbody class="leters">
-        <tr class="text-center"
-        *ngFor="let persona of agregarList | paginate: { itemsPerPage: 3, currentPage: pages }">
-          <th class="text-dark" scope="row">{{persona.id}}</th>
-          <td class="text-dark"> {{persona.cedula}}</td>
-          <td class="text-dark"> {{persona.nombre}}</td>
-          <td class="text-dark"> Rol</td>
-          <td>
-            <div class="margin-leftform-check form-switch">
-              <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            </div>
-          </td>
+                <!--Table body-->
+                <tbody>
+                    <tr class="text-center"
+                      *ngFor="let persona of agregarList | paginate: { itemsPerPage: 3, currentPage: pages }">
+                      <th class="text-dark" scope="row">{{persona.id}}</th>
+                      <td class="text-dark"> {{persona.cedula}}</td>
+                      <td class="text-dark"> {{persona.nombre}}</td>
+                      <td class="text-dark"> Rol</td>
+                      <td>
+                        <div class="margin-leftform-check form-switch">
+                          <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-primary" routerLink="{{persona.id}}">Editar</button>
+                        <button type="button" class="btn btn-danger" >Eliminar</button>
+                      </td>
 
-          <td>
-          <button type="button" class="btn btn-primary" routerLink="{{persona.id}}">Editar</button>
-          <button type="button" class="btn btn-danger" >Eliminar</button>
-        </td>
-        </tr>
+
+                    </tr>
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
+        </div>
+
+
+
+
         <!--Table body-->
 
-    </table>
     <!--Table-->
 
   </div>
@@ -68,4 +77,3 @@
   <pagination-controls (pageChange)="pages = $event"></pagination-controls>
 </div>
 
-</div>

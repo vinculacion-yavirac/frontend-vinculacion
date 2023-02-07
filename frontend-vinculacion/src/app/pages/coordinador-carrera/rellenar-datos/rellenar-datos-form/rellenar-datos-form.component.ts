@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Catalogo } from 'src/app/models/catalogo/Catalogo';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
 import { RellenarDatosHttpService } from 'src/app/service/coordinador-carrera/rellenar-datos/rellenar-datos-http.service';
 
@@ -15,6 +16,9 @@ export class RellenarDatosFormComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router:Router
     ){}
+    agregarList: Catalogo[]=[];
+
+    
 
     currentEntity: Persona =
     {
