@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ListaFundacionTutor } from 'src/app/models/docente-tutor/lista-fundacion-tutor';
+import { VistaFundacionEstudiante } from 'src/app/models/vista/vistaFundacionEstudiante';
 import { ListaFundacionHttpService } from 'src/app/service/docente-tutor/lista-fundacion-tutor/lista-fundacion-http.service';
+import { VistaFundacionEstudianteHttpService } from 'src/app/service/vista/vistaFundacionEstudiante/vista-fundacion-estudiante-http.service';
 
 @Component({
   selector: 'app-lista-fundacion-tutor-from',
@@ -8,43 +10,33 @@ import { ListaFundacionHttpService } from 'src/app/service/docente-tutor/lista-f
   styleUrls: ['./lista-fundacion-tutor-from.component.css']
 })
 export class ListaFundacionTutorFromComponent {
-  @Input() entityDescription: string = "";
-  @Output() termEmitter = new EventEmitter<ListaFundacionTutor>();
-  constructor(
-    private listaFundacionHttpService:ListaFundacionHttpService
-  ) { }
 
-  pages: number = 1;
-  listaFundacion: ListaFundacionTutor[]=[];
+  // @Input () prueba: Catalogo;
+ @Output() termEmitter = new EventEmitter<ListaFundacionTutor>();
+ constructor(
+   private vistaFundacionEstudianteHttpService:VistaFundacionEstudianteHttpService,
+ ) { }
 
-  ngOnInit(): void {
-    this.findAll();
-  }
+ pages: number = 1;
+ vistaFundacionEstudiante: VistaFundacionEstudiante []=[];
 
-  public findAll(): void{
-    this.listaFundacionHttpService.findAll().subscribe(
-      (response) => this.listaFundacion = response    );
-  }
+ ngOnInit(): void {
+   this.findAll();
+ }
 
-  // public onInput(term: string){
+public findAll(): void{
+  this.vistaFundacionEstudianteHttpService.findAll().subscribe(
+    (response) => this.vistaFundacionEstudiante = response );
+}
 
-  //   this.termEmitter.emit(term);
-  // }
-
-  public onInput(term: string) {
-    if (term.length >= 1) {
-      this.listaFundacionHttpService.findByDescription(term).subscribe(
-        (response) => this.listaFundacion = response
-      )
-    }
-    if (term.length === 0) {
-      this.findAll()
-    }
-  }
-
-
-  public onSelect(listaFundacion: ListaFundacionTutor): void {
-    this.termEmitter.emit(listaFundacion);
-
-  }
+ public onInput(term: string) {
+   if (term.length >= 1) {
+     this.vistaFundacionEstudianteHttpService.findByTipoSolicitud(term).subscribe(
+       (response) => this.vistaFundacionEstudiante = response
+     )
+   }
+   if (term.length === 0) {
+     this.findAll()
+   }
+ }
 }

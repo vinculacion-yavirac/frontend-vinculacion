@@ -68,6 +68,7 @@ const routes: Routes = [
       { path: 'portafolio-tutor', component: PortafolioTutorFormularioComponent },
       { path: 'lista-fundacion-tutor', component: ListaFundacionTutorFromComponent },
       { path: 'lista-estudiante-tutor', component: ListaEstudianteTutorFormComponent },
+      { path: 'lista-estudiante-tutor/:id', component: ListaEstudianteTutorFormComponent },
 
 
       { path: 'estudiante', component: EstudianteFormularioComponent },
