@@ -68,7 +68,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Pregunta</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
                 <div class="modal-body">
                   <div class="mb-3">
@@ -89,132 +89,78 @@
           </div>
         </a>
       </div><br>
-
-
       <div class="card1" *ngFor="let pregunta of preguntas">
-        <p data-bs-toggle="collapse" href="#collapseExamplep" role="button" aria-expanded="false"
-          aria-controls="collapseExample">
+        <div class="card-body">
+          <p data-bs-toggle="collapse" href="#collapseExamplep" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
 
-          {{pregunta.id}}.{{pregunta.name}} </p>
+            {{pregunta.id}}.{{pregunta.name}} <button class="btn btn-info"
+              [routerLink]="['../agregar-respuesta',]">agregar respuesta</button></p>
 
-        <div class="collapse" id="collapseExamplep">
-          <div class="card3 card-body">
-            <div class="row">
-              <div class="col-6">
-                <a type="button" [routerLink]="['../editar', pregunta.id]">
-                  <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                      <path
-                        d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
-                      <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
-                      <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
-                      <path
-                        d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
-                      <path
-                        d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
-                    </g>
-                  </svg>
-                </a>
-              </div>
+          <div class="collapse" id="collapseExamplep">
+            <div class="card3 card-body">
+              <div class="row">
+                <div class="col-6">
+                  <a type="button" [routerLink]="['../editar', pregunta.id]">
+                    <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                        <path
+                          d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
+                        <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
+                        <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
+                        <path
+                          d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
+                        <path
+                          d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
 
-              <div class="col-6">
-                <label type="button" data-bs-toggle="modal" data-bs-target="#exampleModaldelete"
-                  (click)="deleteById(pregunta.id)">
-                  <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g>
-                      <path
-                        d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
-                      <path
-                        d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
-                      <path
-                        d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
-                      <path
-                        d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
-                      <path
-                        d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
-                    </g>
-                  </svg>
-                </label>
-              </div>
+                <div class="col-6">
+                  <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModald" >
+                    <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g>
+                        <path
+                          d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
+                        <path
+                          d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
+                        <path
+                          d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                        <path
+                          d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
+                        <path
+                          d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
+                      </g>
+                    </svg>
+                  </a>
+                  <div class="modal fade" id="exampleModald" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModaldLabel">Advertencia!!</h1>
 
-
-
-              <div class="card-body">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                    value="option1">
-                  <label class="form-check-label" for="inlineRadio1" data-bs-toggle="collapse" href="#collapseExample"
-                    role="button" aria-expanded="false" aria-controls="collapseExample">Alto</label>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card3 card-body">
-                      <div class="row">
-                        <div class="col-6">
-                          <a [routerLink]="['../editar']">
-                            <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g>
-                                <path
-                                  d="m799.98 0h-537.06c-76.02 0-137.94 61.859-137.94 137.89v924.21c0 76.02 61.922 137.89 137.94 137.89l674.16 0.003906c76.02 0 137.94-61.859 137.94-137.89v-812.1zm0 99.996 175.02 150h-137.11c-20.93 0-37.922-16.992-37.922-37.895l0.003906-112.11zm175.02 962.11c0 20.891-16.992 37.895-37.922 37.895h-674.16c-20.93 0-37.922-16.992-37.922-37.895v-924.22c0-20.891 16.992-37.895 37.922-37.895h437.11v112.12c0 76.02 61.836 137.89 137.87 137.89h137.1z" />
-                                <path d="m480.61 779.84 229.83-229.83 106.02 106.02-229.83 229.83z" />
-                                <path d="m408.54 957.96 55.082-18.41-36.746-36.719z" />
-                                <path
-                                  d="m852.27 620.16c29.27-29.242 29.27-76.703 0-105.96-29.293-29.293-76.754-29.293-105.96 0l-17.723 17.723 105.96 105.96z" />
-                                <path
-                                  d="m462.89 797.55-24.922 81.062 51.875 51.754 79.082-26.809 0.023437-0.046875-106.04-106.01z" />
-                              </g>
-                            </svg>
-                          </a>
                         </div>
-                        <div class="col-6">
-                          <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModaldelete"
->
-                            <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
-                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g>
-                                <path
-                                  d="m179.76 90.719h348.88c11.762 0 21.281-9.5195 21.281-21.281 0-11.758-9.5234-21.277-21.281-21.277h-152.88v-26.879c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v27.441l-153.44-0.003906c-11.762 0-21.281 9.5195-21.281 21.281 0 11.199 9.5195 20.719 21.281 20.719z" />
-                                <path
-                                  d="m270.48 462c11.762 0 21.281-9.5195 21.281-21.281v-214.48c0-11.762-9.5195-21.281-21.281-21.281-11.762 0.003907-21.281 9.5234-21.281 21.281v215.04c0 11.203 9.5195 20.723 21.281 20.723z" />
-                                <path
-                                  d="m353.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
-                                <path
-                                  d="m437.92 462c11.762 0 21.281-9.5195 21.281-21.281l-0.003906-214.48c0-11.762-9.5195-21.281-21.281-21.281s-21.281 9.5195-21.281 21.281v215.04c0.003906 11.203 9.5234 20.723 21.285 20.723z" />
-                                <path
-                                  d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
-                              </g>
-                            </svg>
-
-                          </a>
-                          <div class="modal fade" id="#exampleModaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  ...
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
+                        <div class="modal-body" >
+                          Si borra este registro ya no se podra recuperar!!
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" (click)="deleteById(pregunta.id)">Save changes</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
-            <br>
           </div>
         </div>
+
       </div>
+
+    </div>
+  </div>
+</div>

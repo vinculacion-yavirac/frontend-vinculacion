@@ -81,7 +81,7 @@ export class  EncuestaComponent implements OnInit{
       console.log(response);
      }
     )
-
+    //this.router.navigate(['/dashboard/encuesta']);
     //console.log("hola")
    }
 
