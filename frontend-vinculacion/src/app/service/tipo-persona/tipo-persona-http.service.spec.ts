@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TipoPersonaHttpService } from '../../tipo-persona-http.service';
+import { TipoPersonaHttpService } from './tipo-persona-http.service';
 
 describe('TipoPersonaHttpService', () => {
   let service: TipoPersonaHttpService;
