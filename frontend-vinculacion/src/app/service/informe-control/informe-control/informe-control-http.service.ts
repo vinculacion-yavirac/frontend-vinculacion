@@ -16,10 +16,10 @@ export class InformeControlHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://localhost:8080/api/informecontrol";
+  private url: string = "http://localhost:8080/api/informecontrol/";
 
   public save(informeControl: InformeControl): Observable<InformeControl>{
-    return this.http.post<InformeControl>(this.url+"/save",informeControl, this.httpOption);
+    return this.http.post<InformeControl>(this.url+"save",informeControl, this.httpOption);
   }
 
   public findById(id: number): Observable<InformeControl>{

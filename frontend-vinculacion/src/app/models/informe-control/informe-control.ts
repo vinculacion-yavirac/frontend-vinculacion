@@ -8,10 +8,10 @@ export interface InformeControl {
     apellido:string,
    nombredelaentidad:string,
     direccion:string,
-   descripcionTutor:string,
-  descripcionTutorAcademico:string,
-    seguimientoProyecto:string,
-   procesoEvaluacion:string
+   descripciontutor:string,
+  descripciontutoracademico:string,
+    seguimientoproyecto:string,
+   procesoevaluacion:string
 
 
 

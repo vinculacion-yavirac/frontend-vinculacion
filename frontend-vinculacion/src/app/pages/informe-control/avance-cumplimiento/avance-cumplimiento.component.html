@@ -32,22 +32,26 @@
                       </tr>
                     </thead>
                     <tbody class="leters">
-                      <tr class="text-center" *ngFor="let avance of avanceC">
-                        <th scope="row"> {{avance.id}}</th>
+                      <tr class="text-center" *ngFor="let avance1 of avance">
+                        <th scope="row"> {{avance1.id}}</th>
                         <td>
-                          {{avance.resumenN}}
+                          {{avance1.resumen}}
                         </td>
                         <td>
-                          {{avance.indicadoresF}}
+                          {{avance1.indicadores}}
                         </td>
                         <td>
-                          {{avance. mediosF}}
+                          {{avance1.medios}}
                         </td>
 
 
                          <td>
-                          <textarea required    class="form-control" placeholder="Leave a comment here" id=""   [(ngModel)]="avance.avanceC"  ></textarea>
+                          <textarea required    class="form-control" placeholder="Leave a comment here" id=""   [(ngModel)]="avance1.avance"  ></textarea>
                          </td>
+                         
+
+
+
 
 
 

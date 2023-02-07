@@ -18,6 +18,19 @@ export class InformeControlComponent {
     this.findAll();
   }
 
+  save():void{
+
+
+    for(let avance2 of this.informeC){
+       
+        this.informeControlHttpService.save(avance2).subscribe()
+       
+
+    }
+
+
+    }
+
   public findAll(): void{
     this.informeControlHttpService.findAll().subscribe(
       (response) => this.informeC = response
