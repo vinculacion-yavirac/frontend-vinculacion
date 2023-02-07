@@ -68,6 +68,7 @@ import { PortafolioTutorComponent } from './coordinador-general/portafolio/porta
 import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
 import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
 import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol-combobox-tutor/rol-combobox-tutor.component';
+import { EditarComponent } from './encuesta/editar/editar.component';
 
 
 
@@ -142,6 +143,7 @@ import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
     EstudiantePortafolioFormularioComponent,
+    EditarComponent,
     
     
 
