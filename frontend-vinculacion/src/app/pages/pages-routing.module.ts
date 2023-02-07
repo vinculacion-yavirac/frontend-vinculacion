@@ -39,6 +39,7 @@ import { FormularioInformeInicialComponent } from './docente-tutor/informe-inici
 import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante-portafolio/estudiante-portafolio-formulario/estudiante-portafolio-formulario.component';
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
+import { EditarComponent } from './encuesta/editar/editar.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -59,7 +60,7 @@ const routes: Routes = [
       { path: 'lista-portafolios', component: ListaPortafoliosFormComponent },
       { path: 'redireccionar', component: RedireccionarPrincipalComponent },
       { path: 'rellenar-datos', component: RellenarDatosFormComponent },
-      
+
       { path: 'lista-estudiantes-general', component: ListaEstudiantesGeneralFormComponent },
       { path: 'portafolio', component: PortafolioFormComponent },
       { path: 'solicitud-certificado', component: SolicitudCertificadoComponent },
@@ -95,6 +96,8 @@ const routes: Routes = [
       { path: 'plan-de-trabajo', component: PlanDeTrabajoComponent},
 
       { path: 'encuesta', component: EncuestaComponent },
+      { path: 'encuesta', component: EncuestaComponent},
+      { path: 'editar/:id', component: EditarComponent},
     ]
   }
 ];
