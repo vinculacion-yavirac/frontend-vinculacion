@@ -21,4 +21,8 @@ export class VistHttpService {
   public findAll():Observable<Vista[]>{
     return this.http.get<Vista[]>(this.url+"/findAll",this.httpOption);
   }
+
+  public findByTipoSolicitud(term: string):Observable<Vista[]>{
+    return this.http.get<Vista[]>(this.url+"/findByTipoSolicitud/"+term,this.httpOption);
+  }
 }

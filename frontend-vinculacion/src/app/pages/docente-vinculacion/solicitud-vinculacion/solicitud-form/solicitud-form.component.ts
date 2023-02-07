@@ -40,8 +40,8 @@ public findAll(): void{
 
  public onInput(term: string) {
    if (term.length >= 1) {
-     this.solicitudVinculacionHttpService.findByTipoSolicitud(term).subscribe(
-       (response) => this.solicitudList = response
+     this.vistHttpService.findByTipoSolicitud(term).subscribe(
+       (response) => this.vistaList = response
      )
    }
    if (term.length === 0) {
