@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProyectoVinculacion } from 'src/app/models/docente-vinculacion/proyecto-vinculacion';
 import { PortafolioVinculacionHttpService } from 'src/app/service/docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-http.service';
+import { ProyectoVinculacionHttpService } from 'src/app/service/docente-vinculacion/proyecto-vinculacion/proyecto-vinculacion-http.service';
 
 @Component({
   selector: 'app-proyecto-form',
@@ -12,7 +13,7 @@ export class ProyectoFormComponent {
 
   @Output() termEmitter = new EventEmitter<ProyectoVinculacion>();
   constructor(
-    private portafolioVinculacionHttpService:PortafolioVinculacionHttpService,
+    private proyectoVinculacionHttpService:ProyectoVinculacionHttpService,
     private router:Router,
   ) { }
  
@@ -32,7 +33,7 @@ export class ProyectoFormComponent {
 
   save(): void {
     console.table(this.currentEntity);
-    this.portafolioVinculacionHttpService.save(this.currentEntity).subscribe(
+    this.proyectoVinculacionHttpService.save(this.currentEntity).subscribe(
       () => {
         this.currentEntity = {
           id:0,
@@ -45,13 +46,13 @@ export class ProyectoFormComponent {
   }
 
   public findAll(): void{
-    this.portafolioVinculacionHttpService.findAll().subscribe(
+    this.proyectoVinculacionHttpService.findAll().subscribe(
       (response) => this.proyectoList = response);
   }
  
   public onInput(term: string) {
     if (term.length >= 1) {
-      this.portafolioVinculacionHttpService.findByNombre(term).subscribe(
+      this.proyectoVinculacionHttpService.findByNombre(term).subscribe(
         (response) => this.proyectoList = response
       )
     }

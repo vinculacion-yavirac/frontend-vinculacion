@@ -5,6 +5,4 @@ export interface AsignarFundacionVinculacion {
     encargado:string,
     telefono:string,
     estado:boolean,
-    tipoPersonaId:number,
-    catalogoId:number,
 }

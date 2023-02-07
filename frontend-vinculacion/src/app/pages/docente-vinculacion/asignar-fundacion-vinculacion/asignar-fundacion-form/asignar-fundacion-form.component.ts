@@ -32,8 +32,6 @@ export class AsignarFundacionFormComponent {
     encargado: '',
     telefono: '',
     estado: false,
-    tipoPersonaId: 0,
-    catalogoId:0
   };
 
   public findAll(): void{
@@ -53,8 +51,6 @@ export class AsignarFundacionFormComponent {
           encargado: '',
           telefono: '',
           estado: false,
-          tipoPersonaId: 0,
-          catalogoId:0,
         };
         // this.router.navigate(['/layout/holiday-list'])
       }

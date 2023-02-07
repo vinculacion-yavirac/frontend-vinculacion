@@ -32,7 +32,6 @@
             <!--Table head-->
 
             <!--Table body-->
-
             <tbody>
                 <tr class="text-center"
                     *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 3, currentPage: pages }">
@@ -64,15 +63,15 @@
                                             <form>
                                                 <fieldset>
                                                     <label class="form-label">Asignar Tutor/Estudiante</label>
-                                                    <app-rol-combobox
+                                                    <!-- <app-rol-combobox
                                                         (rolIdEmiter)="currentEntity.catalogoId=$event"
-                                                        [id]="currentEntity.catalogoId"></app-rol-combobox>
+                                                        [id]="currentEntity.catalogoId"></app-rol-combobox> -->
                                                     <div class="mb-3">
                                                        <div class="mb-3">
                                                         <label class="form-label">Asignar </label>
-                                                        <app-rol-combobox-tutor
+                                                        <!-- <app-rol-combobox-tutor
                                                             (rolIdEmiter)="currentEntity.tipoPersonaId=$event"
-                                                            [id]="currentEntity.tipoPersonaId"></app-rol-combobox-tutor>
+                                                            [id]="currentEntity.tipoPersonaId"></app-rol-combobox-tutor> -->
                                                     </div>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary"(click)="save()" >Submit</button>
