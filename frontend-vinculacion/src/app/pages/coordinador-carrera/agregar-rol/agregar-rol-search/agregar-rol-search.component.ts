@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
-import { AgregarRolHttpService } from 'src/app/service/coordinador-carrera/agregar-rol/agregar-rol-http.service';
 import { PersonaHttpService } from 'src/app/service/persona/persona-http.service';
 
 @Component({
