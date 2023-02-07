@@ -5,4 +5,5 @@ export interface VistaFundacionEstudiante{
   idPersona:number;
   nombrePersona:String;
   cedula:String;
+  estadoPortafolio:boolean;
 }

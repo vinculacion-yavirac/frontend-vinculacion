@@ -35,7 +35,6 @@ import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/
 import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
 
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
-import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -123,7 +122,7 @@ import { EditarComponent } from './encuesta/editar/editar.component';
     ListaFundacionTutorFromComponent,
 
     ListaEstudianteTutorFormComponent,
-    ListaEstudianteTutorBuscarComponent,
+    
     RedireccionarPrincipalComponent,
     AgregarRolAddComponent,
     AgregarRolSearchComponent,
