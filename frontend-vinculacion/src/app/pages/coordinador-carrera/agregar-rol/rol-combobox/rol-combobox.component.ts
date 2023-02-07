@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Catalogo } from 'src/app/models/catalogo/Catalogo';
+import { CatalogoHttpService } from 'src/app/service/catalogo/catalogo-http.service';
 import { AgregarRolHttpService } from 'src/app/service/coordinador-carrera/agregar-rol/agregar-rol-http.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AgregarRolHttpService } from 'src/app/service/coordinador-carrera/agreg
 })
 export class RolComboboxComponent {
   // @Input () prueba: Catalogo;
-  constructor(private rolService: AgregarRolHttpService) { }
+  constructor(private rolService: CatalogoHttpService ) { }
 
   ngOnInit(): void {
     this.findAll();

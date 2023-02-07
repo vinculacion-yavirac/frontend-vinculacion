@@ -19,7 +19,7 @@ export class PersonaHttpService {
   private url: string = "http://localhost:8080/api/persona";
 
   public save(persona: Persona): Observable<Persona>{
-    return this.http.post<Persona>(this.url+"/save", this.httpOption);
+    return this.http.post<Persona>(this.url+"/save",persona, this.httpOption);
   }
 
   public findById(id: number): Observable<Persona>{

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
 import { AgregarRolHttpService } from 'src/app/service/coordinador-carrera/agregar-rol/agregar-rol-http.service';
+import { PersonaHttpService } from 'src/app/service/persona/persona-http.service';
 
 @Component({
   selector: 'app-agregar-rol-add',
@@ -13,7 +14,7 @@ export class AgregarRolAddComponent {
  @Input() entityDescription: string = "";
  @Output() termEmitter = new EventEmitter<Persona>();
  constructor(
-   private agregarRolHttpService:AgregarRolHttpService,
+   private personaHttpService:PersonaHttpService,
    private activatedRoute: ActivatedRoute,
 
  ){}
@@ -46,7 +47,7 @@ currentEntity: Persona = {
 }
 
  public findAll(): void{
-   this.agregarRolHttpService.findAll().subscribe(
+   this.personaHttpService.findAll().subscribe(
      (response) => this.agregarList = response);
  }
 
@@ -57,7 +58,7 @@ currentEntity: Persona = {
 
  public onInput(term: string) {
    if (term.length >= 1) {
-     this.agregarRolHttpService.findByDescription(term).subscribe(
+     this.personaHttpService.findByName(term).subscribe(
        (response) => this.agregarList = response
      )
    }
@@ -65,14 +66,14 @@ currentEntity: Persona = {
      this.findAll()
    }
  }
- public onSelect(agregarRolHttpService: Persona): void {
-   this.termEmitter.emit(agregarRolHttpService);
+ public onSelect(personaHttpService: Persona): void {
+   this.termEmitter.emit(personaHttpService);
 
  }
 
  findById(id: number):void{
 
-  this.agregarRolHttpService.findById(id).subscribe(
+  this.personaHttpService.findById(id).subscribe(
     (response) =>{
 
     this.currentEntity = response;

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
 import { AgregarRolHttpService } from 'src/app/service/coordinador-carrera/agregar-rol/agregar-rol-http.service';
+import { PersonaHttpService } from 'src/app/service/persona/persona-http.service';
 
 @Component({
   selector: 'app-agregar-rol-search',
@@ -12,7 +13,7 @@ export class AgregarRolSearchComponent {
   @Input() entityDescription: string = "";
   @Output() termEmitter = new EventEmitter<Persona>();
   constructor(
-    private agregarRolHttpService:AgregarRolHttpService,
+    private agregarRolHttpService:PersonaHttpService,
     private activatedRoute: ActivatedRoute,
     private router:Router
 
@@ -57,7 +58,7 @@ export class AgregarRolSearchComponent {
 
   public onInput(term: string) {
     if (term.length >= 1) {
-      this.agregarRolHttpService.findByDescription(term).subscribe(
+      this.agregarRolHttpService.findByName(term).subscribe(
         (response) => this.agregarList = response
       )
     }
