@@ -66,8 +66,14 @@ currentEntity: Persona = {
      this.findAll()
    }
  }
+
+
+ public onSelect(agregarRolHttpService: Persona): void {
+   this.termEmitter.emit(agregarRolHttpService);
+
  public onSelect(personaHttpService: Persona): void {
    this.termEmitter.emit(personaHttpService);
+
 
  }
 

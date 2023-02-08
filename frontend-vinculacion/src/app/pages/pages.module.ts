@@ -66,8 +66,11 @@ import { PortafolioTutorComponent } from './coordinador-general/portafolio/porta
 import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/portafolio-estudiante/portafolio-estudiante.component';
 import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
 import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol-combobox-tutor/rol-combobox-tutor.component';
+import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-selecct/rellenar-datos-select/rellenar-datos-select.component';
+
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
+
 
 
 
@@ -142,7 +145,13 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
     EstudiantePortafolioFormularioComponent,
+
+    RellenarDatosSelectComponent,
+    
+    
+
     EditarComponent,
+
 
 
 
