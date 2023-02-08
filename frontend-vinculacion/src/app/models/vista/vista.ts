@@ -1,5 +1,6 @@
 export interface Vista{
-    tipoSolicitud:String;
+  id:number;
+  tipoSolicitud:String;
     nombre:String;
     cedula:String;
     fechaEmision:Date;
