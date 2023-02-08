@@ -8,16 +8,13 @@
 
 <div class="card-body">
 
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+  </button>&nbsp;&nbsp;
   <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
-    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
-</button>&nbsp;&nbsp;&nbsp;
-
-<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
-    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
-</button>&nbsp;&nbsp;&nbsp;
-
-<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
-</button>
+  </button>&nbsp;&nbsp;&nbsp;
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+  </button>&nbsp;&nbsp;&nbsp;
+  
 <br><br>
   <div class="pestanas">
     <a [routerLink]="['/dashboard/datos-generales',currentEntity.integrantesId]" class="Datos Generales">Datos Generales</a>
