@@ -65,7 +65,7 @@ deleteById(id: RespuestaModel['id']){
   Swal.fire({
     position: 'center',
     icon: 'error',
-    title: 'Respueta Eliminada Correctamente',
+    title: 'Respuesta Eliminada Correctamente',
     showConfirmButton: false,
     timer: 3500
   }) }

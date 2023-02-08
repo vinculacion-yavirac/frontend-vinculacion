@@ -72,6 +72,7 @@ import { EditarComponent } from './encuesta/editar/editar.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
 import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
 import { EditarRespuestaComponent } from './encuesta/respuesta/editar-respuesta/editar-respuesta.component';
+import { AgregarPreguntaComponent } from './encuesta/agregar-pregunta/agregar-pregunta.component';
 
 
 
@@ -155,6 +156,7 @@ import { EditarRespuestaComponent } from './encuesta/respuesta/editar-respuesta/
 
     EditarComponent,
           EditarRespuestaComponent,
+          AgregarPreguntaComponent,
 
 
 
