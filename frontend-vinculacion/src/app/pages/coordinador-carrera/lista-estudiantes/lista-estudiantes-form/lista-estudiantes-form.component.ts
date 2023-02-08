@@ -2,8 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
 import { AsignarFundacionVinculacion } from 'src/app/models/docente-vinculacion/asignar-fundacion-vinculacion';
+import { VistaListaRoles } from 'src/app/models/vista/vistaListaRoles';
 import { ListaEstudiantesHttpService } from 'src/app/service/coordinador-carrera/lista-estudiantes/lista-estudiantes-http.service';
 import { AsignarFundacionVinculacionHttpService } from 'src/app/service/docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion-http.service';
+import { VistaListaRolesHttpService } from 'src/app/service/vista/vistaListaRoles/vista-lista-roles-http.service';
 
 @Component({
   selector: 'app-lista-estudiantes-form',
@@ -14,37 +16,31 @@ export class ListaEstudiantesFormComponent {
 
 
  @Input() entityDescription: string = "";
- @Output() termEmitter = new EventEmitter<Persona>();
+ @Output() termEmitter = new EventEmitter<VistaListaRoles>();
  constructor(
    private listaEstudiantesHttpService:ListaEstudiantesHttpService,
    private activatedRoute: ActivatedRoute,
-   private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService,
+   private vistaListaRolesHttpService:VistaListaRolesHttpService,
 
  ){}
 
 pages: number = 1;
-listaEstudiantes: Persona[]=[];
-asignarList: AsignarFundacionVinculacion[]=[];
+asignarList:Persona[] = [];
+asignarVista: VistaListaRoles[]=[];
 
 
 
-currentEntity: Persona = {
-
+currentEntity: VistaListaRoles = {
   id: 0,
   nombre: '',
   cedula: '',
-  telefono: '',
-  direccion: '',
+  telefono: "",
+  direccion: "",
+  nombreCatalogo: '',
+  nombreFundacion: ''
 };
 
-currentEntity2: AsignarFundacionVinculacion = {
-  id: 0,
-  nombre: '',
-  direccion: '',
-  encargado: '',
-  telefono: '',
-  estado: false,
-};
+
 
  ngOnInit(): void {
 
@@ -59,24 +55,20 @@ currentEntity2: AsignarFundacionVinculacion = {
 }
 
  public findAll(): void{
-   this.listaEstudiantesHttpService.findAll().subscribe(
-     (response) => this.listaEstudiantes = response);
+   this.vistaListaRolesHttpService.findAll().subscribe(
+     (response) => this.asignarVista = response);
 
-    this.asignarFundacionVinculacionHttpService.findAll().subscribe(
-      (response) => this.asignarList = response
+    this.vistaListaRolesHttpService.findAll().subscribe(
+      (response) => this.asignarVista = response
     );
 
  }
 
- // public onInput(term: string){
-
- //   this.termEmitter.emit(term);
- // }
 
  public onInput(term: string) {
    if (term.length >= 1) {
-     this.listaEstudiantesHttpService.findByDescription(term).subscribe(
-       (response) => this.listaEstudiantes = response
+     this.vistaListaRolesHttpService.findByDescription(term).subscribe(
+       (response) => this.asignarVista = response
      )
    }
    if (term.length === 0) {
@@ -84,14 +76,14 @@ currentEntity2: AsignarFundacionVinculacion = {
    }
  }
 
- public onSelect(listaEstudiantesHttpService: Persona): void {
-   this.termEmitter.emit(listaEstudiantesHttpService);
+ public onSelect(vistaListaRolesHttpService: VistaListaRoles): void {
+   this.termEmitter.emit(vistaListaRolesHttpService);
 
  }
 
  findById(id: number):void{
 
-  this.listaEstudiantesHttpService.findById(id).subscribe(
+  this.vistaListaRolesHttpService.findById(id).subscribe(
     (response) =>{
 
     this.currentEntity = response;
@@ -99,14 +91,4 @@ currentEntity2: AsignarFundacionVinculacion = {
 )
 }
 
-public onInput2(term: string) {
-  if (term.length >= 1) {
-    this.asignarFundacionVinculacionHttpService.findByName(term).subscribe(
-      (response) => this.asignarList = response
-    )
-  }
-  if (term.length === 0) {
-    this.findAll()
-  }
-}
 }

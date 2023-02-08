@@ -3,10 +3,7 @@
 </div>
 
 <div class="col-auto  d-flex flex-row-reverse">
-
   <app-agregar-rol-search></app-agregar-rol-search>
-
-
 </div>
 
       <div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 21em;">
@@ -31,11 +28,11 @@
                 <!--Table body-->
                 <tbody>
                     <tr class="text-center"
-                      *ngFor="let persona of listaEstudiantes | paginate: { itemsPerPage: 3, currentPage: pages }" >
+                      *ngFor="let persona of asignarVista | paginate: { itemsPerPage: 3, currentPage: pages }" >
                       <th class="text-dark" scope="row">{{persona.id}}</th>
                       <td class="text-dark"> {{persona.cedula}}</td>
                       <td class="text-dark"> {{persona.nombre}}</td>
-                      <td class="text-dark"> {{persona.nombre}}</td>
+                      <td class="text-dark"> {{persona.nombreFundacion}}</td>
 
                       <td>
                         <a href="dashboard/lista-portafolios">
@@ -44,7 +41,7 @@
                       </td>
                       <td>
                         <div class="margin-leftform-check form-switch">
-                          <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                          <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked disabled>
                         </div>
                       </td>
 
@@ -54,10 +51,10 @@
                 </tbody>
                 <!--Table body-->
             </table>
-            <div class="pagi static">
-              <pagination-controls (pageChange)="pages = $event"></pagination-controls>
-            </div>
+            <!--Table-->
         </div>
 
-
+  <div class="pagi static">
+    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+  </div>
 

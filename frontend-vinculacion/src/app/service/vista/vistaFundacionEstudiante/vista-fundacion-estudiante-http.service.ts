@@ -16,7 +16,7 @@ export class VistaFundacionEstudianteHttpService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://localhost:8080/api/vistaFundacionEstudiante";
+  private url: string = "http://localhost:8080/api/vistaCoordinadorCarrera";
 
   public findAll():Observable<VistaFundacionEstudiante[]>{
     return this.http.get<VistaFundacionEstudiante[]>(this.url+"/findAll",this.httpOption);
