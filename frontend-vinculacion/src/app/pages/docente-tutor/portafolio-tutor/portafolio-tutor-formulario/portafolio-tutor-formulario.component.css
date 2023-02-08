@@ -22,3 +22,19 @@
   color: white;
 
 }
+.container-table{
+  background-color: white;
+  border-radius: 10px;
+  grid-auto-flow: column;
+  height: auto;
+}
+
+.switch{
+  width: 65px;
+  height: 24px;
+}
+
+.icon{
+  width: 35px;
+  height: 35px;
+}

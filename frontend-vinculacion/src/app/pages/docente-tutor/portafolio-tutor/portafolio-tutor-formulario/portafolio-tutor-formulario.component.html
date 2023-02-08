@@ -8,7 +8,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Cedula del Estudiante</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="1207154145">
             </div>
           </div>
         </div>
@@ -16,7 +16,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Semestre</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="5to Semestre" >
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Nombre</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" placeholder="Geovanny Rodolfo" >
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Carrera</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="Desarrollo de Software" >
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Apellido</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="Vera Murillo" >
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Nombre de la Fundacion</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="Alas de Colibri" >
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Direccion</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="Quito Norte">
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Encargado</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="Daniel Navarrete">
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
           <div class="mb-3 row">
             <label for="" class="col-sm-3 col-form-label">Telefono</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="" id="">
+              <input type="text" class="form-control" name="" id="" placeholder="0932165487">
             </div>
           </div>
         </div>
@@ -87,17 +87,231 @@
     <br>
     <div class="container-portafolio container-fluid">
       <!--Portafolio Estudiante-->
-      <app-portafolio-tutor-estudiante></app-portafolio-tutor-estudiante>
+      <div>
+        <H5>Portafolio Estudiante</H5>
+        <div class="form-check form-switch form-check-reverse">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+          <label class="form-check-label" for="flexSwitchCheckReverse">Estado del Portafolio</label>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="container-table table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nombre del Archivo</th>
+              <th scope="col">Opciones</th>
+              <th scope="col">Observaciones</th>
+              <th scope="col">Aprobado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carta Compromiso</td>
+              <td>
+                <a href="https://docs.google.com/document/d/1SaFer4KxR9NwWwaJqJMXtXfKQCxt-m7w/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Informe de Incio</td>
+              <td>
+                <a href="https://docs.google.com/document/d/1QmjJJrXaWEnLwmIBD8E6Nn8coLAav5HD/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Contral de Asistencia</td>
+              <td>
+                <a href="https://docs.google.com/document/d/1aWCN2lhumBx84ki8PjE9MmZ5lLAoL-Yz/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Registro de Asistencia</td>
+              <td>
+                <a href="https://docs.google.com/document/d/1QrzwLfuuY0pmfw54SZpsvwytMEDh6yJ-/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Informe Final</td>
+              <td>
+                <a href="https://docs.google.com/document/d/1BLe0h3LuR9_TPjiW6_zdiu6ky3wXDoKQ/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Control de Cumplimiento</td>
+              <td>
+                <a href="https://docs.google.com/document/d/125UtVZ5-H1WSU_M4UpFW9cPQL8BhcwAG/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
       <!--Portafolio Estudiante-->
 
       <!--Portafolio Tutor-->
-      <app-portafolio-tutor-tutor></app-portafolio-tutor-tutor>
+      <H5>Portafolio Tutor</H5>
+      <div class="table-responsive">
+        <table class="container-table table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nombre del Archivo</th>
+              <th scope="col">Opciones</th>
+              <th scope="col">Observaciones</th>
+              <th scope="col">Aprobado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                certificado
+              </td>
+              <td>
+                <a href="https://docs.google.com/document/d/1RENVdf8Bqp9anMEEY2Kl3pZz7IYudT_d/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+                <a href="https://drive.google.com/drive/folders/14tXHd-DYR90WM34j3X1FHJIiR4mZPnxE?usp=sharing">
+                  <img class="icon" src="../../../../assets/image/subir.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Encuesta de Percepción
+              </td>
+              <td>
+                <a href="https://docs.google.com/document/d/1WxjibmIeDBgRxlW-QIal_A3iOd7eUmSF/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+                <a href="https://drive.google.com/drive/folders/14tXHd-DYR90WM34j3X1FHJIiR4mZPnxE?usp=sharing">
+                  <img class="icon" src="../../../../assets/image/subir.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Informe de Control
+              </td>
+              <td>
+                <a href="https://docs.google.com/document/d/1bQch5lf2qJEkuxlszXHPc0i1mRaYK23v/edit?usp=sharing&ouid=101867463825284362605&rtpof=true&sd=true">
+                  <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                </a>
+                  <a href="https://drive.google.com/drive/folders/14tXHd-DYR90WM34j3X1FHJIiR4mZPnxE?usp=sharing">
+                  <img class="icon" src="../../../../assets/image/subir.png" alt="">
+                </a>
+              </td>
+              <td>
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+              </td>
+              <td>
+                <div class="margin-leftform-check form-switch">
+                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    checked>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+          style="height: 100px"></textarea>
+        <label for="floatingTextarea2" style="color: black;">Comentario del Portafolio</label>
+      </div>
+
       <!--Portafolio Tutor-->
       <br>
     </div>
     <br>
     <div class="d-grid gap-2 col-4 mx-auto">
-      <button class="btn btn-primary" type="button">
+      <button class="btn btn-primary" type="button" routerLink="/dashboard/lista-estudiante-tutor">
         <img src="../../../../assets/image/enviar.png" style=" height: 20px; " alt="">
         Enviar</button>
     </div>
