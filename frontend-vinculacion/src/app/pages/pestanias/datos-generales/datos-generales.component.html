@@ -20,17 +20,17 @@
   </button>
   <br><br>
   <div class="pestanas">
-    <a [routerLink]="['/pages/datos-generales',currentEntity.dgId]" class="Datos Generales">Datos Generales</a>
-    <a [routerLink]="['/pages/empresa',currentEntity.dgId]" class="Empresa">Empresa</a>
-    <a [routerLink]="['/pages/integrantes',currentEntity.dgId]" class="Integrantes">Integrantes</a>
-    <a [routerLink]="['/pages/actividades',currentEntity.dgId]" class="Actividades">Actividades</a>
-    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.dgId]" class="Plan de Trabajo">Plan de Trabajo</a>
-    <a [routerLink]="['/pages/firmas',currentEntity.dgId]" class="Firma">Firmas</a>
-    <a [routerLink]="['/pages/bibliografia',currentEntity.dgId]" class="Bibliografía">Bibliografía</a>
-    <a [routerLink]="['/pages/anexos',currentEntity.dgId]" class="Anexos">Anexos</a>
-    <a [routerLink]="['/pages/observaciones',currentEntity.dgId]" class="Observaciones">Observaciones</a>
-    <a [routerLink]="['/pages/documentos',currentEntity.dgId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
-    <a [routerLink]="['/pages/certificados',currentEntity.dgId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+    <a [routerLink]="['/dashboard/datos-generales',currentEntity.dgId]" class="Datos Generales">Datos Generales</a>
+    <a [routerLink]="['/dashboard/empresa',currentEntity.dgId]" class="Empresa">Empresa</a>
+    <a [routerLink]="['/dashboard/integrantes',currentEntity.dgId]" class="Integrantes">Integrantes</a>
+    <a [routerLink]="['/dashboard/actividades',currentEntity.dgId]" class="Actividades">Actividades</a>
+    <a [routerLink]="['/dashboard/plan-de-trabajo',currentEntity.dgId]" class="Plan de Trabajo">Plan de Trabajo</a>
+    <a [routerLink]="['/dashboard/firmas',currentEntity.dgId]" class="Firma">Firmas</a>
+    <a [routerLink]="['/dashboard/bibliografia',currentEntity.dgId]" class="Bibliografía">Bibliografía</a>
+    <a [routerLink]="['/dashboard/anexos',currentEntity.dgId]" class="Anexos">Anexos</a>
+    <a [routerLink]="['/dashboard/observaciones',currentEntity.dgId]" class="Observaciones">Observaciones</a>
+    <a [routerLink]="['/dashboard/documentos',currentEntity.dgId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+    <a [routerLink]="['/dashboard/certificados',currentEntity.dgId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
   </div>
 
   <form name="registro" [formGroup]="datosGeneralesForm" (ngSubmit)="onSubmit()">

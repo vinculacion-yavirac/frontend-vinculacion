@@ -21,17 +21,17 @@
 <br><br>
 
   <div class="pestanas">
-    <a [routerLink]="['/pages/datos-generales',currentEntity.empresaId]" class="Datos Generales">Datos Generales</a>
-    <a [routerLink]="['/pages/empresa',currentEntity.empresaId]" class="Empresa">Empresa</a>
-    <a [routerLink]="['/pages/integrantes',currentEntity.empresaId]" class="Integrantes">Integrantes</a>
-    <a [routerLink]="['/pages/actividades',currentEntity.empresaId]" class="Actividades">Actividades</a>
-    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.empresaId]" class="Plan de Trabajo">Plan de Trabajo</a>
-    <a [routerLink]="['/pages/firmas',currentEntity.empresaId]" class="Firma">Firmas</a>
-    <a [routerLink]="['/pages/bibliografia',currentEntity.empresaId]" class="Bibliografía">Bibliografía</a>
-    <a [routerLink]="['/pages/anexos',currentEntity.empresaId]" class="Anexos">Anexos</a>
-    <a [routerLink]="['/pages/observaciones',currentEntity.empresaId]" class="Observaciones">Observaciones</a>
-    <a [routerLink]="['/pages/documentos',currentEntity.empresaId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
-    <a [routerLink]="['/pages/certificados',currentEntity.empresaId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+    <a [routerLink]="['/dashboard/datos-generales',currentEntity.empresaId]" class="Datos Generales">Datos Generales</a>
+    <a [routerLink]="['/dashboard/empresa',currentEntity.empresaId]" class="Empresa">Empresa</a>
+    <a [routerLink]="['/dashboard/integrantes',currentEntity.empresaId]" class="Integrantes">Integrantes</a>
+    <a [routerLink]="['/dashboard/actividades',currentEntity.empresaId]" class="Actividades">Actividades</a>
+    <a [routerLink]="['/dashboard/plan-de-trabajo',currentEntity.empresaId]" class="Plan de Trabajo">Plan de Trabajo</a>
+    <a [routerLink]="['/dashboard/firmas',currentEntity.empresaId]" class="Firma">Firmas</a>
+    <a [routerLink]="['/dashboard/bibliografia',currentEntity.empresaId]" class="Bibliografía">Bibliografía</a>
+    <a [routerLink]="['/dashboard/anexos',currentEntity.empresaId]" class="Anexos">Anexos</a>
+    <a [routerLink]="['/dashboard/observaciones',currentEntity.empresaId]" class="Observaciones">Observaciones</a>
+    <a [routerLink]="['/dashboard/documentos',currentEntity.empresaId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+    <a [routerLink]="['/dashboard/certificados',currentEntity.empresaId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
   </div>
 
   <form name="registro" [formGroup]="empresaForm" (ngSubmit)="onSubmit()">
