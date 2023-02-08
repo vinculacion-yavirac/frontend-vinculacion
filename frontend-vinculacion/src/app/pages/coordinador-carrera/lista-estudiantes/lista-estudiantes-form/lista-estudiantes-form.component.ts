@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Persona } from 'src/app/models/coordinador-carrera/person';
+import { AsignarFundacionVinculacion } from 'src/app/models/docente-vinculacion/asignar-fundacion-vinculacion';
 import { ListaEstudiantesHttpService } from 'src/app/service/coordinador-carrera/lista-estudiantes/lista-estudiantes-http.service';
+import { AsignarFundacionVinculacionHttpService } from 'src/app/service/docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-vinculacion-http.service';
 
 @Component({
   selector: 'app-lista-estudiantes-form',
@@ -16,11 +18,14 @@ export class ListaEstudiantesFormComponent {
  constructor(
    private listaEstudiantesHttpService:ListaEstudiantesHttpService,
    private activatedRoute: ActivatedRoute,
+   private asignarFundacionVinculacionHttpService:AsignarFundacionVinculacionHttpService,
 
  ){}
 
 pages: number = 1;
 listaEstudiantes: Persona[]=[];
+asignarList: AsignarFundacionVinculacion[]=[];
+
 
 
 currentEntity: Persona = {
@@ -32,7 +37,14 @@ currentEntity: Persona = {
   direccion: '',
 };
 
-
+currentEntity2: AsignarFundacionVinculacion = {
+  id: 0,
+  nombre: '',
+  direccion: '',
+  encargado: '',
+  telefono: '',
+  estado: false,
+};
 
  ngOnInit(): void {
 
@@ -49,6 +61,11 @@ currentEntity: Persona = {
  public findAll(): void{
    this.listaEstudiantesHttpService.findAll().subscribe(
      (response) => this.listaEstudiantes = response);
+
+    this.asignarFundacionVinculacionHttpService.findAll().subscribe(
+      (response) => this.asignarList = response
+    );
+
  }
 
  // public onInput(term: string){
@@ -66,6 +83,7 @@ currentEntity: Persona = {
      this.findAll()
    }
  }
+
  public onSelect(listaEstudiantesHttpService: Persona): void {
    this.termEmitter.emit(listaEstudiantesHttpService);
 
@@ -79,5 +97,16 @@ currentEntity: Persona = {
     this.currentEntity = response;
   }
 )
+}
+
+public onInput2(term: string) {
+  if (term.length >= 1) {
+    this.asignarFundacionVinculacionHttpService.findByName(term).subscribe(
+      (response) => this.asignarList = response
+    )
+  }
+  if (term.length === 0) {
+    this.findAll()
+  }
 }
 }
