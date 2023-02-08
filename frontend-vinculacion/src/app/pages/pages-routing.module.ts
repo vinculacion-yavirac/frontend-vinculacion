@@ -28,6 +28,7 @@ import { FirmasComponent } from './pestanias/firmas/firmas.component';
 import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
+import { MenuComponent } from './pestanias/menu/menu.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { RellenarDatosFormComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-form/rellenar-datos-form.component';
@@ -42,6 +43,7 @@ import { PortafolioFormComponent } from './coordinador-general/portafolio/portaf
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
+
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -88,16 +90,28 @@ const routes: Routes = [
       { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent },
 
       { path: 'actividades', component: ActividadesComponent},
+      { path: 'actividades/:id', component: ActividadesComponent},
       { path: 'anexos', component: AnexosComponent},
+      { path: 'anexos/:id', component: AnexosComponent},
       { path: 'bibliografia', component: BibliografiaComponent},
+      { path: 'bibliografia/:id', component: BibliografiaComponent},
       { path: 'certificados', component: CertificadosComponent},
+      { path: 'certificados/:id', component: CertificadosComponent},
       { path: 'datos-generales', component: DatosGeneralesComponent},
+      { path: 'datos-generales/:id', component: DatosGeneralesComponent},
       { path: 'documentos', component: DocumentosComponent},
+      { path: 'documentos/:id', component: DocumentosComponent},
       { path: 'empresa', component: EmpresaComponent},
+      { path: 'empresa/:id', component: EmpresaComponent},
       { path: 'firmas', component: FirmasComponent},
+      { path: 'firmas/:id', component: FirmasComponent},
       { path: 'integrantes', component: IntegrantesComponent},
+      { path: 'integrantes/:id', component: IntegrantesComponent},
       { path: 'observaciones', component: ObservacionesComponent},
+      { path: 'observaciones/:id', component: ObservacionesComponent},
       { path: 'plan-de-trabajo', component: PlanDeTrabajoComponent},
+      { path: 'plan-de-trabajo/:id', component: PlanDeTrabajoComponent},
+      { path: 'menu-proyecto', component: MenuComponent},
 
       { path: 'encuesta', component: EncuestaComponent },
       { path: 'encuesta', component: EncuestaComponent},
