@@ -1,4 +1,4 @@
-export interface DatosGenerales {
+export interface Menu {
 
   dgId: number,
   codigo: string,
