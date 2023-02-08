@@ -33,7 +33,7 @@
             <!--Table body-->
             <tbody>
                 <tr class="" *ngFor="let proyecto of   vistaProyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
-                    <th class="text-center text-dark" scope="row">1</th>
+                    <th class="text-center text-dark" scope="row">{{proyecto.id}}</th>
                     <td class="text-center text-dark">{{proyecto.nombre}}</td>
                     <td class="text-center text-dark">{{proyecto.nombreFundacion}}</td>
                     <td class="text-center text-dark">
