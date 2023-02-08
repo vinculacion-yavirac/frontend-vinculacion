@@ -20,6 +20,7 @@ import { FirmasComponent } from './pestanias/firmas/firmas.component';
 import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
+import { MenuComponent } from './pestanias/menu/menu.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolicitudFormComponent } from './docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
@@ -37,7 +38,7 @@ import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacio
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AgregarRolAddComponent } from './coordinador-carrera/agregar-rol/agregar-rol-add/agregar-rol-add.component';
 import { AgregarRolSearchComponent } from './coordinador-carrera/agregar-rol/agregar-rol-search/agregar-rol-search.component';
@@ -70,8 +71,6 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
 
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
-
-
 
 
 
@@ -117,6 +116,8 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
+    MenuComponent,
+
     DashboardComponent,
 
 
@@ -127,7 +128,7 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     ListaFundacionTutorFromComponent,
 
     ListaEstudianteTutorFormComponent,
-    
+
     RedireccionarPrincipalComponent,
     AgregarRolAddComponent,
     AgregarRolSearchComponent,
@@ -147,8 +148,8 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     EstudiantePortafolioFormularioComponent,
 
     RellenarDatosSelectComponent,
-    
-    
+
+
 
     EditarComponent,
 
@@ -199,6 +200,9 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
+    MenuComponent,
+
+
     EstudianteBuscarComponent,
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
@@ -209,6 +213,7 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     CommonModule,
     PagesRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     SharedModule,

@@ -1,1 +1,134 @@
-<p>actividades works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+                  <div class="pestanas">
+                    <a [routerLink]="['/pages/datos-generales',currentEntity.actividadesId]" class="Datos Generales">Datos Generales</a>
+                    <a [routerLink]="['/pages/empresa',currentEntity.actividadesId]" class="Empresa">Empresa</a>
+                    <a [routerLink]="['/pages/integrantes',currentEntity.actividadesId]" class="Integrantes">Integrantes</a>
+                    <a [routerLink]="['/pages/actividades',currentEntity.actividadesId]" class="Actividades">Actividades</a>
+                    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.actividadesId]" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a [routerLink]="['/pages/firmas',currentEntity.actividadesId]" class="Firma">Firmas</a>
+                    <a [routerLink]="['/pages/bibliografia',currentEntity.actividadesId]" class="Bibliografía">Bibliografía</a>
+                    <a [routerLink]="['/pages/anexos',currentEntity.actividadesId]" class="Anexos">Anexos</a>
+                    <a [routerLink]="['/pages/observaciones',currentEntity.actividadesId]" class="Observaciones">Observaciones</a>
+                    <a [routerLink]="['/pages/documentos',currentEntity.actividadesId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a [routerLink]="['/pages/certificados',currentEntity.actividadesId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                  </div>
+
+<form name="registro" novalidate>
+  <div class="row">
+      <section class="input-field col s12 m6">
+          <label for="nombre"><b>Frecuencia de las Actividades:</b></label><br><br>
+          <input type="checkbox" ng-model="" name="" id="diaria" required>
+          <label for="diaria">Diaria</label><br><br>
+          <input type="checkbox" ng-model="" name="" id="semanal" required>
+          <label for="semanal">Semanal</label><br><br>
+          <input type="checkbox" ng-model="" name="" id="quincenal" required>
+          <label for="quincenal">Quincenal</label><br><br>
+          <input type="checkbox" ng-model="" name="" id="mensual" required>
+          <label for="mensual">Mensual</label><br><br>
+      </section>
+      <section class="input-field col s12 m6">
+        <label for="nombre"><b>Actividades de Vinculación:</b></label><br><br>
+        <input type="checkbox" ng-model="" name="" id="correos" required>
+        <label for="correos">Convenio Institucionales</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="pvpij" required>
+        <label for="pvpij">Proyecto de Vinculación Prototipo IST JME</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="pcc" required>
+        <label for="pcc">Programa de Capacitación a la Comunidad</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="pvc" required>
+        <label for="pvc">Prácticas Vinculación con la Comunidad</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="investigacion" required>
+        <label for="investigacion">Investigación</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="acuerdo" required>
+        <label for="acuerdo">Acuerdo</label><br><br>
+        <input type="checkbox" ng-model="" name="" id="otros" required>
+        <label for="otros">Otros</label><br><br>
+    </section>
+  </div>
+  <div class="row">
+    <section class="input-field col s12 m6">
+      <label for="nombre"><b>Sectores de Intervención:</b></label><br><br>
+      <input type="checkbox" ng-model="" name="" id="educacion" required>
+      <label for="educacion">Educación</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="salud" required>
+      <label for="salud">Salud</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="sa" required>
+      <label for="sa">Sanamiento Ambiental</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="ap" required>
+      <label for="ap">Apoyo Productivo</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="agyp" required>
+      <label for="agyp">Agricultura, Ganadería y Pesca</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="vivienda" required>
+      <label for="vivienda">Vivienda</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="pma" required>
+      <label for="pma">Protección del medio ambiente y desastres naturales</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="rne" required>
+      <label for="rne">Recursos Naturales y Energía</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="tcv" required>
+      <label for="tcv">Transporte, Comunicación y Viabilidad</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="desarrolloU" required>
+      <label for="desarrolloU">Desarrollo Urbano</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="turismo" required>
+      <label for="turismo">Turismo</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="cultura" required>
+      <label for="cultura">Cultura</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="dic" required>
+      <label for="dic">Desarrollo de Investigación Científica</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="deportes" required>
+      <label for="deportes">Deportes</label><br><br>
+      <input type="checkbox" ng-model="" name="" id="jys" required>
+      <label for="jys">Justicia y Seguridad</label><br><br>
+  </section>
+  <section class="input-field col s12 m6">
+    <label for="nombre"><b>Ejes Estratégicos de Vinculación con la Colectividad</b></label><br><br>
+    <input type="checkbox" ng-model="" name="" id="ambiente" required>
+    <label for="ambiente">Ambiente</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="dsyc" required>
+    <label for="dsyc">Desarrollo Social y Comunitario</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="ia" required>
+    <label for="ia">Investigativo Académico</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="ig" required>
+    <label for="ig">Interculturalidad/Género</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="desarrolloL" required>
+    <label for="desarrolloL">Desarrollo Local</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="epys" required>
+    <label for="epys">Economía Popular y Solidaria</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="dtyt" required>
+    <label for="dtyt">Desarrollo Técnico y Técnológico</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="inovacion" required>
+    <label for="inovacion">Inovación</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="rsu" required>
+    <label for="rsu">Responsabilidad Social Universitaria</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="matrizP" required>
+    <label for="matrizP">Matriz Productiva</label><br><br>
+    <input type="checkbox" ng-model="" name="" id="otros2" required>
+    <label for="otros2">Otros</label><br><br>
+</section>
+  </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit" (click)="save()">Confirmar
+
+      <img class="small pull-right" src="../../../../assets/image/visto.png" alt="">
+
+  </button>
+</form>
+</div>

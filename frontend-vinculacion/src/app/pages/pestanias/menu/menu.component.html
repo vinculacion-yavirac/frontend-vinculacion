@@ -1,0 +1,88 @@
+
+<div class="card-body">
+
+<label for="nombre" class="negro"><h5><b>&nbsp;&nbsp;&nbsp;Proyectos</b></h5></label><br><br>
+ <section class="input-field">
+  <label for="" class="label1">Carrera:</label>
+  <label for="" class="label2">Nombre:</label>
+  <label for="" class="label3">Estado:</label>
+  <label for="" class="label4">Año Electivo:</label><br>
+  <input type="text" name="estado" class="input1">
+  <input type="text" name="nombre" class="input2">
+  <input type="text" name="carrera" class="input3">
+  <input type="text" name="anio" class="input4">
+  </section>
+  <br><br>
+<div class="home-content">
+    <div class="overview-boxes">
+
+        <div class="box boxpadding" *ngFor="let menu of menu">
+          <div class="right-side">
+            <a [routerLink]="['../datos-generales', menu.dgId]">
+            <div class="box-topic">Desarrollo de Software</div>
+            <div class="number">{{menu.nombrep}}</div>
+            <div class="indicator padding21">
+              <i class='bx bx-up-arrow-alt azul'></i>
+              <span class="text">{{menu.fecha}}</span>
+            </div>
+
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="small" src="../../../../assets/image/editar.png" alt="">&nbsp;Editar
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="">
+                <img class="small" src="../../../../assets/image/editar.png" alt="">&nbsp;Eliminar
+            </a>
+          </a>
+          </div>
+          <i class='bx bx-cart-alt cart'></i>
+        </div>
+
+        <div class="box boxpadding">
+          <a [routerLink]="['../datos-generales']">
+          <div class="right-side">
+            <div class="number">&nbsp;Nuevo Proyecto</div><br>
+            <img class="small center" src="../../../../assets/image/suma.png" alt="">
+        </div>
+          </a>
+    </div>
+</div>
+
+
+
+<div class="center">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only"></span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+
+</div>

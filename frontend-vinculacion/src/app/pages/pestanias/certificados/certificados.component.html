@@ -1,1 +1,358 @@
-<p>certificados works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+                  <div class="pestanas">
+                    <a [routerLink]="['/pages/datos-generales',currentEntity.certificadosId]" class="Datos Generales">Datos Generales</a>
+                    <a [routerLink]="['/pages/empresa',currentEntity.certificadosId]" class="Empresa">Empresa</a>
+                    <a [routerLink]="['/pages/integrantes',currentEntity.certificadosId]" class="Integrantes">Integrantes</a>
+                    <a [routerLink]="['/pages/actividades',currentEntity.certificadosId]" class="Actividades">Actividades</a>
+                    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.certificadosId]" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a [routerLink]="['/pages/firmas',currentEntity.certificadosId]" class="Firma">Firmas</a>
+                    <a [routerLink]="['/pages/bibliografia',currentEntity.certificadosId]" class="Bibliografía">Bibliografía</a>
+                    <a [routerLink]="['/pages/anexos',currentEntity.certificadosId]" class="Anexos">Anexos</a>
+                    <a [routerLink]="['/pages/observaciones',currentEntity.certificadosId]" class="Observaciones">Observaciones</a>
+                    <a [routerLink]="['/pages/documentos',currentEntity.certificadosId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a [routerLink]="['/pages/certificados',currentEntity.certificadosId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                  </div>
+
+<form name="registro" novalidate>
+  <br><h6><b>&nbsp;&nbsp;Solicitudes</b></h6>
+  <input ng-disabled="registro.$invalid"  type="file"  class="center">
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Cedula de Identidad.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            1754447512
+                          </a>
+                        </td>
+                        <td>
+                          <div class="aprobado">Aprobado</div>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="portafolio">Ver Portafolio</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/editar.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Proyecto.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            1769532674
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="revision">En Revisión</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="portafolio">Ver Portafolio</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/editar.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Itv.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            1736452938
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="rechazado">Rechazado</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="portafolio">Ver Portafolio</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/editar.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          Aprovacion.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            1765893516
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="revision">En Revisión</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="portafolio">Ver Portafolio</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/editar.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>
+                          Convenio.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            1765893516
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="corregido">Corregido</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <div class="portafolio">Ver Portafolio</div>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/editar.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <br><h6><b>&nbsp;&nbsp;Portafolio</b></h6>
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Carta de Compromiso
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/ojo-boton.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Cumplimiento de Objetivos
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/ojo-boton.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Informe Final
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/ojo-boton.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          Encuesta de Percepción
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/ojo-boton.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>
+                          Control de Asistencia
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/ojo-boton.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+</form>
+</div>

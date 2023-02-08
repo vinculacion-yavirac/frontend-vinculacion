@@ -1,1 +1,197 @@
-<p>anexos works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+                  <div class="pestanas">
+                    <a [routerLink]="['/pages/datos-generales',currentEntity.anexosId]" class="Datos Generales">Datos Generales</a>
+                    <a [routerLink]="['/pages/empresa',currentEntity.anexosId]" class="Empresa">Empresa</a>
+                    <a [routerLink]="['/pages/integrantes',currentEntity.anexosId]" class="Integrantes">Integrantes</a>
+                    <a [routerLink]="['/pages/actividades',currentEntity.anexosId]" class="Actividades">Actividades</a>
+                    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.anexosId]" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a [routerLink]="['/pages/firmas',currentEntity.anexosId]" class="Firma">Firmas</a>
+                    <a [routerLink]="['/pages/bibliografia',currentEntity.anexosId]" class="Bibliografía">Bibliografía</a>
+                    <a [routerLink]="['/pages/anexos',currentEntity.anexosId]" class="Anexos">Anexos</a>
+                    <a [routerLink]="['/pages/observaciones',currentEntity.anexosId]" class="Observaciones">Observaciones</a>
+                    <a [routerLink]="['/pages/documentos',currentEntity.anexosId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a [routerLink]="['/pages/certificados',currentEntity.anexosId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                  </div>
+
+<form name="registro" novalidate>
+  <br><h6><b>&nbsp;&nbsp;Anexos Empresariales</b></h6>
+  <input ng-disabled="registro.$invalid"  type="file"  class="center">
+    <i class="mdi-content-send right"></i>
+
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td >
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td>
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Copia simple de los documentos que acrediten la calidad del Representante Legal/ delegado o apoderado.pdf
+                        </td>
+
+                        <td>
+                          <a href="" class="centersito">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <br><h6><b>&nbsp;&nbsp;Anexos Institucionales</b></h6>
+  <input ng-disabled="registro.$invalid"  type="file"  class="center">
+                  <table class="table row centerp">
+
+                    <tbody class="leters">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          Anexos.pdf
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          Copia simple de la acción de personal del Rector vigente y debidamente legalizado
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          Copia simple de la cédula de identidad del Rector
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/descarga.png" alt="">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="">
+                            <img class="observar" src="../../../../assets/image/eliminar.png" alt="">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <nav aria-label="page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+</form>
+</div>

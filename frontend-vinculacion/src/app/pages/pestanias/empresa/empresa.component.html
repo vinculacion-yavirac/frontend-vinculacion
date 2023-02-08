@@ -1,1 +1,228 @@
-<p>empresa works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+
+  <div class="pestanas">
+    <a [routerLink]="['/pages/datos-generales',currentEntity.empresaId]" class="Datos Generales">Datos Generales</a>
+    <a [routerLink]="['/pages/empresa',currentEntity.empresaId]" class="Empresa">Empresa</a>
+    <a [routerLink]="['/pages/integrantes',currentEntity.empresaId]" class="Integrantes">Integrantes</a>
+    <a [routerLink]="['/pages/actividades',currentEntity.empresaId]" class="Actividades">Actividades</a>
+    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.empresaId]" class="Plan de Trabajo">Plan de Trabajo</a>
+    <a [routerLink]="['/pages/firmas',currentEntity.empresaId]" class="Firma">Firmas</a>
+    <a [routerLink]="['/pages/bibliografia',currentEntity.empresaId]" class="Bibliografía">Bibliografía</a>
+    <a [routerLink]="['/pages/anexos',currentEntity.empresaId]" class="Anexos">Anexos</a>
+    <a [routerLink]="['/pages/observaciones',currentEntity.empresaId]" class="Observaciones">Observaciones</a>
+    <a [routerLink]="['/pages/documentos',currentEntity.empresaId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+    <a [routerLink]="['/pages/certificados',currentEntity.empresaId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+  </div>
+
+  <form name="registro" [formGroup]="empresaForm" (ngSubmit)="onSubmit()">
+    <div class="col s12 m4">
+      <section class="input-field s12 m6">
+        <label for="nombre">Nombre de la Entidad:</label><br>
+        <input type="text" formControlName="nombreE" name="nombreE" [(ngModel)]="currentEntity.nombreE">
+        <div *ngIf="nombreE?.invalid && (nombreE?.dirty || nombreE?.touched)" class="alert alert-danger ">
+          <div *ngIf="nombreE?.errors">Nombre de la Entidad inválida.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <form formGroupName="naturaleza">
+          <label for="edad">Naturaleza de Gestión de la Entidad Receptora:</label><br><br>
+          <input class="with-gap" type="radio" formControlName="naturalezaType" id="publica" value="publica">
+          <label for="publica">Pública</label> &nbsp;&nbsp;
+          <input class="with-gap" type="radio" formControlName="naturalezaType" id="privada" value="privada">
+          <label for="privada">Privada</label><br>
+          <input class="with-gap" type="radio" formControlName="naturalezaType" id="mixta" value="mixta">
+          <label for="mixta">Mixta</label>
+        </form>
+      </section><br>
+      <section class="input-field s12 m6">
+        <label for="nombre">Nombre de la persona autorizada legalmente para la suscripción del convenio:</label><br>
+        <input type="text" formControlName="personaAc" name="personaAc" [(ngModel)]="currentEntity.personaAc">
+        <div *ngIf="personaAc?.invalid && (personaAc?.dirty || personaAc?.touched)" class="alert alert-danger ">
+          <div *ngIf="personaAc?.errors">Ingrese un nombre válido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Numero de RUC:</label><br>
+        <input type="text" formControlName="numRuc" name="numRuc" [(ngModel)]="currentEntity.numRuc">
+        <div *ngIf="numRuc?.invalid && (numRuc?.dirty || numRuc?.touched)" class="alert alert-danger ">
+          <div *ngIf="numRuc?.errors">Numero de RUC inválido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Actividad Económica que consta en el RUC:</label><br>
+        <input type="text" formControlName="actividadEc" name="actividadEc" [(ngModel)]="currentEntity.actividadEc">
+        <div *ngIf="actividadEc?.invalid && (actividadEc?.dirty || actividadEc?.touched)" class="alert alert-danger ">
+          <div *ngIf="actividadEc?.errors">Actividad Económica inválida.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Correo Electrónico de la Empresa:</label><br>
+        <input type="text" formControlName="correoE" name="correoE" [(ngModel)]="currentEntity.correoE">
+        <div *ngIf="correoE?.invalid && (correoE?.dirty || correoE?.touched)" class="alert alert-danger ">
+          <div *ngIf="correoE?.errors">Correo Electrónico inválido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Télefono de Contacto:</label><br>
+        <input type="text" formControlName="telfCo" name="telfCo" [(ngModel)]="currentEntity.telfCo">
+        <div *ngIf="telfCo?.invalid && (telfCo?.dirty || telfCo?.touched)" class="alert alert-danger ">
+          <div *ngIf="telfCo?.errors">Télefono de Contacto inválido.</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="col s12 m4">
+      <section class="input-field s12 m6">
+        <label class="Titulo"><b>Dirección Matriz de Entidad Receptora</b></label><br><br>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Provincia:</label><br><br>
+        <select class="browser-default" formControlName="provinciaMa" (change)="onChangeProvinciaMatriz($event.target)"
+          name="provincia">
+          <option value="" disabled="" selected="">Seleccione una provincia</option>
+          <option *ngFor="let provincia of provinciasMapping" [value]="provincia.id">{{provincia.provincia}}</option>
+        </select>
+        <div *ngIf="provinciaMa?.invalid && (provinciaMa?.dirty || provinciaMa?.touched)" class="alert alert-danger ">
+          <div *ngIf="provinciaMa?.errors">Seleccione una provicincia</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Cantón:</label><br><br>
+        <select class="browser-default" formControlName="cantonMa" (change)="onChangeCantonMatriz($event.target)">
+          <option value="" disabled="" selected="">Seleccione un cantón</option>
+          <option *ngFor="let canton of cantonesMa" [value]="canton.id">{{canton.canton}}</option>
+        </select>
+        <div *ngIf="cantonMa?.invalid && (cantonMa?.dirty || cantonMa?.touched)" class="alert alert-danger ">
+          <div *ngIf="cantonMa?.errors">Seleccione un cantón inválido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Parroquia:</label><br><br>
+        <select class="browser-default" formControlName="parroquiaMa">
+          <option value="" disabled="" selected="">Seleccione una Parroquia</option>
+          <option *ngFor="let parroquia of parroquiasMa" [value]="parroquia.id">{{parroquia.parroquia}}</option>
+        </select>
+        <div *ngIf="parroquiaMa?.invalid && (parroquiaMa?.dirty || parroquiaMa?.touched)" class="alert alert-danger ">
+          <div *ngIf="parroquiaMa?.errors">Seleccione una parroquia.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Dirección:</label><br>
+        <input type="text" formControlName="direccionMa" name="direccionMa" [(ngModel)]="currentEntity.direccionMa">
+        <div *ngIf="direccionMa?.invalid && (direccionMa?.dirty || direccionMa?.touched)" class="alert alert-danger ">
+          <div *ngIf="direccionMa?.errors">Dirección inválida.</div>
+        </div>
+      </section>
+
+      <section class="input-field s12 m6">
+        <label class="Titulo"><b>Dirección Sucursal de Entidad Receptora</b></label><br><br>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Provincia:</label><br><br>
+        <select class="browser-default" formControlName="provinciaSu" (change)="onChangeProvinciaSucursal($event.target)"
+          name="provincia">
+          <option value="" disabled="" selected="">Seleccione una provincia</option>
+          <option *ngFor="let provincia of provinciasMapping" [value]="provincia.id">{{provincia.provincia}}</option>
+        </select>
+        <div *ngIf="provinciaSu?.invalid && (provinciaSu?.dirty || provinciaSu?.touched)" class="alert alert-danger ">
+          <div *ngIf="provinciaSu?.errors">Seleccione una provicincia</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Cantón:</label><br><br>
+        <select class="browser-default" formControlName="cantonSu" (change)="onChangeCantonSucursal($event.target)">
+          <option value="" disabled="" selected="">Seleccione un cantón</option>
+          <option *ngFor="let canton of cantonesSu" [value]="canton.id">{{canton.canton}}</option>
+        </select>
+        <div *ngIf="cantonSu?.invalid && (cantonSu?.dirty || cantonSu?.touched)" class="alert alert-danger ">
+          <div *ngIf="cantonSu?.errors">Seleccione un cantón inválido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Parroquia:</label><br><br>
+        <select class="browser-default" formControlName="parroquiaSu">
+          <option value="" disabled="" selected="">Seleccione una Parroquia</option>
+          <option *ngFor="let parroquia of parroquiasSu" [value]="parroquia.id">{{parroquia.parroquia}}</option>
+        </select>
+        <div *ngIf="parroquiaSu?.invalid && (parroquiaSu?.dirty || parroquiaSu?.touched)" class="alert alert-danger ">
+          <div *ngIf="parroquiaSu?.errors">Seleccione una parroquia.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="nombre">Dirección:</label><br>
+        <input type="text" formControlName="direccionSu" name="direccionSu" [(ngModel)]="currentEntity.direccionSu">
+        <div *ngIf="direccionSu?.invalid && (direccionSu?.dirty || direccionSu?.touched)" class="alert alert-danger ">
+          <div *ngIf="direccionSu?.errors">Dirección inválida.</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="col s12 m4">
+      <section class="input-field s12 m6">
+        <label for="apellido">Numero de Estudiantes que recibirá inicialmente la Entidad:</label><br><br>
+        <input type="text" formControlName="numEE" name="numEE" [(ngModel)]="currentEntity.numEE">
+        <div *ngIf="numEE?.invalid && (numEE?.dirty || numEE?.touched)" class="alert alert-danger ">
+          <div *ngIf="numEE?.errors">Ingrese un número.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Total de Estudiantes que recibirá la Entidad:</label><br><br>
+        <input type="text" formControlName="totalEE" name="totalEE" [(ngModel)]="currentEntity.totalEE">
+        <div *ngIf="totalEE?.invalid && (totalEE?.dirty || totalEE?.touched)" class="alert alert-danger ">
+          <div *ngIf="totalEE?.errors">Ingrese un número.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Lugar de Ubicación:</label><br><br>
+        <input type="text" formControlName="lugarU" name="lugarU" [(ngModel)]="currentEntity.lugarU">
+        <div *ngIf="lugarU?.invalid && (lugarU?.dirty || lugarU?.touched)" class="alert alert-danger ">
+          <div *ngIf="lugarU?.errors">Lugar de Ubicación inválido.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Beneficiarios Directos:</label><br><br>
+        <input type="text" formControlName="beneficiariosDi" name="beneficiariosDi" [(ngModel)]="currentEntity.beneficiariosDi">
+        <div *ngIf="beneficiariosDi?.invalid && (beneficiariosDi?.dirty || beneficiariosDi?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="beneficiariosDi?.errors">Ingrese un número.</div>
+        </div>
+      </section>
+      <section class="input-field s12 m6">
+        <label for="apellido">Beneficiarios Indirectos:</label><br><br>
+        <input type="text" formControlName="beneficiariosIndi" name="beneficiariosIndi" [(ngModel)]="currentEntity.beneficiariosIndi">
+        <div *ngIf="beneficiariosIndi?.invalid && (beneficiariosIndi?.dirty || beneficiariosIndi?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="beneficiariosIndi?.errors">Ingrese un número.</div>
+        </div>
+      </section>
+    </div>
+
+    <button class="btn waves-effect waves-light right" type="submit" [disabled]="!empresaForm.valid">
+      Confirmar
+
+        <img class="small pull-right" src="../../../../assets/image/visto.png" alt="">
+
+    </button>
+
+  </form>
+</div>
