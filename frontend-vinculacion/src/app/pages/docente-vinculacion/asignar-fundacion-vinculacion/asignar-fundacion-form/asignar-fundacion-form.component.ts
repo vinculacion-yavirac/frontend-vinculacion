@@ -67,4 +67,14 @@ export class AsignarFundacionFormComponent {
       this.findAll()
     }
   }
+
+  public clicks(){
+    var bool=confirm("Seguro que quiere agirnar el tutor estudiante?");
+    if(bool){
+      alert("Se asigni el tutor al estudiante");
+    }else{
+      alert("cancelo la solicitud");
+    }
+  };
+
 }

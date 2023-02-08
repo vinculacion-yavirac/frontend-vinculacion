@@ -21,11 +21,9 @@
             <!--Table head-->
             <thead class="text-center">
                 <tr class="text-center">
-                    <th class="text-dark" scope="col">#</th>
+                    <th class="text-center text-dark" scope="col">#</th>
                     <th class="text-center text-dark" scope="col">Nombre de la fundación</th>
                     <th class="text-center text-dark" scope="col">Estado</th>
-                    <th class="text-center text-dark" scope="col">Asignados</th>
-                    <th class="text-center text-dark" scope="col">Observar</th>
                     <th class="text-center text-dark" scope="col">Asignar</th>
                 </tr>
             </thead>
@@ -35,18 +33,14 @@
             <tbody>
                 <tr class="text-center"
                     *ngFor="let asignar of asignarList | paginate: { itemsPerPage: 3, currentPage: pages }">
-                    <th class="text-dark" scope="row">{{asignar.id}}</th>
-                    <td class="text-dark">{{asignar.nombre}}</td>
-                    <td class="text-dark">
+                    <th class="text-center text-dark" scope="row">{{asignar.id}}</th>
+                    <td class="text-center text-dark">{{asignar.nombre}}</td>
+                    <td class="text-center text-dark">
                         <div class="margin-leftform-check form-switch">
                             <input class="switch form-check-input" type="checkbox" role="switch"
                                 id="flexSwitchCheckChecked" [(ngModel)]="asignar.estado" disabled>
                         </div>
                     </td>
-                    <td class="text-dark">10</td>
-                    <td class="text-dark"><a href="" routerLink="/dashboard/portafolio-vinculacion">
-                            <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
-                        </a></td>
                     <td>
                         <div class=" d-grid gap-1 ">
 
@@ -63,18 +57,21 @@
                                             <form>
                                                 <fieldset>
                                                     <label class="form-label">Asignar Tutor/Estudiante</label>
-                                                    <!-- <app-rol-combobox
-                                                        (rolIdEmiter)="currentEntity.catalogoId=$event"
-                                                        [id]="currentEntity.catalogoId"></app-rol-combobox> -->
+                                                    <app-rol-combobox
+                                                        (rolIdEmiter)="currentEntity.id=$event"
+                                                        [id]="currentEntity.id"></app-rol-combobox>
                                                     <div class="mb-3">
                                                        <div class="mb-3">
                                                         <label class="form-label">Asignar </label>
-                                                        <!-- <app-rol-combobox-tutor
-                                                            (rolIdEmiter)="currentEntity.tipoPersonaId=$event"
-                                                            [id]="currentEntity.tipoPersonaId"></app-rol-combobox-tutor> -->
+                                                        <app-rol-combobox-tutor
+                                                            (rolIdEmiter)="currentEntity.id=$event"
+                                                            [id]="currentEntity.id"></app-rol-combobox-tutor>
                                                     </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary"(click)="save()" >Submit</button>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-primary " data-bs-dismiss="modal"
+                                                            aria-label="Close" (click)="clicks()">Asignar</button>
+                                                    </div>
                                                 </fieldset>
                                             </form>
                                         </div>

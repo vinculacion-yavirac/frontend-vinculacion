@@ -20,12 +20,12 @@
             <!--Table head-->
             <thead class="text-center">
                 <tr class="text-center">
-                    <th class="text-dark" scope="col">#</th>
-                    <th class="text-dark" scope="col">Nombre</th>
-                    <th class="text-dark" scope="col">Fundación</th>
-                    <th class="text-dark" scope="col">Estado</th>
-                    <th class="text-dark" scope="col">Descargar</th>
-                    <th class="text-dark" scope="col">Acciones</th>
+                    <th class="text-center text-dark" scope="col">#</th>
+                    <th class="text-center text-dark" scope="col">Nombre</th>
+                    <th class="text-center text-dark" scope="col">Fundación</th>
+                    <th class="text-center text-dark" scope="col">Estado</th>
+                    <th class="text-center text-dark" scope="col">Descargar</th>
+                    <th class="text-center text-dark" scope="col">Acciones</th>
                 </tr>
             </thead>
             <!--Table head-->
@@ -33,17 +33,19 @@
             <!--Table body-->
             <tbody>
                 <tr class="" *ngFor="let proyecto of   vistaProyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
-                    <th class="text-dark" scope="row">1</th>
-                    <td class="text-dark">{{proyecto.nombre}}</td>
-                    <td class="text-dark">{{proyecto.nombreFundacion}}</td>
-                    <td class="text-dark">
+                    <th class="text-center text-dark" scope="row">{{proyecto.id}}</th>
+                    <td class="text-center text-dark">{{proyecto.nombre}}</td>
+                    <td class="text-center text-dark">{{proyecto.nombreFundacion}}</td>
+                    <td class="text-center text-dark">
                         <div class="margin-leftform-check form-switch">
                             <input class="switch form-check-input" type="checkbox" role="switch"
                                 id="flexSwitchCheckChecked" [(ngModel)]="proyecto.estado">
                         </div>
                     </td>
-                    <td class="text-dark">1755516802</td>
-                    <td>
+                    <td class="text-center text-dark"><a href="{{proyecto.descarga}}">
+                        <img class="icon" src="../../../../assets/image/descarga.png" alt="">
+                      </a></td>
+                    <td class="text-center">
                         <button class="btn btn-success btn-outline-light btn-sm" [routerLink]="[]" (click)="save()">Guardar</button>
                     </td>
                 </tr>
