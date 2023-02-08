@@ -5,7 +5,7 @@
 <div class="col-auto  d-flex flex-row-reverse">
 
   <app-agregar-rol-search></app-agregar-rol-search>
-  
+
 
 </div>
 
@@ -36,7 +36,7 @@
                       <td class="text-dark"> {{persona.cedula}}</td>
                       <td class="text-dark"> {{persona.nombre}}</td>
                       <td class="text-dark"> {{persona.nombre}}</td>
-                     
+
                       <td>
                         <a href="dashboard/lista-portafolios">
                           <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
@@ -54,10 +54,10 @@
                 </tbody>
                 <!--Table body-->
             </table>
-            <!--Table-->
+            <div class="pagi static">
+              <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+            </div>
         </div>
 
-  <div class="pagi static">
-    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
-  </div>
+
 
