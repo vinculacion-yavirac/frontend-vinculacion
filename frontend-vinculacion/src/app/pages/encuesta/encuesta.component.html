@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="col-6">
-                  <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModald" >
+                  <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModald">
                     <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <g>
@@ -136,19 +136,21 @@
                       </g>
                     </svg>
                   </a>
-                  <div class="modal fade" id="exampleModald" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModald" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h1 class="modal-title fs-5" id="exampleModaldLabel">Advertencia!!</h1>
 
                         </div>
-                        <div class="modal-body" >
+                        <div class="modal-body">
                           Si borra este registro ya no se podra recuperar!!
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" (click)="deleteById(pregunta.id)">Save changes</button>
+                          <button type="button" class="btn btn-primary" (click)="deleteById(pregunta.id)">Save
+                            changes</button>
                         </div>
                       </div>
                     </div>
@@ -158,7 +160,7 @@
             </div>
           </div>
         </div>
-
+        <app-respuesta></app-respuesta>
       </div>
 
     </div>

@@ -42,6 +42,7 @@ import { PortafolioFormComponent } from './coordinador-general/portafolio/portaf
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
+import { EditarRespuestaComponent } from './encuesta/respuesta/editar-respuesta/editar-respuesta.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -104,6 +105,7 @@ const routes: Routes = [
       { path: 'editar/:id', component: EditarComponent},
       { path: 'respuesta', component: RespuestaComponent},
       { path: 'agregar-respuesta', component: AgregarComponent},
+      { path: 'editar-respuesta/:id', component: EditarRespuestaComponent},
     ]
   }
 ];

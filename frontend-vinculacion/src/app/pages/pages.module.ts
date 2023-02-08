@@ -70,6 +70,8 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
 
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
+import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
+import { EditarRespuestaComponent } from './encuesta/respuesta/editar-respuesta/editar-respuesta.component';
 
 
 
@@ -106,6 +108,7 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     InformeFinalEstudianteComponent,
     EncuestaComponent,
     AgregarComponent,
+    RespuestaComponent,
     ActividadesComponent,
     AnexosComponent,
     BibliografiaComponent,
@@ -127,7 +130,7 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     ListaFundacionTutorFromComponent,
 
     ListaEstudianteTutorFormComponent,
-    
+
     RedireccionarPrincipalComponent,
     AgregarRolAddComponent,
     AgregarRolSearchComponent,
@@ -147,10 +150,11 @@ import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar
     EstudiantePortafolioFormularioComponent,
 
     RellenarDatosSelectComponent,
-    
-    
+
+
 
     EditarComponent,
+          EditarRespuestaComponent,
 
 
 
