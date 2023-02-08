@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./estudiante-formulario.component.css']
 })
 export class EstudianteFormularioComponent {
+  page: number=1;
 
 }
+
