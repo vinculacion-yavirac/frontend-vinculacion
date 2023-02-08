@@ -1,11 +1,31 @@
 <div class="justify-text">
     <h2> Estudiantes</h2>
-  </div>
-  <div class="col-auto  d-flex flex-row-reverse">
-    <button class="btn btn-primary btn-sm" type="button">Solicitud Vinculacion</button>
-  </div>
+</div>
 
-<div text-align="left" class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
+<!--Boton-->
+<li>
+    <div style="text-align: right" class="boton-modal">
+        <label for="btn-modal">
+            Solicitud Vinculacion
+        </label>
+    </div>
+</li>
+<!--Fin de Boton-->
+<!--Ventana Modal-->
+<input type="checkbox" id="btn-modal">
+<div class="container-modal">
+    <div class="content-modal">
+        <h2>¡Se realizo la solicitud exitosamente!</h2>
+
+        <div class="btn-cerrar">
+            <label for="btn-modal">Aceptar</label>
+        </div>
+    </div>
+    <label for="btn-modal" class="cerrar-modal"></label>
+</div>
+<!--Fin de Ventana Modal-->
+<div text-align="left" class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped"
+    style="height: 26em;">
     <div class="">
         <!--Table-->
         <table class="table col-12 px-1">
@@ -26,7 +46,7 @@
 
             <!--Table body-->
             <tbody>
-                <tr class="text-center">
+                <tr class="text-center" ngFor="paginate: { itemsPerPage: 3, currentPage: pages }">
                     <th class="text-black" scope="row">1</th>
                     <td class="text-black">01-01-2023</td>
                     <td class="text-black">Solicitud Vinculacion</td>
@@ -35,31 +55,108 @@
                     <td class="text-black">Tutor 1</td>
                     <td>
                         <!--boton desplegable-->
-                       <!-- start nav -->
-<nav id="menu">
-    <!-- start menu -->
-    <ul>
-     <li><a>☰</a>
-    <!-- start menu desplegable -->
-     <ul>
-     <li><a href="#">Descargar Solicitud</a></li>
-     <li><a href="dashboard/estudiante-portafolio">Cargar Portafolio</a></li>
-     <li><a href="#">Solicitud Certificado</a></li>
-     <li><a href="#">Descargar Certificado</a></li>
-     </ul>
-    <!-- end menu desplegable -->
-     </li>
+                        <!-- start nav -->
+                        <nav id="menu">
+                            <!-- start menu -->
+                            <ul>
+                                <li><a>☰</a>
+                                    <!-- start menu desplegable -->
+                                    <ul>
+                                        <!--Boton-->
+                                        <li>
+                                            <div style="text-align: center" class="boton-modal">
+                                                <label for="btn-modal">
+                                                    Descargar Solicitud
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <!--Fin de Boton-->
+                                        <!--Ventana Modal-->
+                                        <input type="checkbox" id="btn-modal">
+                                        <div class="container-modal">
+                                            <div class="content-modal">
+                                                <h2>¡Se descargo la solicitud deforma exitosa!</h2>
 
-    </ul>
-    <!-- end menu -->
-    </nav>
-    <!-- end nav -->
+                                                <div class="btn-cerrar">
+                                                    <label for="btn-modal">Aceptar</label>
+                                                </div>
+                                            </div>
+                                            <label for="btn-modal" class="cerrar-modal"></label>
+                                        </div>
+                                        <!--Fin de Ventana Modal-->
+
+                                        <!--Boton-->
+                                        <li><a id="btn-modal" href="dashboard/estudiante-portafolio">Cargar
+                                                Portafolio</a>
+
+                                            <!--Fin de Boton-->
+                                            <!--Ventana Modal-->
+
+
+
+                                            <!--Boton-->
+                                        <li>
+                                            <div style="text-align: center" class="boton-modal">
+                                                <label for="btn-modal">
+                                                    Solicitud Certificado
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <!--Fin de Boton-->
+                                        <!--Ventana Modal-->
+                                        <input type="checkbox" id="btn-modal">
+                                        <div class="container-modal">
+                                            <div class="content-modal">
+                                                <h2>¡Se genero la solicitud de manera exitosa!</h2>
+                                                <div class="btn-cerrar">
+                                                    <label for="btn-modal">Aceptar</label>
+                                                </div>
+                                            </div>
+                                            <label for="btn-modal" class="cerrar-modal"></label>
+                                        </div>
+
+                                        <!--Boton-->
+                                        <li>
+                                            <div style="text-align: center" class="boton-modal">
+                                                <label for="btn-modal">
+                                                    Descargar Certificado
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <!--Fin de Boton-->
+                                        <!--Ventana Modal-->
+                                        <input type="checkbox" id="btn-modal">
+                                        <div class="container-modal">
+                                            <div class="content-modal">
+                                                <h2>¡Se descargo el Certificado de forma exitosa!</h2>
+                                                <div class="btn-cerrar">
+                                                    <label for="btn-modal">Aceptar</label>
+                                                </div>
+                                            </div>
+                                            <label for="btn-modal" class="cerrar-modal"></label>
+                                        </div>
+                                    </ul>
+                                    <!-- end menu desplegable -->
+                                </li>
+
+                            </ul>
+                            <!-- end menu -->
+                        </nav>
+                        <!-- end nav -->
                         <!--boton desplegable-->
                     </td>
                 </tr>
             </tbody>
             <!--Table body-->
         </table>
+
         <!--Table-->
     </div>
+
+    <div class="pagi static">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+
+
+
 </div>
