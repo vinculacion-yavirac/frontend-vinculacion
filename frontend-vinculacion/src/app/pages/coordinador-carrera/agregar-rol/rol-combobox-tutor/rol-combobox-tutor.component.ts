@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Catalogo } from 'src/app/models/catalogo/Catalogo';
 import { Persona } from 'src/app/models/catalogo/Persona';
 import { PersonaHttpService } from 'src/app/service/persona/persona-http.service';
 

@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header">
+    Editar Pregunta
+  </div>
+  <div class="card-body">
+    <label for="name" class="form-label">Pregunta:</label>
+    <input type="text" id="name" [(ngModel)]="currentEntity.name" class="form-control">
+    <br>
+    <button class="btn btn-info" (click)="createPregunta()">Guardar</button>
+  </div>
+</div>

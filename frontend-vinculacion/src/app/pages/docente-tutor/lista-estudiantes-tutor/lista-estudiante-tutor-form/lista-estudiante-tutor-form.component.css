@@ -19,3 +19,10 @@
   width: 70px;
   height: 24px;
 }
+
+.pagi{
+  text-align: center;
+  padding: 10px;
+  position:static;
+  grid-row-end: auto;
+}

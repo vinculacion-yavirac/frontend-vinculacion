@@ -26,14 +26,14 @@
    /* items del menu */
    
    #menu ul li {
-    background-color:#6D99EB;
+    background-color:#eaedf1;
    }
    
    /* enlaces del menu */
    
    #menu ul a {
     display:block;
-    color:#fff;
+    color:rgb(0, 0, 0);
     text-decoration:none;
     font-weight:100;
     font-size:10px;
@@ -48,7 +48,7 @@
    #menu ul li {
     position:relative;
     float:right;
-    margin: -4px;;
+    margin: 0px;;
     padding:0;
     margin-right: 55px;
 
@@ -57,7 +57,7 @@
    /* efecto al pasar el ratón por los items del menu */
    
    #menu ul li:hover {
-    background:#78a1ee;
+    background:#e2e4e7;
    }
 
    /* menu desplegable */

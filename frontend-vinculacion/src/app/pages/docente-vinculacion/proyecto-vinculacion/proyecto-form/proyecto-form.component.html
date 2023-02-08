@@ -32,10 +32,10 @@
 
             <!--Table body-->
             <tbody>
-                <tr class="" *ngFor="let proyecto of proyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
-                    <th class="text-dark" scope="row">{{proyecto.id}}</th>
+                <tr class="" *ngFor="let proyecto of   vistaProyectoList | paginate: { itemsPerPage: 3, currentPage: pages }">
+                    <th class="text-dark" scope="row">1</th>
                     <td class="text-dark">{{proyecto.nombre}}</td>
-                    <td class="text-dark">Fundación 1</td>
+                    <td class="text-dark">{{proyecto.nombreFundacion}}</td>
                     <td class="text-dark">
                         <div class="margin-leftform-check form-switch">
                             <input class="switch form-check-input" type="checkbox" role="switch"
@@ -44,7 +44,7 @@
                     </td>
                     <td class="text-dark">1755516802</td>
                     <td>
-                        <button class="btn btn-success btn-outline-light btn-sm" [routerLink]="[proyecto.id]" (click)="save()">Guardar</button>
+                        <button class="btn btn-success btn-outline-light btn-sm" [routerLink]="[]" (click)="save()">Guardar</button>
                     </td>
                 </tr>
             </tbody>

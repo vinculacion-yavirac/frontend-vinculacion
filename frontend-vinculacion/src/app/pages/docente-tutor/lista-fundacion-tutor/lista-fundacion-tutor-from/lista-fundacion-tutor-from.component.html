@@ -4,56 +4,56 @@
 <div class="col-auto  d-flex flex-row-reverse">
   <div class="d-flex flex-row-reverse">
     <div class="p-1 col-sm-7 col-md-10">
-        <form class="d-flex" role="search">
-            <input #inputSearchholidayActividad class="form-control me-2" type="search" placeholder="Search"
-                aria-label="Search" (input)="onInput(inputSearchholidayActividad.value)">
-            <button class=" btn btn-outline-primary" type="submit">Search</button>
-        </form>
+      <form class="d-flex" role="search">
+        <input #inputSearchListaFundacionTutor class="form-control me-2" type="search" placeholder="Search"
+          aria-label="Search" (input)="onInput(inputSearchListaFundacionTutor.value)">
+        <button class=" btn btn-outline-primary" type="submit">Search</button>
+      </form>
     </div>
-</div>
+  </div>
 </div>
 <div class=" table-responsive containerBlue col-auto col-12 px-1 pt-2 table-striped" style="height: 26em;">
   <div class="">
-      <!--Table-->
-      <table class="table col-12 px-1">
+    <!--Table-->
+    <table class="table col-12 px-1">
 
-          <!--Table head-->
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre de la Fundación</th>
-              <th scope="col">Estado de la Fundación</th>
-              <th scope="col">Estudiantes Asignados</th>
-              <th scope="col">Observar</th>
-            </tr>
-          </thead>
-          <!--Table head-->
+      <!--Table head-->
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre de la Fundación</th>
+          <th scope="col">Estado de la Fundación</th>
+          <th scope="col">Estudiantes Asignados</th>
+          <th scope="col">Observar</th>
+        </tr>
+      </thead>
+      <!--Table head-->
 
-          <!--Table body-->
-          <tbody class="text-center">
-            <tr *ngFor="let fundacion of listaFundacion | paginate: { itemsPerPage: 3, currentPage: pages }">
-              <th class="fw-normal" scope="row"> {{fundacion.id}} </th>
-              <td class="fw-normal">{{fundacion.nombre}}</td>
-              <td>
-                <div class="margin-leftform-check form-switch">
-                  <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                  [(ngModel)]="fundacion.estado" disabled>
-                </div>
-              </td>
-              <td class="fw-normal"> 14 </td>
-              <td>
-                <a href="" routerLink="/dashboard/lista-estudiante-tutor">
-                  <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
-                </a>
-              </td>
-            </tr>
+      <!--Table body-->
+      <tbody class="text-center">
+        <tr *ngFor="let fundacion of vistaFundacionEstudiante | paginate: { itemsPerPage: 3, currentPage: pages }">
+          <th class="fw-normal" scope="row"> {{fundacion.idFundacion}} </th>
+          <td class="fw-normal">{{fundacion.nombre}}</td>
+          <td>
+            <div class="margin-leftform-check form-switch">
+              <input class="switch form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                [(ngModel)]="fundacion.estado" disabled>
+            </div>
+          </td>
+          <td class="fw-normal"> 14 </td>
+          <td>
+            <a href="" routerLink="/dashboard/lista-estudiante-tutor/{{fundacion.idFundacion}}">
+              <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
+            </a>
+          </td>
+        </tr>
 
-          </tbody>
-          <!--Table body-->
-      </table>
-      <!--Table-->
+      </tbody>
+      <!--Table body-->
+    </table>
+    <!--Table-->
   </div>
   <div class="pagi static">
     <pagination-controls (pageChange)="pages = $event"></pagination-controls>
-</div>
+  </div>
 </div>

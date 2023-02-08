@@ -33,10 +33,8 @@ import { PortafolioTutorEstudianteComponent } from './docente-tutor/portafolio-t
 import { PortafolioTutorTutorComponent } from './docente-tutor/portafolio-tutor/portafolio-tutor-tutor/portafolio-tutor-tutor.component';
 
 import { ListaFundacionTutorFromComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-from/lista-fundacion-tutor-from.component';
-import { ListaFundacionTutorBuscarComponent } from './docente-tutor/lista-fundacion-tutor/lista-fundacion-tutor-buscar/lista-fundacion-tutor-buscar.component';
 
 import { ListaEstudianteTutorFormComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-form/lista-estudiante-tutor-form.component';
-import { ListaEstudianteTutorBuscarComponent } from './docente-tutor/lista-estudiantes-tutor/lista-estudiante-tutor-buscar/lista-estudiante-tutor-buscar.component';
 import { RedireccionarPrincipalComponent } from './coordinador-carrera/redireccionar/redireccionar-principal/redireccionar-principal.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -69,6 +67,9 @@ import { PortafolioEstudianteComponent } from './coordinador-general/portafolio/
 import { RolComboboxComponent } from './coordinador-carrera/agregar-rol/rol-combobox/rol-combobox.component';
 import { RolComboboxTutorComponent } from './coordinador-carrera/agregar-rol/rol-combobox-tutor/rol-combobox-tutor.component';
 import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-datos/rellenar-datos-selecct/rellenar-datos-select/rellenar-datos-select.component';
+
+import { EditarComponent } from './encuesta/editar/editar.component';
+
 
 
 
@@ -122,10 +123,9 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
     PortafolioTutorTutorComponent,
 
     ListaFundacionTutorFromComponent,
-    ListaFundacionTutorBuscarComponent,
 
     ListaEstudianteTutorFormComponent,
-    ListaEstudianteTutorBuscarComponent,
+    
     RedireccionarPrincipalComponent,
     AgregarRolAddComponent,
     AgregarRolSearchComponent,
@@ -143,9 +143,15 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
     EstudiantePortafolioFormularioComponent,
+
     RellenarDatosSelectComponent,
     
     
+
+    EditarComponent,
+
+
+
 
   ],
   exports:[
@@ -173,10 +179,10 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
 
 
 
-    
+
 
     InformeInicialComponent,
-  
+
     FormularioFinalTutorComponent,
     InformeFinalEstudianteComponent,
 
@@ -194,7 +200,7 @@ import { RellenarDatosSelectComponent } from './coordinador-carrera/rellenar-dat
     EstudianteBuscarComponent,
     EstudianteFormularioComponent,
     EstudiantePortafolioPortafolioComponent,
-    
+
 
   ],
   imports: [
