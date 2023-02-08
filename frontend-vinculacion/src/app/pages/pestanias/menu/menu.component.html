@@ -7,7 +7,7 @@
 
         <div class="box boxpadding" *ngFor="let menu of menu">
           <div class="right-side">
-            <a [routerLink]="['../datos-generales', menu.dgId]">
+            <a [routerLink]="['../datos-generales', menu.id]">
             <div class="box-topic">Desarrollo de Software</div>
             <div class="number">{{menu.nombrep}}</div>
             <div class="indicator padding21">
@@ -27,14 +27,15 @@
           <i class='bx bx-cart-alt cart'></i>
         </div>
 
-        <div class="box boxpadding" class="center" >
-          <a [routerLink]="['../datos-generales']">
-          <div class="right-side">
-            <div class="number">&nbsp;Nuevo Proyecto</div><br>
-            <img class="small center" src="../../../../assets/image/suma.png" alt="" color="blue">
-        </div>
-          </a>
-    </div>
+          <div class="box boxpadding" class="center" >
+            <a [routerLink]="['../datos-generales']">
+              <div class="right-side">
+                <div class="number">&nbsp;Nuevo Proyecto</div><br>
+                <img class="small center" src="../../../../assets/image/suma.png" alt="" color="blue">
+              </div>
+            </a>
+          </div>
+
 </div>
 
 

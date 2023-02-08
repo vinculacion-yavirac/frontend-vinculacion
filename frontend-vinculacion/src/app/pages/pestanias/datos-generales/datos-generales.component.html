@@ -8,7 +8,7 @@
 
 <div class="card-body">
 
-  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+  <button (click)="generatePDF()" ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
   </button>&nbsp;&nbsp;
   <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
   </button>&nbsp;&nbsp;&nbsp;

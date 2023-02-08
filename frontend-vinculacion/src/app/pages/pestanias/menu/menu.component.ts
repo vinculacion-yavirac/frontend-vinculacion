@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Menu } from '../../../models/pestanias/menu';
 import { MenuService } from '../../../service/pestanias/menu/menu.service';
 
@@ -12,7 +12,8 @@ export class  MenuComponent implements OnInit {
 
   constructor(
     private  menuService:  MenuService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private _router: Router
   ) { }
 
   menu: Menu[] = [];
@@ -28,6 +29,11 @@ export class  MenuComponent implements OnInit {
         this.menu = response;
       }
     )
+  }
+
+  public navigateToproject(id:number) {
+    console.log("clickee")
+    this._router.navigate(['first'])
   }
 
 }

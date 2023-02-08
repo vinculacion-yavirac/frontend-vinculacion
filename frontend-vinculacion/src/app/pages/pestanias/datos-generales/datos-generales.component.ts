@@ -16,10 +16,14 @@ interface Carrera {
   styleUrls: ['./datos-generales.component.css'],
 })
 export class DatosGeneralesComponent implements OnInit {
+
+  idRef: Number = 0;
+
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params) => {
       if (params.get('id')) {
         this.findById(parseInt(params.get('id')!));
+        this.idRef = parseInt(params.get('id')!);
       }
     });
   }
@@ -112,6 +116,9 @@ export class DatosGeneralesComponent implements OnInit {
         fechaFinal: '',
       };
     });
+  }
+  generatePDF(){
+    window.open(`http://localhost:8080/api/itv/reporte/${this.idRef}`, '_blank', 'noreferrer')
   }
 
   get codigoProyecto() {

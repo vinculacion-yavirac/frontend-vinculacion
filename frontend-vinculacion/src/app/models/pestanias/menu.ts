@@ -1,6 +1,6 @@
 export interface Menu {
 
-  dgId: number,
+  id: number,
   codigo: string,
   nombrep: string,
   nombrei: string,
