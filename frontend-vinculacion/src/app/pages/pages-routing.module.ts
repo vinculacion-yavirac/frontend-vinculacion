@@ -40,6 +40,8 @@ import { EstudiantePortafolioFormularioComponent } from './estudiante/estudiante
 import { EstudianteFormularioComponent } from './estudiante/estudiante/estudiante-formulario/estudiante-formulario.component';
 import { PortafolioFormComponent } from './coordinador-general/portafolio/portafolio-form/portafolio-form.component';
 import { EditarComponent } from './encuesta/editar/editar.component';
+import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
+import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -98,6 +100,8 @@ const routes: Routes = [
       { path: 'encuesta', component: EncuestaComponent },
       { path: 'encuesta', component: EncuestaComponent},
       { path: 'editar/:id', component: EditarComponent},
+      { path: 'respuesta', component: RespuestaComponent},
+      { path: 'agregar-respuesta', component: AgregarComponent},
     ]
   }
 ];
