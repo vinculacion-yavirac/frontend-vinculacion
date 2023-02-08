@@ -13,22 +13,14 @@ export class AvanceCumplimientoComponent {
     private avanceCumplimientoHttpService:AvanceCumplimientoHttpService
   ) { }
 
-currentEntity:AvanceCumplimiento=
-{
-    id:0,
-    avanceC:"",
-    resumenN:"",
-    indicadoresF:"",
-    mediosF:""
-
-};
 
 
 
 
 
 
-  avanceC: AvanceCumplimiento[]=[];
+
+  avance: AvanceCumplimiento[]=[];
 
 
   esvacio:Boolean=false ;
@@ -47,8 +39,8 @@ currentEntity:AvanceCumplimiento=
   save():void{
 
 
-    for(let avance1 of this.avanceC){
-       if (avance1.avanceC==''){
+    for(let avance1 of this.avance){
+       if (avance1.avance==''){
 
         this.esvacio=true;
         
@@ -64,14 +56,14 @@ currentEntity:AvanceCumplimiento=
 
   public findAll(): void{
     this.avanceCumplimientoHttpService.findAll().subscribe(
-      (response) => this.avanceC = response
+      (response) => this.avance = response
     );
   }
 
   public findByDescription(term:string): void{
     if(term.length >= 2){
       this.avanceCumplimientoHttpService.findByDescription(term).subscribe(
-        (response) => this.avanceC = response
+        (response) => this.avance = response
       )
     }
     if(term.length == 0){
