@@ -54,4 +54,15 @@ findById(id: number): void {
   )
 }
 
+deleteById(id: RespuestaModel['id']){
+  this.respuestaHttpService.deleteById(id).subscribe(
+   response => {
+    this.respuestas= this.respuestas.filter((respuesta => respuesta.id != id ));
+    console.log(response);
+   }
+  )
+  //this.router.navigate(['/dashboard/encuesta']);
+  //console.log("hola")
+ }
+
 }
