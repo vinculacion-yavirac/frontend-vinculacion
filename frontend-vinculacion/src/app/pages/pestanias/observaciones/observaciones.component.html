@@ -1,1 +1,91 @@
-<p>observaciones works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+  <div class="pestanas">
+    <a [routerLink]="['/pages/datos-generales',currentEntity.observacionesId]" class="Datos Generales">Datos Generales</a>
+    <a [routerLink]="['/pages/empresa',currentEntity.observacionesId]" class="Empresa">Empresa</a>
+    <a [routerLink]="['/pages/integrantes',currentEntity.observacionesId]" class="Integrantes">Integrantes</a>
+    <a [routerLink]="['/pages/actividades',currentEntity.observacionesId]" class="Actividades">Actividades</a>
+    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.observacionesId]" class="Plan de Trabajo">Plan de Trabajo</a>
+    <a [routerLink]="['/pages/firmas',currentEntity.observacionesId]" class="Firma">Firmas</a>
+    <a [routerLink]="['/pages/bibliografia',currentEntity.observacionesId]" class="Bibliografía">Bibliografía</a>
+    <a [routerLink]="['/pages/anexos',currentEntity.observacionesId]" class="Anexos">Anexos</a>
+    <a [routerLink]="['/pages/observaciones',currentEntity.observacionesId]" class="Observaciones">Observaciones</a>
+    <a [routerLink]="['/pages/documentos',currentEntity.observacionesId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+    <a [routerLink]="['/pages/certificados',currentEntity.observacionesId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+  </div>
+
+  <form name="registro" [formGroup]="observacionesForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+      <section class="input-field col">
+        <label for="nombre">
+          <h5><b>&nbsp;Estado</b></h5>
+        </label><br><br><br>
+        <form formGroupName="estado">
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="aprobado" value="aprobado">
+          <label for="aprobado" class="bgcolor">Aprobado</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="enrevision" value="enrevision">
+          <label for="enrevision">En Revisión</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="corregido" value="corregido">
+          <label for="corregido" class="bgcolor">Corregido</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="rechazado" value="rechazado">
+          <label for="rechazado">Rechazado</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="enviado" value="enviado">
+          <label for="enviado" class="bgcolor">Enviado a Senecyt</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="porenviar" value="porenviar">
+          <label for="porenviar">Por enviar a Senecyt</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="desarrollo" value="desarrollo">
+          <label for="desarrollo">En Desarrollo</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="terminado" value="terminado">
+          <label for="terminado" class="bgcolor">Terminado</label>&nbsp;&nbsp;&nbsp;
+          <input type="radio" ng-model="" formControlName="estadoRadio" id="suspendido" value="suspendido">
+          <label for="suspendido">Suspendido</label>&nbsp;&nbsp;&nbsp;
+          <br><br><br>
+          <div *ngIf="!estadoRadio" class="alert alert-danger ">
+              Estado es un campo requerido.
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="row">
+      <section class="input-field col">
+        <label for="nombre">
+          <h5><b>&nbsp;Observaciones</b></h5>
+        </label><br><br><br>
+        <input type="text" class="materialize-textarea biginput" formControlName="observaciones" name="observacioness" [(ngModel)]="currentEntity.observacioness">
+        <div *ngIf="observaciones?.invalid && (observaciones?.dirty || observaciones?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="observaciones?.errors?.['required']">
+            Observaciones es un campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button class="btn waves-effect waves-light right" type="submit" [disabled]="!observacionesForm.valid">
+      Confirmar
+
+        <img class="small pull-right" src="../../../../assets/image/visto.png" alt="">
+
+    </button>
+  </form>
+</div>

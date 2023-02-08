@@ -1,1 +1,88 @@
-<p>bibliografia works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+                  <div class="pestanas">
+                    <a [routerLink]="['/pages/datos-generales',currentEntity.bibliografiaId]" class="Datos Generales">Datos Generales</a>
+                    <a [routerLink]="['/pages/empresa',currentEntity.bibliografiaId]" class="Empresa">Empresa</a>
+                    <a [routerLink]="['/pages/integrantes',currentEntity.bibliografiaId]" class="Integrantes">Integrantes</a>
+                    <a [routerLink]="['/pages/actividades',currentEntity.bibliografiaId]" class="Actividades">Actividades</a>
+                    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.bibliografiaId]" class="Plan de Trabajo">Plan de Trabajo</a>
+                    <a [routerLink]="['/pages/firmas',currentEntity.bibliografiaId]" class="Firma">Firmas</a>
+                    <a [routerLink]="['/pages/bibliografia',currentEntity.bibliografiaId]" class="Bibliografía">Bibliografía</a>
+                    <a [routerLink]="['/pages/anexos',currentEntity.bibliografiaId]" class="Anexos">Anexos</a>
+                    <a [routerLink]="['/pages/observaciones',currentEntity.bibliografiaId]" class="Observaciones">Observaciones</a>
+                    <a [routerLink]="['/pages/documentos',currentEntity.bibliografiaId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+                    <a [routerLink]="['/pages/certificados',currentEntity.bibliografiaId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+                  </div>
+
+<form name="registro" novalidate>
+  <br><div><h6><b>&nbsp;&nbsp;Estrategia de Seguimiento y Evaluación</b></h6></div>
+  <div class="row">
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="azul fblack">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estrategias
+          </label></section><br>
+          <section class="input-field col s12 m2 sizze2">
+          <input type="text" [(ngModel)]="currentEntity.numEstrategia" name="numEstrategia" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze6">
+          <input type="text" [(ngModel)]="currentEntity.estrategias" name="estrategias" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+  </div>
+
+        <div class="row">
+            <section class="input-field col s12 m2 sizze2">
+              <input type="text" [(ngModel)]="currentEntity.numEstrategia" name="numEstrategia" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze6">
+              <input type="text" [(ngModel)]="currentEntity.estrategias" name="estrategias" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+          </div>
+
+          <br><div><h6><b>&nbsp;&nbsp;Bibliografía</b></h6></div>
+  <div class="row">
+      <section class="input-field row s12 m6">
+          <label for="nombre" class="azul fblack">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bibliografía
+          </label></section><br>
+          <section class="input-field col s12 m2 sizze2">
+          <input type="text" [(ngModel)]="currentEntity.numBibliografia" name="numBibliografia" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+          <section class="input-field col s12 m2 sizze6">
+          <input type="text" [(ngModel)]="currentEntity.bibliografias" name="bibliografias" required pattern="[ñáéíóúA-Za-z ]+">
+          </section>
+  </div>
+
+        <div class="row">
+            <section class="input-field col s12 m2 sizze2">
+              <input type="text" [(ngModel)]="currentEntity.numBibliografia" name="numBibliografia" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+              <section class="input-field col s12 m2 sizze6">
+              <input type="text" [(ngModel)]="currentEntity.bibliografias" name="bibliografias" required pattern="[ñáéíóúA-Za-z ]+">
+              </section>
+       </div>
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light right" type="submit" (click)="save()">Confirmar
+
+      <img class="small pull-right" src="../../../../assets/image/visto.png" alt="">
+
+  </button>
+</form>
+</div>
+

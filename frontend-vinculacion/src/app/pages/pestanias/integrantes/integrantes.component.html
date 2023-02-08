@@ -1,1 +1,288 @@
-<p>integrantes works!</p>
+<script src="angular.min.js"></script>
+<script src="angular-messages.min.js"></script>
+<script src="materialize/js/jquery-latest.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script>
+  angular.module('messages', ['ngMessages']);
+</script>
+
+<div class="card-body">
+
+  <button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar PDF
+    <img class="pullsito" src="../../../../assets/image/pdf.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar Convenio
+    <img class="pullsito" src="../../../../assets/image/convenio.png" alt="">
+</button>&nbsp;&nbsp;&nbsp;
+
+<button ng-disabled="registro.$invalid" class="btn waves-effect waves-light " type="submit">Generar ITV
+</button>
+<br><br>
+  <div class="pestanas">
+    <a [routerLink]="['/pages/datos-generales',currentEntity.integrantesId]" class="Datos Generales">Datos Generales</a>
+    <a [routerLink]="['/pages/empresa',currentEntity.integrantesId]" class="Empresa">Empresa</a>
+    <a [routerLink]="['/pages/integrantes',currentEntity.integrantesId]" class="Integrantes">Integrantes</a>
+    <a [routerLink]="['/pages/actividades',currentEntity.integrantesId]" class="Actividades">Actividades</a>
+    <a [routerLink]="['/pages/plan-de-trabajo',currentEntity.integrantesId]" class="Plan de Trabajo">Plan de Trabajo</a>
+    <a [routerLink]="['/pages/firmas',currentEntity.integrantesId]" class="Firma">Firmas</a>
+    <a [routerLink]="['/pages/bibliografia',currentEntity.integrantesId]" class="Bibliografía">Bibliografía</a>
+    <a [routerLink]="['/pages/anexos',currentEntity.integrantesId]" class="Anexos">Anexos</a>
+    <a [routerLink]="['/pages/observaciones',currentEntity.integrantesId]" class="Observaciones">Observaciones</a>
+    <a [routerLink]="['/pages/documentos',currentEntity.integrantesId]" class="Adjuntar Documentos">Adjuntar Documentos</a>
+    <a [routerLink]="['/pages/certificados',currentEntity.integrantesId]" class="Solicitud de Certificados">Solicitud de Certificados</a>
+  </div>
+
+  <form name="registro" [formGroup]="integrantesForm" (ngSubmit)="onSubmit()">
+    <br>
+    <div>
+      <h6><b>&nbsp;&nbsp;Coordinador del Proyecto</b></h6>
+    </div>
+    <div class="row">
+      <section class="input-field row s12 m6">
+        <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre y Titulo
+            Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horario
+            de trabajo para el
+            Proyecto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo
+            o Función en la Institución
+            Beneficiaria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones
+            Asignadas</b>
+        </label>
+      </section>
+      <section class="input-field col s12 m2 sizze">
+        <input type="text" formControlName="numProyecto" name="numProyecto" [(ngModel)]="currentEntity.numProyecto">
+      </section>
+      <section class="input-field col s12 m2 sizze2">
+        <input type="text" formControlName="nombreProyecto" name="nombreProyecto" [(ngModel)]="currentEntity.nombreProyecto">
+        <div *ngIf="nombreProyecto?.invalid && (nombreProyecto?.dirty || nombreProyecto?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="nombreProyecto?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze3">
+        <input type="text" formControlName="horarioProyecto" name="horarioProyecto" [(ngModel)]="currentEntity.horarioProyecto">
+        <div *ngIf="horarioProyecto?.invalid && (horarioProyecto?.dirty || horarioProyecto?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="horarioProyecto?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze4">
+        <input type="text" formControlName="cargoProyecto" name="cargoProyecto" [(ngModel)]="currentEntity.cargoProyecto">
+        <div *ngIf="cargoProyecto?.invalid && (cargoProyecto?.dirty || cargoProyecto?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="cargoProyecto?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="funcionesProyecto" name="funcionesProyecto" [(ngModel)]="currentEntity.funcionesProyecto">
+        <div *ngIf="funcionesProyecto?.invalid && (funcionesProyecto?.dirty || funcionesProyecto?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="funcionesProyecto?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+    <div>
+      <h6><b>&nbsp;&nbsp;Grupo de Estudiantes</b></h6>
+    </div>
+    <div class="row">
+      <section class="input-field row s12 m6">
+        <label for="nombre"
+          class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellidos
+            y
+            Nombres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero
+            de
+            Cedula&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Especialidad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones
+            Asignadas y Horas de Trabajo</b>
+        </label>
+      </section>
+      <section class="input-field col s12 m2 sizze">
+        <input type="text" formControlName="numEstudiantes" name="numEstudiantes" [(ngModel)]="currentEntity.numEstudiantes">
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="nombreEstudiantes" name="nombreEstudiantes" [(ngModel)]="currentEntity.nombreEstudiantes">
+        <div *ngIf="nombreEstudiantes?.invalid && (nombreEstudiantes?.dirty || nombreEstudiantes?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="nombreEstudiantes?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze2">
+        <input type="text" formControlName="cedulaEstudiantes" name="cedulaEstudiantes" [(ngModel)]="currentEntity.cedulaEstudiantes">
+        <div *ngIf="cedulaEstudiantes?.invalid && (cedulaEstudiantes?.dirty || cedulaEstudiantes?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="cedulaEstudiantes?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze4">
+        <input type="text" formControlName="especialidadEstudiantes" name="especialidadEstudiantes" [(ngModel)]="currentEntity.especialidadEstudiantes">
+        <div
+          *ngIf="especialidadEstudiantes?.invalid && (especialidadEstudiantes?.dirty || especialidadEstudiantes?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="especialidadEstudiantes?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze3">
+        <input type="text" formControlName="funcionesEstudiantes" name="funcionesEstudiantes" [(ngModel)]="currentEntity.funcionesEstudiantes">
+        <div *ngIf="funcionesEstudiantes?.invalid && (funcionesEstudiantes?.dirty || funcionesEstudiantes?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="funcionesEstudiantes?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+    <div>
+      <h6><b>&nbsp;&nbsp;Grupo de Docente Academico</b></h6>
+    </div>
+    <div class="row">
+      <section class="input-field row s12 m6">
+        <label for="nombre" class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre y Titulo
+            Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Horario
+            de trabajo para el
+            Proyecto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones
+            Asignadas y Horas de Trabajo</b>
+        </label>
+      </section>
+      <section class="input-field col s12 m2 sizze">
+        <input type="text" formControlName="numDocente" name="numDocente" [(ngModel)]="currentEntity.numDocente">
+      </section>
+      <section class="input-field col s12 m2 sizze2">
+        <input type="text" formControlName="nombreDocente" name="nombreDocente" [(ngModel)]="currentEntity.nombreDocente">
+        <div *ngIf="nombreDocente?.invalid && (nombreDocente?.dirty || nombreDocente?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="nombreDocente?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="horarioDocente" name="horarioDocente" [(ngModel)]="currentEntity.horarioDocente">
+        <div *ngIf="horarioDocente?.invalid && (horarioDocente?.dirty || horarioDocente?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="horarioDocente?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="funcionesDocente" name="funcionesDocente" [(ngModel)]="currentEntity.funcionesDocente">
+        <div *ngIf="funcionesDocente?.invalid && (funcionesDocente?.dirty || funcionesDocente?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="funcionesDocente?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+    <div>
+      <h6><b>&nbsp;&nbsp;Coordinador(es) de Institución Beneficiaria</b></h6>
+    </div>
+    <div class="row">
+      <section class="input-field row s12 m6">
+        <label for="nombre"
+          class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellidos
+            y
+            Nombres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo
+            o Función de la institución
+            Beneficiaria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funciones
+            Asignadas</b>
+        </label>
+      </section>
+      <section class="input-field col s12 m2 sizze">
+        <input type="text" formControlName="numInstitucion" name="numInstitucion" [(ngModel)]="currentEntity.numInstitucion">
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="nombreInstitucion" name="nombreInstitucion" [(ngModel)]="currentEntity.nombreInstitucion">
+        <div *ngIf="nombreInstitucion?.invalid && (nombreInstitucion?.dirty || nombreInstitucion?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="nombreInstitucion?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="cargoInstitucion" name="cargoInstitucion" [(ngModel)]="currentEntity.cargoInstitucion">
+        <div *ngIf="cargoInstitucion?.invalid && (cargoInstitucion?.dirty || cargoInstitucion?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="cargoInstitucion?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="funcionesInstitucion" name="funcionesInstitucion" [(ngModel)]="currentEntity.numEmpresarial">
+        <div *ngIf="funcionesInstitucion?.invalid && (funcionesInstitucion?.dirty || funcionesInstitucion?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="funcionesInstitucion?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+    <div>
+      <h6><b>&nbsp;&nbsp;Grupo de Docente Empresarial</b></h6>
+    </div>
+    <div class="row">
+      <section class="input-field row s12 m6">
+        <label for="nombre"
+          class="border"><b>Num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre
+            y Titulo
+            Profesional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Télefono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cargo</b>
+        </label>
+      </section>
+      <section class="input-field col s12 m2 sizze">
+        <input type="text" formControlName="numEmpresarial" name="numEmpresarial" [(ngModel)]="currentEntity.numEmpresarial">
+      </section>
+      <section class="input-field col s12 m2 sizze5">
+        <input type="text" formControlName="nombreEmpresarial" name="nombreEmpresarial" [(ngModel)]="currentEntity.nombreEmpresarial">
+        <div *ngIf="nombreEmpresarial?.invalid && (nombreEmpresarial?.dirty || nombreEmpresarial?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="nombreEmpresarial?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze2">
+        <input type="text" formControlName="telfEmpresarial" name="telfEmpresarial" [(ngModel)]="currentEntity.telfEmpresarial">
+        <div *ngIf="telfEmpresarial?.invalid && (telfEmpresarial?.dirty || telfEmpresarial?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="telfEmpresarial?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+      <section class="input-field col s12 m2 sizze2">
+        <input type="text" formControlName="cargoEmpresarial" name="cargoEmpresarial" [(ngModel)]="currentEntity.cargoEmpresarial">
+        <div *ngIf="cargoEmpresarial?.invalid && (cargoEmpresarial?.dirty || cargoEmpresarial?.touched)"
+          class="alert alert-danger ">
+          <div *ngIf="cargoEmpresarial?.errors">
+            Campo requerido.
+          </div>
+        </div>
+      </section>
+    </div>
+    <button class="btn waves-effect waves-light right" type="submit" [disabled]="!integrantesForm.valid">
+      Confirmar
+
+        <img class="small pull-right" src="../../../../assets/image/visto.png" alt="">
+
+    </button>
+  </form>
+</div>
