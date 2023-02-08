@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="formulario-final-tutor.component.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
-  </head>
-  <body>
-<form class="form2">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="formulario-final-tutor.component.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
+</head>
+
+<body>
+  <form class="form2">
     <div class="h5">
-      <h5>FORMULARIO DE INFORME FINAL</h5>
+      <h5 id="info_final">INFORME FINAL</h5>
+    </div>
+    <div class="tabla3">
+      <table>
+        <thead>
+          <tr>
+            <th>Carrera</th>
+            <th>Nombre y apellido del estudiante</th>
+            <th>Email</th>
+            <th>fecha de Informe</th>
+            <th>Direccion</th>
+            <th>Nro. C.C</th>
+            <th>Telefono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td name="nombre" id="">Desarrollo de software</td>
+            <td name="nombre_estudiantes" id="">Gibran Quiñonez</td>
+            <td name="correo-estudiante" id="">geq.quinonez@yavirac.edu.ec</td>
+            <td name="fecha_inicio" id="">01/01/2023</td>
+            <td name="direccion" id="">Obrero Independiente</td>
+            <td name="cedula_estudiantes" id="">1722246483</td>
+            <td name="telefono_estudiante" id="">0999319213</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="tabla2">
       <table>
@@ -28,108 +56,152 @@
         </thead>
         <tbody>
           <tr>
-            <td>Vinculacion con la Sociedad</td>
-            <td>Instituto Tecnologico Yavirac</td>
-            <td>yavirac.edu.ec</td>
-            <td>0999319213</td>
-            <td>Garcia Moreno</td>
-            <td>Yogledis Herrera</td>
-            <td>Yogledis Herrera</td>
-            <td>12-12-2022</td>
+            <td name="nombre_proyecto">Vinculacion con la Sociedad</td>
+            <td>FONAP</td>
+            <td>fonap@gmail.com</td>
+            <td>0999999999</td>
+            <td>Amazonas y 10 de agosto</td>
+            <td>Laura Muñoz</td>
+            <td nombre="nombre_docente">Yogledis Herrea</td>
+            <td name="fecha_inicial">01/01/2023</td>
           </tr>
         </tbody>
       </table>
-
     </div>
-    <div class="formulario-tabla">
-      <div class="container-tabla-oa">
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>OBJETIVOS</th>
-              <th>ACTIVIDADES</th>
-              <th>AVANCE</th>
-              <th>RESULTADOS ALCANZADOS</th>
-              <th>ALCANCE</th>
-              <th>OBSERVACIONES</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Crear un sistema funcional y proactivo</td>
-              <td>trabajar 8 horas diarias y enviar informe diario</td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Crear un sistema funcional y proactivo</td>
-              <td>trabajar 8 horas diarias y enviar informe diario</td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Crear un sistema funcional y proactivo</td>
-              <td>trabajar 8 horas diarias y enviar informe diario</td>
 
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Crear un sistema funcional y proactivo</td>
-              <td>trabajar 8 horas diarias y enviar informe diario</td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time"required></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Crear un sistema funcional y proactivo</td>
-              <td>trabajar 8 horas diarias y enviar informe diario</td>
-              <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
-              <td><input type="text" name="pickup_time" id="pickup_time" required></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="container2">
-        <form class="myForm">
-          <label for="pickup_time">Fecha de Finalizacion del Proyecto</label>
-          <input type="datetime-local" name="pickup_time" id="pickup_time" disabled>
+    <div class="container-tabla-oa">
+      <h2 class="h2">SEGUIMIENTO Y CUMPLIMIENTO DE LOS OBJETIVOS DEL PROYECTO DE VINCULACIÓN</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>OBJETIVOS</th>
+            <th>ACTIVIDADES</th>
+            <th>AVANCE</th>
+            <th>RESULTADOS ALCANZADOS</th>
+            <th>ALCANCE</th>
+            <th>OBSERVACIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td name="id:">1</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
 
-          <label for="comments">Comentarios del tutor del proyecto</label>
-          <textarea name="comments" id="comments" maxlength="500" required></textarea>
-  
-          <label for="email_address">Adjuntar Archivos </label>
-          <input type="file" name="email_address" id="email_address" disabled>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
 
-          <label for="email_address">Adjuntar Archivos </label>
-          <input type="file" name="email_address" id="email_address" disabled>
-
-          <label for="email_address">Adjuntar Archivos </label>
-          <input type="file" name="email_address" id="email_address" disabled>
-  
-          <label for="comments">Observaciones</label>
-          <textarea name="comments" id="comments" maxlength="500" required></textarea>
-        </form>
-      </div>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Crear un sistema funcional y proactivo</td>
+            <td>trabajar 8 horas diarias y enviar informe diario</td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" disabled></td>
+            <td><input type="text" name="pickup_time" id="pickup_time" required></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="button">
-      <button class="btn btn-primary">Generar PDF</button>
+    <div class="container2">
+      <form class="myForm">
+        <label for="pickup_time">Fecha de Finalizacion del Proyecto</label>
+        <input type="datetime-local" name="pickup_time" id="pickup_time" disabled>
+
+        <label for="comments">Comentarios del tutor de vinculación</label>
+        <textarea name="comments" id="comments" maxlength="500" required></textarea>
+
+        <label for="comments">Comentarios del tutor del proyecto</label>
+        <textarea name="comments" id="comments" maxlength="500" required></textarea>
+
+        <label for="email_address">Adjuntar Archivos </label>
+        <input type="file" name="email_address" id="email_address" disabled>
+
+        <label for="comments">Observaciones</label>
+        <textarea name="comments" id="comments" maxlength="500" required></textarea>
+      </form>
     </div>
-</form>
-  </body>
+    <br>
+    <button class="button" type="sibmit">Generar PDF</button>
+    <br>
+  </form>
+
+</body>
+
 </html>

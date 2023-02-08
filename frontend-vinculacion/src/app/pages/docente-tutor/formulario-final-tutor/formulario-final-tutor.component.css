@@ -1,109 +1,176 @@
+.container2{
+  height: 265px;
+  background: #fff;
+  overflow-y: auto;
+  margin: auto;
+  width:99%;
+  max-width: 1050px;
+  border: solid 2px black;
+  margin-top:-8px;
+  padding:5px;
+ }
 
-  .container2{
-    height: 300px;
-    background: #19418B;
-    box-shadow: -4px 0px 6px rgb(47, 47, 47);
-    padding: 20px;
-    overflow-y: auto;
-    margin: auto;
-    width:99%;
-    max-width: 1050px;
-    margin-top:20px;
-   }
-  
-   /*formulario informe final */
-  
-   .myForm {
-     display: grid;
-     grid-template-columns: [labels] auto [controls] 1fr;
-     grid-auto-flow: row;
-     grid-gap: .8em .5em;
-     background: #19418B;
-     padding: 1.2em;
-     width: 40em;
-     color: #fff;
-     border-radius: 2%;
-     scroll-behavior: auto;
-   }
-   .myForm > input {
-     grid-column: controls;
-     grid-row: auto;
-     padding: .2em;
-     border: 50px;
-   }
-   .button {
-     text-align: center;
-     margin: 10px;
-     }
-   .myForm > textarea {
-     min-height: 3em;
-     }
-   .h5{
-    padding:0px;
-    background-color: transparent;
-    margin: auto;
-    width: 32em;
-    border-radius: 5%;
-    text-align: center;
-    width:99%;
-    max-width: 1050px;
-    color:#fff;
-   }
-   
-   /* tabla de objetivos y actividades */
-   
-   .container-tabla-oa{
-    height: 300px;
-    background: #19418B;
-    box-shadow: -4px 0px 6px rgb(47, 47, 47);
-    padding: 20px;
-    overflow-y: auto;
-    margin: auto;
-    width:99%;
-    max-width: 1050px;
-    margin-top:20px;
-   }
-   table{
-    color:#fff;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-size: 14px;
-   }
-   thead{
-    background: dimgray;
-    max-width: 1050px;
-    width:99%;
-   }
-  th{
-    padding: 1px;
-    text-transform: uppercase;
-    text-align:center;
-    border: solid 5px #fff;
-   }
-   td{
-    padding: 0.2px;
-    border: solid 1px #fff;
-    text-align:center;
-   }
-  
-  /* formulario y tabla */
+ /*formulario informe final */
+ .myForm {
+   display: grid;
+   grid-template-columns: [labels] auto [controls] 1fr;
+   grid-auto-flow: row;
+   background: #fff;
+   width: 40em;
+   color: black;
+   scroll-behavior: auto;
+ }
+ .myForm > input {
+   grid-column: controls;
+   grid-row: auto;
+   padding: .2em;
+   border: 50px;
+ }
+  /*Titulo de Formulario*/ 
+ h5{
+  padding:10px;
+  text-align: center;
+  color:black;
+  font-size: 30px;
+ }
+ .h2{
+  margin: auto;
+  text-align: center;
+  color:black;
+  font-size: 15px;
+  padding: 10px;
+  border: solid 2px black;
+ }
+ 
+ /* tabla de objetivos y actividades */
+ .container-tabla-oa{
+  height: 590px;
+  background: #fff;
+  overflow-y: auto;
+  margin: auto;
+  width:99%;
+  max-width: 1050px;
+ }
+ table{
+  color:black;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: auto;
+ }
+ thead{
+  background: #19418B;
+  max-width: 1050px;
+  width:99%;
+ }
+th{
+  padding: 1px;
+  text-transform: uppercase;
+  text-align:center;
+  border: solid 2px black;
+  color:#fff;
+ }
+ td{
+  padding: 6px;
+  border: solid 2px black;
+  text-align:center;
+ }
+ textarea{
+  justify-content: center;
+  text-align:center;
+  padding:5px;
+ }
 
-  .tabla2{
-    height: 135px;
-    background: #19418B;
-    box-shadow: -4px 0px 6px rgb(47, 47, 47);
-    padding: 5px;
-    overflow-y: auto;
-    margin: auto;
-    width:99%;
-    max-width: 1050px;
-    margin-top:10px;
+/* Datos de entidad beneficiaria y tutor */
+.tabla2{
+  background: #fff;
+  padding: 5px;
+  overflow-y: auto;
+  margin: auto;
+  width:99%;
+  max-width: 1050px;
+  border: solid 2px black;
+}
+
+/*Datos del estudiante*/
+.tabla3{
+  background: #fff;
+  padding: 5px;
+  overflow-y: auto;
+  margin: auto;
+  width:99%;
+  max-width: 1050px;;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+/*Formulario general*/
+.form2{
+  background-color: #3965B8;
+  border-radius:20px;
+  margin: auto;
+  border: 2px solid black;
+}
+/*Boton*/
+.button {
+  background-color: #19418B;
+  display: flex;
+  border-radius: 5px;
+  margin: auto;
+  border: 2px solid black;
+  color: #fff;
+  font-size: 20px;
   }
-  .form2{
-    width:99%;
-    max-width: 1050px;
-    background-color: rgb(47, 47, 47);
-    border-radius:20px;
-  }
+
+/* Cajas de firma de tutores y estudiante*/
+.firmas{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+.parrafo_firmas{
+  text-align:center;
+  border: solid 2px black;
+  background-color:#19418B;
+  color:#fff;
+}
+.cajas{
+  background-color:#fff;
+  width: 320px;
+  height:120px;
+  float:left;
+  border: solid 2px black;
+  justify-content: center;
+}
 
 
+/*Cajas de logo y nombre del instituto*/
+.encabezado{
+  display: flex;
+  justify-content: center;
+  text-align:center;
+}
+.cajas1{
+  background-color:#fff;
+  width:150px;
+  height:150px;
+  border: solid 2px black;
+}
+.cajas2{
+  background-color:#fff;
+  width:809px;
+  height:150px;
+  border: solid 2px black;
+  text-align: center;
+}
+.parrafo_encabezado{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17.2px;
+  text-align:center;
+}
+.imagen{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px 20px;
+}
