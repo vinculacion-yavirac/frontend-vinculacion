@@ -48,8 +48,7 @@
       <br>
       <div class="addq">
         <a>
-          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">Agregar Pregunta
+          <button type="button" class="btn btn-outline-dark"  [routerLink]="['../agregar-pregunta']">Agregar Pregunta
             <svg width="20pt" height="20pt" color="green" version="1.1" viewBox="0 0 700 700"
               xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -62,30 +61,7 @@
               </g>
             </svg>
           </button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Pregunta</h1>
 
-                </div>
-                <div class="modal-body">
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Nombre Pregunta</label>
-                    <input type="text" class="form-control" id="name" [(ngModel)]="currentEntity.name"
-                      placeholder="Ejemplo:Aqui va su pregunta " required>
-                  </div>
-
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="submit" class="btn btn-success" data-bs-dismiss="modal" (click)="createPregunta()">Enviar Pregunta</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </a>
       </div><br>
       <div class="card1" *ngFor="let pregunta of preguntas">
@@ -94,7 +70,7 @@
             aria-controls="collapseExample">
 
             {{pregunta.id}}.{{pregunta.name}} <button class="btn btn-info"
-              [routerLink]="['../agregar-respuesta',]">agregar respuesta</button></p>
+              [routerLink]="['../agregar-respuesta',]">Agregar Respuesta</button></p>
 
           <div class="collapse" id="collapseExamplep">
             <div class="card3 card-body">

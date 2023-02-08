@@ -22,7 +22,7 @@ export class EditarComponent implements OnInit {
 
 
 
-  currentEntity: PreguntaModel = {
+  currentEntityEdit: PreguntaModel = {
     id: 0,
     name: '',
 
@@ -38,8 +38,8 @@ export class EditarComponent implements OnInit {
 
 
   createPregunta(): void {
-    this.preguntaHttpService.create(this.currentEntity).subscribe(() => {
-      this.currentEntity = {
+    this.preguntaHttpService.create(this.currentEntityEdit).subscribe(() => {
+      this.currentEntityEdit = {
         id: 0,
         name: '',
       };
@@ -51,7 +51,7 @@ export class EditarComponent implements OnInit {
   findById(id: number): void {
     this.preguntaHttpService.findById(id).subscribe(
       (response) => {
-        this.currentEntity = response;
+        this.currentEntityEdit = response;
       }
     )
   }

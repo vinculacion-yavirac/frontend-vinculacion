@@ -55,17 +55,7 @@ export class  EncuestaComponent implements OnInit{
   }
 
 
-   createPregunta() :void{
-    this.preguntaHttpService.create(this.currentEntity).subscribe(()=>
-    {
-      this.currentEntity={
-        id: 0,
-        name: '',
-      };
-      this.router.navigate(['/dashboard/encuesta']);
-
-    })
-   }
+  
 
    findById(id: number): void {
     this.preguntaHttpService.findById(id).subscribe(

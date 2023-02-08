@@ -43,6 +43,7 @@ import { EditarComponent } from './encuesta/editar/editar.component';
 import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
 import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
 import { EditarRespuestaComponent } from './encuesta/respuesta/editar-respuesta/editar-respuesta.component';
+import { AgregarPreguntaComponent } from './encuesta/agregar-pregunta/agregar-pregunta.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent,
@@ -102,6 +103,7 @@ const routes: Routes = [
 
       { path: 'encuesta', component: EncuestaComponent },
       { path: 'encuesta', component: EncuestaComponent},
+      { path: 'agregar-pregunta', component: AgregarPreguntaComponent},
       { path: 'editar/:id', component: EditarComponent},
       { path: 'respuesta', component: RespuestaComponent},
       { path: 'agregar-respuesta', component: AgregarComponent},
