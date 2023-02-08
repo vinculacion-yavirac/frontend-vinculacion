@@ -39,7 +39,12 @@
                     <td class="text-dark">{{solicitud.nombre}}</td>
                     <td class="text-dark">{{solicitud.cedula}}</td>
                     <td class="text-dark">{{solicitud.fechaEmision}}</td>
-                    <td class="text-dark">{{solicitud.estado}}</td>
+                    <td class="text-dark">
+                        <div class="margin-leftform-check form-switch">
+                            <input class="switch form-check-input" type="checkbox" role="switch"
+                                id="flexSwitchCheckChecked" [(ngModel)]="solicitud.estado">
+                        </div>
+                    </td>
                     <td>
                         <div class="d-grid gap-1  col-auto">
                             <a href="" routerLink="/dashboard/asignar-fundacion"><button
