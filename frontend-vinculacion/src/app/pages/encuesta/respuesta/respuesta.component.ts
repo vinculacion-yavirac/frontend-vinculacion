@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RespuestaModel } from 'src/app/models/encuesta/respuesta.model';
 import { RespuestaHttpService } from 'src/app/service/encuesta/respuesta-http.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-respuesta',
@@ -61,8 +62,12 @@ deleteById(id: RespuestaModel['id']){
     console.log(response);
    }
   )
-  //this.router.navigate(['/dashboard/encuesta']);
-  //console.log("hola")
- }
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'Respueta Eliminada Correctamente',
+    showConfirmButton: false,
+    timer: 3500
+  }) }
 
 }
