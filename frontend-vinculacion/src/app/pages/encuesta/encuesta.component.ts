@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PreguntaModel } from 'src/app/models/encuesta/pregunta.model';
 
 import { EncuestaHttpService } from 'src/app/service/encuesta/encuesta-http.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-encuesta',
@@ -79,10 +80,20 @@ export class  EncuestaComponent implements OnInit{
      response => {
       this.preguntas= this.preguntas.filter((pregunta => pregunta.id != id ));
       console.log(response);
+
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Pregunta Eliminada Correctamente',
+        showConfirmButton: false,
+        timer: 3500
+      })
+
+
      }
+
     )
-    //this.router.navigate(['/dashboard/encuesta']);
-    //console.log("hola")
+
    }
 
 

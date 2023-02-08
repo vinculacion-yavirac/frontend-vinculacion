@@ -80,9 +80,8 @@
 
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary">Close</button>
-                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="createPregunta()">Save
-                    changes</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-success" data-bs-dismiss="modal" (click)="createPregunta()">Enviar Pregunta</button>
                 </div>
               </div>
             </div>
@@ -119,7 +118,7 @@
                 </div>
 
                 <div class="col-6">
-                  <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModald">
+                  <a type="button"  (click)="deleteById(pregunta.id)">
                     <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <g>
@@ -149,7 +148,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" (click)="deleteById(pregunta.id)">Save
+                          <button type="button" class="btn btn-primary" >Save
                             changes</button>
                         </div>
                       </div>
