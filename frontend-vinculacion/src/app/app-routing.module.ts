@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
-import { AuthRoutingModule } from './auth/auth-routing.module';
+
 
 const routes: Routes= [
   { path: '', redirectTo: '/auth', pathMatch: 'full' },
@@ -36,7 +36,7 @@ const routes: Routes= [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    AuthRoutingModule
+
   ],
   exports: [RouterModule]
 })
