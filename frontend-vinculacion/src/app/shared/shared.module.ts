@@ -5,6 +5,10 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { MainComponent } from './main/main.component';
 import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
+import { SpinnerComponent } from './loader/spinner/spinner.component';
+import { NoContentComponent } from './no-content/no-content/no-content.component';
+// import { ToastComponent } from './notification/toasts/toast-alert/toast/toast.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +16,10 @@ import { SharedRoutingModule } from './shared-routing.module';
     SidebarComponent,
     BreadcrumbsComponent,
     MainComponent,
+    SpinnerComponent,
+    NoContentComponent,
+    // ToastComponent,
+    PaginationComponent,
   ],
   exports:[
     HeaderComponent,
