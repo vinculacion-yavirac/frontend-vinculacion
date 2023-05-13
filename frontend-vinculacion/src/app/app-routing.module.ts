@@ -4,12 +4,34 @@ import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 
 const routes: Routes= [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  {path: 'dashboard', loadChildren:() => import('./pages/pages.module').then(m => m.PagesModule)},
-  {path: 'shared', loadChildren:() => import('./shared/shared.module').then(m => m.SharedModule)},
-  {path: 'login', loadChildren:() => import('./auth/auth.module').then(m => m.AuthModule)},
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  {
+    path: 'auth',
+    children:[
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      // { path: 'login', canActivate: [LoginGuard], component: LoginComponent },
+    ],
+  },
+  {
+         path: 'system',
+         loadChildren:() => 
+           import('./pages/pages.module').then(m => m.PagesModule),
+            //  canActivate: [AuthGuard],
+            //   loadChildren: () =>
+            //     import('./layout/layout.module').then((m) => m.LayoutModule),
+  },
+  {
+        path: 'feature',
+        loadChildren:() => 
+          import('./shared/shared.module').then(m => m.SharedModule),
+        // canActivate: [AuthGuard],
+        // loadChildren: () =>
+        //   import('./feature/feature.module').then((m) => m.FeatureModule),
+  },
   { path: '**', component: NopagesfoundComponent },
 ]
+
+
 
 @NgModule({
   imports: [
