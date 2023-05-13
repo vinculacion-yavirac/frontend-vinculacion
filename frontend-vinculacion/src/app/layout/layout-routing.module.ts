@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { SolicitudFormComponent } from '../pages/docente-vinculacion/solicitud-vinculacion/solicitud-form/solicitud-form.component';
+import { AsignarFundacionFormComponent } from '../pages/docente-vinculacion/asignar-fundacion-vinculacion/asignar-fundacion-form/asignar-fundacion-form.component';
+import { ConfiguracionVinculacionFormComponent } from '../pages/docente-vinculacion/configuracion-vinculacion/configuracion-vinculacion-form/configuracion-vinculacion-form.component';
+import { PortafolioVinculacionFormComponent } from '../pages/docente-vinculacion/portafolio-vinculacion/portafolio-vinculacion-form/portafolio-vinculacion-form.component';
+import { ProyectoFormComponent } from '../pages/docente-vinculacion/proyecto-vinculacion/proyecto-form/proyecto-form.component';
 
 const routes: Routes = [
   // { path: 'upload', component: UploadComponent },
@@ -8,6 +13,12 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
+      { path: 'solicitud', component: SolicitudFormComponent},
+      // { path: 'asignar-fundacion', component: AsignarFundacionFormComponent },
+      // { path: 'configuraciones', component: ConfiguracionVinculacionFormComponent },
+      // { path: 'portafolio-vinculacion', component: PortafolioVinculacionFormComponent },
+      // { path: 'proyecto', component: ProyectoFormComponent},
+      // { path: 'proyecto/:id', component: ProyectoFormComponent},
       // {path:'oficios', component:OficiosFormComponent},
       // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       // { path: 'dashboard', component: DashboardComponent },

@@ -4,9 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FeatureRoutingModule } from './feature-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { SpinnerComponent } from '../shared/loader/spinner/spinner.component';
-import { NoContentComponent } from '../shared/no-content/no-content/no-content.component';
-import { PaginationComponent } from '../shared/pagination/pagination.component';
+
 
 
 @NgModule({
@@ -23,12 +21,12 @@ import { PaginationComponent } from '../shared/pagination/pagination.component';
     // AgePipe,
     // TimeAgoPipe,
     // CapitalizePipe,
-    SpinnerComponent,
+    // SpinnerComponent,
     // NameInitialsPipe,
     // FullNameShortPipe,
-    NoContentComponent,
+    // NoContentComponent,
     NgxPaginationModule,
-    PaginationComponent,
+    // PaginationComponent,
     // FullNameFirstMiddlePipe,
     // HasPermissionsDirective,
   ],

@@ -15,10 +15,11 @@ const routes: Routes= [
   {
          path: 'system',
          loadChildren:() => 
-           import('./pages/pages.module').then(m => m.PagesModule),
+           import('./layout/layout.module').then((m) => m.LayoutModule),
+          //  import('./pages/pages.module').then(m => m.PagesModule),
             //  canActivate: [AuthGuard],
             //   loadChildren: () =>
-            //     import('./layout/layout.module').then((m) => m.LayoutModule),
+              // import('./layout/layout.module').then((m) => m.LayoutModule),
   },
   {
         path: 'feature',

@@ -2,3 +2,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.snackbar {
+  background: #1f2937;
+  padding: 0 !important;
+  min-width: 200px !important;
+}
+
+.mat-accordion>.mat-expansion-panel-spacing{
+  border: #535a6650 1px solid !important;
+}
+
+.mat-expansion-panel-header {
+  color: #535a66 !important;
+  padding: 0px !important;
+  height: 48px !important;
+  transition: all 0.1s ease !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: none !important;
+  /*border-radius: none;*/
+  font-family: "ui-sans-serif", "system-ui", -apple-system, BlinkMacSystemFont,    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  -webkit-transition: all 0.1s ease !important;
+  -moz-transition: all 0.1s ease !important;
+  -ms-transition: all 0.1s ease !important;
+  -o-transition: all 0.1s ease !important;
+  -webkit-border-radius: none !important;
+  -moz-border-radius: none !important;
+  -ms-border-radius: none !important;
+  -o-border-radius: none !important;
+}
+
+.mat-expansion-panel-header:hover {
+  background: #ebecf0 !important;
+}
+
+.mat-expansion-panel-content {
+  background: #ffffff !important;
+  font-family: "ui-sans-serif", "system-ui", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+.mat-expansion-panel-header-description,
+.mat-expansion-indicator::after {
+  border-color: #535a66 !important;
+  color: #535a66 !important;
+}
+
+.mat-expansion-panel-body {
+  background: #ebecf080 !important;
+  padding: 0px !important;
+  margin-top: -4px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  background: #f5f5f7 !important;
+  height: 48px !important;
+}
+
+input {
+  color: #535a66 !important;
+}

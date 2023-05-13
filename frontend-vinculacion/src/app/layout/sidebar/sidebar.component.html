@@ -1,60 +1,106 @@
-<div class="container-fluid ">
-    <div class="row flex-nowrap">
-      <div class="col-auto col-sm-3 px-sm-1 col-md-2 px-md-2 col-xl-2 px-sm-1 px-0 bg-light">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-0 pt-1 text-white min-vh-90">
-          <a href="/" class="d-flex align-items-center pb-0 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <span class="fs-6 d-none d-sm-inline">Portafolio</span>
-          </a>
-          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-            <li class="nav-item">
-              <a routerLink="solicitud" class="nav-link align-middle px-4">
-                <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline" >Solicitud</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="proyecto" class="nav-link align-middle px-4">
-                <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Proyecto</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="portafolio-vinculacion" class="nav-link align-middle px-4">
-                <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Portafolio</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="asignar-fundacion" class="nav-link align-middle px-4">
-                <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Asignar Fundacion</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="agregar-rol" class="nav-link align-middle px-4">
-                <i class="fs-6 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Agregar Tu/Es</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-auto col-10 col-sm-9 px-sm-4 col-md-10 px-md-3 col-xl-10 px-xl-3 col-lg-10 px-lg-3">
-        <div class="row">
-          <div
-            class="pt-1 col-auto col-12 col-sm-12 px-sm-3 col-md-12 px-md-3 col-md-10 col-xl-12 px-xl-3 col-lg-12 px-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <!-- <app-breadcrumbs></app-breadcrumbs> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="pt-1 col-auto col-12 col-sm-12 px-sm-3 col-md-12 px-md-3 col-xl-12 px-xl-3 col-lg-12 px-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <!-- <router-outlet></router-outlet> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- SIDEBAR -->
+<div id="sidebar" class="shadow-xl h-screen overflow-hidden bg-white">
+  <div class="h-16 flex border-b border-x-stone-700 items-center bg-blueskype py-8 ">
+    <a href="#">
+      <!-- <img src="http://gadguayllabamba.gob.ec/wp-content/uploads/2017/06/ese-es-el-logo-finalfinal1.png" alt="fdje"
+        class="ml-[7px] min-w-[10rem]" [ngClass]="{ hidden: !sidebar }" /> -->
+        <img src="../../../assets/image/logo.png" alt="Yavirac"
+        class="ml-[3rem] min-w-[7rem]"  style="height: 61px;"/>
+      <!-- <img src="https://pbs.twimg.com/profile_images/1163897057838620674/rJn8fQgB_400x400.png" alt="fdje"
+        class="ml-[11px] w-12" [ngClass]="{ hidden: sidebar }" /> -->
+    </a>
   </div>
-  
+
+  <div class="p-4 flex justify-between flex-col text-neutral" style="height: calc(100vh - 4rem)">
+    <ul>
+      <li [routerLinkActive]="['active']" routerLink="/system/dashboard"
+        class="flex pl-0 rounded-md items-center transition-all hover:bg-[#3f51b521] cursor-pointer">
+        <div class="flex justify-center items-center min-w-[2.25rem] min-h-[2.25rem] rounded-md">
+          <span class="fas fa-home text-sm leading-none"></span>
+        </div>
+        <div class="h-9 rounded-md flex items-center">
+          <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
+          <a class="flex items-center text-sm">
+            <span class="text-ellipsis overflow-hidden whitespace-nowrap">Home</span>
+          </a>
+        </div>
+      </li>
+
+      <div *permissions="[
+          'LEER_USUARIOS',
+          'CREAR_USUARIOS',
+          'ACTUALIZAR_USUARIOS',
+          'ELIMINAR_USUARIOS'
+        ]">
+        <div class="opacity-50">
+          <div class="mt-5 mb-1.5">
+            <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap">
+              Administración
+            </h2>
+            <!-- <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
+              [ngClass]="{ 'opacity-0 pointer-events-none': !sidebar }">
+              Administración
+            </h2> -->
+          </div>
+        </div>
+        <li [routerLinkActive]="['active']" routerLink="/system/personal" *permissions="[
+            'LEER_USUARIOS',
+            'CREAR_USUARIOS',
+            'ACTUALIZAR_USUARIOS',
+            'ELIMINAR_USUARIOS',
+            'LEER_ROLES',
+            'CREAR_ROLES',
+            'ACTUALIZAR_ROLES',
+            'ELIMINAR_ROLES'
+          ]" class="flex pl-0 rounded-md items-center transition-all hover:bg-[#3f51b521] cursor-pointer">
+          <div class="flex justify-center items-center min-w-[2.25rem] min-h-[2.25rem] rounded-md">
+            <span class="fas fa-user-tie text-base leading-none"></span>
+          </div>
+          <div class="h-9 rounded-md flex items-center">
+            <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
+            <a class="flex items-center text-sm">
+              <span class="text-ellipsis overflow-hidden whitespace-nowrap">Operador</span>
+            </a>
+          </div>
+        </li>
+
+
+        <div class="opacity-50">
+          <div class="mt-5 mb-1.5">
+            <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
+             >
+              Documentación
+            </h2>
+            <!-- <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
+              [ngClass]="{ 'opacity-0 pointer-events-none': !sidebar }">
+              Documentación
+            </h2> -->
+          </div>
+        </div>
+
+        <li [routerLinkActive]="['active']" routerLink="/system/oficios-list"
+          class="flex pl-0 rounded-md items-center transition-all hover:bg-[#3f51b521] cursor-pointer">
+          <div class="flex justify-center items-center min-w-[2.25rem] min-h-[2.25rem] rounded-md">
+            <span class="fa-solid fa-id-card-clip text-base leading-none"></span>
+          </div>
+          <div class="h-9 rounded-md flex items-center">
+            <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
+            <a class="flex items-center text-sm" >
+              <span class="text-ellipsis overflow-hidden whitespace-nowrap">Oficios</span>
+            </a>
+          </div>
+        </li>
+
+
+      </div>
+    </ul>
+
+    <ul>
+      <li class="text-xs opacity-50">
+        <span  class="uppercase mr-1">System</span>
+        <!-- <span *ngIf="sidebar" class="uppercase mr-1">System GAD</span> -->
+        <span>v1.0</span>
+      </li>
+    </ul>
+  </div>
+</div>

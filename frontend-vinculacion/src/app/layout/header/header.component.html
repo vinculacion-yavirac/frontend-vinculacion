@@ -1,21 +1,48 @@
+<div class="navbar px-5 py-1 shadow-md bg-blueskype text-white">
+  <div class="flex-1">
+    <div 
+      class="flex items-center justify-center w-9 h-9 rounded-full hover:bg-[#0C9707] cursor-pointer transition-all">
+      <span class="fa-solid fa-bars text-lg"></span>
+    </div>
+    <!-- <div (click)="toggleSidebarEvent()"
+      class="flex items-center justify-center w-9 h-9 rounded-full hover:bg-[#0C9707] cursor-pointer transition-all">
+      <span class="fa-solid fa-bars text-lg"></span>
+    </div> -->
+  </div>
+  <div class="flex-none">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0"
+        class="flex items-center rounded-md mr-0.5 w-52 cursor-pointer bg-[#10351E] hover:bg-[#0C9707] px-2 py-1 transition-all">
+        <div tabindex="0" class="avatar mr-3">
+          <div class="w-9 mask mask-squircle">
+            <div class="inline-flex overflow-hidden relative justify-center items-center w-9 h-9 bg-white">
+             <span class="font-bold text-neutral uppercase"> usuarios</span>
+              <!-- <span *ngIf="currentUser.names && currentUser.last_names"
+                class="font-bold text-neutral uppercase">{{currentUser | NameInitials}}</span> -->
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="block font-bold	text-sm leading-none capitalize text-ellipsis overflow-hidden truncate w-36"> usuarios</span>
+          <span class="block font-normal text-xs opacity-50 capitalize"></span>
+          <!-- <span *ngIf="currentUser.names && currentUser.last_names"
+            class="block font-bold	text-sm leading-none capitalize text-ellipsis overflow-hidden truncate w-36">{{currentUser
+            | FullNameFirstMiddle}}</span> -->
+          <!-- <span *ngIf="currentUser.role"
+            class="block font-normal text-xs opacity-50 capitalize">{{currentUser.role}}</span> -->
+        </div>
+      </label>
 
-<nav class="navbar col-auto col-12 px-1 col-sm-12 px-sm-1 col-lg-12 " style="background-color: #19418B;">
-    <div class="col-auto col-3 px-2 col-sm-9 px-sm-1 col-md-1 px-md-1 pt-3">
-      <a href="#inicio">
-        <img class="redimension" src="../../../assets/image/logo.png" alt="">
-      </a>
+      <ul tabindex="0"
+        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-md w-52 text-black">
+        <li [routerLinkActive]="['active']" routerLink="/system/perfil" class="hover:bg-[#3f51b521]">
+          <a>
+            Perfil
+          </a>
+        </li>
+        <!-- <li class="hover:bg-[#3f51b521]" (click)="logout()"><a>Cerrar Sesión</a></li> -->
+        <li class="hover:bg-[#3f51b521]" ><a>Cerrar Sesión</a></li>
+      </ul>
     </div>
-    <div
-      class="col-auto col-1 px-2 col-sm-2 px-sm-1 px-sm-6 col-md-11 px-md-6 col-xl-11 px-xl-2 col-lg-11 px-lg-2 pt-2">
-      <h4 class="text-white col-auto col-2 px-0 col-sm-3 px-sm-4"> Docente Vinculación</h4>
-    </div>
-    <div class="col-auto col-8 px-5 col-sm-8 px-sm-5 col-md-12 px-md-3 col-lg-11 px-lg-10 pt-2 ">
-      <li class=" list-group col-sm-11 px-sm-6 col-md-12 px-md-1 align-items-end">
-        <h4 class="carrera text-white">Desarrollo de Software</h4>
-      </li>
-      <li class="list-group col-sm-11 px-sm-6  col-md-12 px-md-3 align-items-end">
-        <h4 class="nombre text-white">Steveen Ordoñez</h4>
-      </li>
-    </div>
-  </nav>
-
+  </div>
+</div>

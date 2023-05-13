@@ -1,1 +1,261 @@
-<p>dashboard works!</p>
+<div class="grid grid-rows-3 h-[calc(100vh-4rem)]">
+    <div class="bg-primary row-span-1 shadow-md shadow-[#3f51b5a6] z-10 p-6 text-white overflow-hidden relative">
+      <h3 class="text-base opacity-60">
+        <!-- Hola <span *ngIf="user">{{ user | FullNameShort }}</span>! -->
+      </h3>
+  
+      <div class="w-full absolute bottom-5 left-0">
+        <div class="w-full flex justify-between items-center p-6">
+          <div>
+            <h2 class="text-xl">Bienvenido aL</h2>
+            <h1 class="text-3xl font-bold">Sistema Administrativo</h1>
+            <h3 class="text-xl">Gad Guayallabamba</h3>
+          </div>
+          <div class="rounded-full h-20 w-20 bg-white flex justify-center items-center overflow-hidden p-1">
+            <img src="/assets/images/1.png" alt="logo" />
+          </div>
+        </div>
+  
+        <div class="w-full flex">
+          <span class="h-0.5 w-1/2 bg-[#FFDD00]"></span>
+          <span class="h-0.5 w-1/4 bg-[#034EA2]"></span>
+          <span class="h-0.5 w-1/4 bg-[#ED1C24]"></span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="grid grid-cols-2 gap-2">
+      <div class="grid grid-cols-3 gap-3">
+      <div class="container">
+        <img class="image" src="/assets/images/person1.jpg" alt="logo" />
+        <div class="button-container">
+          <button type="button" [routerLink]="['/system/oficios-list']"
+            class="text-blue-700 bg-white font-light rounded-md text-sm px-7 py-2 inline-flex justify-center  text-center">
+            Administrar Oficios
+          </button>
+        </div>
+      </div>
+  
+        <style>
+          .container {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100vh;
+          }
+  
+          .image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.4) ;
+          }
+  
+          .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        </style>
+  
+        <div class="container">
+          <img class="image" src="/assets/images/person2.jpg" alt="logo" />
+          <div class="button-container">
+            <button type="button" [routerLink]="['/system/oficios-list']"
+              class="text-blue-700 bg-white font-light rounded-md text-sm px-7 py-2 inline-flex justify-center  text-center">
+              Administrar Oficios
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <img class="image" src="/assets/images/person3.jpg" alt="logo" />
+          <div class="button-container">
+            <button type="button" [routerLink]="['/system/oficios-list']"
+              class="text-blue-700 bg-white font-light rounded-md text-sm px-7 py-2 inline-flex justify-center  text-center">
+              Administrar Oficios
+            </button>
+          </div>
+        </div>
+      </div>
+  
+        <div class="grid grid-cols-2 grid-rows-2 gap-2">
+          <div>
+            <div class="w-full bg-white border border-gray-350 rounded-lg shadow-2xl">
+              <div class="flex justify-end px-4 pt-4">
+                <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                  class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                  type="button">
+                  <span class="sr-only">Open dropdown</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                  class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                  <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                        Data</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center pb-10">
+                <h1 class="text-8xl text-green-800">
+                  726
+                </h1>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-dark">Oficios Realizados</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visualización mensual</span>
+              </div>
+            </div>
+  
+          </div>
+          <div>
+            <div class="w-full bg-white border border-gray-350 rounded-lg shadow-2xl">
+              <div class="flex justify-end px-4 pt-4">
+                <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                  class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                  type="button">
+                  <span class="sr-only">Open dropdown</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                  class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                  <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                        Data</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center pb-10">
+                <h1 class="text-8xl text-blue-700">
+                  968
+                </h1>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-dark">Oficios Recibidos</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visualización mensual</span>
+              </div>
+            </div>
+  
+          </div>
+          <div>
+            <div class="w-full bg-white border border-gray-350 rounded-lg shadow-2xl">
+              <div class="flex justify-end px-4 pt-4">
+                <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                  class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                  type="button">
+                  <span class="sr-only">Open dropdown</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                  class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                  <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                        Data</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center pb-10">
+                <h1 class="text-8xl text-gray-700">
+                  406
+                </h1>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-dark">Oficios Archivados</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visualización mensual</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-full bg-white border border-gray-350 rounded-lg shadow-2xl">
+              <div class="flex justify-end px-4 pt-4">
+                <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                  class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                  type="button">
+                  <span class="sr-only">Open dropdown</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                  class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                  <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                        Data</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center pb-10">
+                <h1 class="text-8xl text-red-800">
+                  506
+                </h1>
+                <h5 class="mb-1 text-xl font-medium text-red-800 dark:text-dark">Oficios Pendientes</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visualización mensual</span>
+  
+              </div>
+            </div>
+          </div>
+  
+    </div>
+  </div>

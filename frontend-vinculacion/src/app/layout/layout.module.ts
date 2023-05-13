@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FeatureModule } from '../feature/feature.module';
+import { PagesModule } from '../pages/pages.module';
 
 
 @NgModule({
@@ -18,8 +20,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     CommonModule,
+    FeatureModule,
     LayoutRoutingModule,
-    // FeatureModule,
+    PagesModule,
     // ChartsModule,
     // MaterialModule,
   ]

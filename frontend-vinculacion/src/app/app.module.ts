@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from './layout/layout.module';
+import { FeatureModule } from './feature/feature.module';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { LayoutModule } from './layout/layout.module';
     ReactiveFormsModule,
     // BrowserAnimationsModule,
     // MaterialModule,
-    // FeatureModule,
+    FeatureModule,
     LayoutModule,
     
   ],
