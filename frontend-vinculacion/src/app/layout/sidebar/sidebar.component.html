@@ -2,12 +2,8 @@
 <div id="sidebar" class="shadow-xl h-screen overflow-hidden bg-white">
   <div class="h-16 flex border-b border-x-stone-700 items-center bg-blueskype py-8 ">
     <a href="#">
-      <!-- <img src="http://gadguayllabamba.gob.ec/wp-content/uploads/2017/06/ese-es-el-logo-finalfinal1.png" alt="fdje"
-        class="ml-[7px] min-w-[10rem]" [ngClass]="{ hidden: !sidebar }" /> -->
         <img src="../../../assets/image/logo.png" alt="Yavirac"
-        class="ml-[3rem] min-w-[7rem]"  style="height: 61px;"/>
-      <!-- <img src="https://pbs.twimg.com/profile_images/1163897057838620674/rJn8fQgB_400x400.png" alt="fdje"
-        class="ml-[11px] w-12" [ngClass]="{ hidden: sidebar }" /> -->
+        class="ml-[3rem] min-w-[7rem]"  [ngClass]="{ hidden: !sidebar }" style="height: 61px;"/>
     </a>
   </div>
 
@@ -19,8 +15,7 @@
           <span class="fas fa-home text-sm leading-none"></span>
         </div>
         <div class="h-9 rounded-md flex items-center">
-          <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
-          <a class="flex items-center text-sm">
+          <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }">
             <span class="text-ellipsis overflow-hidden whitespace-nowrap">Home</span>
           </a>
         </div>
@@ -34,13 +29,10 @@
         ]">
         <div class="opacity-50">
           <div class="mt-5 mb-1.5">
-            <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap">
-              Administración
-            </h2>
-            <!-- <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
+            <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
               [ngClass]="{ 'opacity-0 pointer-events-none': !sidebar }">
               Administración
-            </h2> -->
+            </h2>
           </div>
         </div>
         <li [routerLinkActive]="['active']" routerLink="/system/personal" *permissions="[
@@ -57,8 +49,7 @@
             <span class="fas fa-user-tie text-base leading-none"></span>
           </div>
           <div class="h-9 rounded-md flex items-center">
-            <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
-            <a class="flex items-center text-sm">
+            <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }">
               <span class="text-ellipsis overflow-hidden whitespace-nowrap">Operador</span>
             </a>
           </div>
@@ -68,13 +59,9 @@
         <div class="opacity-50">
           <div class="mt-5 mb-1.5">
             <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
-             >
-              Documentación
-            </h2>
-            <!-- <h2 class="text-xs font-normal text-ellipsis overflow-hidden whitespace-nowrap"
               [ngClass]="{ 'opacity-0 pointer-events-none': !sidebar }">
               Documentación
-            </h2> -->
+            </h2>
           </div>
         </div>
 
@@ -84,8 +71,7 @@
             <span class="fa-solid fa-id-card-clip text-base leading-none"></span>
           </div>
           <div class="h-9 rounded-md flex items-center">
-            <!-- <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }"> -->
-            <a class="flex items-center text-sm" >
+            <a class="flex items-center text-sm" [ngClass]="{ hidden: !sidebar }">
               <span class="text-ellipsis overflow-hidden whitespace-nowrap">Oficios</span>
             </a>
           </div>
@@ -97,8 +83,7 @@
 
     <ul>
       <li class="text-xs opacity-50">
-        <span  class="uppercase mr-1">System</span>
-        <!-- <span *ngIf="sidebar" class="uppercase mr-1">System GAD</span> -->
+        <span *ngIf="sidebar" class="uppercase mr-1">System Yavirac</span>
         <span>v1.0</span>
       </li>
     </ul>

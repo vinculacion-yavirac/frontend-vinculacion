@@ -1,5 +1,6 @@
 export interface User {
-  id: number,
-  usuario: string,
-  clave: string,
+  names: string;
+  last_names: string;
+  email: string;
+  role: string;
 }

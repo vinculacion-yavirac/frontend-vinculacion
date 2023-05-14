@@ -1,3 +1,8 @@
 .bg-blueskype{
     background-color: #19418B;
 }
+#sidebar li.active{
+    background: #0C9707;
+    color: white;
+    pointer-events: none;
+  }

@@ -1,15 +1,11 @@
 <div class="flex">
-    <!-- <div class="w-52 fixed z-20" [ngClass]="{ 'w-[69px]': !sidebar }"> -->
-    <div class="w-52 fixed z-20">
-      <!-- <app-sidebar [sidebar]="sidebar"></app-sidebar> -->
-      <app-sidebar></app-sidebar>
-
+    <div class="w-52 fixed z-20" [ngClass]="{ 'w-[69px]': !sidebar }">
+      <app-sidebar [sidebar]="sidebar"></app-sidebar>
     </div>
-    <!-- <div class="w-full ml-52" [ngClass]="{ 'ml-[69px]': !sidebar }"> -->
-    <div class="w-full ml-52">
-      <!-- <div class="w-[calc(100%-13rem)] fixed z-20" [ngClass]="{ 'w-[calc(100%-69px)]': !sidebar }">
+    <div class="w-full ml-52" [ngClass]="{ 'ml-[69px]': !sidebar }">
+      <div class="w-[calc(100%-13rem)] fixed z-20" [ngClass]="{ 'w-[calc(100%-69px)]': !sidebar }">
         <app-header (toggleEvent)="receiveToggle($event)"></app-header>
-      </div> -->
+      </div>
       <div class="w-[calc(100%-13rem)] fixed z-20">
         <app-header></app-header>
       </div>

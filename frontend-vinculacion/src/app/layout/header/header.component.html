@@ -1,13 +1,9 @@
 <div class="navbar px-5 py-1 shadow-md bg-blueskype text-white">
   <div class="flex-1">
-    <div 
+    <div (click)="toggleSidebarEvent()"
       class="flex items-center justify-center w-9 h-9 rounded-full hover:bg-[#0C9707] cursor-pointer transition-all">
       <span class="fa-solid fa-bars text-lg"></span>
     </div>
-    <!-- <div (click)="toggleSidebarEvent()"
-      class="flex items-center justify-center w-9 h-9 rounded-full hover:bg-[#0C9707] cursor-pointer transition-all">
-      <span class="fa-solid fa-bars text-lg"></span>
-    </div> -->
   </div>
   <div class="flex-none">
     <div class="dropdown dropdown-end">
@@ -28,8 +24,8 @@
           <!-- <span *ngIf="currentUser.names && currentUser.last_names"
             class="block font-bold	text-sm leading-none capitalize text-ellipsis overflow-hidden truncate w-36">{{currentUser
             | FullNameFirstMiddle}}</span> -->
-          <!-- <span *ngIf="currentUser.role"
-            class="block font-normal text-xs opacity-50 capitalize">{{currentUser.role}}</span> -->
+          <span *ngIf="currentUser.role"
+            class="block font-normal text-xs opacity-50 capitalize">{{currentUser.role}}</span>
         </div>
       </label>
 
