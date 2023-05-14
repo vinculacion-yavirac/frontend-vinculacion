@@ -7,7 +7,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeatureModule } from '../feature/feature.module';
-import { PagesModule } from '../pages/pages.module';
 
 
 @NgModule({
@@ -17,12 +16,13 @@ import { PagesModule } from '../pages/pages.module';
     SidebarComponent,
     MainComponent,
     DashboardComponent,
+    
+    // ModalAlertComponent,
   ],
   imports: [
     CommonModule,
     FeatureModule,
     LayoutRoutingModule,
-    PagesModule,
     // ChartsModule,
     // MaterialModule,
   ]

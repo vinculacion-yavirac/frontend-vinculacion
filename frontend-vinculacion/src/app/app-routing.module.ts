@@ -24,7 +24,8 @@ const routes: Routes= [
   {
         path: 'feature',
         loadChildren:() => 
-          import('./shared/shared.module').then(m => m.SharedModule),
+          import('./feature/feature.module').then((m) => m.FeatureModule),
+          // import('./shared/shared.module').then(m => m.SharedModule),
         // canActivate: [AuthGuard],
         // loadChildren: () =>
         //   import('./feature/feature.module').then((m) => m.FeatureModule),
@@ -35,10 +36,7 @@ const routes: Routes= [
 
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

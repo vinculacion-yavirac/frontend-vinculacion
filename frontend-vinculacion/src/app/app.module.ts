@@ -6,11 +6,15 @@ import {HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from './layout/layout.module';
 import { FeatureModule } from './feature/feature.module';
+import { LoginComponent } from './auth/login/login.component';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent, 
+    NopagesfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,7 @@ import { FeatureModule } from './feature/feature.module';
     // BrowserAnimationsModule,
     // MaterialModule,
     FeatureModule,
+    // LayoutModule,
     LayoutModule,
     
   ],
