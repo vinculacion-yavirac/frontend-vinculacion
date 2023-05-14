@@ -8,13 +8,18 @@ import { LayoutModule } from './layout/layout.module';
 import { FeatureModule } from './feature/feature.module';
 import { LoginComponent } from './auth/login/login.component';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
+import { BreadcrumbsComponent } from './auth/profile/breadcrumbs/breadcrumbs.component';
+import { GeneralComponent } from './auth/profile/general/general.component';
+import { MainComponent } from './auth/profile/main/main.component';
+import { SeguridadComponent } from './auth/profile/seguridad/seguridad.component';
+import { SidebarComponent } from './auth/profile/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent, 
-    NopagesfoundComponent,
+    NopagesfoundComponent, BreadcrumbsComponent, GeneralComponent, MainComponent, SeguridadComponent, SidebarComponent,
   ],
   imports: [
     BrowserModule,
