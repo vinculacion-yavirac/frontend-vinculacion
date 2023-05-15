@@ -1,0 +1,20 @@
+<div class="text-neutral p-4 relative h-full w-full">
+    <div class="text-center">
+      <span class="fa-solid fa-triangle-exclamation text-6xl text-[#F39C11]"></span>
+      <h1 class="text-3xl font-semibold">Advertencia</h1>
+      <h3>{{data.message}}</h3>
+  
+      <div class="text-left mt-6">
+        <h3>{{data.title}}</h3>
+        <h2 class="font-bold uppercase">{{data.dato}}</h2>
+      </div>
+  
+    </div>
+    <div class="absolute bottom-4 w-[calc(100%-2rem)] flex justify-between items-end">
+      <a [mat-dialog-close]="false" class="text-sm text-[#FF6961] cursor-pointer">cancelar</a>
+      <button [mat-dialog-close]="true" class="btn btn-sm gap-2 bg-neutral text-xs">
+        <span class="fa-solid fa-trash-can text-white"></span>
+        {{data.button}}
+      </button>
+    </div>
+  </div>

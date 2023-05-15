@@ -16,9 +16,7 @@
             "outputPath": "dist/frontend-vinculacion",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -96,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "85854855-9a55-4157-b06f-0e8a4b2ce72a"
+    "analytics": false
   }
 }

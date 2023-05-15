@@ -1,1 +1,13 @@
-<p>toast works!</p>
+<div id="toast-default" class="flex items-center w-full p-2 text-gray-300 bg-gray-800 rounded-md" role="alert">
+    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg">
+      <i class="fa-solid fa-paper-plane text-lg"></i>
+      <span class="sr-only">Plane icon</span>
+    </div>
+    <div class="ml-3 text-sm font-normal">{{ data }}.</div>
+    <button type="button" (click)="snackBarRef.dismissWithAction()"
+      class=" mx-1 bg-gray-800 text-gray-500 hover:text-white rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-700 inline-flex items-center justify-center h-8 w-8 min-w-[32px]"
+      data-dismiss-target="#toast-default" aria-label="Close">
+      <span class="sr-only">Close</span>
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+  </div>
