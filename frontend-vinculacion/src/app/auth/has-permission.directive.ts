@@ -5,7 +5,7 @@ import { AuthHttpService } from '../service/auth/auth-http.service';
   selector: '[permissions]',
 })
 export class HasPermissionsDirective {
-  @Input() appHasPermissions: string[];
+  // @Input() appHasPermissions: string[];
   private hasPermission = false;
 
   constructor(
@@ -14,18 +14,18 @@ export class HasPermissionsDirective {
     private authHttpService: AuthHttpService
   ) {}
 
-  @Input()
-  set permissions(values: any) {
-    this.appHasPermissions = values;
-    this.updateView();
-  }
+  // @Input()
+  // set permissions(values: any) {
+  //   this.appHasPermissions = values;
+  //   this.updateView();
+  // }
 
-  private updateView() {
-    this.hasPermission = this.authHttpService.isAuthorized(this.appHasPermissions);
-    if (this.hasPermission) {
-      this.viewContainer.createEmbeddedView(this.templateRef);
-    } else {
-      this.viewContainer.clear();
-    }
-  }
+  // private updateView() {
+  //   this.hasPermission = this.authHttpService.isAuthorized(this.appHasPermissions);
+  //   if (this.hasPermission) {
+  //     this.viewContainer.createEmbeddedView(this.templateRef);
+  //   } else {
+  //     this.viewContainer.clear();
+  //   }
+  // }
 }

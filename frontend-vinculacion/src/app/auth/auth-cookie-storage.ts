@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from 'ngx-cookie-service';
 import { EncryptionHttpService } from '../service/encryption/encryption-http.service';
 
 const COOKIE_STORAGE_TOKEN_REFRESH_KEY = 'refresh_token';
@@ -9,18 +9,18 @@ const COOKIE_STORAGE_TOKEN_REFRESH_KEY = 'refresh_token';
 })
 export class AuthCookieStorage {
   constructor(
-    // private cookieService: CookieService,
+    private cookieService: CookieService,
     private encryptionHttpService: EncryptionHttpService
   ) {}
 
   setRefreshToken(token: string): void {
     const encryptedToken = this.encryptionHttpService.encrypt(token);
-    // this.cookieService.set(
-    //   COOKIE_STORAGE_TOKEN_REFRESH_KEY,
-    //   encryptedToken,
-    //   1,
-    //   '/'
-    // );
+    this.cookieService.set(
+      COOKIE_STORAGE_TOKEN_REFRESH_KEY,
+      encryptedToken,
+      1,
+      '/'
+    );
   }
 
   getRefreshToken(): string {

@@ -1,1 +1,16 @@
-<p>permiso.list.checkbox works!</p>
+<div class="w-full">
+    <div *ngIf="loading" class="absolute h-full w-full top-0 left-0 bg-[#535a6610] !backdrop-blur-md z-10">
+      <!-- <loader></loader> -->
+    </div>
+    <ul class="grid grid-cols-3 grid-rows-20 grid-flow-col-dense text-neutral">
+      <li *ngFor="let permiso of permissions" class="py-1 text-xs">
+        <div class="flex justify-start items-center p-1">
+          <input type="checkbox" class="checkbox checkbox-primary checkbox-sm rounded-[4px]" (change)="PermissionsEmitter(permiso)"
+            [checked]="isChecked(permiso)" />
+          <span class="fa-solid fa-key mx-1 ml-2"></span>
+          <label class="text-xs">{{permiso.name}}</label>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

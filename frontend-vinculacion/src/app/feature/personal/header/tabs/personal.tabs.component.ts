@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-personal.tabs',
+  selector: 'personal-tabs',
   templateUrl: './personal.tabs.component.html',
   styleUrls: ['./personal.tabs.component.css']
 })
-export class PersonalTabsComponent {
+export class PersonalTabsComponent implements OnInit {
+  @Input() route: string = '';
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }

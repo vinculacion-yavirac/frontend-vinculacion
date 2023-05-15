@@ -1,1 +1,12 @@
-<p>permiso.list works!</p>
+<div class="w-full">
+    <div *ngIf="loading" class="absolute h-full w-full top-0 left-0 bg-[#535a6610] !backdrop-blur-md z-10">
+      <!-- <loader></loader> -->
+    </div>
+      <ul class="grid grid-cols-3 pointer-events-none text-neutral">
+        <li *ngFor="let permiso of permissions" class="py-1 text-xs">
+          <span class="fa-solid fa-key mr-1"></span>
+          {{permiso.name}}
+        </li>
+      </ul>
+    </div>
+    

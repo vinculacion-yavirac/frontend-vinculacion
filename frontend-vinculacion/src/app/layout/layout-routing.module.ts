@@ -8,6 +8,9 @@ import { UsuarioArchivedComponent } from '../feature/personal/usuarios/archived/
 import { RolFormComponent } from '../feature/personal/roles/form/rol.form.component';
 import { RolListComponent } from '../feature/personal/roles/list/rol.list.component';
 import { RolArchivedComponent } from '../feature/personal/roles/archived/rol.archived.component';
+import { ProfileMainComponent } from '../auth/profile/main/profile-main.component';
+import { ProfilePersonalDataComponent } from '../auth/profile/general/general.component';
+import { SeguridadComponent } from '../auth/profile/seguridad/seguridad.component';
 
 const routes: Routes = [
   // { path: 'upload', component: UploadComponent },
@@ -26,24 +29,24 @@ const routes: Routes = [
       // { path: 'dashboard', component: DashboardComponent },
       // { path: 'oficios-list', component: OficiosListComponent },
       // { path: 'oficios-list/archived', component: OficiosArchivedComponent },
-      // {
-      //   path: 'perfil',
-      //   children: [
-      //     {
-      //       path: '',
-      //       component: ProfileMainComponent,
-      //       children: [
-      //         { path: '', redirectTo: 'datos-personales', pathMatch: 'full' },
-      //         {
-      //           path: 'datos-personales',
-      //           component: ProfilePersonalDataComponent,
-      //         },
+      {
+        path: 'perfil',
+        children: [
+          {
+            path: '',
+            component: ProfileMainComponent,
+            children: [
+              { path: '', redirectTo: 'datos-personales', pathMatch: 'full' },
+              {
+                path: 'datos-personales',
+                component: ProfilePersonalDataComponent,
+              },
 
-      //         { path: 'seguridad', component: ProfileSecurityComponent },
-      //       ],
-      //     },
-      //   ],
-      // },
+              { path: 'seguridad', component: SeguridadComponent },
+            ],
+          },
+        ],
+      },
 
       {
         path: 'personal',

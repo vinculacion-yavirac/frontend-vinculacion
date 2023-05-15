@@ -1,1 +1,123 @@
-<p>rol.form works!</p>
+<!-- <module-header title="{{title}}">
+    <rol-breadcrumbs breadcrumbs>
+      <li><a routerLink="/layout/personal/usuarios/form">Formulario</a></li>
+      <li *ngIf="currentRole.name"><a>{{currentRole.name}}</a></li>
+    </rol-breadcrumbs>
+    <div tabs class="h-8"></div>
+  </module-header> -->
+  
+  <div class="w-full p-8 px-20 bg-white border-t-[1px] border-[#535a6650]">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  
+      <div class="grid grid-cols-5 gap-8 my-8">
+        <div class="col-span-1 text-neutral">
+          <h3 class="font-medium">Información</h3>
+          <p class="text-sm">Indicaciones generales para este formulario.</p>
+        </div>
+  
+        <div class="col-span-4 rounded-md bg-neutral-content w-full p-4 px-20 font-medium text-sm text-neutral">
+          <p>1. Todos los campos son de carácter obligatorio si cuenta con (<span class="text-red-500">*</span>)</p>
+          <p>2. Si el campo se encuentra en rojo la información ingresada es incorrecta.</p>
+        </div>
+      </div>
+  
+      <mat-divider></mat-divider>
+  
+      <div class="grid grid-cols-5 gap-8 my-8">
+        <div class="col-span-1 text-neutral">
+          <h3 class="font-medium">Definición</h3>
+          <p class="text-sm">Asigne un nombre al rol, y así tener una mejor identificación.</p>
+        </div>
+        <div class="col-span-4 relative rounded-md bg-[#f4f4f7] p-12 px-20 border border-[#535A6640]">
+          <div *ngIf="loading"
+            class="absolute h-full w-full top-0 left-0 bg-[#535a6610] !backdrop-blur-md z-10">
+            <!-- <loader></loader> -->
+          </div>
+          <div class="w-full">
+            <!-- input de nombre -->
+            <mat-form-field class="w-full">
+              <mat-label>Nombre</mat-label>
+              <div class="flex items-center">
+                <input type="text" matInput formControlName="name" [errorStateMatcher]="matcher" autocomplete="off"
+                  spellcheck="false">
+                <div *ngIf="(formGroup.get('name')?.statusChanges | async) === 'PENDING'">
+                  <h1 class="text-xs text-primary">Comprobando...</h1>
+                </div>
+              </div>
+              <mat-error *ngIf="formGroup.get('name')?.hasError('checkRolNameIsAvailable')">
+                Esta nombre <strong>ya esta registrado</strong>
+              </mat-error>
+              <mat-error
+                *ngIf="formGroup.get('name')?.hasError('minlength') || formGroup.get('name')?.hasError('pattern') && !formGroup.get('name')?.hasError('checkRolNameIsAvailable')">
+                Esta nombre es <strong>invalido</strong>
+              </mat-error>
+              <mat-error *ngIf="formGroup.get('name')?.hasError('required')">
+                Este campo es <strong>requerido</strong>
+              </mat-error>
+            </mat-form-field>
+  
+          </div>
+        </div>
+      </div>
+  
+      <mat-divider></mat-divider>
+  
+      <div class="grid grid-cols-5 gap-8 my-8">
+        <div class="col-span-1 text-neutral">
+          <h3 class="font-medium">Permisos</h3>
+          <p class="text-sm">Asigne los permisos que tendrá este rol.</p>
+        </div>
+        <div
+          class="col-span-4 p-12 px-20 border border-[#535A6640] relative bg-neutral-content bg-[#ebecf090] rounded-md">
+          <div *ngIf="loading" class="absolute h-full w-full top-0 left-0 bg-[#535a6610] !backdrop-blur-md z-10">
+            <!-- <loader></loader> -->
+          </div>
+  
+          <div class="aboslute top-0 right-0 flex justify-end mb-4">
+            <span
+              class="bg-neutral-content text-neutral text-xs font-medium inline-flex items-center gap-2 px-2.5 py-0.5 rounded">
+              <span class="fa-solid fa-key"></span>
+              Permisos {{formGroup.get('permissions')?.value.length}}
+            </span>
+          </div>
+  
+          <!-- lista de permisos -->
+          <!-- <list-permisos-checkbox *ngIf="!loading" (permissionsEmitter)="receivePermissions($event)"
+            [permissionsSelected]="currentRole.permissions"></list-permisos-checkbox> -->
+  
+          <div class="mt-2" *ngIf="formGroup.get('permissions')?.value.length == 0">
+            <h3 class="text-[#f44336] text-[13px] font-[Roboto,Helvetica Neue,sans-serif]">Debe seleccionar al menos un
+              <strong>permiso</strong></h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mb-8 w-full flex justify-between items-center">
+        <div>
+          <div *permissions="['ARCHIVAR_ROLES']">
+            <button (click)="openDialogArchiveRol(currentRole)" *ngIf="currentRole.id" type="button"
+              class="btn btn-outline btn-error text-xs rounded-md">Eliminar</button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center gap-4">
+          <button [routerLink]="['/system/personal/roles']"
+            class="btn btn-outline btn-primary text-xs text-primary rounded-md  flex justify-center items-center">
+            <div class="flex justify-center items-center gap-2">
+              <span class="fa-solid fa-arrow-left-long text-sm"></span>
+              <span>Cancelar</span>
+            </div>
+          </button>
+  
+          <button *permissions="['CREAR_ROLES','ACTUALIZAR_ROLES']" type="submit" class="btn btn-primary text-xs rounded-md border-0 flex justify-center items-center"
+            [disabled]="!formGroup.valid" [ngClass]="{'!text-white !bg-neutral opacity-80': !formGroup.valid}">
+            <div class="flex justify-center items-center gap-2">
+              <span class="fa-solid fa-floppy-disk text-sm"></span>
+              <span *ngIf="currentRole.id">Actualizar</span>
+              <span *ngIf="!currentRole.id">Guardar</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  

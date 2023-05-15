@@ -6,5 +6,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class ModuleHeaderComponent {
-  @Input() title: string;
+  // @Input() title: string;
 }

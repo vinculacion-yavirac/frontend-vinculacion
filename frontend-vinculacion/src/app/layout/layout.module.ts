@@ -6,8 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MaterialModule } from '../shared/material/material.module';
 import { FeatureModule } from '../feature/feature.module';
-
+import { ChartsModule } from 'ng2-charts';
+//import { ModalAlertComponent } from '../shared/material/modal-alert/modal-alert.component';
 
 @NgModule({
   declarations: [
@@ -16,15 +18,13 @@ import { FeatureModule } from '../feature/feature.module';
     SidebarComponent,
     MainComponent,
     DashboardComponent,
-    
-    // ModalAlertComponent,
   ],
   imports: [
     CommonModule,
     FeatureModule,
     LayoutRoutingModule,
-    // ChartsModule,
-    // MaterialModule,
+    ChartsModule,
+    MaterialModule,
   ]
 })
 export class LayoutModule { }

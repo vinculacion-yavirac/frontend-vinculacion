@@ -1,1 +1,86 @@
-<p>rol.archived works!</p>
+<!-- <module-header title="roles archivados">
+    <rol-breadcrumbs breadcrumbs>
+      <li><a routerLink="/system/personal/roles/list/archived">Archivados</a></li>
+    </rol-breadcrumbs>
+    <personal-tabs tabs route="roles"></personal-tabs>
+  </module-header> -->
+  
+  <div class="w-full h-[calc(100vh-4rem-9rem+4px)] p-4 bg-white border-t-[1px] border-[#535a6650]">
+    <div class="flex justify-between my-4">
+      <div class="w-1/2">
+        <div class="relative">
+          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <span class="fa-solid fa-magnifying-glass"></span>
+          </div>
+          <input type="text" id="table-search" #search (keyup)="searchRolesArchivedByTerm(search.value)"
+            class="input input-sm block h-8 p-2 pl-10 w-full max-w-xs text-sm text-neutral bg-[#ebecf0] !border-[#535A6640] rounded-lg border !outline-[#535A6620]"
+            placeholder="Buscar">
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <div class="px-4 py-1 text-xs">
+        <h3 class="font-medium"><span class="font-bold">{{rolesArchived.length}}</span> Roles archivados</h3>
+      </div>
+      <div class="overflow-hidden relative rounded-md">
+        <div class="min-h-[calc(100vh-4rem-20rem)] overflow-hidden bg-neutral-content border border-[#535a6650] rounded-md relative mb-4">
+          <table class="my_table w-full text-sm text-left text-neutral">
+            <thead class="text-xs text-white uppercase bg-primary">
+              <tr>
+                <th></th>
+                <th scope="col" class="py-3 px-6">
+                  <div class="flex items-center">
+                    Rol
+                  </div>
+                </th>
+                <th scope="col" class="py-3 px-6">
+                  Fecha de archivado
+                </th>
+                <th scope="col" class="py-3 px-6">
+                  Usuario Responsable
+                </th>
+                <th scope="col" class="py-3 px-6">
+                  <span class="sr-only">Accciones</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y-[0.5px] divide-[#535A6640]">
+              <tr class="bg-white hover:bg-[#4052b510] transition-all"
+                *ngFor="let rol of rolesArchived | paginate: config; let index = index">
+                <th scope="row" class="py-4 px-6 font-medium text-neutral whitespace-nowrap dark:text-neutral">
+                  {{index+1}}
+                </th>
+                <td class="py-3 px-6 font-medium text-neutral whitespace-nowrap dark:text-neutral">
+                  {{rol.name}}
+                </td>
+                <td class="py-3 px-6">
+                  {{rol.archived_at}}
+                </td>
+                <td class="py-3 px-6">
+                  {{rol.archived_by.identification}}
+                </td>
+                <th class="py-3 px-6 text-right">
+                  <span (click)="restoreRol(rol)"
+                    class="fa-solid fa-clock-rotate-left text-lg cursor-pointer transition-all hover:text-primary" *permissions="['RESTAURAR_ROLES']"></span>
+                  <span (click)="openDialogDeleteRol(rol)"
+                    class="fa-regular fa-trash-can text-lg ml-3 cursor-pointer transition-all hover:text-red-600" *permissions="['ELIMINAR_ROLES']" ></span>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <div *ngIf="loading || rolesArchived.length == 0" class="h-[calc(100%)] w-full absolute z-10 top-0 left-0">
+            <div *ngIf="loading" class="h-full w-full bg-[#535a6610] backdrop-blur-sm">
+              <loader></loader>
+            </div>
+            <no-content *ngIf="rolesArchived.length == 0 && !loading"></no-content>
+          </div> -->
+        </div>
+  
+         <!-- Paginación de tabla -->
+        <!-- <pagination [config]="config"></pagination> -->
+      </div>
+  
+    </div>
+  </div>
+  

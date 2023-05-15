@@ -1,13 +1,11 @@
+import { Permission } from "../permiso/permiso";
 import { Person } from "../persona/persona";
-import { Role } from "../role/rol";
 
-export interface User {
+export interface Role {
   id: number;
-  email: string;
-  password: string;
+  name: string;
 
-  person: Person;
-  role: Role;
+  permissions: Permission[];
 
   active: boolean;
   archived: boolean;

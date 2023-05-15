@@ -1,1 +1,135 @@
-<p>rol.list works!</p>
+<!-- <module-header title="Personal">
+    <rol-breadcrumbs breadcrumbs></rol-breadcrumbs>
+    <personal-tabs tabs route="roles"></personal-tabs>
+  </module-header> -->
+  
+  <div class="w-full p-4 mb-4 bg-white border-t-[1px] border-[#535a6650]">
+    <div class="flex justify-between my-4">
+      <div class="w-1/2">
+        <div class="relative">
+          <div
+            class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+          >
+            <span class="fa-solid fa-magnifying-glass"></span>
+          </div>
+          <input
+            type="text"
+            id="table-search"
+            #search
+            (keyup)="searchRolesByTerm(search.value)"
+            class="input input-sm block h-8 p-2 pl-10 w-full max-w-xs text-sm text-neutral bg-[#ebecf0] !border-[#535A6640] rounded-md border !outline-[#535A6620]"
+            placeholder="Buscar"
+          />
+        </div>
+      </div>
+      <div>
+        <!-- <button
+          (click)="accordion.openAll()"
+          class="btn btn-sm gap-2 rounded-md bg-neutral-content text-xs text-neutral border-1 border-[#535A6640] shadow ml-4 hover:text-white"
+        >
+          <span class="fa-solid fa-expand text-sm leading-none"></span>
+          Expandir
+        </button> -->
+  
+        <!-- <button
+          (click)="accordion.closeAll()"
+          class="btn btn-sm gap-2 rounded-md bg-neutral-content text-xs text-neutral border-1 border-[#535A6640] shadow ml-4 hover:text-white"
+        >
+          <span class="fa-solid fa-compress text-sm leading-none"></span>
+          Contraer
+        </button> -->
+  
+        <button
+          *permissions="['EXPORTAR_ROLES']"
+          class="btn btn-sm gap-2 rounded-md bg-neutral-content text-xs text-neutral border-1 border-[#535A6640] shadow ml-4 hover:text-white"
+        >
+          <span class="fa-solid fa-file-export text-sm leading-none"></span>
+          Exportar
+        </button>
+        <button
+          *permissions="['IMPORTAR_ROLES']"
+          class="btn btn-sm gap-2 rounded-md bg-neutral-content text-xs text-neutral border-1 border-[#535A6640] shadow ml-4 hover:text-white"
+        >
+          <span class="fa-solid fa-file-import text-sm leading-none"></span>
+          Importar
+        </button>
+  
+        <button *permissions="['CREAR_ROLES']"
+          class="btn btn-sm gap-2 rounded-md bg-primary text-xs border-0 shadow shadow-[#3f51b5] px-8 ml-4 hover:bg-primary-focus hover:scale-105"
+          routerLink="/system/personal/roles/form"
+        >
+          <span
+            class="fas fa-plus text-sm leading-none"
+          ></span>
+          Nuevo
+        </button>
+      </div>
+    </div>
+  
+    <div>
+      <div class="px-4 py-1 text-xs">
+        <h3 class="font-medium">
+          <span class="font-bold">{{ roles.length }}</span> Roles
+        </h3>
+      </div>
+      <div>
+        <div
+          *ngIf="loading || roles.length == 0"
+          class="h-[calc(100vh-20rem-5px)]"
+        >
+          <!-- <loader *ngIf="loading"></loader>
+          <no-content *ngIf="roles.length == 0 && !loading"></no-content> -->
+        </div>
+        <mat-accordion multi *ngIf="!loading">
+          <mat-expansion-panel
+            hideToggle
+            [expanded]="true"
+            *ngFor="let rol of roles"
+          >
+            <mat-expansion-panel-header>
+              <div class="w-full h-[48px] flex justify-between px-6">
+                <div class="flex items-center relative">
+                  <div
+                    class="flex items-center py-1 font-medium h-full capitalize border-r w-[calc(15rem+.5px-1.5rem)]"
+                  >
+                    <span class="fa-solid fa-user-tag mr-1"></span>
+                    {{ rol.name }}
+                  </div>
+                  <div
+                    class="py-1 text-sm capitalize opacity-40 absolute left-[calc(17rem-1.5rem)] flex items-center w-32"
+                  >
+                    <span class="fa-solid fa-key mr-1"></span>
+                    <span>{{ rol.permissions.length }} Permisos</span>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="py-1 text-right">
+                    <span
+                      [routerLink]="['/system/personal/roles/form/', rol.id]"
+                      class="fa-regular fa-pen-to-square text-lg cursor-pointer transition-all hover:text-primary"
+                      *permissions="['ACTUALIZAR_ROLES']"
+                    ></span>
+                    <span
+                      (click)="openDialogArchiveRol(rol)"
+                      class="fa-regular fa-trash-can text-lg ml-3 cursor-pointer transition-all hover:text-red-600"
+                      *permissions="['ARCHIVAR_ROLES']"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel-header>
+  
+            <div class="w-[calc(100%-15rem)] p-8 ml-60 border-l">
+              <ul class="grid grid-cols-3 pointer-events-none">
+                <li *ngFor="let permiso of rol.permissions" class="py-1 text-xs">
+                  <span class="fa-solid fa-key mr-1"></span>
+                  {{ permiso.name }}
+                </li>
+              </ul>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+  

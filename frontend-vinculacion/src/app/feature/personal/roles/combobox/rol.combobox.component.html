@@ -1,1 +1,10 @@
-<p>rol.combobox works!</p>
+<mat-form-field appearance="fill" class="w-full">
+    <mat-label>Rol</mat-label>
+    <mat-select [formControl]="roleFormControl" [errorStateMatcher]="matcher">
+      <mat-option *ngFor="let rol of roles" [value]="rol.id">{{rol.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="roleFormControl.hasError('required')">Este campo es <strong>requerido</strong></mat-error>
+    <mat-hint *ngIf="roles?.length === 0">No hay roles</mat-hint>
+  </mat-form-field>
+  

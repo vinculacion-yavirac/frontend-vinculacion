@@ -8,17 +8,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class PaginationComponent implements OnInit {
   constructor() {}
 
-  @Output() pageBoundsCorrection: EventEmitter<number>;
-  @Input() id: string;
-  @Input() config: {
-    itemsPerPage: number;
-    currentPage: number;
-  };
+  // @Output() pageBoundsCorrection: EventEmitter<number>;
+  // @Input() id: string;
+  // @Input() config: {
+  //   itemsPerPage: number;
+  //   currentPage: number;
+  // };
 
   ngOnInit(): void {}
 
-  pageChange(event: any) {
-    this.config.currentPage = event;
-  }
+  // pageChange(event: any) {
+  //   this.config.currentPage = event;
+  // }
 
 }
