@@ -1,16 +1,14 @@
-
 <div class="container" id="container">
 
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 			<h1>Vinculacion</h1>
 			<span>Inicia Sesión</span>
-			<input type="email" placeholder="Usuario" />
-			<input type="password" placeholder="Contraseña" />
-			<a class = "btn btn-primary" href="/dashboard/solicitud">
-				ingresar
-				<!-- <button routerLink="/dashboard/solicitud" class = "btn btn-primary">Ingresar</button> -->
-			</a> 
+			<input type="email" placeholder="Usuario" formControlName="email" />
+			<input type="password" placeholder="Contraseña" formControlName="password"/>
+			<a  routerLink="/dashboard/solicitud">
+				<button class = "btn btn-primary" >Ingresar</button>
+			</a>
 		</form>
 	</div>
 	<div class="overlay-container">

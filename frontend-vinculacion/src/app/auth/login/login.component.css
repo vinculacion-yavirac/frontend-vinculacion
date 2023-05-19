@@ -97,7 +97,7 @@ input {
 	overflow: hidden;
 	width: 768px;
   top: 150px;
-	max-width: 100%;
+	max-width: 150%;
 	min-height: 480px;
   background-image: url("../../../assets/image/yavirac.jfif") ;
 }
